@@ -27,6 +27,9 @@ const UserProfile = () => {
       <ProfileNavWrapper>
         <ProfileNav iconName="fa fa-credit-card" text="Payment" />
       </ProfileNavWrapper>
+      <NewTransactionWrapper>
+        <NewTransaction />
+      </NewTransactionWrapper>
     </UserProfileWrapper>
   );
 };
@@ -43,13 +46,49 @@ const ProfileNav = ({ iconName, text }) => {
   );
 };
 
+const NewTransaction = () => {
+  return (
+    <>
+      <span>Start a new transaction</span>
+      <i class="fa fa-plus-circle"></i>
+    </>
+  );
+};
+const NewTransactionWrapper = styled.div`
+  cursor: pointer;
+  height: 4.5rem;
+  //   background-color: #539dc2;
+  background-color: #5dade2;
+  color: white;
+  font-size: 1.3rem;
+  //   border: 1px solid green;
+  width: 100%;
+  padding-left: 10%;
+  &:hover {
+    filter: brightness(90%);
+  }
+  transition: 0.3s ease-out;
+  span {
+    margin: 0rem 2rem 0rem 0rem;
+    font-size: 1.3rem;
+    // border: 1px solid green;
+    padding-top: -1rem;
+    position: relative;
+    top: -0.7rem;
+  }
+  i {
+    font-size: 3rem;
+    padding-top: 0.7rem;
+  }
+`;
+
 const ProfileNavWrapper = styled.div`
-  height: 4rem;
+  height: 4.5rem;
   margin-top: ${prop => (prop.marginTop ? "2rem" : "0rem")};
   width: 100%;
   //   border: 1px solid lightgrey;
   padding-left: 10%;
-  padding-top: 1.3rem;
+  padding-top: 1.6rem;
   font-size: 1.3rem;
   //   box-shadow: 1px 1px 1px 1px lightgrey;
   i {
@@ -86,7 +125,9 @@ const LocationWrapper = styled.div`
 `;
 
 const UserProfileWrapper = styled.div`
-  //   border: 1px solid gold;
+  //   border: 1px solid lightgrey;
+  box-shadow: 1px 0px 2px 3px lightgrey;
+  //   height: 40rem;
   .current {
     background: rgb(240, 240, 240);
     color: #539dc2;
