@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import UserProfile from "./user-profile/user-profile";
+import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
 
 function Page() {
   return (
@@ -8,7 +9,9 @@ function Page() {
       <div className="section user-profile-section">
         <UserProfile />
       </div>
-      <div className="section user-transaction-section"></div>
+      <div className="section user-transaction-section">
+        <UserTransactionAndChat />
+      </div>
       <div className="section user-history-section"></div>
     </PageWrapper>
   );
