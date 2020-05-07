@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Icon from "../icon/icon";
 import avatar from "../../../src/assets/suited-profile.jpg";
 
-function NavBar() {
+export function NavBar() {
   return (
     <>
       <NavBarWrapper className="row">
-        <div className=" element col-1 offset-5">
+        <div className=" col-1 offset-5">
           <NavItem iconClassName="fa-users" text="Share" />
         </div>
         <div className="col-1">
@@ -22,9 +22,10 @@ function NavBar() {
         <div className="col-1">
           <NavItem iconClassName="fa-sign-out" text="Logout" />
         </div>
-        <div className="col-1">
-          {/* <NavItem iconClassName="fa-users" text="Me" /> */}
-          <Avatar />
+        <div className="element col-1">
+          <AvatarContainer marginTop lineHeight centerText marginLeft fullWidth>
+            <Avatar Username="Me" />
+          </AvatarContainer>
         </div>
       </NavBarWrapper>
     </>
@@ -35,6 +36,9 @@ const NavBarWrapper = styled.div`
   width: 100%;
   margin: auto;
   background-color: #35586c;
+  .element {
+    border-bottom: 6px solid white;
+  }
 `;
 
 const NavItem = ({ iconClassName, text }) => {
@@ -50,38 +54,54 @@ const NavItemWrapper = styled.div`
   color: white;
   display: block;
   margin-top: 0.75rem;
+  cursor: pointer;
   line-height: 1.115rem;
   p {
     text-align: center;
     font-weight: bold;
   }
+  &:hover {
+    filter: brightness(90%);
+  }
 `;
-const Avatar = () => {
+export const Avatar = ({ Username }) => {
   return (
-    <AvatarContainer>
+    <>
       <img src={avatar} alt="" />
-      <p>Me</p>
-    </AvatarContainer>
+      <p>{Username}</p>
+    </>
   );
 };
 
-const AvatarContainer = styled.div`
-  height: 4rem;
+export const AvatarContainer = styled.div`
+  height: ${prop => (prop.userSectionSize ? "6rem" : "3.5rem")};
   color: white;
+  width: ${prop => (prop.shorterWidth ? "29%" : "100%")};
+  margin: auto;
   display: block;
-  margin-top: 0.75rem;
-  line-height: 1.115rem;
+  margin-top: ${prop => (prop.marginTop ? "1.1rem" : "0rem")};
+  line-height: ${prop => (prop.lineHeight ? "1.115rem" : "1rem")};
   // border: 1px solid green;
   img {
+    cursor: pointer;
     max-width: 60%;
     max-height: 60%;
     border-radius: 50%;
-    margin-left: 27%;
+    margin-left: ${prop => (prop.marginLeft ? "27%" : "24%")};
+    margin-top: ${prop => (prop.marginTopImg ? "2rem" : "0rem")};
+    // border: 1px solid red;
+    &:hover {
+      filter: brightness(90%);
+    }
   }
   p {
-    text-align: center;
+    text-align: ${prop => (prop.centerText ? "center" : "left")};
+    color: ${prop => (prop.blackColor ? "black" : "white")};
     font-weight: bold;
+    // border: 1px solid red;
+    height: 1.1rem;
+    width: ${prop => (prop.fullWidth ? "100%" : "200%")};
+    margin-top: ${prop => (prop.marginTopP ? "1.1rem" : "0rem")};
+    font-size: ${prop => (prop.large ? "1.15rem" : "normal")};
   }
 `;
-
-export default NavBar;

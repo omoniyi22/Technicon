@@ -1,32 +1,36 @@
 import React from "react";
 import styled from "styled-components";
+import UserProfile from "./user-profile/user-profile";
 
 function Page() {
   return (
     <PageWrapper className="row w-100">
-      <div className=""></div>
-      <div className=""></div>
-      <div className=""></div>
+      <div className="section user-profile-section">
+        <UserProfile />
+      </div>
+      <div className="section user-transaction-section"></div>
+      <div className="section user-history-section"></div>
     </PageWrapper>
   );
 }
 
 const PageWrapper = styled.div`
   margin: auto;
-  border: 1px solid red;
-  div {
-    border: 1px solid brown;
+  //   border: 1px solid red;
+  .section {
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 1px 1px lightgrey;
   }
-  div:nth-child(1) {
+  .user-profile-section {
     height: 26rem;
     width: 27%;
     margin-left: 7.5%;
   }
-  div:nth-child(2) {
+  .user-transaction-section {
     height: 38rem;
     width: 37%;
   }
-  div:nth-child(3) {
+  .user-history-section {
     height: 26rem;
     width: 21%;
   }
