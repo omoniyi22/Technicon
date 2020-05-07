@@ -9,6 +9,8 @@ body {
   font-family: "Metropolis", -apple-system, system-ui, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
