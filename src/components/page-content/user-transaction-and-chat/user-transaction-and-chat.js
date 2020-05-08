@@ -13,9 +13,47 @@ export const UserTransactionAndChat = () => {
       <UserChatNavWrapper>
         <UserChatNav />
       </UserChatNavWrapper>
+      <br/>
+      <Chat chattext="Thank you for reaching out. Your ID number is 1234. We will notify you once your gadget arrives." timedelivered={<p>10:30AM</p>} />
+      <Chat chattext="Hello James, your phone has arrived, we will inform you of the diagnosed faults and costs in a min. Please stay put." timedelivered="" />
+      <Chat chattext="Hello James, your phone was diagnosed with borken screen and burnt motherboard. The cost of repair is as follows:" timedelivered="" />
+      <Chat chattext="New Screen - N1700
+      New Motherboard - N3000
+      VAT - N300 ." timedelivered={<p>10:30AM</p>} />
     </>
   );
 };
+const Chat = ({chattext, timedelivered})=>{
+    return(
+        <>
+         <ChatWrapper>
+            <ChatMessageWrapper>
+                <ChatBody chat={chattext} />
+            </ChatMessageWrapper>
+            <TimeWrapper marginLeft smallFont colorGrey noPaddingTop className="time">
+                <Time time={timedelivered} />
+            </TimeWrapper>
+         </ChatWrapper>
+        </>
+    )
+}
+const ChatWrapper =styled.div`
+`;
+const ChatBody = ({ chat }) => {
+  return <div>{chat}</div>;
+};
+const ChatMessageWrapper = styled.div`
+  max-height: 15rem;
+  border-radius: 1.5rem 1.5rem 1.5rem 0rem;
+  background: rgb(240, 240, 240);
+  font-weight: bold;
+  margin: 0.9% 0% 0.5% 3%;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: rgb(160, 160, 160);
+  max-width: 70%;
+//   border: 1px solid purple;
+`;
 
 const UserChatNav = () => {
   return (
@@ -50,10 +88,8 @@ const UserChatNavWrapper = styled.div`
   }
   .transaction {
     width: 48.5%;
-    // border: 1px solid gold;
   }
   .invoice {
-    // border: 1px solid yellow;
     width: 48.5%;
   }
 `;
@@ -70,10 +106,27 @@ const UserDevice = () => {
           <div>Iphone 6X</div>
         </div>
       </div>
-      <div className="time">04/04/2020</div>
+      <TimeWrapper className="time">
+        <Time time="04/04/2020" />
+      </TimeWrapper>
     </>
   );
 };
+const Time = ({ time }) => {
+  return <>{time}</>;
+};
+const TimeWrapper = styled.div`
+  padding-top: ${prop=> prop.noPaddingTop? "0rem":"1%"};
+  color: ${prop=>(prop.colorGrey?"rgb(160, 160, 160);":"white")};
+  font-size: ${prop=>prop.smallFont?"0.7rem": ""};
+  margin-left: ${prop=>prop.marginLeft?"3%": ""};
+//   border: 1px solid red;
+//now we target a paragraph than we are going to include in the rendered prop, so that margin is given if Time has p, which means that the returned chat will have a margin-bottom if it has time attached to it.
+  p{
+    //   border: 1px solid blue;
+      margin-bottom: 1.7rem;
+    }
+`;
 const UserDeviceWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -104,11 +157,6 @@ const UserDeviceWrapper = styled.div`
     .icon-text div:nth-child(1) {
       font-weight: bold;
     }
-  }
-  .time {
-    // border: 1px solid green;
-    padding-top: 1%;
-    color: white;
   }
 `;
 
