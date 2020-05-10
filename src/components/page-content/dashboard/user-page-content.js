@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import UserProfile from "./user-profile/user-profile";
+// import UserProfile from "./user-profile/user-profile";
 import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
+import UserProfile from "./user-profile/user-profile";
+import TransactionHistory from "./transaction-history/transaction-history";
+// import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
 
-function Page() {
+function UserPageContent() {
   return (
     <PageWrapper className="row w-100">
       <div className="section user-profile-section">
@@ -12,7 +15,9 @@ function Page() {
       <div className="section user-transaction-section">
         <UserTransactionAndChat />
       </div>
-      <div className="section user-history-section"></div>
+      <div className="section user-history-section">
+        <TransactionHistory />
+      </div>
     </PageWrapper>
   );
 }
@@ -34,9 +39,11 @@ const PageWrapper = styled.div`
     width: 37%;
   }
   .user-history-section {
-    height: 26rem;
+    max-height: 27.7rem;
+    border: none;
+    box-shadow: none;
     width: 21%;
   }
 `;
 
-export default Page;
+export default UserPageContent;

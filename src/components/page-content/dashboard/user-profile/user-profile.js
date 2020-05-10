@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Avatar, AvatarContainer } from "../../navbar/navbar";
-import { Button } from "../button/button";
+import { Avatar, AvatarContainer } from "../../../navbar/navbar";
+import { Button } from "../../button/button";
 
 const UserProfile = () => {
   return (
