@@ -35,8 +35,14 @@ const PageWrapper = styled.div`
     margin-left: 7.5%;
   }
   .user-transaction-section {
-    height: 38rem;
+    height: inherit;
     width: 37%;
+    // the .right-chat below is what pushes the chat with the blue border to the right.
+    .right-chat {
+      float: right;
+      // border: 2px solid gold;
+      min-width: 10rem;
+    }
   }
   .user-history-section {
     max-height: 27.7rem;

@@ -23,66 +23,88 @@ export const UserTransactionAndChat = () => {
         <UserChatNav />
       </UserChatNavWrapper>
       <br />
-      <Chat
-        chattext="Thank you for reaching out. Your ID number is 1234. We will notify you once your gadget arrives."
-        timedelivered={<p>10:30AM</p>}
-      />
-      <Chat
-        chattext="Hello James, your phone has arrived, we will inform you of the diagnosed faults and costs in a min. Please stay put."
-        timedelivered=""
-      />
-      <Chat
-        chattext="Hello James, your phone was diagnosed with borken screen and burnt motherboard. The cost of repair is as follows:"
-        timedelivered=""
-      />
-      <Chat
-        chattext="New Screen - N1700
+      <ChatWrapper>
+        <Chat
+          chattext="Thank you for reaching out. Your ID number is 1234. We will notify you once your gadget arrives."
+          timedelivered={<p>10:30AM</p>}
+        />
+      </ChatWrapper>
+      <ChatWrapper
+        rightChat
+        rightChatBorder
+        backgroundWhite
+        className="right-chat"
+      >
+        <Chat chattext="Confirm pickup." timedelivered={<p>10:30AM</p>} />
+      </ChatWrapper>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <ChatWrapper>
+        <Chat
+          chattext="Hello James, your phone has arrived, we will inform you of the diagnosed faults and costs in a min. Please stay put."
+          timedelivered=""
+        />
+      </ChatWrapper>
+      <ChatWrapper>
+        <Chat
+          chattext="Hello James, your phone was diagnosed with borken screen and burnt motherboard. The cost of repair is as follows:"
+          timedelivered=""
+        />
+      </ChatWrapper>
+      <ChatWrapper>
+        <Chat
+          chattext="New Screen - N1700
       New Motherboard - N3000
       VAT - N300 ."
-        chattext="New Screen - N1700
+          chattext="New Screen - N1700
       New Motherboard - N3000
       VAT - N300 ."
-        timedelivered={<p>10:30AM</p>}
-      />
+          timedelivered={<p>10:30AM</p>}
+        />
+      </ChatWrapper>
     </>
   );
 };
 const Chat = ({ chattext, timedelivered, chatMessageModule }) => {
   return (
     <>
-      <ChatWrapper>
-        <ChatMessageWrapper>
-          <ChatBody chat={chattext} />
-        </ChatMessageWrapper>
-        <TimeWrapper
-          marginLeft
-          smallFont
-          colorGrey
-          noPaddingTop
-          className="time"
-        >
-          <Time time={timedelivered} />
-        </TimeWrapper>
-      </ChatWrapper>
+      <ChatMessageWrapper className="chat-message-wrapper">
+        <ChatBody chat={chattext} />
+      </ChatMessageWrapper>
+      <TimeWrapper marginLeft smallFont colorGrey noPaddingTop className="time">
+        <Time time={timedelivered} />
+      </TimeWrapper>
     </>
   );
 };
-const ChatWrapper = styled.div``;
+const ChatWrapper = styled.div`
+  .chat-message-wrapper {
+    max-height: 15rem;
+    border-radius: ${prop =>
+      prop.rightChat
+        ? "1.5rem 1.5rem 0rem 1.5rem"
+        : "1.5rem 1.5rem 1.5rem 0rem"};
+    // background: rgb(240, 240, 240);
+    background: ${prop =>
+      prop.backgroundWhite ? "white" : "rgb(240, 240, 240)"};
+    font-weight: bold;
+    margin: 0.9% 0% 0.5% 3%;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: rgb(160, 160, 160);
+    max-width: 20.7rem;
+    align-item: right;
+    border: ${prop => (prop.rightChatBorder ? "1.5px solid #5dade2" : "none")};
+  }
+`;
+const ChatMessageWrapper = styled.div``;
+
 const ChatBody = ({ chat }) => {
   return <div>{chat}</div>;
 };
-const ChatMessageWrapper = styled.div`
-  max-height: 15rem;
-  border-radius: 1.5rem 1.5rem 1.5rem 0rem;
-  background: rgb(240, 240, 240);
-  font-weight: bold;
-  margin: 0.9% 0% 0.5% 3%;
-  padding: 1rem;
-  font-size: 0.85rem;
-  color: rgb(160, 160, 160);
-  max-width: 70%;
-  //   border: 1px solid purple;
-`;
 
 const UserChatNav = () => {
   return (
