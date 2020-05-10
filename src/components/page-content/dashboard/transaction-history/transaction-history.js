@@ -42,7 +42,7 @@ const TransactionHistory = () => {
           >
             <UserDevice
               deviceID="#ID 0119"
-              deviceBrand="Samsung Notebook"
+              deviceBrand="Macbook Pro"
               timeModule={
                 <TimeWrapper className="time" colorBlue>
                   <Time time="03/03/2021" />
@@ -62,7 +62,7 @@ const TransactionHistory = () => {
           >
             <UserDevice
               deviceID="#ID 0119"
-              deviceBrand="Samsung Notebook"
+              deviceBrand="Iphone 6x"
               timeModule={
                 <TimeWrapper className="time" colorBlue>
                   <Time time="04/04/2020" />

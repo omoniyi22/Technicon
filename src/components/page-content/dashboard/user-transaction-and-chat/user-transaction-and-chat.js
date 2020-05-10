@@ -159,7 +159,7 @@ export const TimeWrapper = styled.div`
       : "white" && prop.colorBlue
       ? "#5dade2"
       : "white"};
-  font-size: ${prop => (prop.smallFont ? "0.7rem" : "0.9rem")};
+  font-size: ${prop => (prop.smallFont ? "0.7rem" : "0.8rem")};
   margin-left: ${prop => (prop.marginLeft ? "3%" : "")};
   // border: 1px solid red;
   //now we target a paragraph than we are going to include in the rendered prop, so that margin is given if Time has p, which means that the returned chat will have a margin-bottom if it has time attached to it.
