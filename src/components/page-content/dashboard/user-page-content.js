@@ -40,7 +40,7 @@ const PageWrapper = styled.div`
     // the .right-chat below is what pushes the chat with the blue border to the right.
     .right-chat {
       float: right;
-      // border: 2px solid gold;
+      margin-right: 0.7vw;
       min-width: 10rem;
     }
   }
