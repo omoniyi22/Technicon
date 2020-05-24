@@ -87,7 +87,7 @@ const ChatWrapper = styled.div`
       prop.rightChat
         ? "1.5rem 1.5rem 0rem 1.5rem"
         : "1.5rem 1.5rem 1.5rem 0rem"};
-    // background: rgb(240, 240, 240);
+
     background: ${prop =>
       prop.backgroundWhite ? "white" : "rgb(240, 240, 240)"};
     font-weight: bold;
@@ -118,13 +118,13 @@ const UserChatNavWrapper = styled.div`
   height: 3.5rem;
   margin: auto;
   display: flex;
-  //   border: 1px solid green;
+
   padding-left: 3%;
   .transaction,
   .invoice {
     text-align: center;
     border-bottom: 1.25px solid lightgrey;
-    // margin: auto;
+
     font-weight: bold;
     padding-top: 1.2rem;
     cursor: pointer;
@@ -183,10 +183,9 @@ export const TimeWrapper = styled.div`
       : "white"};
   font-size: ${prop => (prop.smallFont ? "0.7rem" : "0.8rem")};
   margin-left: ${prop => (prop.marginLeft ? "3%" : "")};
-  // border: 1px solid red;
-  //now we target a paragraph than we are going to include in the rendered prop, so that margin is given if Time has p, which means that the returned chat will have a margin-bottom if it has time attached to it.
+
+  /*now we target a paragraph than we are going to include in the rendered prop, so that margin is given if Time has p, which means that the returned chat will have a margin-bottom if it has time attached to it.*/
   p {
-    //   border: 1px solid blue;
     margin-bottom: 1.7rem;
   }
 `;
@@ -199,9 +198,7 @@ export const UserDeviceWrapper = styled.div`
   border-top: 0.5px solid lightgrey;
   background-color: ${prop => (prop.blueBackground ? "#5dade2" : "white")};
   .time-and-count {
-    // border: 1px solid yellow;
     .count {
-      // border: 1px solid gold;
       margin-left: 0.3rem;
       margin-top: 0.25rem;
       width: 1.4rem;
@@ -210,22 +207,19 @@ export const UserDeviceWrapper = styled.div`
       height: 1.4rem;
       text-align: center;
       padding-top: 0.23rem;
-      background-color: #6495ED;
+      background-color: #6495ed;
       opacity: 0.5;
       border-radius: 50%;
-      // display: ${prop => (prop.hideCount ? "none" : "block")}; 
     }
-    .hide-count{
+    .hide-count {
       display: none;
     }
   }
   .icon-and-id {
-    // border: 1px solid green;
     width: ${prop => (prop.width9rem ? "9rem" : "inherit")};
     display: flex;
     justify-content: space-between;
     .icon-container {
-      // border: 1px solid red;
       border-radius: 50%;
       height: 2.8rem;
       background-color: white;
@@ -240,7 +234,6 @@ export const UserDeviceWrapper = styled.div`
       margin: auto;
       margin-left: ${prop => (prop.marginLeft ? "0.8rem" : "")};
       font-size: 0.9rem;
-      // border: 1px solid yellow;
     }
     .icon-text div:nth-child(1) {
       font-weight: bold;
@@ -251,14 +244,11 @@ export const UserDeviceWrapper = styled.div`
       padding-top: 0.2rem;
       color: ${prop => (prop.colorGrey ? "grey" : "white")};
     }
-    
   }
 `;
 
 export const UserTransactionAndChatWrapper = styled.div`
-  //   border: 3px solid gold;
   .header {
-    // border: 3px solid green;
     height: 3.2rem;
     padding: 0.85rem 0 0 1.5rem;
     color: grey;

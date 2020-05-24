@@ -54,28 +54,26 @@ const AboutPageContent = () => {
 };
 const AboutPageWrapper = styled.div`
   width: 100%;
-  // border: 1px solid red;
+
   height: inherit;
   .about-technicon-container {
     margin-top: 5%;
     height: 16rem;
     .techicon-about-image {
-      // border: 1px solid red;
       padding: 0;
       height: 16rem;
       img {
         width: 21.65rem;
         max-height: 100%;
         max-width: 100%;
-        object-fit: cover; //to maintain the aspect ratio of the image in it's container
-        object-position: 50% 10%; //to move the image around in the container
+        object-fit: cover;
+        object-position: 50% 10%;
       }
     }
     .about-technicon {
-      // border: 1px solid yellow;
       padding-left: 5%;
       padding-top: 4.5%;
-      // width: 31rem;
+
       h1 {
         font-size: 2.3rem;
         font-weight: bold;
@@ -87,12 +85,11 @@ const AboutPageWrapper = styled.div`
     }
   }
   .blog {
-    // border: 3px solid green;
     margin: 7rem 0 0 0;
     height: inherit;
     .title {
       height: inherit;
-      // border: 2px solid blue;
+
       margin: auto;
       padding: 0;
       margin-bottom: 1rem;
@@ -103,7 +100,6 @@ const AboutPageWrapper = styled.div`
         padding-left: 1rem;
       }
       .my-progress {
-        // border: 1px solid red;
         height: 0.15rem;
         width: 40%;
         background-color: lightgrey;

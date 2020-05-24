@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-// import UserProfile from "./user-profile/user-profile";
 import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
 import UserProfile from "./user-profile/user-profile";
 import TransactionHistory from "./transaction-history/transaction-history";
-// import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
 
 function UserPageChatDashBoard() {
   return (
@@ -24,7 +22,6 @@ function UserPageChatDashBoard() {
 
 const PageWrapper = styled.div`
   margin: auto;
-  //   border: 1px solid red;
   .section {
     border: 1px solid lightgrey;
     box-shadow: 1px 1px 1px 1px lightgrey;
@@ -37,7 +34,7 @@ const PageWrapper = styled.div`
   .user-transaction-section {
     height: inherit;
     width: 37%;
-    // the .right-chat below is what pushes the chat with the blue border to the right.
+    /* the .right-chat below is what pushes the chat with the blue border to the right.*/
     .right-chat {
       float: right;
       margin-right: 0.7vw;

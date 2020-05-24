@@ -59,11 +59,9 @@ const NewTransaction = () => {
 const NewTransactionWrapper = styled.div`
   cursor: pointer;
   height: 4.5rem;
-  //   background-color: #539dc2;
   background-color: #5dade2;
   color: white;
   font-size: 1.3rem;
-  //   border: 1px solid green;
   width: 100%;
   padding-left: 10%;
   &:hover {
@@ -73,7 +71,6 @@ const NewTransactionWrapper = styled.div`
   span {
     margin: 0rem 2rem 0rem 0rem;
     font-size: 1.3rem;
-    // border: 1px solid green;
     padding-top: -1rem;
     position: relative;
     top: -0.7rem;
@@ -88,16 +85,15 @@ const ProfileNavWrapper = styled.div`
   height: 4.5rem;
   margin-top: ${prop => (prop.marginTop ? "2rem" : "0rem")};
   width: 100%;
-  //   border: 1px solid lightgrey;
+
   padding-left: 10%;
   padding-top: 1.6rem;
   font-size: 1.3rem;
-  //   box-shadow: 1px 1px 1px 1px lightgrey;
+
   i {
     margin: 0rem 2rem 0 0;
   }
   span {
-    // border: 1px solid pink;
   }
   cursor: pointer;
   &:hover {
@@ -108,7 +104,6 @@ const ProfileNavWrapper = styled.div`
 `;
 
 const LocationWrapper = styled.div`
-  //   border: 1px solid purple;
   margin-top: ${prop => (prop.marginTop ? "2rem" : "0rem")};
   height: 2.2rem;
   padding-left: 27%;
@@ -122,14 +117,11 @@ const LocationWrapper = styled.div`
     text-align: center;
     font-size: 0.9rem;
     width: 100%;
-    // border: 1px solid purple;
   }
 `;
 
 const UserProfileWrapper = styled.div`
-  //   border: 1px solid lightgrey;
   box-shadow: 1px 0px 2px 3px lightgrey;
-  //   height: 40rem;
   .current {
     background: rgb(240, 240, 240);
     color: #539dc2;

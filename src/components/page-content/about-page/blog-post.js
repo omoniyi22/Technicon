@@ -30,7 +30,7 @@ export const BlogPostContent = ({
   );
 };
 
-// Type checking...
+/* Type checking...*/
 BlogPostContent.propTypes = {
   image: PropTypes.any.isRequired,
   title: PropTypes.string.isRequired,
@@ -55,25 +55,21 @@ export const BlogPostWrapper = styled.div`
     }
   }
   .text-container {
-    // border: 1px solid gold;
     min-height: 8rem;
     .blog-post-title {
       height: 1.9rem;
       font-size: 1.25rem;
       font-weight: bold;
-      // border: 1px solid red;
     }
     .blog-post-content {
       height: 4.5rem;
       font-size: 0.9rem;
-      // border: 1px solid blue;
     }
     .blog-post-time-and-suggestion {
       height: 1.6rem;
-      // border: 1px solid gold;
+
       display: flex;
       .suggestions-container {
-        // border: 1px solid red;
         margin-left: 4vw;
         span {
           background-color: grey;
@@ -83,17 +79,8 @@ export const BlogPostWrapper = styled.div`
         }
         span:nth-child(1) {
           margin-right: 1vw;
-          // border: 1px solid blue;
         }
       }
     }
   }
 `;
-
-// export function BlogPost() {
-//   return (
-//     <BlogPostWrapper className="row blog-post">
-//       <BlogPostContent />
-//     </BlogPostWrapper>
-//   );
-// }

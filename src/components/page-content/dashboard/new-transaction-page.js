@@ -26,7 +26,6 @@ function UserPageNewTransaction() {
 const PageWrapper = styled.div`
   margin: auto;
   background-color: rgb(22, 22, 22, 0.04);
-  //   border: 1px solid red;
   .section {
     border: 1px solid lightgrey;
     box-shadow: 1px 1px 1px 1px lightgrey;

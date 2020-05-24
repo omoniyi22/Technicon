@@ -13,7 +13,7 @@ export function NavBar() {
         <div className="col-1">
           <NavItem iconClassName="fa-clipboard" text="Legal" />
         </div>
-        <div className="col-1">
+        <div className="col-1"> 
           <Link to="/about">
             <NavItem iconClassName="fa-exclamation-circle" text="About" />
           </Link>

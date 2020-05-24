@@ -67,11 +67,11 @@ export const UserNewTransaction = () => {
             <br />
             <div className="input-with-select">
               <input
-                className="form-control form-control-lg "
+                className="form-control form-control-lg phone-number-details"
                 type="text"
                 placeholder="Phone number"
               />
-              <select className="form-control form-control-lg">
+              <select className="form-control form-control-lg phone-brand-details">
                 <option>Mobile Phone</option>
                 <option>Phablet</option>
                 <option>Tablet</option>
@@ -151,17 +151,21 @@ const UserNewTransactionWrapper = styled.div`
       min-height: 3rem;
       font-size: 15px;
       option {
-        // border: 1px solid red;
       }
     }
     .radio-text {
       padding: 1.5vw 0 0 0.7vw;
     }
     .btn-block {
-      //   border: 1px solid red;
       border-radius: 2rem;
       height: 3.5rem;
       line-height: 100%;
+    }
+    .phone-number-details {
+      border-radius: 5px 0rem 0rem 5px;
+    }
+    .phone-brand-details {
+      border-radius: 0px 5px 5px 0px;
     }
   }
 `;
