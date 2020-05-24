@@ -129,6 +129,10 @@ const UserNewTransactionWrapper = styled.div`
       font-size: 0.9rem;
       padding-left: 0.6vw;
     }
+    input {
+      font-size: 0.9rem;
+      height: 3rem;
+    }
     .input-with-select {
       display: flex;
     }
