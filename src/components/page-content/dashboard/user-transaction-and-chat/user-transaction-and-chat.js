@@ -7,64 +7,66 @@ export const UserTransactionAndChat = () => {
       <UserTransactionAndChatWrapper>
         <p className="header">Dashboard</p>
       </UserTransactionAndChatWrapper>
-      <UserDeviceWrapper width9rem marginRight1_5rem blueBackground hideCount>
-        <UserDevice
-          deviceID="#ID 0119"
-          deviceBrand="Iphone 6X"
-          timeModule={
-            <TimeWrapper className="time">
-              <Time time="04/04/04" />
-            </TimeWrapper>
-          }
-          hideCountNum="hide-count"
-        />
-      </UserDeviceWrapper>
-      <UserChatNavWrapper>
-        <UserChatNav />
-      </UserChatNavWrapper>
-      <br />
-      <ChatWrapper>
-        <Chat
-          chattext="Thank you for reaching out. Your ID number is 1234. We will notify you once your gadget arrives."
-          timedelivered={<p>10:30AM</p>}
-        />
-      </ChatWrapper>
-      <ChatWrapper
-        rightChat
-        rightChatBorder
-        backgroundWhite
-        className="right-chat"
-      >
-        <Chat chattext="Confirm pickup." timedelivered={<p>10:30AM</p>} />
-      </ChatWrapper>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <ChatWrapper>
-        <Chat
-          chattext="Hello James, your phone has arrived, we will inform you of the diagnosed faults and costs in a min. Please stay put."
-          timedelivered=""
-        />
-      </ChatWrapper>
-      <ChatWrapper>
-        <Chat
-          chattext="Hello James, your phone was diagnosed with borken screen and burnt motherboard. The cost of repair is as follows:"
-          timedelivered=""
-        />
-      </ChatWrapper>
-      <ChatWrapper>
-        <Chat
-          chattext="New Screen - N1700
+      <div className="transaction-and-chat-section">
+        <UserDeviceWrapper width9rem marginRight1_5rem blueBackground hideCount>
+          <UserDevice
+            deviceID="#ID 0119"
+            deviceBrand="Iphone 6X"
+            timeModule={
+              <TimeWrapper className="time">
+                <Time time="04/04/04" />
+              </TimeWrapper>
+            }
+            hideCountNum="hide-count"
+          />
+        </UserDeviceWrapper>
+        <UserChatNavWrapper>
+          <UserChatNav />
+        </UserChatNavWrapper>
+        <br />
+        <ChatWrapper>
+          <Chat
+            chattext="Thank you for reaching out. Your ID number is 1234. We will notify you once your gadget arrives."
+            timedelivered={<p>10:30AM</p>}
+          />
+        </ChatWrapper>
+        <ChatWrapper
+          rightChat
+          rightChatBorder
+          backgroundWhite
+          className="right-chat"
+        >
+          <Chat chattext="Confirm pickup." timedelivered={<p>10:30AM</p>} />
+        </ChatWrapper>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <ChatWrapper>
+          <Chat
+            chattext="Hello James, your phone has arrived, we will inform you of the diagnosed faults and costs in a min. Please stay put."
+            timedelivered=""
+          />
+        </ChatWrapper>
+        <ChatWrapper>
+          <Chat
+            chattext="Hello James, your phone was diagnosed with borken screen and burnt motherboard. The cost of repair is as follows:"
+            timedelivered=""
+          />
+        </ChatWrapper>
+        <ChatWrapper>
+          <Chat
+            chattext="New Screen - N1700
       New Motherboard - N3000
       VAT - N300 ."
-          chattext="New Screen - N1700
+            chattext="New Screen - N1700
       New Motherboard - N3000
       VAT - N300 ."
-          timedelivered={<p>10:30AM</p>}
-        />
-      </ChatWrapper>
+            timedelivered={<p>10:30AM</p>}
+          />
+        </ChatWrapper>
+      </div>
     </>
   );
 };
@@ -115,6 +117,7 @@ const UserChatNav = () => {
   );
 };
 const UserChatNavWrapper = styled.div`
+  background-color: white;
   height: 3.5rem;
   margin: auto;
   display: flex;
@@ -248,6 +251,7 @@ export const UserDeviceWrapper = styled.div`
 `;
 
 export const UserTransactionAndChatWrapper = styled.div`
+  background-color: white;
   .header {
     height: 3.2rem;
     padding: 0.85rem 0 0 1.5rem;

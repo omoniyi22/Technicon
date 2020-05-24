@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { NavBar } from "./components/navbar/navbar";
-import UserPageChatDashBoard from "./components/page-content/dashboard/user-page-content";
+import UserPageChatDashBoard from "./components/page-content/dashboard/user-chat-and-history";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AboutPage } from "./components/page-content/about-page/about-page";
 import UserPageNewTransaction from "./components/page-content/dashboard/new-transaction-page";
