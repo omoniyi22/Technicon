@@ -39,7 +39,7 @@ const PageWrapper = styled.div`
       width: 84%;
       margin: auto;
       position: relative;
-      top: 4.7%;
+      top: 4%;
       font-weight: bold;
     }
     height: inherit;
