@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import moment from "moment";
 import Time from "./time";
-import data from "./data";
+import PropTypes from "prop-types";
 export const BlogPostContent = ({
   image,
   title,
@@ -29,6 +28,16 @@ export const BlogPostContent = ({
       </div>
     </BlogPostWrapper>
   );
+};
+
+// Type checking...
+BlogPostContent.propTypes = {
+  image: PropTypes.any.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  suggestions1: PropTypes.string.isRequired,
+  suggestions2: PropTypes.string.isRequired
 };
 
 export const BlogPostWrapper = styled.div`

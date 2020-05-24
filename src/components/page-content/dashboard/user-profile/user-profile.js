@@ -17,7 +17,7 @@ const UserProfile = () => {
         <Avatar Username="Yusuf yusuf" />
       </AvatarContainer>
       <LocationWrapper marginTop>
-        <i class="fa fa-map-marker"></i>
+        <i className="fa fa-map-marker"></i>
         <span> B9, ZikHall, UniIbadan</span>
       </LocationWrapper>
       <Button />
@@ -36,13 +36,13 @@ const UserProfile = () => {
   );
 };
 {
-  /* <i class="far fa-credit-card"></i> */
+  /* <i className="far fa-credit-card"></i> */
 }
 
 const ProfileNav = ({ iconName, text }) => {
   return (
     <>
-      <i class={`${iconName}`}></i>
+      <i className={`${iconName}`}></i>
       <span>{text}</span>
     </>
   );
@@ -52,7 +52,7 @@ const NewTransaction = () => {
   return (
     <>
       <span>Start a new transaction</span>
-      <i class="fa fa-plus-circle"></i>
+      <i className="fa fa-plus-circle"></i>
     </>
   );
 };

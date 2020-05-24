@@ -156,7 +156,7 @@ export const UserDevice = ({
     <>
       <div className="icon-and-id">
         <div className="icon-container">
-          <i class="fa fa-apple"></i>
+          <i className="fa fa-apple"></i>
         </div>
         <div className="icon-text">
           <div>{deviceID}</div>

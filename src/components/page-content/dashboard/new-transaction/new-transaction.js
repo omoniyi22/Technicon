@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CustomRadioBtn = ({ text }) => {
   return (
     <>
-      <div class="form-check">
+      <div className="form-check">
         <input
           className="form-check-input"
           type="radio"
           name="exampleRadios"
           id="exampleRadios1"
           value="option1"
-          checked
+          defaultChecked
         />
         <label className="form-check-label radio-text" htmlFor="exampleRadios1">
           {text}
@@ -19,6 +20,10 @@ const CustomRadioBtn = ({ text }) => {
       </div>
     </>
   );
+};
+
+CustomRadioBtn.propTypes = {
+  text: PropTypes.string.isRequired
 };
 
 const CustomInput = ({ title, formElementModule }) => {
@@ -30,6 +35,11 @@ const CustomInput = ({ title, formElementModule }) => {
       {formElementModule}
     </CustomInputWrapper>
   );
+};
+
+CustomInput.propTypes = {
+  title: PropTypes.string.isRequired,
+  formElementModule: PropTypes.any.isRequired
 };
 
 const CustomInputWrapper = styled.div`
@@ -61,7 +71,7 @@ export const UserNewTransaction = () => {
                 type="text"
                 placeholder="Phone number"
               />
-              <select class="form-control form-control-lg">
+              <select className="form-control form-control-lg">
                 <option>Mobile Phone</option>
                 <option>Phablet</option>
                 <option>Tablet</option>
@@ -81,7 +91,7 @@ export const UserNewTransaction = () => {
             <CustomInput
               title="Brand"
               formElementModule={
-                <select class="form-control form-control-lg">
+                <select className="form-control form-control-lg">
                   <option>Nokia</option>
                   <option>Samsung</option>
                   <option>iPhone</option>
@@ -145,8 +155,7 @@ const UserNewTransactionWrapper = styled.div`
       }
     }
     .radio-text {
-      //   border: 1px solid blue;
-      padding: 0.3vw 0 0 0.7vw;
+      padding: 1.5vw 0 0 0.7vw;
     }
     .btn-block {
       //   border: 1px solid red;
