@@ -2,7 +2,7 @@ import TechniconAboutImage from "../../../assets/suited-profile.jpg";
 const data = [
   {
     id: 1,
-    image: "",
+    image: TechniconAboutImage,
     topic: "I am the first topic",
     post_content:
       "nfnfowfowf fbfiofnwiofwmof fnwifnwifnwifwof ofiwnifonwifnwfiwnfo  ifowhfiwfwiofonfionfiwfnwpofn",
@@ -12,7 +12,7 @@ const data = [
   },
   {
     id: 2,
-    image: "",
+    image: TechniconAboutImage,
     topic: "I am the second topic",
     post_content:
       "nfnfowfowf fbfiofnwiofwmof fnwifnwifnwifwof ofiwnifonwifnwfiwnfo  ifowhfiwfwiofonfionfiwfnwpofn",
@@ -22,7 +22,7 @@ const data = [
   },
   {
     id: 3,
-    image: "",
+    image: TechniconAboutImage,
     topic: "I am the second topic",
     post_content:
       "nfnfowfowf fbfiofnwiofwmof fnwifnwifnwifwof ofiwnifonwifnwfiwnfo  ifowhfiwfwiofonfionfiwfnwpofn",

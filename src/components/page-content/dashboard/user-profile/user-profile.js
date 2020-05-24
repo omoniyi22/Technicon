@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Avatar, AvatarContainer } from "../../../navbar/navbar";
 import { Button } from "../../button/button";
-
+import { BrowserRouter as Router, Link } from "react-router-dom";
 const UserProfile = () => {
   return (
     <UserProfileWrapper>
@@ -27,9 +27,11 @@ const UserProfile = () => {
       <ProfileNavWrapper>
         <ProfileNav iconName="fa fa-credit-card" text="Payment" />
       </ProfileNavWrapper>
-      <NewTransactionWrapper>
-        <NewTransaction />
-      </NewTransactionWrapper>
+      <Link to="/new-transaction">
+        <NewTransactionWrapper>
+          <NewTransaction />
+        </NewTransactionWrapper>
+      </Link>
     </UserProfileWrapper>
   );
 };

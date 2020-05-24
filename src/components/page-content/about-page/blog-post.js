@@ -13,7 +13,7 @@ export const BlogPostContent = ({
 }) => {
   return (
     <BlogPostWrapper className="row blog-post">
-      <div className="col-3 image-container grow">
+      <div className="image-container grow">
         <img src={image} alt="" />
       </div>
       <div className="col-9 text-container">
@@ -34,19 +34,20 @@ export const BlogPostContent = ({
 export const BlogPostWrapper = styled.div`
   padding: 1.5rem;
   .image-container {
-    border: 1px solid grey;
+    border: 0px solid grey;
     height: 8rem;
     cursor: pointer;
     img {
+      width: 10rem;
       max-height: 100%;
       max-width: 100%;
-      object-fit: contain;
-      object-position: 50% 50%;
+      object-fit: cover;
+      object-position: 50% 10%;
     }
   }
   .text-container {
     // border: 1px solid gold;
-    height: 8rem;
+    min-height: 8rem;
     .blog-post-title {
       height: 1.9rem;
       font-size: 1.25rem;

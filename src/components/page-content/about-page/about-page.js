@@ -110,7 +110,7 @@ const AboutPageWrapper = styled.div`
       }
     }
     .post {
-      height: 11rem;
+      height: inherit;
       border: 2px solid grey;
       margin: auto;
       margin-bottom: 2rem;
