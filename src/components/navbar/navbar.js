@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "../icon/icon";
 import avatar from "../../../src/assets/suited-profile.jpg";
-
+import { BrowserRouter as Router, Link } from "react-router-dom";
 export function NavBar() {
   return (
     <>
@@ -14,7 +14,9 @@ export function NavBar() {
           <NavItem iconClassName="fa-clipboard" text="Legal" />
         </div>
         <div className="col-1">
-          <NavItem iconClassName="fa-exclamation-circle" text="About" />
+          <Link to="/about">
+            <NavItem iconClassName="fa-exclamation-circle" text="About" />
+          </Link>
         </div>
         <div className="col-1">
           <NavItem iconClassName="fa-bell" text="Notifications" />
@@ -23,9 +25,17 @@ export function NavBar() {
           <NavItem iconClassName="fa-sign-out" text="Logout" />
         </div>
         <div className="element col-1">
-          <AvatarContainer marginTop lineHeight centerText marginLeft fullWidth>
-            <Avatar Username="Me" />
-          </AvatarContainer>
+          <Link to="/dashboard">
+            <AvatarContainer
+              marginTop
+              lineHeight
+              centerText
+              marginLeft
+              fullWidth
+            >
+              <Avatar Username="Me" />
+            </AvatarContainer>
+          </Link>
         </div>
       </NavBarWrapper>
     </>
@@ -37,7 +47,7 @@ const NavBarWrapper = styled.div`
   margin: auto;
   background-color: #35586c;
   .element {
-    border-bottom: 6px solid white;
+    // border-bottom: 6px solid white;
   }
 `;
 
