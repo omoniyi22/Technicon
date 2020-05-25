@@ -15,4 +15,7 @@ const UserPaymentGateWayWrapper = styled.div`
     background: rgb(240, 240, 240);
     color: #539dc2;
   }
+  .Home-nav {
+    color: grey;
+  }
 `;
