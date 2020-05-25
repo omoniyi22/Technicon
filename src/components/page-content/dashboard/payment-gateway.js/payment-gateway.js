@@ -131,7 +131,7 @@ const UserNewTransactionWrapper = styled.div`
       height: 28px;
       border-radius: 50%;
       top: -6px;
-      left: -0.5rem;
+      left: -0.6rem;
       position: relative;
       background-color: rgba(22, 22, 22, 0.05);
       content: "";

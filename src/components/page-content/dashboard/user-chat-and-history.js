@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import DashBoard from "./dashboard";
 import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
+import TransactionHistory from "./transaction-history/transaction-history";
 function UserPageChatDashBoard() {
   return (
     <UserPageChatDashBoardWrapper>
-      <DashBoard userActionModule={<UserTransactionAndChat />} />
+      <DashBoard
+        userActionModule={<UserTransactionAndChat />}
+        userAdsModule={<TransactionHistory />}
+      />
     </UserPageChatDashBoardWrapper>
   );
 }

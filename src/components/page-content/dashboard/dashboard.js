@@ -4,16 +4,14 @@ import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transac
 import UserProfile from "./user-profile/user-profile";
 import TransactionHistory from "./transaction-history/transaction-history";
 
-function DashBoard({ userActionModule }) {
+function DashBoard({ userActionModule, userAdsModule }) {
   return (
     <PageWrapper className="row w-100">
       <div className="section user-profile-section">
         <UserProfile />
       </div>
       <div className="section user-transaction-section">{userActionModule}</div>
-      <div className="section user-history-section">
-        <TransactionHistory />
-      </div>
+      <div className="section user-history-section">{userAdsModule}</div>
     </PageWrapper>
   );
 }
@@ -40,10 +38,11 @@ const PageWrapper = styled.div`
       background-color: white;
     }
     .new-transaction-header-text {
-      width: 84%;
+      width: 81%;
       margin: auto;
       position: relative;
       top: 4%;
+      bottom: 1%;
       font-weight: bold;
     }
     height: inherit;

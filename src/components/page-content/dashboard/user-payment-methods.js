@@ -2,10 +2,14 @@ import React from "react";
 import DashBoard from "./dashboard";
 import styled from "styled-components";
 import { UserPayment } from "./payment-gateway.js/payment-gateway";
+import PaymentCardDetails from "./payment-card-details/payment-card-details";
 function UserPaymentGateWay() {
   return (
     <UserPaymentGateWayWrapper>
-      <DashBoard userActionModule={<UserPayment />} />
+      <DashBoard
+        userActionModule={<UserPayment />}
+        userAdsModule={<PaymentCardDetails />}
+      />
     </UserPaymentGateWayWrapper>
   );
 }
@@ -17,5 +21,8 @@ const UserPaymentGateWayWrapper = styled.div`
   }
   .Home-nav {
     color: grey;
+  }
+  .card-details-container {
+    padding-top: 14%;
   }
 `;

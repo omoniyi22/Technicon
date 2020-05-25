@@ -26,7 +26,7 @@ CustomRadioBtn.propTypes = {
   text: PropTypes.string.isRequired
 };
 
-const CustomInput = ({ title, formElementModule }) => {
+export const CustomInput = ({ title, formElementModule }) => {
   return (
     <CustomInputWrapper>
       <label htmlFor="exampleInputEmail1" className="complaint-text">
