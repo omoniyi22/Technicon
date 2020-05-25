@@ -24,7 +24,7 @@ export const UserPayment = () => {
             </div>
             <div class="form-check">
               <input
-                className="form-check-input"
+                className="radio-input"
                 type="radio"
                 name="exampleRadios"
                 id="exampleRadios1"
@@ -48,7 +48,7 @@ export const UserPayment = () => {
             </div>
             <div class="form-check">
               <input
-                className="form-check-input"
+                className="radio-input"
                 type="radio"
                 name="exampleRadios"
                 id="exampleRadios2"
@@ -117,12 +117,43 @@ const UserNewTransactionWrapper = styled.div`
   .payment-method-option {
     display: flex;
     justify-content: space-between;
-    input {
-    }
-    .form-check-input {
+    .radio-input {
       position: relative;
       top: -0.5rem;
       cursor: pointer;
+      font-size: 1.1rem;
+      left: -1rem;
+      visibility: hidden;
+      padding-top: -1rem;
+    }
+    input[type="radio"]:after {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      top: -6px;
+      left: -0.5rem;
+      position: relative;
+      background-color: rgba(22, 22, 22, 0.05);
+      content: "";
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid lightgrey;
+    }
+    input[type="radio"]:checked:after {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      top: -6px;
+      left: -0.6rem;
+      position: relative;
+      background-color: #6495ed;
+      opacity: 0.5;
+      color: blue;
+      content: " ✔";
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid #6495ed;
+      padding-left: 0.3rem;
     }
   }
   #payment-method-text {
