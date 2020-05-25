@@ -13,10 +13,15 @@ export const UserPayment = () => {
         <div className="payment-options">
           <br />
           <br />
-          <div className="payment-method-option">
-            <ProfileNavWrapper shorterHeight forpayment noCursorPointer>
+          <ProfileNavWrapper
+            shorterHeight
+            forpayment
+            noCursorPointer
+            className="payment-method-option"
+          >
+            <div>
               <ProfileNav iconName="fa fa-money" text="Cash" />
-            </ProfileNavWrapper>
+            </div>
             <div class="form-check">
               <input
                 className="form-check-input"
@@ -27,14 +32,20 @@ export const UserPayment = () => {
                 checked
               />
             </div>
-          </div>
-          <div className="payment-method-option">
-            <ProfileNavWrapper shorterHeight forpayment noCursorPointer>
+          </ProfileNavWrapper>
+
+          <ProfileNavWrapper
+            shorterHeight
+            forpayment
+            noCursorPointer
+            className="payment-method-option"
+          >
+            <div>
               <ProfileNav
                 iconName="fa fa-credit-card payment-card"
                 text="****1245"
               />
-            </ProfileNavWrapper>
+            </div>
             <div class="form-check">
               <input
                 className="form-check-input"
@@ -45,7 +56,7 @@ export const UserPayment = () => {
                 checked
               />
             </div>
-          </div>
+          </ProfileNavWrapper>
           <ProfileNavWrapper
             shorterHeight
             forpayment
@@ -105,11 +116,12 @@ const UserNewTransactionWrapper = styled.div`
   }
   .payment-method-option {
     display: flex;
+    justify-content: space-between;
     input {
     }
     .form-check-input {
       position: relative;
-      top: 1rem;
+      top: -0.5rem;
       cursor: pointer;
     }
   }
