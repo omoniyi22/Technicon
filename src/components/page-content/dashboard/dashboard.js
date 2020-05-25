@@ -32,6 +32,10 @@ const PageWrapper = styled.div`
     background-color: white;
   }
   .user-transaction-section {
+    .payment-options {
+      width: 84%;
+      margin: auto;
+    }
     .transaction-and-chat-section {
       background-color: white;
     }

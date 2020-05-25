@@ -5,6 +5,7 @@ import UserPageChatDashBoard from "./components/page-content/dashboard/user-chat
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AboutPage } from "./components/page-content/about-page/about-page";
 import UserPageNewTransaction from "./components/page-content/dashboard/new-transaction-page";
+import UserPaymentGateWay from "./components/page-content/dashboard/user-payment-methods";
 class App extends React.Component {
   render() {
     return (
@@ -14,6 +15,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/dashboard" exact component={UserPageChatDashBoard} />
             <Route path="/new-transaction" component={UserPageNewTransaction} />
+            <Route path="/payment-gateway" component={UserPaymentGateWay} />
             <Route path="/about" component={AboutPage} />
           </Switch>
         </Router>

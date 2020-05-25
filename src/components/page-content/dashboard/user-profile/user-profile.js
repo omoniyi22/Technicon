@@ -21,12 +21,14 @@ const UserProfile = () => {
         <span> B9, ZikHall, UniIbadan</span>
       </LocationWrapper>
       <Button />
-      <ProfileNavWrapper marginTop className="current">
+      <ProfileNavWrapper hoverEffect marginTop className="current">
         <ProfileNav iconName="fa fa-home" text="Dashboard" />
       </ProfileNavWrapper>
-      <ProfileNavWrapper>
-        <ProfileNav iconName="fa fa-credit-card" text="Payment" />
-      </ProfileNavWrapper>
+      <Link to="/payment-gateway">
+        <ProfileNavWrapper hoverEffect>
+          <ProfileNav iconName="fa fa-credit-card" text="Payment" />
+        </ProfileNavWrapper>
+      </Link>
       <Link to="/new-transaction">
         <NewTransactionWrapper>
           <NewTransaction />
@@ -39,11 +41,11 @@ const UserProfile = () => {
   /* <i className="far fa-credit-card"></i> */
 }
 
-const ProfileNav = ({ iconName, text }) => {
+export const ProfileNav = ({ iconName, text }) => {
   return (
     <>
       <i className={`${iconName}`}></i>
-      <span>{text}</span>
+      <span className="nav-text">{text}</span>
     </>
   );
 };
@@ -81,12 +83,12 @@ const NewTransactionWrapper = styled.div`
   }
 `;
 
-const ProfileNavWrapper = styled.div`
-  height: 4.5rem;
+export const ProfileNavWrapper = styled.div`
+  height: ${prop => (prop.shorterHeight ? "3.5rem" : " 4.5rem")};
   margin-top: ${prop => (prop.marginTop ? "2rem" : "0rem")};
-  width: 100%;
+  width: ${prop => (prop.shorterWidth ? "60%" : "100%")};
 
-  padding-left: 10%;
+  padding-left: ${prop => (prop.forpayment ? "0%" : "10%")};
   padding-top: 1.6rem;
   font-size: 1.3rem;
 
@@ -95,12 +97,29 @@ const ProfileNavWrapper = styled.div`
   }
   span {
   }
-  cursor: pointer;
+  cursor: ${prop => (prop.noCursorPointer ? "" : "pointer")};
   &:hover {
-    filter: brightness(90%);
-    background: rgb(240, 240, 240);
+    filter: ${prop => (prop.hoverEffect ? "brightness(90%)" : "0%")};
+    background: ${prop => (prop.hoverEffect ? "rgb(240, 240, 240)" : "0%")};
   }
   transition: 0.3s ease-out;
+  .nav-text {
+    font-weight: bolder;
+    font-size: ${prop => (prop.forpayment ? "0.9rem" : "inherit")};
+    position: relative;
+    top: ${prop => (prop.forpayment ? "-0.6vw" : "")};
+  }
+  border-bottom: ${prop => (prop.forpayment ? "1px solid lightgrey" : "none;")};
+  .fa-money,
+  .payment-card,
+  .payment-plus {
+    position: relative;
+    top: -0.5vw;
+  }
+  border-bottom: ${prop => (prop.noBorderBottom ? "none" : "")};
+  span {
+    color: ${prop => (prop.blackColor ? "black" : "")};
+  }
 `;
 
 const LocationWrapper = styled.div`
