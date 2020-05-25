@@ -135,6 +135,9 @@ const UserNewTransactionWrapper = styled.div`
       margin-bottom: 0.4vw;
       margin-left: 0.4vw;
     }
+    .form-check-input {
+      cursor: pointer;
+    }
     input::placeholder {
       font-size: 0.9rem;
       padding-left: 0.6vw;
@@ -154,7 +157,9 @@ const UserNewTransactionWrapper = styled.div`
       }
     }
     .radio-text {
-      padding: 1.5vw 0 0 0.7vw;
+      padding: 1.7vw 0 0 0.7vw;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
     .btn-block {
       border-radius: 2rem;
