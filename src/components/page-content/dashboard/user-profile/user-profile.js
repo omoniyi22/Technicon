@@ -21,11 +21,13 @@ const UserProfile = () => {
         <span> B9, ZikHall, UniIbadan</span>
       </LocationWrapper>
       <Button />
-      <ProfileNavWrapper hoverEffect marginTop className="current">
-        <ProfileNav iconName="fa fa-home" text="Dashboard" />
-      </ProfileNavWrapper>
+      <Link to="/dashboard">
+        <ProfileNavWrapper hoverEffect marginTop className="Home-nav">
+          <ProfileNav iconName="fa fa-home" text="Dashboard" />
+        </ProfileNavWrapper>
+      </Link>
       <Link to="/payment-gateway">
-        <ProfileNavWrapper hoverEffect>
+        <ProfileNavWrapper hoverEffect className="payment-nav">
           <ProfileNav iconName="fa fa-credit-card" text="Payment" />
         </ProfileNavWrapper>
       </Link>
