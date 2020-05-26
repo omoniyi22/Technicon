@@ -19,6 +19,43 @@ const Headers = ({ heading, bar, subheading }) => {
     </>
   );
 };
+const HeadersWrapper = styled.span`
+  #what-we-do-container {
+    width: 100%;
+    height: inherit;
+    margin-bottom: 0.5rem;
+  }
+  .what-we-do {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+    color: ${prop => (prop.blue ? "#38b0de" : "white")};
+  }
+  #bar-container {
+    height: inherit;
+    width: 100%;
+  }
+  .bar {
+    width: 8%;
+    height: 0.5rem;
+    background-color: #38b0de;
+    margin: auto;
+  }
+  #special-service-container {
+    height: inherit;
+    width: 100%;
+  }
+  .special-service {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    margin: auto;
+    color: ${prop => (prop.blue ? "#38b0de" : "white")};
+    text-align: center;
+  }
+`;
 
 function LandingPage() {
   return (
@@ -34,15 +71,18 @@ function LandingPage() {
         </div>
       </div>
       <div>
-        <Headers
-          heading="What we do"
-          subheading="Our repair services specialize in..."
-          bar={
-            <div id="bar-container">
-              <div className="bar"></div>
-            </div>
-          }
-        />
+        <br />
+        <HeadersWrapper blue>
+          <Headers
+            heading="What we do"
+            subheading="Our repair services specialize in..."
+            bar={
+              <div id="bar-container">
+                <div className="bar"></div>
+              </div>
+            }
+          />
+        </HeadersWrapper>
         <div className="services-wrapper technicon-service">
           <div className="services">
             <div className="brand">
@@ -71,16 +111,18 @@ function LandingPage() {
             </div>
           </div>
         </div>
-        <Headers
-          heading="Use Technicon in three steps..."
-          bar=""
-          subheading={
-            <div>
-              Our unbeateable services has placed us a leaders in <br /> the
-              mobile engineering space
-            </div>
-          }
-        />
+        <HeadersWrapper>
+          <Headers
+            heading="Use Technicon in three steps..."
+            bar=""
+            subheading={
+              <div>
+                Our unbeateable services has placed us a leaders in <br /> the
+                mobile engineering space
+              </div>
+            }
+          />
+        </HeadersWrapper>
         <div className="services-wrapper techicon-steps-wrapper">
           <div className="services">
             <div className="pickup">
@@ -127,41 +169,6 @@ const LandingPageWrapper = styled.div`
     color: white;
     font-weight: bolder;
     width: 85%;
-  }
-  #what-we-do-container {
-    width: 100%;
-    height: inherit;
-    margin-bottom: 0.5rem;
-  }
-  .what-we-do {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    width: 100%;
-    margin: auto;
-    margin-top: 3rem;
-    text-align: center;
-  }
-  #bar-container {
-    height: inherit;
-    width: 100%;
-  }
-  .bar {
-    width: 8%;
-    height: 0.5rem;
-    background-color: #38b0de;
-    margin: auto;
-  }
-  #special-service-container {
-    height: inherit;
-    width: 100%;
-  }
-  .special-service {
-    font-size: 1.2rem;
-    padding-top: 2rem;
-    margin: auto;
-    color: #38b0de;
-    text-align: center;
   }
   .services-wrapper {
     width: 100%;
