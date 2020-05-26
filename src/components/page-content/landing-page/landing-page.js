@@ -127,18 +127,27 @@ function LandingPage() {
           <div className="services">
             <div className="pickup">
               <div className="steps-image"></div>
-              <div className="steps-header"></div>
-              <div className="steps-paragraph"></div>
+              <div className="steps-header">Pickup and delivery</div>
+              <div className="steps-paragraph">
+                We pick up your device and deliver before/after or you may visit
+                a technicon office near you
+              </div>
             </div>
             <div className="realtime">
               <div className="steps-image"></div>
-              <div className="steps-header"></div>
-              <div className="steps-paragraph"></div>
+              <div className="steps-header">Realtime updates</div>
+              <div className="steps-paragraph">
+                Realtime updates on the status of your device as it is being
+                repaired
+              </div>
             </div>
             <div className="experts">
               <div className="steps-image"></div>
-              <div className="steps-header"></div>
-              <div className="steps-paragraph"></div>
+              <div className="steps-header">Expert engineers</div>
+              <div className="steps-paragraph">
+                hire the most trusted techincian to fix your mobile phone and
+                desktop
+              </div>
             </div>
           </div>
         </div>
@@ -239,6 +248,30 @@ const LandingPageWrapper = styled.div`
   .pickup,
   .experts {
     margin-top: 6rem;
+  }
+  .steps-image {
+    height: 55%;
+    width: 70%;
+    margin: auto;
+    background-color: lightgrey;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  .steps-header {
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.7rem;
+    color: #38b0de;
+    margin-bottom: 3%;
+  }
+  .steps-paragraph {
+    width: 88%;
+    margin: auto;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
   }
 `;
 export default LandingPage;
