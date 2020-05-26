@@ -15,7 +15,9 @@ function LandingPage() {
             <UserNewTransaction text="" buttontext="Try for free" />
           </UserNewTransactionOverLay>
         </div>
-        <div className="col-4 homepage-text"></div>
+        <div className="col-5 homepage-text">
+          <p id="hire">Hire expert engineers to fix your gadgets.</p>
+        </div>
       </div>
     </LandingPageWrapper>
   );
@@ -26,15 +28,23 @@ const LandingPageWrapper = styled.div`
   height: 70rem;
   width: 100%;
   .row {
-    object-fit: fill;
+    background-image: url(${BackgroundImage});
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     margin: 0;
-    height: 32rem;
-
+    height: 39rem;
     .new-transaction-from-homepage,
     .homepage-text {
       height: 32rem;
     }
+  }
+  #hire {
+    margin-top: 28rem;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+    width: 85%;
   }
 `;
 export default LandingPage;
