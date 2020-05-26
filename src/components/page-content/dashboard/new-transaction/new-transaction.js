@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const CustomRadioBtn = ({ text }) => {
+export const CustomRadioBtn = ({ text, id, labelId }) => {
   return (
     <>
       <div className="form-check">
@@ -10,11 +10,11 @@ const CustomRadioBtn = ({ text }) => {
           className="form-check-input"
           type="radio"
           name="exampleRadios"
-          id="exampleRadios1"
+          id={id}
           value="option1"
           defaultChecked
         />
-        <label className="form-check-label radio-text" htmlFor="exampleRadios1">
+        <label className="form-check-label radio-text" htmlFor={labelId}>
           {text}
         </label>
       </div>
@@ -42,15 +42,15 @@ CustomInput.propTypes = {
   formElementModule: PropTypes.any.isRequired
 };
 
-const CustomInputWrapper = styled.div`
+export const CustomInputWrapper = styled.div`
   margin-top: 0.2rem;
 `;
 
-export const UserNewTransaction = () => {
+export const UserNewTransaction = ({ text, buttontext }) => {
   return (
     <>
-      <p className="new-transaction-header-text">New transaction</p>
-      <UserNewTransactionWrapper>
+      <p className="new-transaction-header-text">{text}</p>
+      <UserNewTransactionWrapper className="User-transaction-wrapper">
         <form>
           <div className="form-group">
             <CustomInput
@@ -100,15 +100,22 @@ export const UserNewTransaction = () => {
               }
             />
             <br />
+            <CustomRadioBtn
+              id="exampleRadios1"
+              labelId="exampleRadios1"
+              text="I need a dispatch rider"
+            />
             <br />
-            <CustomRadioBtn text="I need a dispatch rider" />
-            <br />
-            <CustomRadioBtn text="I will bring my gadget to a technicon office myself" />
+            <CustomRadioBtn
+              labelId="exampleRadios2"
+              id="exampleRadios2"
+              text="I will bring my gadget to a technicon office myself"
+            />
             <br />
             <br />
             <br />
             <button type="button" className="btn btn-primary btn-lg btn-block">
-              Next
+              {buttontext}
             </button>
           </div>
         </form>
@@ -116,15 +123,28 @@ export const UserNewTransaction = () => {
     </>
   );
 };
+export const UserNewTransactionOverLay = styled.div`
+  padding-top: ${prop => (prop.noPaddingTop ? "0vw" : "1.8vw")};
+  .new-transaction-header-text {
+    width: 82%;
+    margin: auto;
+    font-weight: bold;
+  }
+  .User-transaction-wrapper {
+  }
+`;
 
-const UserNewTransactionWrapper = styled.div`
+export const UserNewTransactionWrapper = styled.div`
   background-color: white;
   border: none;
-  width: 84%;
+  width: 82%;
   margin: auto;
-  margin-top: 2.5vw;
-  min-height: 40rem;
+  margin-top: 0.5vw;
+  min-height: 35rem;
   form {
+    .form-check {
+      height: 1rem;
+    }
     padding: 2vw;
     .complaint-text {
       width: 84%;
@@ -149,7 +169,48 @@ const UserNewTransactionWrapper = styled.div`
     .input-with-select {
       display: flex;
     }
+    .form-check {
+      display: inline-block;
+      position: relative;
+      padding: 0 6px;
+      margin: 10px 0 0;
+    }
 
+    .form-check input[type="radio"] {
+      display: none;
+    }
+
+    .form-check label {
+      color: #666;
+      font-weight: normal;
+    }
+
+    .form-check label:before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      margin: 0 5px 0 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 11px;
+      border: 2px solid #33a1c9;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .form-check input[type="radio"]:checked + label:after {
+      border-radius: 11px;
+      cursor: pointer;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      content: " ";
+      display: block;
+      background: #33a1c9;
+    }
     select {
       min-height: 3rem;
       font-size: 15px;
@@ -157,12 +218,13 @@ const UserNewTransactionWrapper = styled.div`
       }
     }
     .radio-text {
-      padding: 1.7vw 0 0 0.7vw;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: bold;
     }
     .btn-block {
       border-radius: 2rem;
+      background-color: #33a1c9;
+      border: none;
       height: 3.5rem;
       line-height: 100%;
     }
@@ -171,6 +233,7 @@ const UserNewTransactionWrapper = styled.div`
     }
     .phone-brand-details {
       border-radius: 0px 5px 5px 0px;
+      font-size: 0.9rem;
     }
   }
 `;

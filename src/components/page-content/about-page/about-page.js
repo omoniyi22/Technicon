@@ -53,8 +53,6 @@ const AboutPageContent = () => {
   );
 };
 const AboutPageWrapper = styled.div`
-  width: 100%;
-
   height: inherit;
   .about-technicon-container {
     margin-top: 5%;

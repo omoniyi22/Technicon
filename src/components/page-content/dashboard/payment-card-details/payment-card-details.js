@@ -37,7 +37,6 @@ const CustomFormElementWrapper = styled.div`
     font-size: 0.9rem;
   }
   .icon {
-    // border: 1px solid red;
     position: relative;
     top: -1.8rem;
     left: ${prop => (prop.calenderIcon ? "80%" : "85%")};

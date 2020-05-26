@@ -7,13 +7,16 @@ export function NavBar() {
   return (
     <>
       <NavBarWrapper className="row">
-        <div className=" col-1 offset-5">
+        <div className=" col-1 logo offset-1">
+          <Link to="/">Logo</Link>
+        </div>
+        <div className=" col-1 offset-4">
           <NavItem iconClassName="fa-users" text="Share" />
         </div>
         <div className="col-1">
           <NavItem iconClassName="fa-clipboard" text="Legal" />
         </div>
-        <div className="col-1"> 
+        <div className="col-1">
           <Link to="/about">
             <NavItem iconClassName="fa-exclamation-circle" text="About" />
           </Link>
@@ -46,8 +49,11 @@ const NavBarWrapper = styled.div`
   width: 100%;
   margin: auto;
   background-color: #35586c;
-  .element {
-    // border-bottom: 6px solid white;
+  .logo {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin: auto;
   }
 `;
 

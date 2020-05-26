@@ -37,14 +37,6 @@ const PageWrapper = styled.div`
     .transaction-and-chat-section {
       background-color: white;
     }
-    .new-transaction-header-text {
-      width: 81%;
-      margin: auto;
-      position: relative;
-      top: 4%;
-      bottom: 1%;
-      font-weight: bold;
-    }
     height: inherit;
     width: 37%;
     /* the .right-chat below is what pushes the chat with the blue border to the right.*/
