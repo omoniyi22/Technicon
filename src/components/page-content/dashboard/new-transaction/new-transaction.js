@@ -227,6 +227,10 @@ export const UserNewTransactionWrapper = styled.div`
       border: none;
       height: 3.5rem;
       line-height: 100%;
+      transition: 0.2s ease-in;
+    }
+    .btn-block:hover {
+      filter: brightness(90%);
     }
     .phone-number-details {
       border-radius: 5px 0rem 0rem 5px;
