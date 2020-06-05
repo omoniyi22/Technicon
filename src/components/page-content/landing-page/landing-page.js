@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BackgroundImage from "../../../assets/fine-bg.jpg";
 import {
   UserNewTransaction,
-  UserNewTransactionOverLay
+  UserNewTransactionOverLay,
 } from "../dashboard/new-transaction/new-transaction";
 import SignUp from "../../signup/signup";
 import SignIn from "../../signin/signin";
@@ -23,6 +23,7 @@ const Headers = ({ heading, bar, subheading }) => {
     </>
   );
 };
+
 const HeadersWrapper = styled.span`
   #what-we-do-container {
     width: 100%;
@@ -36,7 +37,7 @@ const HeadersWrapper = styled.span`
     margin: auto;
     margin-top: 3rem;
     text-align: center;
-    color: ${prop => (prop.blue ? "#38b0de" : "white")};
+    color: ${(prop) => (prop.blue ? "#38b0de" : "white")};
   }
   #bar-container {
     height: inherit;
@@ -56,7 +57,7 @@ const HeadersWrapper = styled.span`
     font-size: 1.2rem;
     padding-top: 2rem;
     margin: auto;
-    color: ${prop => (prop.blue ? "#38b0de" : "white")};
+    color: ${(prop) => (prop.blue ? "#38b0de" : "white")};
     text-align: center;
   }
 `;
@@ -108,7 +109,7 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true
+      show: true,
     };
   }
   // modal
@@ -217,7 +218,7 @@ class LandingPage extends React.Component {
         <SignIn /> */}
         <br />
         <br />
-        <ModalTest show={this.state.show}>
+        {/* <ModalTest show={this.state.show}>
           <div className="coming-soon-container">
             <h1>We're Coming Soon</h1>
             <div className="action">
@@ -229,7 +230,7 @@ class LandingPage extends React.Component {
               <div className="action-btn readmore">Subscribe</div>
             </div>
           </div>
-        </ModalTest>
+        </ModalTest> */}
       </LandingPageWrapper>
     );
   }
@@ -338,7 +339,7 @@ const LandingPageWrapper = styled.div`
     width: 20rem;
     height: 6.5rem;
     border-radius: 0.5rem;
-    background-color: lightgrey;
+    background-color: #2d9cdb;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -355,7 +356,7 @@ const LandingPageWrapper = styled.div`
     height: 4.1vw;
     margin: auto;
     border-radius: 50%;
-    background-color: lightgrey;
+    background-color: #2d9cdb;
   }
   .brand-text,
   .andriod-text,
