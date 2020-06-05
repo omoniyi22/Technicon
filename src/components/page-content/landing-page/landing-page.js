@@ -218,7 +218,7 @@ class LandingPage extends React.Component {
         <SignIn /> */}
         <br />
         <br />
-        {/* <ModalTest show={this.state.show}>
+        <ModalTest show={this.state.show}>
           <div className="coming-soon-container">
             <h1>We're Coming Soon</h1>
             <div className="action">
@@ -230,7 +230,7 @@ class LandingPage extends React.Component {
               <div className="action-btn readmore">Subscribe</div>
             </div>
           </div>
-        </ModalTest> */}
+        </ModalTest>
       </LandingPageWrapper>
     );
   }
