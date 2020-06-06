@@ -299,9 +299,7 @@ function Footer(props) {
   return (
     <div style={styles.footer}>
       <div style={styles.line}></div>
-      <div style={styles.text}>
-        {props.title} created by Smashcat &copy; 2017
-      </div>
+      <div style={styles.text}>{props.title} &copy;</div>
     </div>
   );
 }
