@@ -63,6 +63,7 @@ const HeadersWrapper = styled.span`
   #special-service-container {
     height: inherit;
     width: 100%;
+    padding-bottom: 1rem;
   }
   .special-service {
     font-size: 1.2rem;
