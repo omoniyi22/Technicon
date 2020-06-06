@@ -119,7 +119,7 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true
+      show: false
     };
   }
   // modal
@@ -571,7 +571,7 @@ const LandingPageWrapper = styled.div`
   }
   @media (max-width: 705px) {
     position: relative;
-    top: 5rem;
+    top: 4.7rem;
   }
   .use-technicon {
     background: rgba(45, 156, 219, 0.5);
