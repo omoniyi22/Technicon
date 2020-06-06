@@ -333,6 +333,7 @@ const LandingPageWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin: auto;
+    margin-top: 1.5rem;
   }
   .action-btn {
     border-radius: 8px;
