@@ -39,9 +39,6 @@ const UserProfile = () => {
     </UserProfileWrapper>
   );
 };
-{
-  /* <i className="far fa-credit-card"></i> */
-}
 
 export const ProfileNav = ({ iconName, text }) => {
   return (

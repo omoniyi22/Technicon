@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Progress } from "../progress";
-import { BlogPost, BlogPostContent } from "./blog-post";
+import { BlogPostContent } from "./blog-post";
 import TechniconAboutImage from "../../../assets/suited-profile.jpg";
 import Data from "./data";
 

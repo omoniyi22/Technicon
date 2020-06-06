@@ -10,7 +10,7 @@ export function NavBar() {
         <div className=" col-1 logo offset-1">
           <Link to="/">Logo</Link>
         </div>
-        <div className=" col-1 offset-4">
+        <div className=" col-1 offset-4 users-nav">
           <NavItem iconClassName="fa-users" text="Share" />
         </div>
         <div className="col-1">
@@ -21,13 +21,13 @@ export function NavBar() {
             <NavItem iconClassName="fa-exclamation-circle" text="About" />
           </Link>
         </div>
-        <div className="col-1">
+        <div className="col-1 notification">
           <NavItem iconClassName="fa-bell" text="Notifications" />
         </div>
         <div className="col-1">
           <NavItem iconClassName="fa-sign-out" text="Logout" />
         </div>
-        <div className="element col-1">
+        <div className=" col-1 me-nav">
           <Link to="/dashboard">
             <AvatarContainer
               marginTop
@@ -55,6 +55,63 @@ const NavBarWrapper = styled.div`
     text-align: center;
     margin: auto;
   }
+  @media (max-width: 1136px) {
+    .me-nav {
+      margin-right: 5rem;
+    }
+    .col-1 {
+      margin-left: 1rem;
+    }
+    .fa-users,
+    .fa-clipboard,
+    .fa-exclamation-circle {
+      position: relative;
+      left: -0.2rem;
+    }
+  }
+  .fa-bell {
+    position: relative;
+    left: 0.4rem;
+  }
+  @media (max-width: 990px) {
+    .fa-users {
+      position: relative;
+      left: -0.4rem;
+    }
+  }
+  @media (max-width: 850px) {
+    .me-nav {
+      margin-top: 1.2%;
+    }
+    .notification {
+      position: relative;
+      left: -1.1rem;
+    }
+    .fa-bell {
+      position: relative;
+      left: 1rem;
+    }
+  }
+  @media (max-width: 790px) {
+    .me-nav {
+      margin-right: 3rem;
+    }
+    .col-1 {
+      margin-left: 1.5rem;
+    }
+    .fa-users {
+      position: relative;
+      left: -0.2rem;
+    }
+  }
+  @media (max-width: 552px) {
+    .me-nav {
+      margin-right: 1rem;
+    }
+    .col-1 {
+      margin-left: 1.5rem;
+    }
+  }
 `;
 
 const NavItem = ({ iconClassName, text }) => {
@@ -78,6 +135,16 @@ const NavItemWrapper = styled.div`
   }
   &:hover {
     filter: brightness(90%);
+  }
+  @media (max-width: 1000px) {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 790px) {
+    p {
+      font-size: 0.7rem;
+    }
   }
 `;
 export const Avatar = ({ Username }) => {
@@ -106,6 +173,9 @@ export const AvatarContainer = styled.div`
     margin-left: ${prop => (prop.marginLeft ? "27%" : "24%")};
     margin-top: ${prop => (prop.marginTopImg ? "2rem" : "0rem")};
     // border: 1px solid red;
+    @media (max-width: 850px) {
+      margin-left: ${prop => (prop.marginLeft ? "17%" : "24%")};
+    }
     &:hover {
       filter: brightness(90%);
     }

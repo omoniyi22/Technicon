@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Button = () => {
-  return <ButtonWrapper>Edit profile</ButtonWrapper>;
+export const Button = ({ type = "submit" }) => {
+  return <ButtonWrapper type={type}>Edit profile</ButtonWrapper>;
 };
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.button`
   height: 2.5rem;
   width: 14rem;
   margin: auto;

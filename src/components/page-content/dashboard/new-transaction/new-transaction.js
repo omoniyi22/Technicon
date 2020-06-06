@@ -123,6 +123,32 @@ export const UserNewTransaction = ({ text, buttontext }) => {
     </>
   );
 };
+
+export const SubmitButton = ({ buttontext, type = "button" }) => {
+  return (
+    <>
+      <SubmitButtonContainer
+        type={type}
+        className="btn btn-primary btn-lg btn-block"
+      >
+        {buttontext}
+      </SubmitButtonContainer>
+    </>
+  );
+};
+export const SubmitButtonWrapper = styled.div`
+  margin-top: ${prop => (prop.marginTop ? "2rem" : "")};
+  display: ${prop => (prop.displayNone ? "none" : "block")};
+`;
+export const SubmitButtonContainer = styled.button`
+  border-radius: 1.5rem;
+  background-color: #33a1c9;
+  height: 3.5rem;
+  line-height: 2.5rem;
+  transition: 0.2s ease-in;
+  &:hover {
+    filter: brightness(90%);
+`;
 export const UserNewTransactionOverLay = styled.div`
   padding-top: ${prop => (prop.noPaddingTop ? "0vw" : "1.8vw")};
   .new-transaction-header-text {

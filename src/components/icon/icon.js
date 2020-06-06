@@ -16,6 +16,10 @@ const FontAwesome = styled.div`
   margin-left: 30%;
   margin-bottom: 11%;
   margin-top: 6%;
+  @media (max-width: 850px) {
+    font-size: 1.2rem;
+    margin-top: 50%;
+  }
 `;
 
 export default Icon;
