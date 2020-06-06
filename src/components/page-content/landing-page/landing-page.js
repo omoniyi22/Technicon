@@ -8,6 +8,17 @@ import {
 import SignUp from "../../signup/signup";
 import SignIn from "../../signin/signin";
 import ContactForm from "../contact_form/contact_form";
+import laptopImg from "../../../assets/svg/laptop-img.svg";
+import phoneImg from "../../../assets/svg/phone-img.svg";
+import tabletImg from "../../../assets/svg/tablet-img.svg";
+import deliveryImg from "../../../assets/svg/delivery-img.svg";
+import updatesImg from "../../../assets/svg/updates-img.svg";
+import engineersImg from "../../../assets/svg/engineers-img.svg";
+import designLeft from "../../../assets/svg/design-left.svg";
+import designRight from "../../../assets/svg/design-right.svg";
+import designLeft2 from "../../../assets/svg/design-left2.svg";
+import designRight2 from "../../../assets/svg/design-right2.svg";
+
 // import ContactForm from "../../contact_form/contact_form";
 
 const Headers = ({ heading, bar, subheading }) => {
@@ -34,9 +45,10 @@ const HeadersWrapper = styled.span`
     font-weight: bolder;
     width: 100%;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 0rem;
     text-align: center;
     color: ${prop => (prop.blue ? "#38b0de" : "white")};
+    padding-top: ${props => (props.muchPaddingTop ? "6rem" : "0")};
   }
   #bar-container {
     height: inherit;
@@ -97,7 +109,6 @@ const ModalTest = ({ show, children }) => {
           left: 50%;
           transform: translate(-50%, -50%);
           border-radius: 12px;
-          // border: 1px solid red;
         }
       `}</style>
     </div>
@@ -122,6 +133,7 @@ class LandingPage extends React.Component {
     return (
       <LandingPageWrapper>
         <div className="row">
+          {/* do not remove the commented div below */}
           {/* <div className="col-5 new-transaction-from-homepage">
             <UserNewTransactionOverLay noPaddingTop>
               <UserNewTransaction text="" buttontext="Try for free" />
@@ -132,7 +144,14 @@ class LandingPage extends React.Component {
           </div>
         </div>
         <div>
-          <br />
+          <div className="designs-container">
+            <div className="design-left">
+              <img src={designLeft} alt="" />
+            </div>
+            <div className="design-right">
+              <img src={designRight} alt="" />
+            </div>
+          </div>
           <HeadersWrapper blue>
             <Headers
               heading="What we do"
@@ -147,14 +166,19 @@ class LandingPage extends React.Component {
           <div className="services-wrapper technicon-service">
             <div className="services">
               <div className="brand">
-                <div className="brand-image"></div>
+                <div className="brand-image">
+                  <img src={laptopImg} />
+                </div>
                 <div className="brand-text">
                   All brands of laptops, and
                   <span className="colored-text"> operating systems</span>
                 </div>
               </div>
               <div className="andriod">
-                <div className="andriod-image"></div>
+                <div className="andriod-image">
+                  {" "}
+                  <img src={phoneImg} />
+                </div>
                 <div className="andriod-text">
                   Android and IOS
                   <span className="colored-text">
@@ -164,7 +188,10 @@ class LandingPage extends React.Component {
                 </div>
               </div>
               <div className="Hardware">
-                <div className="Hardware-image"></div>
+                <div className="Hardware-image">
+                  {" "}
+                  <img src={tabletImg} />
+                </div>
                 <div className="Hardware-text">
                   Hardware and software of
                   <span className="colored-text"> tablets and accessories</span>
@@ -172,22 +199,34 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </div>
-          <HeadersWrapper>
-            <Headers
-              heading="Use Technicon in three steps..."
-              bar=""
-              subheading={
-                <div>
-                  Our unbeateable services has placed us a leaders in <br /> the
-                  mobile engineering space
-                </div>
-              }
-            />
-          </HeadersWrapper>
+          <div className="use-technicon">
+            <div className="designs-container">
+              <div className="design-left">
+                <img src={designLeft2} alt="" />
+              </div>
+              <div className="design-right">
+                <img src={designRight2} alt="" />
+              </div>
+            </div>
+            <HeadersWrapper>
+              <Headers
+                heading="Use Technicon in three steps..."
+                bar=""
+                subheading={
+                  <div>
+                    Our unbeateable services has placed us a leaders in <br />{" "}
+                    the mobile engineering space
+                  </div>
+                }
+              />
+            </HeadersWrapper>
+          </div>
           <div className="services-wrapper techicon-steps-wrapper">
             <div className="services">
               <div className="pickup">
-                <div className="steps-image"></div>
+                <div className="steps-image">
+                  <img src={deliveryImg} alt="" />
+                </div>
                 <div className="steps-header">Pickup and delivery</div>
                 <div className="steps-paragraph">
                   We pick up your device and deliver before/after or you may
@@ -195,7 +234,10 @@ class LandingPage extends React.Component {
                 </div>
               </div>
               <div className="realtime">
-                <div className="steps-image"></div>
+                <div className="steps-image">
+                  {" "}
+                  <img src={updatesImg} alt="" />
+                </div>
                 <div className="steps-header">Realtime updates</div>
                 <div className="steps-paragraph">
                   Realtime updates on the status of your device as it is being
@@ -203,7 +245,10 @@ class LandingPage extends React.Component {
                 </div>
               </div>
               <div className="experts">
-                <div className="steps-image"></div>
+                <div className="steps-image">
+                  {" "}
+                  <img src={engineersImg} alt="" />
+                </div>
                 <div className="steps-header">Expert engineers</div>
                 <div className="steps-paragraph">
                   hire the most trusted techincian to fix your mobile phone and
@@ -215,15 +260,13 @@ class LandingPage extends React.Component {
         </div>
         {/* <SignUp />
         <SignIn /> */}
-        <br />
-        <br />
         <ModalTest show={this.state.show}>
           <div className="coming-soon-container">
             <h1>We're Coming Soon</h1>
             <div className="action">
               <input
                 className="action-btn subscribe subscribe-input"
-                placeholder="email"
+                placeholder="enter email"
                 type="text"
               />
               <div className="action-btn readmore">Subscribe</div>
@@ -236,12 +279,34 @@ class LandingPage extends React.Component {
 }
 
 const LandingPageWrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Segoe UI");
+
+  font-family: Segoe UI;
+  .designs-container {
+    height: 6rem;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+    top: 5rem;
+  }
+  .design-left,
+  .design-right {
+    width: 11.5%;
+    height: 100%;
+  }
+  .design-left img,
+  .design-right img {
+    width: 100%;
+    height: 100%;
+  }
   .subscribe,
   .readmore {
     font-size: 2vw;
     color: white;
     text-align: center;
-    padding-top: 3%;
+    padding-top: 1.2%;
     transition: 0.2s ease-in-out;
   }
   .subscribe:hover {
@@ -264,14 +329,14 @@ const LandingPageWrapper = styled.div`
     color: white;
   }
   .action {
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     margin: auto;
   }
   .action-btn {
     border-radius: 8px;
-    width: 48%;
+    width: 60%;
     border: 0.5px solid white;
     height: 4vw;
     cursor: pointer;
@@ -280,6 +345,7 @@ const LandingPageWrapper = styled.div`
   .readmore {
     background-color: #539dc2;
     border: none;
+    width: 28%;
   }
   .campaign-form-container {
     width: 100%;
@@ -288,11 +354,12 @@ const LandingPageWrapper = styled.div`
     margin-top: 0vw;
   }
   .subscribe-input {
-    font-size: 1.5rem;
+    font-size: 2vw;
     padding-top: 0rem;
+    padding-top: -1rem;
     background-color: lightgrey;
   }
-  background-color: black;
+  // background-color: black;
   height: 100rem;
   width: 100%;
   .row {
@@ -319,10 +386,10 @@ const LandingPageWrapper = styled.div`
   }
   .services-wrapper {
     width: 100%;
-    margin-top: 1.7rem;
+    margin-top: 0rem;
   }
   .technicon-service {
-    margin-bottom: 12vw;
+    margin-bottom: 5vw;
   }
   .services {
     margin: auto;
@@ -342,7 +409,7 @@ const LandingPageWrapper = styled.div`
     margin: auto;
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    background-color: #f2f2f2;
   }
   .brand,
   .Hardware {
@@ -355,7 +422,14 @@ const LandingPageWrapper = styled.div`
     height: 4.1vw;
     margin: auto;
     border-radius: 50%;
-    background-color: lightgrey;
+    background-color: #2d9cdb;
+
+    display: flex;
+  }
+  .brand-image img,
+  .andriod-image img,
+  .Hardware-image img {
+    margin: auto;
   }
   .brand-text,
   .andriod-text,
@@ -371,7 +445,7 @@ const LandingPageWrapper = styled.div`
   }
   .techicon-steps-wrapper {
     padding-bottom: 2.5rem;
-    background-color: black;
+    background: rgba(45, 156, 219, 0.5);
   }
   .pickup,
   .realtime,
@@ -382,6 +456,7 @@ const LandingPageWrapper = styled.div`
     background-color: lightgrey;
     margin: auto;
     background-color: white;
+    padding-bottom: 2rem;
   }
   .pickup,
   .experts {
@@ -391,16 +466,22 @@ const LandingPageWrapper = styled.div`
     height: 55%;
     width: 70%;
     margin: auto;
-    background-color: lightgrey;
+    background-color: white;
     margin-top: 3%;
     margin-bottom: 2%;
+
+    display: flex;
+  }
+  .steps-image img {
+    width: 100%;
+    height: 100%;
   }
   .steps-header {
     text-align: center;
     width: 100%;
     font-weight: normal;
     font-size: 1.7rem;
-    color: #38b0de;
+    color: #0179ad;
     margin-bottom: 3%;
   }
   .steps-paragraph {
@@ -428,7 +509,12 @@ const LandingPageWrapper = styled.div`
       height: 3.5rem;
       margin: auto;
       border-radius: 50%;
-      background-color: lightgrey;
+      background-color: #2d9cdb;
+      display: flex;
+    }
+    .brand-image img,
+    .andriod-image img,
+    .Hardware-image img {
     }
     .row {
       background-image: url(${BackgroundImage});
@@ -436,7 +522,7 @@ const LandingPageWrapper = styled.div`
       background-size: cover;
       width: 100%;
       margin: 0;
-      height: 30rem;
+      height: 25rem;
       .new-transaction-from-homepage,
       .homepage-text {
         height: 32rem;
@@ -462,26 +548,57 @@ const LandingPageWrapper = styled.div`
       font-size: 8vw;
       text-align: center;
       color: white;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
     }
     .action {
-      width: 70%;
-      display: flex;
+      width: 100%;
+      display: block;
       justify-content: space-between;
       margin: auto;
     }
     .action-btn {
-      border-radius: 8px;
-      width: 48%;
-      border: 0.5px solid white;
-      height: 8vw;
-      cursor: pointer;
-      color: white;
-      padding-top: 1.5rem;
+      margin: auto;
+      margin-top: 1rem;
+      height: 2.5rem;
+      font-size: 3vw;
     }
     .subscribe-input {
-      font-size: 2rem;
-      padding-top: 0rem;
+      margin-left: 20%;
+      margin-top: 0rem;
+      height: 2.5rem;
+    }
+  }
+  @media (max-width: 705px) {
+    position: relative;
+    top: 5rem;
+  }
+  .use-technicon {
+    background: rgba(45, 156, 219, 0.5);
+  }
+  @media (max-width: 560px) {
+    .action-btn {
+      margin: auto;
+      margin-top: 1rem;
+      height: 2.5rem;
+      font-size: 3vw;
+    }
+    .readmore {
+      padding-top: 2%;
+    }
+    .subscribe-input {
+      margin-left: 20%;
+      margin-top: 0rem;
+      height: 2.5rem;
+    }
+  }
+  @media (max-width: 560px) {
+    .readmore {
+      padding-top: 3%;
+    }
+  }
+  @media (max-width: 380px) {
+    .readmore {
+      padding-top: 5%;
     }
   }
 `;

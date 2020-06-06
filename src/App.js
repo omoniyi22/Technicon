@@ -7,12 +7,14 @@ import { AboutPage } from "./components/page-content/about-page/about-page";
 import UserPageNewTransaction from "./components/page-content/dashboard/new-transaction-page";
 import UserPaymentGateWay from "./components/page-content/dashboard/user-payment-methods";
 import LandingPage from "./components/page-content/landing-page/landing-page";
+import HamburgerMenu from "./components/hamburger-menu/hamburger-menu";
 class App extends React.Component {
   render() {
     return (
       <>
         <Router>
           <NavBar />
+          <HamburgerMenu />
           <Switch>
             <Route path="/" exact component={LandingPage} />
             <Route path="/dashboard" component={UserPageChatDashBoard} />
