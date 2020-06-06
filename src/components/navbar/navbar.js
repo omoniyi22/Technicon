@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Icon from "../icon/icon";
 import avatar from "../../../src/assets/suited-profile.jpg";
+import about from "../../../src/assets/svg/about.svg";
+import legal from "../../../src/assets/svg/legal.svg";
+import login from "../../../src/assets/svg/login.svg";
+import share from "../../../src/assets/svg/share.svg";
+import logo from "../../../src/assets/svg/real-logo.svg";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import images from "../../assets/images";
 
@@ -9,25 +14,33 @@ export function NavBar() {
   return (
     <>
       <NavBarWrapper className="row">
-        <div className="col-1 logo offset-1">
-          <Link to="/"></Link>
+        <div className=" col-1 logo offset-1">
+          <Link to="/">
+            <div className="logo-container">
+              <img src={logo} alt="" />
+            </div>
+          </Link>
         </div>
         <div className=" col-1 offset-4 users-nav">
-          <NavItem iconClassName="fa-users" text="Share" />
+          <NavItem iconName={share} text="Share" navIconClassName="" />
         </div>
         <div className="col-1">
-          <NavItem iconClassName="fa-clipboard" text="Legal" />
+          <NavItem iconName={legal} text="Legal" navIconClassName="" />
         </div>
         <div className="col-1">
           <Link to="/about">
-            <NavItem iconClassName="fa-exclamation-circle" text="About" />
+            <NavItem iconName={about} text="About" navIconClassName="" />
           </Link>
         </div>
         <div className="col-1 notification">
-          <NavItem iconClassName="fa-bell" text="Notifications" />
+          <NavItem
+            iconName={login}
+            text="Notifications"
+            navIconClassName="notification-img"
+          />
         </div>
         <div className="col-1">
-          <NavItem iconClassName="fa-sign-out" text="Logout" />
+          <NavItem iconName={login} text="Logout" navIconClassName="" />
         </div>
         <div className=" col-1 me-nav">
           <Link to="/dashboard">
@@ -47,10 +60,17 @@ export function NavBar() {
   );
 }
 const NavBarWrapper = styled.div`
+  font-family: inherit;
+  .logo-container {
+    width: 5rem;
+  }
+  .logo-container img {
+    max-width: 5rem;
+  }
   height: 5.5rem;
   width: 100%;
   margin: auto;
-  background-color: #02364d;
+  background: #02364d;
   .logo {
     color: white;
     text-align: center;
@@ -61,6 +81,13 @@ const NavBarWrapper = styled.div`
     background-size: contain;
     height: 44px;
     width: 74px;
+  }
+  @media (max-width: 1160px) {
+    .notification-img {
+      position: relative;
+
+      left: 1.2rem;
+    }
   }
   @media (max-width: 1136px) {
     .me-nav {
@@ -92,7 +119,7 @@ const NavBarWrapper = styled.div`
     }
     .notification {
       position: relative;
-      left: -1.1rem;
+      left: -1.2rem;
     }
     .fa-bell {
       position: relative;
@@ -111,34 +138,46 @@ const NavBarWrapper = styled.div`
       left: -0.2rem;
     }
   }
-  @media (max-width: 552px) {
-    .me-nav {
-      margin-right: 1rem;
-    }
-    .col-1 {
-      margin-left: 1.5rem;
-    }
+  @media (max-width: 705px) {
+    display: none;
   }
 `;
 
-const NavItem = ({ iconClassName, text }) => {
+const NavItem = ({ iconName, text, navIconClassName }) => {
   return (
     <NavItemWrapper>
-      <Icon iconName={`${iconClassName}`} />
+      <div className="nav-img-container">
+        <img src={iconName} alt="" className={navIconClassName} />
+      </div>
       <p>{text}</p>
     </NavItemWrapper>
   );
 };
 const NavItemWrapper = styled.div`
+  .nav-img-container {
+    width: 30%;
+    height: 40%;
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+  .nav-img-container img {
+    width: 100%;
+    height: 100%;
+  }
+
   height: 4rem;
   color: white;
   display: block;
   margin-top: 0.75rem;
   cursor: pointer;
   line-height: 1.115rem;
+  width: 100%;
   p {
     text-align: center;
     font-weight: bold;
+    position: relative;
+    top: 0.4rem;
+    color: #bdbdbd;
   }
   &:hover {
     filter: brightness(90%);
@@ -148,9 +187,23 @@ const NavItemWrapper = styled.div`
       font-size: 0.8rem;
     }
   }
+  @media (max-width: 990px) {
+    .nav-img-container {
+      width: 50%;
+      height: 40%;
+      margin: auto;
+      margin-top: 1.2rem;
+    }
+  }
   @media (max-width: 790px) {
     p {
       font-size: 0.7rem;
+    }
+    .nav-img-container {
+      width: 55%;
+      height: 40%;
+      margin: auto;
+      margin-top: 1.2rem;
     }
   }
 `;
@@ -165,13 +218,13 @@ export const Avatar = ({ Username }) => {
 
 export const AvatarContainer = styled.div`
   height: ${(prop) => (prop.userSectionSize ? "6rem" : "3.5rem")};
-  color: white;
+  color: #bdbdbd;
   width: ${(prop) => (prop.shorterWidth ? "29%" : "100%")};
   margin: auto;
   display: block;
   margin-top: ${(prop) => (prop.marginTop ? "1.1rem" : "0rem")};
   line-height: ${(prop) => (prop.lineHeight ? "1.115rem" : "1rem")};
-  // border: 1px solid green;
+
   img {
     cursor: pointer;
     max-width: 60%;
@@ -179,7 +232,7 @@ export const AvatarContainer = styled.div`
     border-radius: 50%;
     margin-left: ${(prop) => (prop.marginLeft ? "27%" : "24%")};
     margin-top: ${(prop) => (prop.marginTopImg ? "2rem" : "0rem")};
-    // border: 1px solid red;
+
     @media (max-width: 850px) {
       margin-left: ${(prop) => (prop.marginLeft ? "17%" : "24%")};
     }
@@ -189,9 +242,9 @@ export const AvatarContainer = styled.div`
   }
   p {
     text-align: ${(prop) => (prop.centerText ? "center" : "left")};
-    color: ${(prop) => (prop.blackColor ? "black" : "white")};
+    color: ${(prop) => (prop.blackColor ? "black" : "#BDBDBD")};
     font-weight: bold;
-    // border: 1px solid red;
+
     height: 1.1rem;
     width: ${(prop) => (prop.fullWidth ? "100%" : "200%")};
     margin-top: ${(prop) => (prop.marginTopP ? "1.1rem" : "0rem")};

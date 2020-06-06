@@ -1,13 +1,15 @@
 /* Add global styles here */
 
-@font-face {
+/* @font-face {
   font-family: Metropolis;
   src: url("./assets/fonts/Metropolis.otf");
-}
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap");
 
 body {
-  font-family: "Metropolis", -apple-system, system-ui, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Muli", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 16px;
   margin: 0;
   padding: 0;
