@@ -22,10 +22,10 @@ export function NavBar() {
           </Link>
         </div>
         <div className=" col-1 offset-4 users-nav">
-          <NavItem iconName={share} text="Share" navIconClassName="" />
+          {/* <NavItem iconName={share} text="Share" navIconClassName="" /> */}
         </div>
         <div className="col-1">
-          <NavItem iconName={legal} text="Legal" navIconClassName="" />
+          {/* <NavItem iconName={legal} text="Legal" navIconClassName="" /> */}
         </div>
         <div className="col-1">
           <Link to="/#">

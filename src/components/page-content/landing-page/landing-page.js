@@ -175,7 +175,7 @@ const Message = styled.p`
     text-align: center;
   }
   @media screen and (max-width: 360px) {
-    font-size: ${(props) => (props.big ? "1.3rem" : "0.95rem")};
+    font-size: ${(props) => (props.big ? "1.3rem" : "1rem")};
     font-weight: ${(props) => (props.big ? "bold" : "600")};
     text-align: center;
   }
@@ -193,7 +193,7 @@ const Caption = styled.p`
   font-weight: normal;
   @media screen and (max-width: 360px) {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 `;
 

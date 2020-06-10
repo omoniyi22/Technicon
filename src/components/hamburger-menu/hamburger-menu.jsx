@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
     };
   }
 
@@ -34,12 +34,12 @@ class App extends React.Component {
         background: "#02364D",
         width: "100%",
         color: "white",
-        fontFamily: "Segoe UI"
+        fontFamily: "Segoe UI",
       },
       logo: {
         margin: "0 auto",
         position: "relative",
-        left: "-1rem"
+        left: "-1rem",
       },
       body: {
         display: "flex",
@@ -48,10 +48,11 @@ class App extends React.Component {
         width: "100vw",
         height: "100vh",
         filter: this.state.menuOpen ? "blur(2px)" : null,
-        transition: "filter 0.5s ease"
-      }
+        transition: "filter 0.5s ease",
+      },
     };
-    const menu = ["Share", "Legal", "About", "Notification", "Logout"];
+    // const menu = ["Share", "Legal", "About", "Notification", "Logout"];
+    const menu = ["About", "FAQ", "Blog"];
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
@@ -92,7 +93,7 @@ class MenuItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false
+      hover: false,
     };
   }
 
@@ -105,7 +106,7 @@ class MenuItem extends React.Component {
       container: {
         opacity: 0,
         animation: "1s appear forwards",
-        animationDelay: this.props.delay
+        animationDelay: this.props.delay,
       },
       menuItem: {
         fontFamily: `'Open Sans', sans-serif`,
@@ -116,7 +117,7 @@ class MenuItem extends React.Component {
         color: this.state.hover ? "gray" : "#fafafa",
         transition: "color 0.2s ease-in-out",
         animation: "0.5s slideIn forwards",
-        animationDelay: this.props.delay
+        animationDelay: this.props.delay,
       },
       line: {
         width: "90%",
@@ -124,8 +125,8 @@ class MenuItem extends React.Component {
         background: "gray",
         margin: "0 auto",
         animation: "0.5s shrink forwards",
-        animationDelay: this.props.delay
-      }
+        animationDelay: this.props.delay,
+      },
     };
     return (
       <div style={styles.container}>
@@ -152,7 +153,7 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: this.props.open ? this.props.open : false
+      open: this.props.open ? this.props.open : false,
     };
   }
 
@@ -178,11 +179,11 @@ class Menu extends React.Component {
         transition: "height 0.3s ease",
         zIndex: 2,
 
-        marginTop: "4.5rem"
+        marginTop: "4.5rem",
       },
       menuList: {
-        paddingTop: "3rem"
-      }
+        paddingTop: "3rem",
+      },
     };
     return (
       <div style={styles.container}>
@@ -200,7 +201,7 @@ class MenuButton extends React.Component {
     super(props);
     this.state = {
       open: this.props.open ? this.props.open : false,
-      color: this.props.color ? this.props.color : "#02364D"
+      color: this.props.color ? this.props.color : "#02364D",
     };
   }
 
@@ -228,30 +229,30 @@ class MenuButton extends React.Component {
         position: "relative",
         left: "20px",
         marginTop: "20px",
-        marginBottom: "20px"
+        marginBottom: "20px",
       },
       line: {
         height: "6px",
         width: "40px",
         background: this.state.color,
-        transition: "all 0.2s ease"
+        transition: "all 0.2s ease",
       },
       lineTop: {
         transform: this.state.open ? "rotate(45deg)" : "none",
         transformOrigin: "top left",
         marginBottom: this.state.open ? "-9px" : "5px",
         position: "relative",
-        left: this.state.open ? "3px" : ""
+        left: this.state.open ? "3px" : "",
       },
       lineMiddle: {
         opacity: this.state.open ? 0 : 1,
-        transform: this.state.open ? "translateX(-16px)" : "none"
+        transform: this.state.open ? "translateX(-16px)" : "none",
       },
       lineBottom: {
         transform: this.state.open ? "translateX(-1px) rotate(-45deg)" : "none",
         transformOrigin: "top left",
-        marginTop: this.state.open ? "25px" : "5px"
-      }
+        marginTop: this.state.open ? "25px" : "5px",
+      },
     };
     return (
       <div
@@ -284,16 +285,16 @@ function Footer(props) {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      color: props.color
+      color: props.color,
     },
     line: {
       height: "1px",
       width: "90%",
-      background: props.color
+      background: props.color,
     },
     text: {
-      padding: "0.5rem"
-    }
+      padding: "0.5rem",
+    },
   };
 
   return (
@@ -306,12 +307,12 @@ function Footer(props) {
 
 Footer.defaultProps = {
   color: "#02364D",
-  title: "hello world!"
+  title: "hello world!",
 };
 
 Footer.propTypes = {
   color: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 /* Main.jsx */
@@ -321,9 +322,9 @@ class HamburgerMenu extends React.Component {
       main: {
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
         // height: "100vh",
-      }
+      },
     };
 
     return (
