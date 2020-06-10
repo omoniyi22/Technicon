@@ -27,7 +27,7 @@ export function InputWithButton({ name = "Subscribe" }) {
         }
         name="firstName"
         placeholder="Your first name"
-        style={{ width: "250px", marginRight: 20, marginBottom: 10 }}
+        style={{ width: "100%", marginRight: 20, marginBottom: 10 }}
       />
       <Input
         onChange={({ target: { value, name } }) => {
@@ -38,7 +38,7 @@ export function InputWithButton({ name = "Subscribe" }) {
         }}
         name="email"
         placeholder="Enter your email"
-        style={{ width: "250px", marginRight: 20 }}
+        style={{ width: "100%", marginRight: 20 }}
       />
 
       <Button
@@ -76,7 +76,7 @@ export function InputWithButton({ name = "Subscribe" }) {
           borderRadius: 4,
           outline: "none",
           border: "none",
-          width: "250px",
+          width: "100%",
           height: 44,
           marginTop: 20,
         }}
@@ -90,6 +90,5 @@ export function InputWithButton({ name = "Subscribe" }) {
 
 const InputContainer = styled.div`
   display: flex;
-  margin: 1rem 0;
   flex-direction: column;
 `;

@@ -136,10 +136,18 @@ const ComingSoon = () => {
         <Message big>When we launch!</Message>
       </BigContainer>
 
-      <InputWithButton />
+      <InputContainer>
+        <InputWithButton />
+      </InputContainer>
     </ComingContainer>
   );
 };
+
+const InputContainer = styled.div`
+  // border: 1px solid red;
+  width: 280px;
+  margin: 1.2rem 0;
+`;
 
 const BigContainer = styled.div`
   // border: 1px solid red;
@@ -147,7 +155,12 @@ const BigContainer = styled.div`
 
 const ComingContainer = styled.div`
   // border: 1px solid orange;
-  margin: 1.4rem 0;
+  margin: 1.4rem auto;
+  @media screen and (min-width: 1024px) {
+    margin: 1.4rem auto;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
 `;
 
 const Message = styled.p`
@@ -155,6 +168,17 @@ const Message = styled.p`
   font-weight: ${(props) => (props.big ? "bold" : "600")};
   letter-spacing: 0.3px;
   color: #fff;
+
+  @media screen and (max-width: 780px) {
+    font-size: ${(props) => (props.big ? "1.4rem" : "1rem")};
+    font-weight: ${(props) => (props.big ? "bold" : "600")};
+    text-align: center;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: ${(props) => (props.big ? "1.3rem" : "0.95rem")};
+    font-weight: ${(props) => (props.big ? "bold" : "600")};
+    text-align: center;
+  }
 `;
 
 const IntroContainer = styled.div`
@@ -167,6 +191,10 @@ const Caption = styled.p`
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: normal;
+  @media screen and (max-width: 360px) {
+    text-align: center;
+    font-size: 1.2rem;
+  }
 `;
 
 class LandingPage extends React.Component {
@@ -205,9 +233,10 @@ class LandingPage extends React.Component {
               <UserNewTransaction text="" buttontext="Try for free" />
             </UserNewTransactionOverLay>
           </div> */}
-          <div className="col-8 homepage-text">
-            <ComingSoon />
 
+          <ComingSoon />
+
+          <div className="col-8 homepage-text">
             {/* <p id="hire">Hire expert engineers to fix your gadgets.</p> */}
           </div>
         </div>
@@ -588,7 +617,7 @@ const LandingPageWrapper = styled.div`
     .Hardware-image img {
     }
     .row {
-      background-image: url(${BackgroundImage});
+      background-image: url(${images.landingSvg});
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
