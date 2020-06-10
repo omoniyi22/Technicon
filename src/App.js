@@ -8,6 +8,7 @@ import UserPageNewTransaction from "./components/page-content/dashboard/new-tran
 import UserPaymentGateWay from "./components/page-content/dashboard/user-payment-methods";
 import LandingPage from "./components/page-content/landing-page/landing-page";
 import HamburgerMenu from "./components/hamburger-menu/hamburger-menu";
+
 class App extends React.Component {
   render() {
     return (

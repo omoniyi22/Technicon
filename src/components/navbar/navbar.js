@@ -28,22 +28,22 @@ export function NavBar() {
           <NavItem iconName={legal} text="Legal" navIconClassName="" />
         </div>
         <div className="col-1">
-          <Link to="/about">
+          <Link to="/#">
             <NavItem iconName={about} text="About" navIconClassName="" />
           </Link>
         </div>
         <div className="col-1 notification">
-          <NavItem
+          {/* <NavItem
             iconName={login}
             text="Notifications"
             navIconClassName="notification-img"
-          />
+          /> */}
         </div>
         <div className="col-1">
-          <NavItem iconName={login} text="Logout" navIconClassName="" />
+          {/* <NavItem iconName={login} text="Logout" navIconClassName="" /> */}
         </div>
         <div className=" col-1 me-nav">
-          <Link to="/dashboard">
+          {/* <Link to="/dashboard">
             <AvatarContainer
               marginTop
               lineHeight
@@ -53,7 +53,7 @@ export function NavBar() {
             >
               <Avatar Username="Me" />
             </AvatarContainer>
-          </Link>
+          </Link> */}
         </div>
       </NavBarWrapper>
     </>

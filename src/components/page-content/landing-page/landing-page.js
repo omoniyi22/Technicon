@@ -19,6 +19,10 @@ import designRight from "../../../assets/svg/design-right.svg";
 import designLeft2 from "../../../assets/svg/design-left2.svg";
 import designRight2 from "../../../assets/svg/design-right2.svg";
 import images from "../../../assets/images";
+import Landing from "../../landingPage";
+import CustomButton, { InputWithButton } from "../../buttons/customButton";
+import { getBlogPosts } from "../../../services/services";
+
 // import ContactForm from "../../contact_form/contact_form";
 
 const Headers = ({ heading, bar, subheading }) => {
@@ -40,6 +44,7 @@ const HeadersWrapper = styled.span`
     width: 100%;
     height: inherit;
     margin-bottom: 0.5rem;
+    margin-top: 20px;
   }
   .what-we-do {
     font-size: 1.5rem;
@@ -117,11 +122,58 @@ const ModalTest = ({ show, children }) => {
   );
 };
 
+const ComingSoon = () => {
+  return (
+    <ComingContainer>
+      <Caption>We are launching soon</Caption>
+      <IntroContainer>
+        <Message>Stay safe so you could be part</Message>
+        <Message>of our journey!</Message>
+      </IntroContainer>
+
+      <BigContainer>
+        <Message big>Be the first to know</Message>
+        <Message big>When we launch!</Message>
+      </BigContainer>
+
+      <InputWithButton />
+    </ComingContainer>
+  );
+};
+
+const BigContainer = styled.div`
+  // border: 1px solid red;
+`;
+
+const ComingContainer = styled.div`
+  // border: 1px solid orange;
+  margin: 1.4rem 0;
+`;
+
+const Message = styled.p`
+  font-size: ${(props) => (props.big ? "2.6rem" : "1.4rem")};
+  font-weight: ${(props) => (props.big ? "bold" : "600")};
+  letter-spacing: 0.3px;
+  color: #fff;
+`;
+
+const IntroContainer = styled.div`
+  // border: 1px solid red;
+  margin: 1.4rem 0;
+`;
+
+const Caption = styled.p`
+  color: #fafafa;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: normal;
+`;
+
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true,
+      show: false,
     };
   }
   // modal
@@ -131,6 +183,18 @@ class LandingPage extends React.Component {
   hideModal = () => {
     this.setState({ show: false });
   };
+
+  componentDidMount() {
+    console.log(process.env.BACKEND_URL);
+    getBlogPosts()
+      .then((result) => {
+        console.log(result.data);
+      })
+
+      .catch((err) => {
+        console.log(err);
+      });
+  }
   render() {
     return (
       <LandingPageWrapper>
@@ -142,18 +206,21 @@ class LandingPage extends React.Component {
             </UserNewTransactionOverLay>
           </div> */}
           <div className="col-8 homepage-text">
-            <p id="hire">Hire expert engineers to fix your gadgets.</p>
+            <ComingSoon />
+
+            {/* <p id="hire">Hire expert engineers to fix your gadgets.</p> */}
           </div>
         </div>
         <div>
-          <div className="designs-container">
+          {/* <div className="designs-container">
             <div className="design-left">
               <img src={designLeft} alt="" />
             </div>
             <div className="design-right">
               <img src={designRight} alt="" />
             </div>
-          </div>
+          </div> */}
+
           <HeadersWrapper blue>
             <Headers
               heading="What we do"
@@ -364,9 +431,12 @@ const LandingPageWrapper = styled.div`
   height: 100rem;
   width: 100%;
   .row {
-    background-image: url(${images.landingBg});
+    background-image: url(${images.landingSvg});
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     margin: 0;
     height: 39rem;
