@@ -31,7 +31,8 @@ class App extends React.Component {
         opacity: 0.9,
         display: "flex",
         alignItems: "center",
-        background: "#02364D",
+        // background: "#02364D",
+        background: "#f2f2f2",
         width: "100%",
         color: "white",
         fontFamily: "Segoe UI",
@@ -234,7 +235,8 @@ class MenuButton extends React.Component {
       line: {
         height: "6px",
         width: "40px",
-        background: this.state.color,
+        background: "#000",
+        // background: this.state.color,
         transition: "all 0.2s ease",
       },
       lineTop: {

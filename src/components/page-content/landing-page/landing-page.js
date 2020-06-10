@@ -548,7 +548,8 @@ const LandingPageWrapper = styled.div`
   }
   .techicon-steps-wrapper {
     padding-bottom: 2.5rem;
-    background: rgba(45, 156, 219, 0.5);
+    background: rgb(2, 120, 173);
+    // background: rgba(45, 156, 219, 0.5);
   }
   .pickup,
   .realtime,
@@ -676,7 +677,8 @@ const LandingPageWrapper = styled.div`
     top: 4.7rem;
   }
   .use-technicon {
-    background: rgba(45, 156, 219, 0.5);
+    // background: rgba(45, 156, 219, 0.5);
+    background: rgb(2, 120, 173);
   }
   @media (max-width: 560px) {
     .action-btn {
