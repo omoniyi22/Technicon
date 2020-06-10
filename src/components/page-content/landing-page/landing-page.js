@@ -146,7 +146,10 @@ const ComingSoon = () => {
 const InputContainer = styled.div`
   // border: 1px solid red;
   width: 280px;
-  margin: 1.2rem 0;
+  margin: 1.2rem auto;
+  @media screen and (min-width: 1024px) {
+    margin: 1.2rem 0;
+  }
 `;
 
 const BigContainer = styled.div`
