@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { ProfileNavWrapper, ProfileNav } from "../user-profile/user-profile";
+import {  ProfileNav } from "../user-profile/user-profile";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 export const UserPayment = () => {
@@ -13,7 +13,7 @@ export const UserPayment = () => {
         <div className="payment-options">
           <br />
           <br />
-          <ProfileNavWrapper
+          <div
             shorterHeight
             forpayment
             noCursorPointer
@@ -32,9 +32,9 @@ export const UserPayment = () => {
                 checked
               />
             </div>
-          </ProfileNavWrapper>
+          </div>
 
-          <ProfileNavWrapper
+          <div
             shorterHeight
             forpayment
             noCursorPointer
@@ -56,8 +56,8 @@ export const UserPayment = () => {
                 checked
               />
             </div>
-          </ProfileNavWrapper>
-          <ProfileNavWrapper
+          </div>
+          <div
             shorterHeight
             forpayment
             noBorderBottom
@@ -67,7 +67,7 @@ export const UserPayment = () => {
               iconName="fa fa-plus-circle payment-plus"
               text="Add payment card"
             />
-          </ProfileNavWrapper>
+          </div>
           <div className="bridge-line"></div>
           <p className="payment-method-text-2">Promo</p>
           <div className="discount-card">
@@ -81,7 +81,7 @@ export const UserPayment = () => {
           </div>
           <br />
           <Link to="/referral">
-            <ProfileNavWrapper
+            <div
               shorterHeight
               forpayment
               noBorderBottom
@@ -93,7 +93,7 @@ export const UserPayment = () => {
                 iconName="fa fa-gift payment-card"
                 text="Enter referral code"
               />
-            </ProfileNavWrapper>
+            </div>
           </Link>
         </div>
       </UserNewTransactionWrapper>

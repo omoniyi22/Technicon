@@ -6,7 +6,7 @@ import about from "../../../src/assets/svg/about.svg";
 import legal from "../../../src/assets/svg/legal.svg";
 import login from "../../../src/assets/svg/login.svg";
 import share from "../../../src/assets/svg/share.svg";
-import logo from "../../../src/assets/svg/real-logo.svg";
+import logo from "./logo.png";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import images from "../../assets/images";
 
@@ -15,11 +15,7 @@ export function NavBar() {
     <>
       <NavBarWrapper className="row">
         <div className=" col-1 logo offset-1">
-          <Link to="/">
-            <div className="logo-container">
-              <img src={logo} alt="" />
-            </div>
-          </Link>
+         
         </div>
         <div className=" col-1 offset-4 users-nav">
           {/* <NavItem iconName={share} text="Share" navIconClassName="" /> */}

@@ -1,0 +1,65 @@
+.invoice_logo{
+    margin: 15px 0 10px 0;
+    display: flex;
+    img{
+        margin-left: -6px;
+    }
+    .logo_date{
+        font-weight: bold;
+        color: rgba(77, 76, 75, 0.554);
+        font-size: 13px;
+        flex: 2;
+        align-self: flex-end;
+    }
+}
+.invoice_cash{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 19px;
+    color: rgb(98, 94, 94);
+    .cash{
+        align-self: flex-end;
+        font-size: 14.8px;
+        font-weight: bold;
+    }
+    .amount{
+        flex: 2;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.transacts_list{
+    padding-top: 7px;
+    .transact_items{
+        font-size: 15.2px;
+        display: flex;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        color: rgb(98, 94, 94);
+
+        .transact_amount{
+            flex:2;
+            text-align: right;
+            color: rgb(98, 94, 94);
+ 
+        }
+        .transact_total{
+            font-weight:bold;
+            color: rgb(87, 85, 85);
+            align-self: flex-end;
+        }
+        .transact_total_amount{
+            font-size: 16.5px;
+            padding-top: 15.5px;
+            margin-top: 7px;
+            text-align: right;
+            margin-left: auto;
+            padding-left: 60px;
+            font-weight: bold;
+            color: rgb(98, 94, 94);
+        }
+       
+    }
+
+    
+}

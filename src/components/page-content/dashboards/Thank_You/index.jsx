@@ -1,0 +1,1 @@
+export {Thank_You as default} from './ThankYou'

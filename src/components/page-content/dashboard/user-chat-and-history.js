@@ -7,8 +7,7 @@ function UserPageChatDashBoard() {
   return (
     <UserPageChatDashBoardWrapper>
       <DashBoard
-        userActionModule={<UserTransactionAndChat />}
-        userAdsModule={<TransactionHistory />}
+        userActionModule={<UserTransactionAndChat />}userAdsModule={<TransactionHistory />}
       />
     </UserPageChatDashBoardWrapper>
   );

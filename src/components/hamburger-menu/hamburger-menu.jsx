@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./hamburger-menu.css";
 import styled from "styled-components";
-import logo from "../../../src/assets/svg/real-logo.svg";
+import logo from "./logo.png";
 
 /* App.jsx */
 class App extends React.Component {
@@ -24,7 +24,6 @@ class App extends React.Component {
   render() {
     const styles = {
       container: {
-        position: "absolute",
         top: 0,
         left: 0,
         zIndex: "99",
@@ -69,15 +68,16 @@ class App extends React.Component {
     });
 
     return (
-      <div>
+      <div className="nav-correct">
         <div style={styles.container}>
+          
           <MenuButton
             open={this.state.menuOpen}
             onClick={() => this.handleMenuClick()}
             color="white"
           />
           <div style={styles.logo}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" width="76px"/>
           </div>
         </div>
         <Menu open={this.state.menuOpen}>{menuItems}</Menu>
@@ -226,15 +226,15 @@ class MenuButton extends React.Component {
         justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
-        padding: "4px",
+        padding: "px",
         position: "relative",
         left: "20px",
-        marginTop: "20px",
-        marginBottom: "20px",
+        marginTop: "10px",
+        marginBottom: "10px",
       },
       line: {
-        height: "6px",
-        width: "40px",
+        height: "3px",
+        width: "30px",
         background: "#000",
         // background: this.state.color,
         transition: "all 0.2s ease",

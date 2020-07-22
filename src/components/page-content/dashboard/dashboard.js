@@ -1,57 +1,25 @@
-import React from "react";
-import styled from "styled-components";
+import React, { Component } from "react";
 import { UserTransactionAndChat } from "./user-transaction-and-chat/user-transaction-and-chat";
 import UserProfile from "./user-profile/user-profile";
 import TransactionHistory from "./transaction-history/transaction-history";
+import  './dashboard.scss'
 
-function DashBoard({ userActionModule, userAdsModule }) {
-  return (
-    <PageWrapper className="row w-100">
-      <div className="section user-profile-section">
-        <UserProfile />
+class DashBoard extends Component {
+  render(){
+    return (
+      <div className="row Dashboard mx-md-5 mt-md-4 border">
+        <div className="col-md-6 col-sm ChatBoard border px-2">
+          <UserTransactionAndChat/>
+        </div>
+        <div className="col-md-6 col-sm border px-2">
+          <UserProfile />
+          <TransactionHistory/>
+        </div>
+        {/* <div className="col-md-4 col-sm Transboard border px-2">
+        </div> */}
       </div>
-      <div className="section user-transaction-section">{userActionModule}</div>
-      <div className="section user-history-section">{userAdsModule}</div>
-    </PageWrapper>
-  );
+    );
+  }
 }
-
-const PageWrapper = styled.div`
-  margin: auto;
-  background-color: rgb(22, 22, 22, 0.04);
-  .section {
-    border: 1px solid lightgrey;
-    box-shadow: 1px 1px 1px 1px lightgrey;
-  }
-  .user-profile-section {
-    height: 26rem;
-    width: 27%;
-    margin-left: 7.5%;
-    background-color: white;
-  }
-  .user-transaction-section {
-    .payment-options {
-      width: 84%;
-      margin: auto;
-    }
-    .transaction-and-chat-section {
-      background-color: white;
-    }
-    height: inherit;
-    width: 37%;
-    /* the .right-chat below is what pushes the chat with the blue border to the right.*/
-    .right-chat {
-      float: right;
-      margin-right: 0.7vw;
-      min-width: 10rem;
-    }
-  }
-  .user-history-section {
-    max-height: 27.7rem;
-    border: none;
-    box-shadow: none;
-    width: 21%;
-  }
-`;
 
 export default DashBoard;

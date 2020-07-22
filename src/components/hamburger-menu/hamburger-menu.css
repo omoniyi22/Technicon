@@ -18,6 +18,10 @@
     transform: translateX(0);
   }
 }
+.nav-correct{
+  display: relative  !important;
+  width: 100%;
+}
 
 @keyframes shrink {
   0% {
@@ -26,4 +30,9 @@
   100% {
     width: 90%;
   }
+}
+.ham-menu{
+  width: 20px;
+  height: 20px;
+border: 1px solid;
 }

@@ -10,7 +10,6 @@ const Landing = () => {
               Learn the latest tech skill at your convenience with reduced cost
               on data
             </div> */}
-
           <div>
             <p className="head-title">Be in Demand</p>
             <p className="p-tag">

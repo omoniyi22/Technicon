@@ -1,0 +1,54 @@
+.fit_in{
+    width: 100%;
+    min-height: 217px;
+    max-height: 36vmin;
+    height: 34vmin;
+    margin-top: 8px;
+    .pickup_map{
+        left: 0;
+        background-image: url('./map.png');
+        width: 100%;
+        min-height: 217px;
+        max-height: 36vmin;
+        height: 34vmin;
+
+    }
+}
+
+@media screen and (max-width:767px){
+    .pickup_map{
+        margin-top: 0px;
+        
+    }
+}
+
+.pickup_content{
+    border-radius: 23px ;
+    margin-top: -20px !important;
+    @include heart_center();
+    .pickup_text_1{
+        margin-top:90px;
+    }
+    .fa {
+        color: rgb(75, 167, 243);
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .enable_loaction{
+        color: rgb(138, 134, 134);
+        font-weight: bold;
+        font-size: 14.6px;
+    }
+}
+.pickup_form{
+    margin-top: 27px;
+
+}
+.pickup_button_3{
+    @include large_button()
+}
+
+.down_button{
+    margin-top: 30px;
+    @include large_button_oda()
+}

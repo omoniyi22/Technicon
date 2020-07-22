@@ -1,0 +1,97 @@
+.fit_in{
+    width: 100%;
+    min-height: 219px;
+    max-height: 36vmin;
+    height: 34vmin;
+    margin-top: 8px;
+    .pickup_map{
+        left: 0;
+        background-image: url('./map.png');
+        width: 100%;
+        min-height: 219px;
+        max-height: 36vmin;
+        height: 34vmin;
+
+    }
+}
+
+@media screen and (max-width:767px){
+    .pickup_map{
+        margin-top: 0px;
+        
+    }
+}
+
+.pickup_content{
+    border-radius: 23px ;
+    margin-top: -20px !important;
+    @include heart_center();
+    .pickup_text_1{
+        margin-top:10px;
+    }
+    .fa {
+        color: rgb(75, 167, 243);
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .enable_loaction{
+        color: rgb(138, 134, 134);
+        font-weight: bold;
+        font-size: 14.6px;
+    }
+}
+.pickup_form{
+    margin-top: 47px;
+    .left{
+        margin-top: 2px;
+        flex-direction: column;
+        @include heart_center();
+        .vecti{
+            width: fit-content;
+        }
+    }
+    .right{
+        padding-right: 8px;
+        flex: 2;
+        margin-left: 11px;
+        .new_transaction_input{
+            input{
+                background:#F5F5F5 ;
+                font-size: 13px !important;
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+            }
+            select{
+                font-size: 12.7px !important;
+                padding-top: 0px !important;
+                padding-bottom: 0px !important;
+            }
+            .bolo{
+                border-width: 4px !important;
+                border-color: rgb(255, 255, 255) !important;;
+            }
+        }
+        .new_transaction_label{
+            padding-left: 2px;
+            font-size: 11.4px;
+            color: rgba(148, 148, 148, 0.739);
+        }
+        .custom-control-label{
+            height: 23px;
+            padding-top: 4px;
+            font-weight: bold;
+            font-size: 12.2px;
+        }
+        .new_transaction_button{
+            @include heart_center();
+            button{
+                @include large_button();           
+            }
+        }
+        
+    }
+}
+.pickup_button_3{
+    
+    @include large_button_oda()
+}
