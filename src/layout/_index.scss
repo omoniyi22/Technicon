@@ -1,0 +1,16 @@
+@media (min-width: 779px) {
+    .nav_bar{
+        display: block;
+        @import './Navbar/Navbar';
+    }
+    .side_nav{
+        display: none;
+        @import './Side_Nav/Sidebar';
+    }
+}
+
+@media (max-width: 779px) {
+    .nav_bar{
+        display: none !important;
+    } 
+}

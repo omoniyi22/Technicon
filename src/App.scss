@@ -1,0 +1,23 @@
+@import './components/scope';
+@import './layout/scope';
+@import './layout/extendible';
+@font-face {
+    font-family: 'MyWebFont';
+    src: url(./assets/fonts/Metropolis.otf); /* IE9 Compat Modes */
+        
+}
+* {
+  font-family: 'MyWebFont';
+
+  margin: 0;
+  padding: 0;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
