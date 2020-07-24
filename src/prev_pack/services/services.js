@@ -1,7 +1,7 @@
 import { BLOG, NEWSLETTER } from "./api";
 import axios from "axios";
 
-// const configParams = {};
+const configParams = {};
 
 export function getBlogPosts() {
   return axios.get(BLOG);

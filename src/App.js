@@ -19,7 +19,7 @@ class App extends React.Component {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/new-transaction" component={Dashboard} />
             <Route path="/payment-gateway" component={Dashboard} />
-            <Route path="/" exact component={LandingPage} />
+            <Route path="/" component={LandingPage} />
           </Switch>
         </Router>
       </>

@@ -24,9 +24,7 @@ class App extends React.Component {
   render() {
     const styles = {
       container: {
-        position: "absolute",
-        top: 0,
-        left: 0,
+        width:"100%",
         zIndex: "99",
         opacity: 0.9,
         display: "flex",
@@ -69,7 +67,7 @@ class App extends React.Component {
     });
 
     return (
-      <div>
+      <div className="w-100">
         <div style={styles.container}>
           <MenuButton
             open={this.state.menuOpen}

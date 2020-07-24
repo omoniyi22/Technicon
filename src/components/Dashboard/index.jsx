@@ -16,6 +16,9 @@ import Thank_You from './Thank_You'
 import Reach_Out_ID from './Reached_Out'
 import OfficeAddress from "./Office_Address";
 
+import LogIn from './../Log_In'
+import SignUp from './../Sign_Up'
+
 import './index.scss'
 //Switch Dashboard components
 import SwitchEffect from './Switch'
@@ -32,13 +35,16 @@ class Dashboard extends Component {
               <div className="Dash_1 col-lg-4 col-md-6  mb-4 ">
                 <div className=" w-100 mb-4 mt-2">
                   {/* <UserProfile/> */}
-              <OfficeAddress/>
+              {/* <OfficeAddress/> */}
+              <LogIn/>
+              {/* <EditProfile/> */}
               </div>  
               </div>  
               <div className={`Dash_2 col-lg-4 ${!Switch[2] && "border "} col-md-6 `}>
                 <div className=" w-100 mb-4 mt-2">
                 {/* {Switch[0] == null ? <ChatBox/> : Switch[0]} */}
-                  <Thank_You/>
+                  {/* <Thank_You/> */}
+                  <SignUp/>
                 </div>
               </div>  
               <div className="Dash_3 col-lg-4 col-md-6 mx-0 ">
@@ -47,6 +53,8 @@ class Dashboard extends Component {
                 {/* <PaymentGateway/> */}
 
                 <PickupLocation/>
+                {/* <SignUp/> */}
+
                 </div>
               </div>  
             </div>

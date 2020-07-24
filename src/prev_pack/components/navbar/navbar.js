@@ -180,7 +180,7 @@ const NavItemWrapper = styled.div`
     color: #bdbdbd;
   }
   &:hover {
-    filter: brightness(90%);
+    filter: brightness(200%);
   }
   @media (max-width: 1000px) {
     p {

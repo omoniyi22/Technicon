@@ -27,7 +27,7 @@ class EditProfile extends Component{
                         <div className="edit_input row mx-0 md-form my-0">
                             <div className="fa fa-user"></div>
                             <div className=" form_input ">
-                                <input className="form-control py-0 form-control-sm border-bottom my-0" value="Deborah Joseph"/>
+                                <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Full Name"/>
                             </div>
                             <div className="fa fa-pen"/>
                         </div>
@@ -39,7 +39,7 @@ class EditProfile extends Component{
                         <div className="edit_input row mx-0 md-form my-0">
                             <div className="fa fa-envelope"></div>
                             <div className=" form_input Email ">
-                                <input className="form-control py-0 form-control-sm border-bottom my-0" value="Deborah Joseph"/>
+                                <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Email Address"/>
                             </div>
                             <div className="fa fa-pen"/>
                         </div>
@@ -51,7 +51,7 @@ class EditProfile extends Component{
                         <div className="edit_input row mx-0 md-form my-0">
                             <div className="fa fa-phone-alt"></div>
                             <div className=" form_input Phone ">
-                                <input className="form-control py-0 form-control-sm border-bottom my-0" value="Deborah Joseph"/>
+                                <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Phone Number"/>
                             </div>
                             <div className="fa fa-pen"/>
                         </div>
@@ -63,7 +63,7 @@ class EditProfile extends Component{
                         <div className="edit_input row mx-0 md-form my-0">
                             <div className="fa fa-map-marker-alt"></div>
                             <div className=" form_input Location">
-                                <input className="form-control py-0 form-control-sm border-bottom my-0" value="Deborah Joseph"/>
+                                <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Location"/>
                             </div>
                             <div className="fa fa-pen"/>
                         </div>
@@ -75,7 +75,7 @@ class EditProfile extends Component{
                         <div className="edit_input row mx-0 md-form my-0">
                             <div className="fa fa-user"></div>
                             <div className=" form_input ">
-                                <input className="form-control py-0 form-control-sm border-bottom my-0" value="Deborah Joseph"/>
+                                <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Birthday"/>
                             </div>
                             <div className="fa fa-pen"/>
                         </div>
