@@ -8,51 +8,37 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <!-- Bootstrap 4 -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    /> -->
-    <!-- font awesome icons -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/
-font-awesome/4.6.3/css/font-awesome.min.css"
-    />  -->
-
     <link href="/fontsawesome/css/all.css" rel="stylesheet" />
     <link href="/BootFont/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/BootFont/css/mdb.min.css" rel="stylesheet" />
     <link href="/BootFont/css/style.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="swiper/package/css/swiper.min.css">
+    <link rel="stylesheet" href="BootFont/animate.css">
     <title>Technicon | Your device needs the perfect care</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
     <div id="root"></div>
-  
-
+    
     <script type="text/javascript" src="BootFont/js/popper.min.js"></script>
-    <script type="text/javascript" src="BootFont/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="BootFont/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="BootFont/src/js/bootstrap/src/"></script>
     <script type="text/javascript" src="BootFont/js/mdb.js"></script>
-  
+    <script type="text/javascript" src="BootFont/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="BootFont/wow.js"></script>
+    <script type="text/javascript">
+      
+     var wow = new WOW(
+                      {
+                        mobile:       true,       // default
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>
   </body>
 </html>

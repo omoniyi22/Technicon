@@ -1,0 +1,404 @@
+
+.talk_date{
+    color: rgb(160, 157, 157);
+    font-style: normal;
+}
+
+@mixin  heart_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin Shadow{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12) !important; 
+}
+*{
+    color: rgb(92, 93, 93);
+}
+.recent{
+    color: rgb(160, 157, 157);
+
+}
+.crosh{
+    display: none;
+}
+.About_reason{
+    padding-left: 3.5% ;
+    padding-right: 3.5% ;
+    display: flex;
+    .diver{
+        width: 33.33%;
+        .why_title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+        .why_content{
+        }
+    }
+}
+.doak{
+    border: none !important;
+}
+.About_header{
+    color: rgba(39, 38, 38, 0.788);
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    padding-left: 3.5% ;
+    padding-right: 3.5% ;
+    .Bold{
+        font-weight: bold;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+    .H_note{
+        max-width:  760px;
+        
+    }
+   
+    .pix{
+        flex: 2;
+        .author_card{
+            @include heart_center();
+            flex-direction: column;
+            .pictured{
+                @include heart_center();
+                overflow: hidden;
+                .fa{
+                    font-size: 24px;
+                    color: rgba(42, 132, 184, 0.705);
+                    &:hover{
+                        color: rgb(42, 132, 184);
+                        cursor: pointer;
+                    }
+                }
+                .picture{
+                    width: 110px;
+                    height: 110px; 
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            .author_details{
+                text-align: center;
+                width: 300px;
+                margin-left: 10px;
+                .a_name{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .b_name{
+                    font-size: 14px;
+                    color: rgb(160, 157, 157);
+                }
+            }
+        }
+            
+    }
+}
+.says{
+    @include heart_center();
+}
+.swipe_man{
+    padding: 20px 8% 20px 8%;
+    .swiper-wrapper {
+        .testifier{
+            display: flex !important;
+            @include heart_center();
+            .piz{
+                margin-right: 100px;
+                div{
+                    height: 150px;
+                    width: 150px;
+                    background-position-x: center;
+                        background-position-y: 20%;
+                        background-size: cover;
+                }
+            }
+            .talk{
+                text-align: left;
+                max-width: 560px;
+                font-size: 18px;
+                .talk_note{
+                    
+                      line-height: 28px;
+                }
+                .talk_name{
+                      margin-top: 35px;
+                      font-weight: bold;
+                }
+                .talk_position{
+                    color: rgb(160, 157, 157);
+                    margin-top: 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.Our_Catalogue{
+   @include heart_center();
+   .worker{
+    @include heart_center();
+    display: block;
+    .cleax{
+        @include heart_center();
+        .worker_pix{
+            border-width: 3px !important;
+            width: 40%;
+            padding: 2px;
+            .worker_pixin{
+                margin: 1%;
+                padding-top: 95%;
+                background-position: center;
+                background-size: cover;
+            }   
+        }
+    }
+       .worker_name{
+           margin-top: 7px;
+           font-size: 18px;
+           font-weight: bold;
+       }
+       .worker_position{
+           font-size: 12px;
+           color: rgba(119, 119, 119, 0.808) !important;
+       }
+   }
+}
+
+@media (max-width: 834px){
+    .no_show_slide{
+        display: none;
+    }
+    .doak{
+        border-bottom: 1px solid rgb(226, 226, 226) !important;
+    }
+    .About_header{
+        font-size: 14px;
+        margin-top: 0px;
+        flex-direction: column-reverse;
+        .H_note{
+            max-width:  100% ;
+            .Bold{
+                margin-top: 3px;
+                margin-bottom: 2px;
+                font-size: 19px !important;
+            }
+            .noted{
+                max-width:500px;
+                font-size: 14.5px !important;
+            }
+        }
+    }
+    .pix{
+        align-items: flex-start !important;
+        .picture{
+            width: 75px !important;
+            height: 75px !important; 
+            border: 2px solid;
+            border-top: none;
+        }
+        .author_card{
+            flex-direction: row !important;
+
+            .author_details{
+                text-align: left !important;
+                width: fit-content !important;
+            }
+        }
+    }
+    .About_reason{
+        padding-left: 3.5% ;
+        padding-right: 3.5% ;
+    }
+    .About_reason{
+        .hoda{
+            box-shadow: none !important;
+            border: none !important;
+            img{
+                @include Shadow()
+            }
+        }
+        padding-left: 3.5% ;
+        padding-right: 3.5% ;
+        display: block !important;
+        .diver{
+            width: 100% !important;
+            .why_title{
+                font-size: 16px !important;
+                color: rgba(54, 106, 190, 0.712);
+                font-weight: bold;
+            }
+            .why_content{
+                font-size: 13.5px;
+                color: rgba(90, 90, 89, 0.945);
+            }
+        }
+    }
+    .jo{
+        &:hover{
+            background: green;
+        }
+    }
+    
+
+            
+            .testifier{
+                flex-direction: column !important;
+                width: 100%;
+                border-top: 2px solid rgb(181, 184, 184) !important;
+                .piz{
+                    @include heart_center();
+                    width: 100%;
+                    background: red !important;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @include heart_center();
+                    margin-right: 100px;
+                    div{
+                        width: 100%;
+                        padding-top: 50%;
+                        background-position-x: center;
+                        background-position-y: 20%;
+                        background-size: cover;
+                    }
+                }
+                .talk{
+                    padding: 8px;
+                    max-width:660px;
+                    font-size: 13px;
+                    font-style: italic;
+                    .talk_note{
+                          line-height: 18px;
+                    }
+                    .talk_name{
+                          margin-top: 10px;
+                          font-weight: bold;
+                    }
+                    .talk_position{
+                        margin-top: 8px;
+                        font-size: 11.8px !important;
+                        color: rgb(160, 157, 157);
+
+                    }
+                }
+            }
+    
+    .About_header{
+        color: rgba(39, 38, 38, 0.788);
+        margin-top: 30px;
+        font-size: 18px;
+        display: flex;
+        padding-left: 3.5% ;
+        padding-right: 3.5% ;
+        .Bold{
+            font-weight: bold;
+            font-size: 13px !important;
+            margin-top: 10px;
+            margin-bottom: 14px;
+        }
+        .H_note{
+            max-width:  760px;
+            
+        }
+       
+        .pix{
+            flex: 2;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 2px 1px 7px 0 rgba(0, 0, 0, 0.12) !important; 
+            margin-bottom: 18px;
+            border: 2px solid rgba(0, 0, 0, 0.609) !important;
+
+            .author_card{
+
+                @include heart_center();
+                flex-direction: column;
+                border: 1px solid rgba(242, 246, 246, 0.692) !important;
+                .pictured{
+                    margin-right: 15px !important;
+                    @include heart_center();
+                    .fa{
+                        font-size: 17px !important;
+                        margin-left: 5px  !important;
+                        margin-right: 5px  !important;
+                        color: rgba(42, 132, 184, 0.705);
+                        &:hover{
+                            color: rgb(42, 132, 184);
+                            cursor: pointer;
+                        }
+                    }
+                    .picture{
+                        width: 110px;
+                        height: 110px; 
+                        border: 2px solid rgba(209, 232, 253, 0.788) !important;
+                    }
+                }
+                .author_details{
+                    text-align: center;
+                    width: 300px;
+                    margin-left: 10px;
+                    border: none !important;
+                    .a_name{
+                        text-align: center !important;
+                        font-size: 14.5px !important;
+                        font-weight: bold;
+                    }
+                    .b_name{
+                        font-size: 13px !important;
+                    }
+                }
+            }
+                
+        }
+    }
+    .worker{
+        @include heart_center();
+        display: block;
+        .cleax{
+            @include heart_center();
+            .worker_pix{
+                border-width: 2px !important;
+                width: 40%;
+                .worker_pixin{
+                    margin: 1%;
+                    padding-top: 90% !important;
+                }   
+            }
+        }
+    }
+    .Our_Catalogue{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+            .cleax{
+                @include heart_center();
+                .worker_pix{
+                    border-width: 1px !important;
+                    width: 100% !important;
+                    .worker_pixin{
+                        margin: 1%;
+                        padding-top: 90% !important;
+                        background-position: center;
+                    background-size: cover;
+                    
+                    }   
+                }
+            }
+
+        .worker_name{
+            margin-top: 7px;
+            font-size: 13px !important;
+            font-weight: bold;
+        }
+        .worker_position{
+            font-size: 11px !important;
+        }
+    }
+    .crosh{
+        display: block !important;
+    }
+}
+

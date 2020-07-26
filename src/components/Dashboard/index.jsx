@@ -18,6 +18,7 @@ import OfficeAddress from "./Office_Address";
 
 import LogIn from './../Log_In'
 import SignUp from './../Sign_Up'
+import About from './../About'
 
 import './index.scss'
 //Switch Dashboard components
@@ -52,8 +53,8 @@ class Dashboard extends Component {
                 {/* {Switch[1]  == null ? <TransactionHistory/> : Switch[1]} */}
                 {/* <PaymentGateway/> */}
 
-                <PickupLocation/>
-                {/* <SignUp/> */}
+                
+                <About/>
 
                 </div>
               </div>  
