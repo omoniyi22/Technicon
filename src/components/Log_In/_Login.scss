@@ -3,7 +3,8 @@
     background-image: url('./circle.png'), url('./sila.png');
     background-position-x: left, right;
     background-position-y:  0,  14%  ;
-
+    width: 100%;
+    max-width: 400px;
     background-repeat: no-repeat;
     background-size: 170px 160px, 90px 110px;
     filter: drop-shadow(1px 1px 1px #bcdce9);

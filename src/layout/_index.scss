@@ -1,4 +1,4 @@
-@media (min-width: 779px) {
+@media (min-width: 780px) {
     .nav_bar{
         display: block;
         @import './Navbar/Navbar';
@@ -9,8 +9,12 @@
     }
 }
 
-@media (max-width: 779px) {
+@media (max-width: 780px) {
     .nav_bar{
         display: none !important;
     } 
+    .side_nav{
+        display: block;
+        @import './Side_Nav/Sidebar';
+    }
 }

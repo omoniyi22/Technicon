@@ -35,5 +35,4 @@ class Footer extends Component{
         )
     }
 }
-
 export {Footer}

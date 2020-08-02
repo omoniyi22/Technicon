@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
+// import {useHistory} from 'react-router'
+import {createBrowserHistory} from 'history'
 const pix = require('./profile.jpg')
+
 class EditProfile extends Component{
+  constructor(props){
+  super(props)
+  }
     render(){
         return(
             <form className="EditProfile  mt-2 mt-md-3 ">
 
                 <div className=" EDIT_PROFILE  ">
-                    <div className="EDIT_PROFILE_A"> Edit Profile </div>
+                    <div className="EDIT_PROFILE_A"><span className="fa fa-arrow-left mr-1"
+                    onClick={()=>createBrowserHistory().back()}
+                    />  Edit Profile </div>
                     <div className="EDIT_PROFILE_B text-right rounded-pill">SAVE</div>
                 </div>
                 <div className="edit_pix  ">
                     <div className="mr_a  border-top border-bottom">
                     </div>
+
                     <div className="pix_view  border rounded-pill z-depth-1">
                         <img src={pix} className="rounded-pill" alt=""/>
                     </div>

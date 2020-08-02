@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
 
-    height:430px;
+    height:36rem;
     @media (max-width: 779px) {
         height: 300px;
         .Laya{
@@ -13,10 +13,10 @@
         }
     }
     .Laya{
-        background: linear-gradient(to bottom, rgba(25, 152, 184, 0.164), rgba(12, 75, 100, 0.89)); /*Standard*/
-        opacity: 0.4;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.274),rgba(9, 44, 104, 0.794), rgb(0, 1, 3)); /*Standard*/
+        opacity: 0.8;
         width: 100%;
-        height:430px;
+        height:36rem;
         position: absolute;
         
         @media (max-width: 779px) {

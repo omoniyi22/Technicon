@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+
 import UserProfile from './User_Profile'
 import ChatBox from './Chat_Box'
 import TransactionHistory from './Transaction_History'
@@ -16,45 +18,50 @@ import Thank_You from './Thank_You'
 import Reach_Out_ID from './Reached_Out'
 import OfficeAddress from "./Office_Address";
 
-import LogIn from './../Log_In'
-import SignUp from './../Sign_Up'
-import About from './../About'
+
 
 import './index.scss'
 //Switch Dashboard components
 import SwitchEffect from './Switch'
 
+
+
 class Dashboard extends Component {
+  constructor(props){
+    super(props)
+  }
+  
     render (){
     let Switch = SwitchEffect(
         NewTransaction,
         PaymentGateway,
-        PaymentMethod
+        PaymentMethod,
+        EditProfile
      )
         return(
             <div className='C_style row  py-2 mx-0 px-0 mt-2 mx-md-1 '>
               <div className="Dash_1 col-lg-4 col-md-6  mb-4 ">
                 <div className=" w-100 mb-4 mt-2">
-                  {/* <UserProfile/> */}
+                {Switch[3] == null ? <UserProfile/> : Switch[3]}
               {/* <OfficeAddress/> */}
-              <LogIn/>
+              {/* <LogIn/> */}
               {/* <EditProfile/> */}
               </div>  
               </div>  
               <div className={`Dash_2 col-lg-4 ${!Switch[2] && "border "} col-md-6 `}>
                 <div className=" w-100 mb-4 mt-2">
-                {/* {Switch[0] == null ? <ChatBox/> : Switch[0]} */}
+                {Switch[0] == null ? <ChatBox/> : Switch[0]}
                   {/* <Thank_You/> */}
-                  <SignUp/>
+                  {/* <SignUp/> */}
                 </div>
               </div>  
               <div className="Dash_3 col-lg-4 col-md-6 mx-0 ">
                 <div className=" mb-4 ">
-                {/* {Switch[1]  == null ? <TransactionHistory/> : Switch[1]} */}
+                {Switch[1]  == null ? <TransactionHistory/> : Switch[1]}
                 {/* <PaymentGateway/> */}
 
                 
-                <About/>
+                {/* <About/> */}
 
                 </div>
               </div>  

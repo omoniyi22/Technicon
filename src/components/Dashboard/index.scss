@@ -1,7 +1,9 @@
 @import './extendibles';
 @import './scope';
 @import './class';
-
+body{
+  color: rgb(110, 107, 107);
+}
 .C_style {
    @media screen and (max-width:768px){
         .Dash_1, .Dash_2, .Dash_3{

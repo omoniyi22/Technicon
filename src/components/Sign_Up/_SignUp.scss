@@ -1,5 +1,7 @@
 .Signin{
-    color: rgb(126, 118, 118);
+     width: 100%;
+     max-width: 450px;
+    color: rgb(107, 104, 104);
      background-image: url('./circle.png'), url('./sila.png');
      background-position-x: left, right;
      background-position-y:  0,  14%  ;
@@ -88,4 +90,5 @@
                  }
              }
      }
+   
  }

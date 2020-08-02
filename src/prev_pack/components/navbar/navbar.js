@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
 import Icon from "../icon/icon";
 import avatar from "./../../assets/suited-profile.jpg";
 import about from "./../../assets/svg/about.svg";
@@ -14,15 +15,13 @@ export function NavBar() {
   return (
     <>
       <NavBarWrapper className="row">
-        <div className=" col-1 logo offset-1">
+        <div className=" col-1 logo  border">
           <div to="/">
-            <div className="logo-container">
-              <img src={logo} alt="" />
-            </div>
+           
           </div>
         </div>
-        <div className=" col-1 offset-4 users-nav">
-          {/* <NavItem iconName={share} text="Share" navIconClassName="" /> */}
+        <div className=" col-1 offset-4 ">
+          <NavItem iconName={share} text="Share" navIconClassName="" />
         </div>
         <div className="col-1">
           {/* <NavItem iconName={legal} text="Legal" navIconClassName="" /> */}
@@ -63,11 +62,12 @@ const NavBarWrapper = styled.div`
   font-family: inherit;
   .logo-container {
     width: 5rem;
+    border: solid 2px white;
   }
   .logo-container img {
     max-width: 5rem;
   }
-  height: 5.5rem;
+  height: 4rem;
   width: 100%;
   margin: auto;
   background: #02364d;
@@ -79,7 +79,7 @@ const NavBarWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 44px;
+    height:37px;
     width: 74px;
   }
   @media (max-width: 1160px) {
@@ -158,7 +158,7 @@ const NavItemWrapper = styled.div`
     width: 30%;
     height: 40%;
     margin: auto;
-    margin-top: 1.2rem;
+    
   }
   .nav-img-container img {
     width: 100%;

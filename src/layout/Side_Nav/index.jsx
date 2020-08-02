@@ -1,1 +1,3 @@
-export {SideBar as default} from "./SideBar
+
+
+export {SideBar as default} from "./SideBar"

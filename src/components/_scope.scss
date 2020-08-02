@@ -1,10 +1,20 @@
+@import './class';
+
+@mixin heart_center {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
 .Home{
     @import './Home/Home';
 }
 .Log_in{
+    @include heart_center();
     @import './Log_In/Login';
 }
 .Sign_up{
+    @include heart_center();
     @import './Sign_Up/SignUp';
 }
 .About{

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import DayPicker from 'react-day-picker';
+import './../../../../node_modules/react-day-picker/lib/style.css';
 const card = require('./card.jpg')
 const gaurd = require('./gaurd.png')
 
@@ -13,11 +15,11 @@ class PaymentGateway extends Component{
                 <div className="new_transaction_form form px-2 z-depth-1 mt-2 py-3 rounded-lg ">
                     <div className="new_transaction_group mb-3 ">
                         <div className="new_transaction_label small font-weight-bold">
-                        COMPLAINT
+                        CARD HOLDER NAME
                         </div>
                         <div className="new_transaction_input ">
                         <div className="bolo my-1 w-100 borde-left  ">
-                            <input placeholder='What is wrong with your device'
+                            <input placeholder='Card Holder Name'
                              className="w-100 form-control border   py-0 border-none"/>
                         </div>
                         </div>
@@ -25,11 +27,11 @@ class PaymentGateway extends Component{
 
                     <div className="new_transaction_group mb-3 ">
                         <div className="new_transaction_label small font-weight-bold">
-                        EMAIL ADDRESS
+                        CARD NUMBER
                         </div>
                         <div className="new_transaction_input ">
                         <div className="bolo my-1 w-100 borde-left  ">
-                            <input placeholder='Email Address'
+                            <input placeholder='Card Number'
                              className="w-100 form-control border   py-0 border-none"/>
                         </div>
                         </div>
@@ -39,11 +41,11 @@ class PaymentGateway extends Component{
                     <div className="row mx-0 px-0">
                         <div className="new_transaction_group mb-3 col-6  px-0 mx-0 ">
                         <div className="new_transaction_label small font-weight-bold">
-                            CONTACT
+                            EXP.
                         </div>
                         <div className="new_transaction_input ">
                         <div className="bolo my-1 w-100 border-right ">
-                            <input  placeholder='Phone number'
+                            <input  placeholder='Expiring Date'
                             className="w-100 form-control  py-0 border-none"/>
                         </div>
                         </div>
@@ -51,17 +53,11 @@ class PaymentGateway extends Component{
 
                     <div className="new_transaction_group mb-3 col-6 mx-0 px-0">
                         <div className="new_transaction_label small font-weight-bold">
-                        REPAIR
+                        CVV
                         </div>
                         <div className="new_transaction_input ">
                         <div className="bolo my-1 w-100  ">
-                            <select class="w-100 form-control  py-0 border-none">
-                            <option value="1">Phone</option>
-                            <option value="2">Laptop</option>
-                            <option value="3">Desktop</option>
-                            <option value="3">Accesories</option>
-                            <option value="3">Tablet</option>
-                            </select>
+                            <input placeholder="CVV Number" class="w-100 form-control  py-0 border-none"/>    
                         </div>
                         </div>
                     </div>

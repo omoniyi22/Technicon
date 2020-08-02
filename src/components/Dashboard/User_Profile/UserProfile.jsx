@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from "react-router-dom"
+
 class UserProfile extends Component{
     render(){
         return(
@@ -17,12 +19,16 @@ class UserProfile extends Component{
                                 <span className="street ml-1">No 43, Oluwaseun street, Agbowo, Lagos.</span>
                             </botton>
                         </div>
+                        <Link to="/edit-profile" className="text_inherit">
                         <button className="edit_profile btn btn-sm mt-0 z-depth-0 rounded-pill">
                             Edit Profile
                         </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="switch_buttons py-0 mb-0 mt-3 border-top border-left border-right border-bottom">
+                      <Link to="/dashboard" className="text_inherit">
+                    
                     <div className="dashboard mt-1 row mx-0 ">
                         <div className="dashboard_icon py-1 mb-2  ">
                           <div className="fa fa-home pl-4 pr-3 "/>
@@ -33,8 +39,10 @@ class UserProfile extends Component{
                             </div>
                         </div>
                     </div>
+                    </Link>
                 </div>
                 <div className="switch_buttons py-0 mb-0 mt-0  border-bottom border-left border-right">
+                      <Link to="/payment-gateway" className="text_inherit">
                     <div className="dashboard mt-1 row mx-0 ">
                         <div className="dashboard_icon py-1 mb-2  ">
                           <div className="fa fa-money-bill-alt  pl-4 pr-3 "/>
@@ -45,7 +53,9 @@ class UserProfile extends Component{
                             </div>
                         </div>
                     </div>
+                  </Link>
                 </div>
+                    <Link to="/new-transaction" className="text_inherit">
                 <div className='start_transaction  text-center border-left-0 border-right-0  w-100 row m-0 p-0 content-justify-center'>
                     <div className=' hahaha border'>
                         <span>Start a new transaction</span>
@@ -56,6 +66,7 @@ class UserProfile extends Component{
                         </div>
                     </div>
                 </div>
+                    </Link>
             </div>
         )
     }

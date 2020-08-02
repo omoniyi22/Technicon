@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Home from './../../../../components/Home'
 import BackgroundImage from "../../../assets/fine-bg.jpg";
 import {
   UserNewTransaction,
@@ -229,29 +230,9 @@ class LandingPage extends React.Component {
   render() {
     return (
       <LandingPageWrapper>
-        <div className="row">
-          {/* do not remove the commented div below */}
-          {/* <div className="col-5 new-transaction-from-homepage">
-            <UserNewTransactionOverLay noPaddingTop>
-              <UserNewTransaction text="" buttontext="Try for free" />
-            </UserNewTransactionOverLay>
-          </div> */}
-
-          <ComingSoon />
-
-          <div className="col-8 homepage-text">
-            {/* <p id="hire">Hire expert engineers to fix your gadgets.</p> */}
-          </div>
-        </div>
+          <Home/>
         <div>
-          {/* <div className="designs-container">
-            <div className="design-left">
-              <img src={designLeft} alt="" />
-            </div>
-            <div className="design-right">
-              <img src={designRight} alt="" />
-            </div>
-          </div> */}
+         
 
           <HeadersWrapper blue>
             <Headers
@@ -380,6 +361,7 @@ class LandingPage extends React.Component {
 }
 
 const LandingPageWrapper = styled.div`
+mart
   font-family: inherit;
   .designs-container {
     height: 6rem;
@@ -388,7 +370,7 @@ const LandingPageWrapper = styled.div`
     justify-content: space-between;
     margin: auto;
     position: relative;
-    top: 5rem;
+    top: 0rem;
   }
   .design-left,
   .design-right {
@@ -463,15 +445,12 @@ const LandingPageWrapper = styled.div`
   height: 100rem;
   width: 100%;
   .row {
-    background-image: url(${images.landingSvg});
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
-    background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     margin: 0;
-    height: 39rem;
+    height: 36rem;
     .new-transaction-from-homepage,
     .homepage-text {
       height: 32rem;
@@ -621,7 +600,6 @@ const LandingPageWrapper = styled.div`
     .Hardware-image img {
     }
     .row {
-      background-image: url(${images.landingSvg});
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
@@ -674,7 +652,6 @@ const LandingPageWrapper = styled.div`
   }
   @media (max-width: 705px) {
     position: relative;
-    top: 4.7rem;
   }
   .use-technicon {
     // background: rgba(45, 156, 219, 0.5);
