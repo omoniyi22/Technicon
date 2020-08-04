@@ -38,9 +38,7 @@ console.log(getState)
     type: LOGIN_SUCCESS,
     payload: res.data.data
     })
-    dispatch({
-  type: USER_LOADED
-})
+
   })
 .catch(err=>{
   dispatch(returnErrors( 

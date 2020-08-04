@@ -1,8 +1,9 @@
+
 import {connect} from 'react-redux'
 import {LoginAction} from './../../store/actions/authAction'
 import {clearErrors, returnErrors} from './../../store/actions/errorActions'
 
-import {LogIn} from './Log_In'
+import LogIn from './login'
 
 const mapStateToProps = state =>({
   isAuthenticated: state.auth.isAuthenticated,

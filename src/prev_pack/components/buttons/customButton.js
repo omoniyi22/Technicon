@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "antd";
 import { Input } from "antd";
 import styled from "styled-components";
-import { newsLetter } from "../../services/services";
+import { newsLetter } from "../../service/services";
 
 export default function CustomButton({ name = "Subscribe" }) {
   return <Button type="primary">{name}</Button>;

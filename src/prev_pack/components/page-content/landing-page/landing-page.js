@@ -22,7 +22,7 @@ import designRight2 from "../../../assets/svg/design-right2.svg";
 import images from "../../../assets/images";
 import Landing from "../../landingPage";
 import CustomButton, { InputWithButton } from "../../buttons/customButton";
-import { getBlogPosts } from "../../../services/services";
+import { getBlogPosts } from "../../../service/services";
 
 // import ContactForm from "../../contact_form/contact_form";
 

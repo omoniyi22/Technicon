@@ -18,3 +18,9 @@
         @import './Side_Nav/Sidebar';
     }
 }
+.no-displayed{
+  visibility: hidden ;
+}
+.displayed{
+  visibility: visible ;
+}

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+
 const thank_png = require("./thanks.png")
 
 class Thank_You extends Component{
@@ -12,9 +14,11 @@ class Thank_You extends Component{
                     Thank You For Your Patronage !!!
                 </div>
                 <div className="thank_button  col-12 w-100 mx-0 px-2 text-center rounded-pill">
+                <Link to="/dashboard">
                     <div className="w-100 rounded-pill">
                         DONE
                     </div>
+                </Link>
                 </div>
             </div>
         )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import SwitchEffect from './../Switch'
 const icon1 = require('./home.png')
 const icon2 = require('./payment.png')
 const icon3 = require('./about.png')
@@ -31,8 +31,11 @@ class SideBar extends Component {
     })
   }
   render() {
+    let Swig = SwitchEffect()
     return (
-      <div className="w-100 side_nav">
+      <>
+      {(window.location.href.search("login") || window.location.href.search("siginup") !== -1) &&
+      <div className={`w-100 side_nav `}>
 
         <div className="  slide_right" style={{ "right": this.state.slideRight }}>
           <div className="contained  pt-2  ">
@@ -116,6 +119,8 @@ class SideBar extends Component {
           </div>
         </div>
       </div>
+      }
+      </>
     )
   }
 }

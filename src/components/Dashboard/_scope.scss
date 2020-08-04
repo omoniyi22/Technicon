@@ -26,22 +26,6 @@
 .EditProfile{
     @import './Edit_Profile/EditProfile';
 };
-
-.PickupLocation{
-    @import './Pickup_Location/PickupLocation';
-};
-
 .Invoice{
     @import './Invoice/Invoice';
-}
-
-.Thank_You{
-    @import './Thank_You/ThankYou';
-}
-
-.ReachOut{
-    @import './Reached_Out/ReachOut';
-}
-.OfficeLocation{
-    @import './Office_Address/OfficeAddress';
 }

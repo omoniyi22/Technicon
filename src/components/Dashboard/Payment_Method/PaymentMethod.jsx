@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 class PaymentMethod extends Component {
     constructor(props){
@@ -31,7 +32,6 @@ class PaymentMethod extends Component {
                                 <div className=" m-auto fa fa-check w-100 h-100"/>
                             </div>
                         </div>
-                       
                     </div>
 
                     
@@ -51,7 +51,11 @@ class PaymentMethod extends Component {
                         <div className="border  rounded-pill addman">
                         <div className="payment_method_cash_icon fa fa-plus  mx-auto"></div>
                         </div>
-                        <div className="payment_method_title ml-3 ">Add Payment Card</div>                     
+                        <div className="payment_method_title ml-3 ">
+                          <Link to='/payment-gateway'>
+                          Add Payment Card
+                          </Link>
+                        </div>                     
                     </div>
                 </div>
                 <div className="payment_method_promo mt-1 py-2 white z-depth-1">
