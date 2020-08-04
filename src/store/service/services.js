@@ -42,14 +42,14 @@ export const POSTcomplaint = async (
 ) => {
   return axios.post(COMPLAINT,
     {
-      // description,
-      // device_type,
-      // email,
-      // dispatch_rider,
-      // phone_number,
-      // device_brand,
-      // pickup,
-      // delivery
+      description,
+      device_type,
+      email,
+      dispatch_rider,
+      phone_number,
+      device_brand,
+      pickup,
+      delivery
 
 
   //     	"description" : "Screen damaged",

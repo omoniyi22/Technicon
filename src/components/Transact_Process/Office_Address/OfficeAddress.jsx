@@ -20,7 +20,7 @@ class OfficeAddress extends Component {
 
   onClick() {
     this.props.Office(null)
-    this.props.history.push('/your-id')
+    // this.props.history.push('/your-id')
   }
 
   render() {

@@ -75,15 +75,22 @@
 // }
 // de()
 
-function de(a, b) {
-  let num = a.match(/\d+/g)
-  let alf = a.match(/[A-Za-z]/g)
-  if (alf !== null) {
-    console.log('this contains number')
-      console.log('this conatins alpha')
-    if (alf !== null) {
-    }
-  }
-}
+// function de(a, b) {
+//   let num = a.match(/^[0-9]+$/)
+//   // let num = a.match(/\d+/i)
+//   let alf = a.match(/[A-Za-z]/g)
+//   if (num !== null) {
+//     console.log('this contains number')
+//       // console.log('this conatins alpha')
+//     // if (alf !== null) {
+//     // }
+//   }
+// }
 
-de('2w2..')
+// de('22')
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log(re.test(email))
+}
+validateEmail('wwewe@dsd.com')

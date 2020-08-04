@@ -18,11 +18,10 @@ export const LOGIN_STOP = "LOGIN_STOP"
 export const REGISTER_START = "REGISTER_START"
 export const REGISTER_STOP = "REGISTER_STOP"
 
-export const T_ERROR = "TRANSACTION_ERROR"
-export const T_SUCCESS = "TRANSACTION_SUCCESS"
 
 //Transaction stages
 export const TS1 = "TS1"
+export const T_ERROR = "TRANSACTION_ERROR"
+export const T_SUCCESS = "T_SUCCESS"
 export const TS2 = "TS2"
-export const TS3 = "TS3"
-export const TS4 = "TS4"
+export const TS_END = "TS_END"

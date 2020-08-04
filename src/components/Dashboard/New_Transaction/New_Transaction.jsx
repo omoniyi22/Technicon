@@ -13,11 +13,12 @@ class NewTransaction extends Component {
       email: "",
       device_brand: "",
       dispatch_rider: true,
-      msg: null,
+      msg: "",
       ButtonReady: true
     }
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+
   }
 
   onChange(e) {
@@ -26,7 +27,11 @@ class NewTransaction extends Component {
     })
   }
 
-
+  Clear() {
+    this.setState({
+      msg: ""
+    })
+  }
 
   onCheck(e) {
     this.setState({
@@ -35,10 +40,8 @@ class NewTransaction extends Component {
   }
 
   onSubmit(e) {
-
-
-    
     e.preventDefault()
+
     let {
       description,
       phone_number,
@@ -48,13 +51,34 @@ class NewTransaction extends Component {
       dispatch_rider
     } = this.state
 
+    let num = phone_number.match(/^[0-9]+$/)
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let emailTest = re.test(email)
+
     if (
-      description.length > 1 &&
-      phone_number.length > 1 &&
-      device_type.length > 1 &&
-      email.length > 1 &&
-      device_brand.length > 1
+      description.length < 1 ||
+      phone_number.length < 1 ||
+      device_type.length < 1 ||
+      email.length < 1 ||
+      device_brand.length < 1
     ) {
+      this.setState({
+        msg: "Pls fill in all the fields"
+      })
+    } else if (phone_number.length < 11 || phone_number.length > 11) {
+      this.setState({
+        msg: "Contact must 11 digit"
+      })
+    } else if (num === null) {
+      this.setState({
+        msg: "Contact must contain only number"
+      })
+    } else if (emailTest === false) {
+      this.setState({
+        msg: "Pls fill in a valid email address"
+      })
+    }
+    else {
       if (this.state.dispatch_rider) {
         this.props.transactStart({
           description,
@@ -67,7 +91,7 @@ class NewTransaction extends Component {
         this.props.history.push('/pick-up')
       }
       else {
-          this.props.transactStart({
+        this.props.transactStart({
           description,
           phone_number,
           device_type,
@@ -77,23 +101,18 @@ class NewTransaction extends Component {
         })
         this.props.history.push('/office-address')
       }
-       this.setState({
-      description: "",
-      phone_number: "",
-      device_type: "",
-      email: "",
-      device_brand: "",
-      dispatch_rider: true,
-      msg: null
-
-    })
-    } else {
       this.setState({
-        msg: "Pls fill in all the fields"
+        description: "",
+        phone_number: "",
+        device_type: "",
+        email: "",
+        device_brand: "",
+        dispatch_rider: true,
+        msg: null
       })
     }
 
-  
+
   }
 
   render() {
@@ -107,9 +126,16 @@ class NewTransaction extends Component {
     } = this.state
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="new_transaction_header font-weight-bold px-1 py-3  ">New Transaction</div>
+        <div className="new_transaction_header font-weight-bold px-1 py-3 col-12  flex">New Transaction
+        {this.state.msg && <div className="Error !  ml-auto mr-2 mt-1 small border rounded-pill pl-2 py-1 red lighten-2 white-text">{this.state.msg} !!!
+        <span className="fa fa-times ml-3 text-danger rounded-pill border px-2 p-1 mr-1 white"
+              onClick={
+                this.Clear.bind(this)
+              }
+            /></div>}
+        </div>
         <div className="NewTransaction ">
-          <div className="new_transaction_form form px-1 ">
+          <div className="new_transaction_form form px-1  ">
             <div className="new_transaction_group mb-3 ">
               <div className="new_transaction_label small font-weight-bold">
                 COMPLAINT
@@ -138,7 +164,7 @@ class NewTransaction extends Component {
                       name="phone_number"
                       value={this.state.phone_number}
                       onChange={this.onChange}
-                      type = {number}
+                      type={number}
                     />
                   </div>
                 </div>
@@ -155,11 +181,11 @@ class NewTransaction extends Component {
                       value={this.state.device_type}
                       name="device_type"
                     >
-                      <option >Phone</option>
+                      <option >Select Device Type</option>
                       <option >Laptop</option>
                       <option >Desktop</option>
-                      <option >Accesories</option>
                       <option >Tablet</option>
+                      <option >Accesories</option>
                     </select>
                   </div>
                 </div>
@@ -222,11 +248,6 @@ class NewTransaction extends Component {
               <label class="custom-control-label" for="defaultGroupExample3">I will bring my device to the technical office myself</label>
             </div>
 
-            {`${description}`}
-            {`${phone_number}`}
-            {`${device_brand}`}
-            {`${email}`}
-            {`${device_type}`}
 
 
             <div className="new_transaction_button  mt-4 mt-md-5">

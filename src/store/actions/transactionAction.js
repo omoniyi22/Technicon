@@ -1,5 +1,5 @@
-import { START_TRANSACTION } from './../types'
-import { T_ERROR, T_SUCCESS, TS1, TS2, TS3, TS4 } from './../types'
+import { } from './../types'
+import { T_ERROR, T_SUCCESS, TS1, TS2, TS_END } from './../types'
 import { TRANSACTION_SUCCESS } from './../types'
 
 import { POSTcomplaint } from './../service/services'
@@ -31,40 +31,35 @@ export const transactStart = (getState) => (dispatch) => {
 // }
 
 export const Office = (getState) => async (dispatch, Taoma) => {
-  let prevData =  await Taoma().transact.TS2_data
+  let prevData = await Taoma().transact.TS2_data
   if (getState === null) {
     let data = await POSTcomplaint(prevData, Taoma)
     console.log("my-self", data)
-    dispatch({
-      type: TS2
-    })
+    // dispatch({
+    //   type: TS2
+    // })
   } else {
-    try{
-    prevData = await {...prevData, ...getState}
-    console.log(getState)
-    let data = await POSTcomplaint(prevData, Taoma)
-    let resp = await data.status
-    console.log(resp)
-    }catch(err){
-    console.log('office', err)
+    let prevDatas = { ...prevData, ...getState }
+    try {
+      console.log(prevDatas, prevData)
+      let data = await POSTcomplaint(prevDatas, Taoma)
+      console.log(data)
+      if (data.data.data.trackingCode) {
+        dispatch({
+          type: T_SUCCESS,
+          payload: data.data.data.trackingCode
+        })
+      }
+    } catch (err) {
+      console.log('office', err)
+      dispatch({
+        type: T_ERROR,
+        payload: err
+      })
     }
-    
-    dispatch({
-      type: TS2
-    })
   }
 }
 
 
-export const YourID = () => {
-  return {
-    type: TS3
-  }
-}
-export const Thanks = () => {
-  return {
-    type: TS4
-  }
-}
-
-
+export const Your_ID = () => ({ type: TS2 })
+export const Close_Transact = () => ({ type: TS_END })

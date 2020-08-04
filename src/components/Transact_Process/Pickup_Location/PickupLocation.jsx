@@ -20,11 +20,7 @@ class PickupLocation extends Component {
     this.onClick = this.onClick.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
-  componentDidMount() {
-    if (this.props.TS1 === false) {
-      this.props.history.push('./dashboard')
-    }
-  }
+ 
 
   onClick(e) {
     this.setState({
@@ -32,7 +28,8 @@ class PickupLocation extends Component {
     })
   }
 
-  onSubmit() {
+  onSubmit(e) {
+    e.preventDefault();
     let {
       pickup,
       delivery
@@ -41,8 +38,10 @@ class PickupLocation extends Component {
       pickup.length > 1 || delivery.length > 1
     ) {
       this.props.Office(
-        pickup,
-        delivery
+        {
+          pickup,
+          delivery
+        }
       )
       this.setState({
         msg: "There is an error"
@@ -53,10 +52,17 @@ class PickupLocation extends Component {
       })
     }
   }
+  componentDidUpdate(prevProps) {
+    let {success} = this.props
+    if (success !== prevProps.success) {
+      this.props.history.push('/your-id')
+    }
+  }
+
 
   render() {
     return (
-      <form> 
+      <form onSubmit={this.onSubmit}>
 
         <div className="PickupLocation ">
           <div className="fit_in ">
@@ -115,14 +121,11 @@ class PickupLocation extends Component {
             </div>
 
 
-            <div className="pickup_button_3 rounded-pill text-center mt-3"
-            onClick={this.onSubmit}
+            <button className="pickup_button_3 rounded-pill text-center mt-3"
+
             >
               NEXT
-            </div>
-{this.state.pickup}
-{this.state.delivery}
-
+            </button>
           </div>
         </div>
       </form>

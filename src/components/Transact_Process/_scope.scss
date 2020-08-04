@@ -1,6 +1,11 @@
 
 
 .PickupLocation{
+  margin-top: 13px;
+     width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     @import './Pickup_Location/PickupLocation';
 };
 
