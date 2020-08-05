@@ -21,7 +21,13 @@ export const REGISTER_STOP = "REGISTER_STOP"
 
 //Transaction stages
 export const TS1 = "TS1"
-export const T_ERROR = "TRANSACTION_ERROR"
+export const LOAD = "LOAD"
+export const T_ERROR = "T_ERROR"
 export const T_SUCCESS = "T_SUCCESS"
 export const TS2 = "TS2"
 export const TS_END = "TS_END"
+
+//Get Transactions
+export const T_GET_ALL = "T_GET_ALL"
+export const ALL_LOADING = "ALL_LOADING"
+export const T_ALL_ERROR = "T_ALL_ERROR"

@@ -1,4 +1,4 @@
-import { BLOG, NEWSLETTER, COMPLAINT, SIGNUP, REGISTER } from "./api";
+import { BLOG, NEWSLETTER, COMPLAINT,ALL_COMPLAINT, SIGNUP, REGISTER } from "./api";
 import axios from "axios";
 
 //Header config 
@@ -19,10 +19,15 @@ export const tokenConfig = (getState) => {
 
 
 //Blog
-export function getBlogPosts() {
-  return axios.get(BLOG);
-}
+// export function getBlogPosts() {
+//   return axios.get(BLOG);
+// }
 
+// export function newsLetter(email, firstName) {
+//   return axios.post(NEWSLETTER, { email, firstName }, { tokenConfig });
+// }
+
+//LOGIN 
 
 
 //POSTComplaint
@@ -50,20 +55,12 @@ export const POSTcomplaint = async (
       device_brand,
       pickup,
       delivery
-
-
-  //     	"description" : "Screen damaged",
-	// "device_type" : "IPHONE X",
-	// "email" : "narcisse.egonu@gmail.com",
-	// "dispatch_rider" : true,
-	// "phone_number" : "07067656140",
-	// "device_brand":"Apple",
-	// "pickup" : "University of Ibadan",
-	// "delivery":"Bodija"	
     },
     tokenConfig(getToken))
 }
 
-// export function newsLetter(email, firstName) {
-//   return axios.post(NEWSLETTER, { email, firstName }, { tokenConfig });
-// }
+// GETALL COMPLAINT
+export const GET_ALL_complaint = async(getToken)=>{
+  return axios(ALL_COMPLAINT, tokenConfig(getToken))
+}
+

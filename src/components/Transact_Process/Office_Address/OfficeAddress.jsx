@@ -13,16 +13,20 @@ class OfficeAddress extends Component {
   }
 
   componentDidMount() {
-    if (this.props.TS1 === false) {
+    if (!this.props.TS1) {
       this.props.history.push('/dashboard')
     }
   }
 
   onClick() {
     this.props.Office(null)
-    // this.props.history.push('/your-id')
   }
-
+  componentDidUpdate(prevProps) {
+    let { success } = this.props
+    if (success !== prevProps.success) {
+      this.props.history.push('/your-id')
+    }
+  }
   render() {
     return (
       <div className="OfficeLocation ">
@@ -50,11 +54,12 @@ class OfficeAddress extends Component {
             SEND LOCATION TO MAIL
                     </div>
 
-          <div className="down_button rounded-pill text-center"
+          <button className="down_button rounded-pill text-center"
+            disabled={this.props.Load}
             onClick={this.onClick}
           >
-            NEXT
-                    </div>
+            {!this.props.Load ? 'NEXT' : 'LOADING...'}
+          </button>
 
         </div>
       </div>

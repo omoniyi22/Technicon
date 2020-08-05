@@ -14,16 +14,22 @@ class PickupLocation extends Component {
     this.state = {
       pickup: "",
       delivery: "",
-      msg: null
+      msg: null,
+      mss : this.props.err
     }
 
     this.onClick = this.onClick.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
  
-
+componentDidMount(){
+  if(this.props.TS2){
+    this.props.history.push('/dashboard')
+  }
+}
   onClick(e) {
     this.setState({
+      msg: null,
       [e.target.name]: e.target.value
     })
   }
@@ -35,7 +41,7 @@ class PickupLocation extends Component {
       delivery
     } = this.state
     if (
-      pickup.length > 1 || delivery.length > 1
+      pickup.length > 8 && delivery.length > 8
     ) {
       this.props.Office(
         {
@@ -43,12 +49,10 @@ class PickupLocation extends Component {
           delivery
         }
       )
-      this.setState({
-        msg: "There is an error"
-      })
+      
     } else {
       this.setState({
-        msg: "There is an error"
+        msg: "Both fields must contain at least 8 characters \n for proper description"
       })
     }
   }
@@ -79,21 +83,27 @@ class PickupLocation extends Component {
                 Enable your location so our dispatch riders can come pickup your gadget.
                         </span>
             </div>
+            <div className="w-100 text-center text-danger mx-auto mt-3 small"
+            style={{visibility: this.state.msg ? "visible" : "hidden", marginBottom: "-10px"}}
+            >{this.state.msg && this.state.msg + " !!!"} </div>
+            <div className="w-100 text-center text-danger mx-auto mt-3 small"
+            style={{visibility: this.props.err ? "visible" : "hidden", marginBottom: "-10px"}}
+            >{this.props.err && this.props.err + " !!! Please go back and try again .."} </div>
             <div className="pickup_form flex  w-100">
               <div className="left  flex">
-                <img src={vecto} width="20px" />
+                <img src={this.state.pickup.length > 8 ? vecto : vectu } width="20px" />
                 <img className="vecti" className="my-1" src={vecti} />
-                <img src={vectu} width="20px" />
+                <img src={this.state.delivery.length > 8 ? vecto : vectu} width="20px" />
               </div>
               <div className="right">
 
                 <div className="new_transaction_group mb-2 ">
                   <div className="new_transaction_label small font-weight-bold">
-                    COMPLAINT
+                    PICKUP LOCATION
                         </div>
                   <div className="new_transaction_input ">
                     <div className="bolo my-1 w-100 borde-left  ">
-                      <input placeholder='What is wrong with your device'
+                      <input placeholder='Pickup Location'
                         name="pickup"
                         onChange={this.onClick}
                         value={this.state.pickup}
@@ -104,11 +114,11 @@ class PickupLocation extends Component {
 
                 <div className="new_transaction_group mb-3 ">
                   <div className="new_transaction_label small font-weight-bold">
-                    COMPLAINT
+                    DELIVERY ADDRESS
                         </div>
                   <div className="new_transaction_input ">
                     <div className="bolo my-1 w-100 borde-left  ">
-                      <input placeholder='What is wrong with your device'
+                      <input placeholder='Delivery address'
                         name="delivery"
                         onChange={this.onClick}
                         value={this.state.delivery}
@@ -122,9 +132,9 @@ class PickupLocation extends Component {
 
 
             <button className="pickup_button_3 rounded-pill text-center mt-3"
-
+              disabled={this.props.Load}
             >
-              NEXT
+              {this.props.Load ? 'LOADING...' : 'NEXT'}
             </button>
           </div>
         </div>

@@ -13,7 +13,11 @@ class Reach_Out_ID extends Component {
 
     }
   }
- 
+ componentDidMount(){
+  if(this.props.TS2){
+    this.props.history.push('/dashboard')
+  }
+}
   render() {
 
     return (

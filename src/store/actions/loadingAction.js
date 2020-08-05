@@ -5,28 +5,24 @@ import {
   REGISTER_STOP
 } from '../types'
 
-export const LoginStart =()=>{
-  return{
-   type: LOGIN_START
+export const LoginStart = () => {
+  return {
+    type: LOGIN_START
   }
 }
 
-export const LoginStop =()=>{
-  return{
-    type :LOGIN_STOP
+export const LoginStop = () => {
+  return {
+    type: LOGIN_STOP
   }
 }
 
-export const RegisterStart =()=>{
-   return {type : REGISTER_START}
-  }
+export const RegisterStart = () => {
+  return { type: REGISTER_START }
+}
 
-    
- 
-
-
-export const RegisterStop =()=>{
-  return{
-    type : REGISTER_STOP
+export const RegisterStop = () => {
+  return {
+    type: REGISTER_STOP
   }
 }

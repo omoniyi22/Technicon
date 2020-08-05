@@ -1,5 +1,7 @@
 .Advert{
-    background: rgb(255, 188, 31);
+    background-image: url('./advert.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 140px;
     max-height: 36vmin;
     height: 34vmin;
@@ -11,6 +13,28 @@
     align-items: center;
 }
 .Transactions{
+    .senc {
+      @include heart_center();
+      justify-content: center;
+      align-items: center;
+      display: flex;
+        background: #EDEDEE;
+      div{
+      width: 100%;
+      height: 100%;
+        text-align: center;
+      }
+      }
+      .a{
+        width: 145px;
+        height:  100px;
+      }
+  .machine{
+  overflow-y: hidden;
+    min-height:  190px ;
+    height: 190px;
+    max-height: 190px;
+  }
     .transacts{
         border-bottom: solid 1.9px #1A96C7;
         .transacts_header{

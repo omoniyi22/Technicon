@@ -54,6 +54,9 @@
 }
 
 .chat_box{
+  max-height: 365px;
+  min-height: 365px;
+  overflow: scroll;
     .left_chat_box:first-of-type{
         .left_chat_box_message{
             border-bottom-left-radius:4px ; // 1st

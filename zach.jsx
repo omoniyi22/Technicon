@@ -89,8 +89,26 @@
 
 // de('22')
 
-function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(re.test(email))
-}
-validateEmail('wwewe@dsd.com')
+// function validateEmail(email) {
+//     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     console.log(re.test(email))
+// }
+// validateEmail('wwewe@dsd.com')
+
+
+// function fola(p) {
+//   let items
+//   let content = 3
+//   items = Math.ceil(p.length / content)
+//   let i = 0
+//   let j
+//   let len = []
+//   while (i < items) {
+//     j = p.splice(0, content)
+//     len.push(j)
+//     i++
+//   }
+//   return (len)
+// }
+// let v = fola([1, 2, 3, 4, 5, 6, 7, 2, 3, 8, 3])[0]
+// v.map(i=>console.log(i))

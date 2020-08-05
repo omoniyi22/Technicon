@@ -12,3 +12,6 @@ export const REGISTER = `${BASE}/auth/register`;
 
 //Complaint
 export const COMPLAINT = `${BASE}/complaint`;
+
+//Get all Complaint
+export const ALL_COMPLAINT = `${BASE}/complaint/fetch`;

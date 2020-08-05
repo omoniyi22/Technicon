@@ -16,7 +16,7 @@ import {
 
 import { returnErrors } from './errorActions'
 import { LoginStart, LoginStop, RegisterStart, RegisterStop } from './loadingAction'
-import { LoginApi, RegisterApi } from './../../services/services'
+import { LoginApi, RegisterApi } from './../service/services'
 
 export const LoadUserAction = () => async()=>{
 

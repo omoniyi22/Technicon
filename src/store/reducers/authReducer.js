@@ -60,8 +60,3 @@ export default function (state = initialState, action) {
 
   }
 }
-
-
-// export function newsLetter(email, firstName) {
-//     return axios.post(NEWSLETTER, { email, firstName });
-//   }
