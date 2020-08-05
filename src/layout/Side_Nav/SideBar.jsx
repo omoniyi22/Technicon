@@ -75,7 +75,7 @@ class SideBar extends Component {
                         </div>
                       </Link>
                     </> :
-                      <Link onClick={this.slideoff} to="/register" className="cinta">
+                      <Link onClick={this.slideoff} to="/signup" className="cinta">
                         <div className="nav_item ">
                           <span className="icon2 fa fa-user-plus " />
                           <div className="sav">Register</div>

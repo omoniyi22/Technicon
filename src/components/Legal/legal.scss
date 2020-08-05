@@ -1,0 +1,16 @@
+.legal{
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  max-width: 100%;
+  .header{
+    font-size: 22px;
+  }
+  .jumbotron{
+    margin-top: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
