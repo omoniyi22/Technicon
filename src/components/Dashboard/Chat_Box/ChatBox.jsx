@@ -48,13 +48,13 @@ class ChatBox extends Component {
 
             <div className="row m-0  text-center border-bottom mb-3 py-0 my_invoice">
               <div
-               className={this.state.Switch ? 'col-6  py-3 mount_color' : 'col-6  py-3'}
-               style={{transitionDuration : "0.2s"}}
+                className={this.state.Switch ? 'col-6  py-3 mount_color' : 'col-6  py-3'}
+                style={{ transitionDuration: "0.2s" }}
                 onClick={this.Switch}
               >Transaction</div>
               <div
-               className={!this.state.Switch ? 'col-6  py-3 mount_color' : 'col-6  py-3'}
-               style={{transitionDuration : "0.2s"}}
+                className={!this.state.Switch ? 'col-6  py-3 mount_color' : 'col-6  py-3'}
+                style={{ transitionDuration: "0.2s" }}
 
                 onClick={this.unSwitch}
               >Invoice</div>
@@ -69,6 +69,16 @@ class ChatBox extends Component {
             }
 
 
+            <div className="bottom  border">
+              <div className="send_reciept border ">
+                <div className=" ml">Send Receipt to mail</div>
+              </div>
+              <div className="mail_out border ml-auto rounded-pill z-depth-1">
+                <div className="send_now border rounded-pill z-depth-1">
+                  <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                </div>
+              </div>
+            </div>
             <div className="bottom  border">
               <div className="send_reciept border ">
                 <div className=" ml">Send Receipt to mail</div>

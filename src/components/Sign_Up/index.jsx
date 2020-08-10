@@ -2,6 +2,7 @@ import {connect} from 'react-redux'
 import {LoginAction, RegisterAction} from './../../store/actions/authAction'
 import {clearErrors} from './../../store/actions/errorActions'
 import {SignUp} from './Sign_Up'
+import {nav_out} from './../../store/actions/navSwitch'
 
 const mapStateToProps = state =>({
   isAuthenticated: state.auth.isAuthenticated,
@@ -11,5 +12,5 @@ const mapStateToProps = state =>({
 })
 
 export default connect(mapStateToProps,
-{RegisterAction, clearErrors}
+{RegisterAction, clearErrors, nav_out}
 )(SignUp)

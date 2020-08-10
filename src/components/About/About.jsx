@@ -7,6 +7,12 @@ const picture = require('./Narce.jpg')
 
 
 class About extends Component{
+  constructor(props){
+    super(props)
+  }
+   componentDidMount(){
+    this.props.nav_in()
+  }
     render(){
         const params = {   
             navigation: {
@@ -21,7 +27,7 @@ class About extends Component{
                         <div className="Bold doak font-weight-bold border-bottom">
                             About Technicon
                         </div>
-                        <div className="noted Fluids">
+                        <div className="note  Fluids">
                             Hey sorry about the cheezy name. When I kicked this 
                             site off on July 4th, 2007, 
                             I mostly really did write about CSS. But of course, that 
@@ -29,12 +35,11 @@ class About extends Component{
                             to learn that. The site is WordPress, so writing about that was
                             sprinkled in. As my experience as a front-end developer and designer
                             grew and my knowledge broadened, so did the sites topics.
-                        </div>
-                        <div className="noted mt-2 Fluids">
+                        <div className=" mt-2 Fluids">
                             Hey sorry about the cheezy name. When I kicked this 
                             site off on July 4th, 2007, 
                             I mostly really did write about CSS. But of course, that 
-                        
+                        </div>
                         </div>
                     </div>
                     <div className="pix  mx-0 py-3  delay-1s wow fadeInRight  ">

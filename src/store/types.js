@@ -17,6 +17,7 @@ export const LOGIN_START = "LOGIN_START"
 export const LOGIN_STOP = "LOGIN_STOP"
 export const REGISTER_START = "REGISTER_START"
 export const REGISTER_STOP = "REGISTER_STOP"
+export const GET_PROFILE = "GET_PROFILE"
 
 
 //Transaction stages
@@ -31,3 +32,23 @@ export const TS_END = "TS_END"
 export const T_GET_ALL = "T_GET_ALL"
 export const ALL_LOADING = "ALL_LOADING"
 export const T_ALL_ERROR = "T_ALL_ERROR"
+
+
+
+//Profile
+export const EDIT_TIMER = "EDIT_TIMER"
+export const PROFILE_ERROR = "PROFILE_ERROR"
+export const PROFILE_SUCCESS = "PROFILE_SUCCESS"
+export const CLEAR_ERR = "CLEAR_ERR"
+
+//Nav
+export const NAV_IN = "NAV_IN"
+export const NAV_OUT = "NAV_OUT"
+
+
+
+//Get Trasaction
+
+//Chat
+
+//Payment Method

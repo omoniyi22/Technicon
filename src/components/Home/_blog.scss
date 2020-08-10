@@ -1,0 +1,48 @@
+.worker_pix {
+  // border-width: 3px !important;
+  width: 40%;
+  .worker_pixin {
+    padding-top: 65%;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.content {
+  padding-bottom: 13px !important;
+}
+.date {
+  font-size: 11px;
+}
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.noted {
+  font-size: small;
+}
+.read_more {
+  font-size: 14px;
+  font-weight: bold;
+  font-variant: small-caps;
+  margin-top: 14px;
+  .ssowp {
+    margin-top: 3.4px;
+  }
+  &:hover {
+    div{
+
+    color: rgb(8, 154, 212);
+    }
+    cursor: pointer;
+  }
+}
+.seew{
+  padding-top: 5.3px !important;
+  font-size: 19px;
+  font-weight: bold !important;
+  &:hover{
+    color: white !important;
+    background: rgba(13, 49, 70, 0.774);
+  }
+}

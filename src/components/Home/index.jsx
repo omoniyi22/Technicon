@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
 import {Home} from './Home'
-import {} from './../../store/actions/authAction'
+import {nav_in} from './../../store/actions/navSwitch'
 
 const mapStateToProps=(state)=>({
-  auth: state.auth
+  auth: state.auth.isAuthenticated
 })
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps, {nav_in})(Home)

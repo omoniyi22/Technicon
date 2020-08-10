@@ -1,20 +1,56 @@
-@import './../../components/Dashboard/extendibles';
+@import "./../../components/Dashboard/extendibles";
 
- .cinta{
-   color: inherit !important;
-   margin-bottom: -14.4px !important;
-   padding: 0 !important;
- }
-.side_nav{
+.pdf {
+  padding-bottom: 33px !important;
+}
+
+@mixin modals {
+  .modals {
+    transition-duration: 0.2s;
+    width: 100%;
+    bottom: -100%;
+    position: fixed;
+    background-attachment: scroll;
+    background: rgb(255, 255, 255);
+    height: 230px;
+    .vona {
+      border-width: 5px !important;
+      border-color: rgb(223, 224, 224) !important;
+      .header {
+        border-color: rgb(248, 249, 250) !important;
+
+        font-weight: bold;
+        padding: 20px 0 12px 12%;
+      }
+      .icond {
+        border-color: #70b5e4 !important;
+
+        display: flex;
+        flex-direction: column;
+        .row {
+          .col-4 {
+            @include heart_center();
+          }
+        }
+      }
+    }
+  }
+}
+
+.cinta {
+  color: inherit !important;
+  margin-bottom: -14.4px !important;
+  padding: 0 !important;
+}
+.side_nav {
   background: rgba(205, 224, 228, 0.623);
   @include heart_center();
   display: flex;
-  
 
-  .nav_logo{
-   flex: 2;
+  .nav_logo {
+    flex: 2;
   }
-  .nav_button{
+  .nav_button {
     padding: 2px 10px 1px 10px;
     border: 2px solid #8dc0e0 !important;
     padding: 0 !important;
@@ -23,48 +59,48 @@
     margin-left: 9px;
     color: rgb(255, 255, 255);
     @include heart_center();
-    .fa{
+    .fa {
       border-radius: 4px;
       margin: 1px;
       padding: 4px 9px 4px 9px;
       background: #8dc0e0;
     }
-     &:hover{
-       transition-duration: 0.2s;
-       .fa{
-        background:rgb(112, 181, 228);
-       }
+    &:hover {
+      transition-duration: 0.2s;
+      .fa {
+        background: rgb(112, 181, 228);
+      }
     }
-    &:active{
-        background: rgba(112, 182, 228, 0.822);
+    &:active {
+      background: rgba(112, 182, 228, 0.822);
     }
   }
- 
-  .nav_login{
-        border: rgb(112, 181, 228) 2px solid  !important;    
-    button{
-      padding : 6px 11px 6px 11px !important;
-    width: fit-content;
-    font-size: 11.6px;
-    font-weight: bold;
-    padding: 8px 18px 8px 18px;
+
+  .nav_login {
+    border: rgb(112, 181, 228) 2px solid !important;
+    button {
+      padding: 6px 11px 6px 11px !important;
+      width: fit-content;
+      font-size: 11.6px;
+      font-weight: bold;
+      padding: 8px 18px 8px 18px;
+      background: rgb(112, 181, 228);
+      border: rgb(207, 231, 255) 3px solid;
+      color: white;
+      &:hover {
         background: rgb(112, 181, 228);
-        border: rgb(207, 231, 255) 3px solid ;
-        color: white ;
-    &:hover{
-        background: rgb(112, 181, 228);
-    }
-    &:active{
+      }
+      &:active {
         background: rgba(112, 182, 228, 0.602);
-    }
+      }
     }
   }
 }
-.slide_right{
+.slide_right {
   transition-duration: 0.3s;
-  background: #EDECEC !important;
-   overflow-y: scroll;
-  .possa{
+  background: #edecec !important;
+  overflow-y: scroll;
+  .possa {
     position: absolute;
     top: 11px;
     right: 25px;
@@ -72,16 +108,16 @@
     color: rgba(200, 77, 77, 0.602);
     font-size: 15px !important;
     font-weight: light !important;
-    span{
-&:hover{
-    transition-duration: 0.4s;
-    background-color: rgba(194, 64, 64, 0.602);
-    color: white;
-}
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-right: 7px;
-    padding-left: 7px;
+    span {
+      &:hover {
+        transition-duration: 0.4s;
+        background-color: rgba(194, 64, 64, 0.602);
+        color: white;
+      }
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 7px;
+      padding-left: 7px;
     }
   }
   width: 100%;
@@ -89,144 +125,164 @@
   z-index: 3;
   background: rgba(255, 255, 255, 0);
   position: fixed;
-  .contained{
-  background: rgb(255, 255, 255);
-  width:100%;
-  max-width: 100%;
-    .user_n{
+  .contained {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 100%;
+    .user_n {
       @include pointer();
       padding-top: 4%;
-        padding-left:7% !important;
+      padding-left: 7% !important;
       @include heart_center();
       display: flex;
       justify-content: left;
       width: fit-content;
-      
-      .user_pix{
+
+      .user_pix {
         overflow: hidden;
         height: 60px;
         width: 60px;
         margin-right: 18px;
       }
-      .user_dl{
-        
-        .userName{
+      .user_dl {
+        .userName {
           font-size: 15px;
           font-weight: bold;
         }
-        .userLocation{
+        .userLocation {
           color: rgba(18, 117, 156, 0.548);
           font-size: 13.3px;
           font-weight: bold;
-          span{
+          span {
             margin-right: 5px;
           }
         }
       }
     }
-    .side_items{
+    .side_items {
+      @include modals();
       display: flex;
       flex-direction: column;
-      .nav_item:first-of-type{
+      .nav_item:first-of-type {
         margin-top: 15px;
       }
-      .nav_item{
+      .nav_item {
         @include pointer();
         display: flex;
-        width:100%;
+        width: 100%;
         padding: 18px 8px 18px 8%;
         border-left: 5px solid rgb(255, 255, 255) !important;
-        .icon1{
+        .icon1 {
           font-size: 18px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 18px;
           margin-top: -1px;
         }
 
-        .icon2{
+        .icon2 {
           font-size: 15.6px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 19px;
           margin-left: 1px;
           margin-top: 2px;
         }
 
-        .icon3{
+        .icon3 {
           font-size: 18.9px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 18px;
           margin-left: 2px;
           margin-top: -0.2px;
         }
 
-        .icon4{
+        .icon4 {
           font-size: 18.9px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 17.4px;
           margin-left: 5px;
           margin-top: 1.3px;
         }
 
-        .icon5{
+        .icon5 {
           font-size: 18.9px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 18px;
           margin-left: 3px;
-          margin-top: 1.0px;
+          margin-top: 1px;
         }
-        .icon6{
+        .icon6 {
           font-size: 19.2px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 19px;
           margin-left: 2px;
           margin-top: 1px;
         }
-        .icon7{
+        .icon7 {
           font-size: 19.2px;
-          width:22px;
+          width: 22px;
           height: 17px;
           margin-right: 19px;
           margin-left: 2px;
-          margin-top: .4px;
+          margin-top: 0.4px;
         }
 
-        .Nav{
+        .Nav {
           font-weight: bold;
         }
-        &:hover{
+        &:hover {
           transition-duration: 0.3s;
           @include hash_bg();
-          border-left: 5px solid #70B5E4 !important;
-          span{
-          transition-duration: 0.3s;
+          border-left: 5px solid #70b5e4 !important;
+          span {
+            transition-duration: 0.3s;
 
             color: rgb(85, 167, 221);
           }
         }
-        &:active{
+        &:active {
           transition-duration: 0.3s;
 
           @include hash_bg();
-          border-left: 5px solid #70B5E4 !important;
+          border-left: 5px solid #70b5e4 !important;
         }
-        .sav{
+        .sav {
           font-size: 15px;
         }
       }
-      .logouti{
+      .logouti {
         padding-top: 30px;
-        border-left: 5px solid  #EDECEC !important;
+        border-left: 5px solid #edecec !important;
         @include hash_bg();
         align-self: stretch !important;
         flex-basis: 2;
         flex-flow: row;
       }
     }
+  }
+}
+.softeir {
+  color: rgb(255, 255, 255) !important;
+  padding-bottom: 3.2px;
+  font-size: 16px;
+  font-variant: small-caps;
+  background: rgba(10, 91, 129, 0.89);
+  &:active {
+    background: rgba(20, 127, 177, 0.733);
+  }
+}
+.soss {
+  color: rgb(255, 255, 255) !important;
+  padding: 2px 8px 0px 8px;
+  margin-left: 11px;
+  background: rgba(10, 91, 129, 0.781);
+  cursor: pointer;
+  &:active {
+    background: rgba(20, 127, 177, 0.733);
   }
 }

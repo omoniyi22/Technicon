@@ -1,6 +1,5 @@
 import { LOAD, T_GET_ALL } from './../types'
 import { T_ERROR, T_SUCCESS, TS1, TS2, TS_END, ALL_LOADING, T_ALL_ERROR } from './../types'
-import { TRANSACTION_SUCCESS } from './../types'
 import { POSTcomplaint, GET_ALL_complaint } from './../service/services'
 import {T_loader} from './Util'
 

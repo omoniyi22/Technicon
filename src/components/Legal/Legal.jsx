@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import './legal.scss'
 
 class Legal extends Component{
+  constructor(props){
+    super(props)
+  }
+  componentDidMount(){
+    this.props.nav_in()
+  }
   render(){
     return(
       <div>
@@ -9,7 +15,9 @@ class Legal extends Component{
           <div className="legal">
 
           <div className="  text-left pb-3 ml-2 h3 mt-3 text-primary">Terms and Policies</div>
-          <div className="body  jumbotron border pb-4 ">
+          <div className="body  jumbotron border pb-4  "
+          style={{marginRight: "10px"}}
+          >
             <div className="my-2 font-weight-bold h6 pb-2">Our Legal Terms and Conditions</div>
             <div className="note py-1 px-4 note-primary py-3">
               Advertise with www.rubberspace.space, the first cloud platform with her user base in schools. The funding recieved is used to generate more traffic(users) in essence promote all products on our advert lists.

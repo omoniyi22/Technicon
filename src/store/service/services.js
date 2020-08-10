@@ -1,4 +1,7 @@
-import { BLOG, NEWSLETTER, COMPLAINT,ALL_COMPLAINT, SIGNUP, REGISTER } from "./api";
+import {
+  BLOG, NEWSLETTER, COMPLAINT, ALL_COMPLAINT, SIGNUP, REGISTER,
+  PROFILE
+} from "./api";
 import axios from "axios";
 
 //Header config 
@@ -60,7 +63,20 @@ export const POSTcomplaint = async (
 }
 
 // GETALL COMPLAINT
-export const GET_ALL_complaint = async(getToken)=>{
+export const GET_ALL_complaint = async (getToken) => {
   return axios(ALL_COMPLAINT, tokenConfig(getToken))
 }
 
+//GET_PROFILE
+export const GET_PROFILE = async (getToken) => {
+  return axios(PROFILE, tokenConfig(getToken))
+}
+
+//UPDATE_PROFILE
+export const UPDATE_PROFILE = async ({
+  location, birthday, name, address, phone_number, username
+}, getToken) => {
+  return axios.patch(PROFILE, {
+    location, birthday, name, address, phone_number, username
+  }, tokenConfig(getToken))
+}

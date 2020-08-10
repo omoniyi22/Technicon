@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Footer extends Component{
     render(){
         return(
-            <div  className="border-top Footer  mt-5">
+            <div  className=" Footer  mt-5">
                 <footer className="footer px-2 px-md-4 py-4">
                     <div className="social text-center">
                         <div className="Join font-weight-bold mb-2">

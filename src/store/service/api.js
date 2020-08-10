@@ -15,3 +15,6 @@ export const COMPLAINT = `${BASE}/complaint`;
 
 //Get all Complaint
 export const ALL_COMPLAINT = `${BASE}/complaint/fetch`;
+
+// Profile
+export const PROFILE = `${BASE}/auth`;

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import {withResizeDetector} from 'react-resize-detector'
+import { withResizeDetector } from 'react-resize-detector'
+import { nav_in } from './../../store/actions/navSwitch'
+import { connect } from 'react-redux'
 
 
 import UserProfile from './User_Profile'
@@ -35,22 +37,25 @@ class Dashboard extends Component {
     }
     this.screenResize = this.screenResize.bind(this)
   }
-  screenResize(){
+  componentDidMount() {
+    this.props.nav_in()
+  }
+  screenResize() {
     this.setState({
       w: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       h: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     })
   }
-componentDidUpdate(){
-  if(window.innerWidth !== this.state.w){
-window.addEventListener("resize", this.screenResize)
+  componentDidUpdate() {
+    if (window.innerWidth !== this.state.w) {
+      window.addEventListener("resize", this.screenResize)
+    }
   }
-}
-componentDidUpdate(){
-  if(window.innerWidth !== this.state.w){
-window.addEventListener("resize", this.screenResize)
+  componentDidUpdate() {
+    if (window.innerWidth !== this.state.w) {
+      window.addEventListener("resize", this.screenResize)
+    }
   }
-}
 
   render() {
     let Switch = SwitchEffect(
@@ -72,16 +77,12 @@ window.addEventListener("resize", this.screenResize)
         <div className={`Dash_1 col-lg-4 col-md-6  mb-4 ${mobile_view[0]}`}  >
           <div className=" w-100 mb-4 mt-2">
             {Switch[3] == null ? <UserProfile /> : Switch[3]}
-            {/* <OfficeAddress/> */}
-            {/* <LogIn/> */}
-            {/* <EditProfile/> */}
           </div>
         </div>
         <div className={`Dash_2 col-lg-4 ${!Switch[2] && "border "} ${mobile_view[1]} col-md-6 `}>
           <div className=" w-100 mb-4 mt-2">
             {Switch[0] == null ? <ChatBox /> : Switch[0]}
-            {/* <Thank_You/> */}
-            {/* <SignUp/> */}
+  
           </div>
         </div>
         <div className={`Dash_3 col-lg-4 col-md-6 mx-0 ${mobile_view[2]} `}>
@@ -90,20 +91,20 @@ window.addEventListener("resize", this.screenResize)
           </div>
         </div>
         {
-          ((function(width, height){
-            return(
-        <div className="Dash_3 col-12 mx-0 " style={{ display: width < 991 ? "block" : "none" }}>
-          <div className=" mb-4 ">
-            {Switch[1] == null ? <TransactionHistory /> : Switch[1]}
-          </div>
-        </div>)
+          ((function (width, height) {
+            return (
+              <div className="Dash_3 col-12 mx-0 " style={{ display: width < 991 ? "block" : "none" }}>
+                <div className=" mb-4 ">
+                  {Switch[1] == null ? <TransactionHistory /> : Switch[1]}
+                </div>
+              </div>)
           })())
         }
- 
+
       </div>
     )
   }
 }
 
 
-export default withResizeDetector(Dashboard)
+export default connect(null, { nav_in })(Dashboard)
