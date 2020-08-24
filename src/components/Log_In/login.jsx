@@ -97,14 +97,15 @@ class LogIn extends Component {
           <div className=" text-center mt-2">
             <img src={logo} width="70px" />
           </div>
-          <div className=" text-center mt-4 Login_title">
+          <div className=" text-center mt-3 Login_title">
             SIGN IN
           </div>
 
-          {this.state.msg &&
-            <div className="reos m-0 p-0 text-center mt-0   mx-4 small " ><span className="fa fa-exclamation mr-2 " /> {this.state.msg} </div>}
+          {this.state.msg ?
+            <div className="roes m-0 p-0 text-center mt-0  text-danger mt-1  mx-4 small " ><span className="fa  text-danger fa-exclamation mr-2 " /> {this.state.msg} </div>
+         :   <div className="roes m-0 p-0 text-center mt-0  text-white mt-1  mx-4 small " ><span className="fa  text-white fa-exclamation mr-2 " /> {this.state.msg} </div>}
 
-          <form className="Login_form" onSubmit={this.onSubmit}>
+          <form className="Login_form py-3 my-1  border-bottom" onSubmit={this.onSubmit}>
 
 
             <div className="new_transaction_group mb-3 ">

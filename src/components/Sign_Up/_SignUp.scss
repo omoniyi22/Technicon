@@ -1,94 +1,91 @@
-.Signin{
-     width: 100%;
-     max-width: 450px;
-    color: rgb(107, 104, 104);
-     background-image: url('./circle.png'), url('./sila.png');
-     background-position-x: left, right;
-     background-position-y:  0,  14%  ;
- 
-     background-repeat: no-repeat;
-     background-size: 240px 220px, 90px 110px;
-     filter: drop-shadow(1px 1px 1px #bcdce9);
+.Signin {
+  width: 100%;
+  max-width: 450px;
+  color: rgb(107, 104, 104);
+  background-image: url("./circle.png"), url("./sila.png");
+  background-position-x: left, right;
+  background-position-y: 0, 14%;
 
-     .first_title_1{
-         font-size: 22px;
-         font-weight: bold;
-         color: rgb(0, 213, 255);
-     }
-     @media  (max-width: 779px){    
-     }
- 
-   
-     form{
-         border-style: unset;
-         // background: rgba(234, 246, 252, 0.171);
-         // background: #EAF6FC;
-         padding: 20px 5% 13px 20px;
-         align-content: center;
-         justify-content: center;
-         width: 100%;
-         margin-top:5px ;
-         
-             .new_transaction_input{
-                 input{
-                     font-size: 13.5px !important;
-                     padding-top: 3px !important;
-                     padding-bottom: 3px !important;
-                 }
-                
-                 .bolo{
-                     border-width: 4px !important;
-                     border-color: rgb(255, 255, 255) !important;;
-                 }
-             }
-             .new_transaction_label{
-                 padding-left: 2px;
-                 font-size: 13px;
-             }
-             .custom-control-label{
-                 height: 23px;
-                 padding-top: 4px;
-                 font-weight: bold;
-                 font-size: 12.2px;
-             }
-             .new_transaction_button{
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-             }
-             .forget{
-                 font-size: 14px;
-                 cursor: pointer;
-             }
-             .log_in_button{
-               
-                     width: 100%;
-                     border: 3px #86C6FB solid;
-                     background: rgb(255, 255, 255);
-                     color: rgb(115, 162, 216) ;
-                     font-size: 11.6px;
-                     font-weight: bold;
-                     padding: 8.5px 15px 8.5px 15px;
-                     background: rgb(112, 181, 228);
-                     cursor: pointer;
-                         color: white ;
-                     &:hover{
-                         box-shadow: 0 !important;
-                         border: rgb(207, 231, 255) 3px solid ;
-                         background: rgb(0, 162, 255) !important;
-                         color: rgb(255, 255, 255) ;
-                     };
-                     &:active{
-                         background: rgb(16, 121, 182) !important;
-                 
-                     }
-             }
-             .koch{
-                 font-size: 14px;
-                 b{
-                     cursor: pointer;
-                 }
-             }
-     }
-   
- }
+  background-repeat: no-repeat;
+  background-size: 240px 220px, 90px 110px;
+  filter: drop-shadow(1px 1px 1px #bcdce9);
+
+  .first_title_1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 213, 255);
+  }
+  @media (max-width: 779px) {
+  }
+
+  form {
+    border-style: unset;
+    // background: rgba(234, 246, 252, 0.171);
+    // background: #EAF6FC;
+    padding: 20px 5% 13px 20px;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+
+    .new_transaction_input {
+      input {
+        font-size: 13.5px !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+      }
+
+      .bolo {
+        border-width: 4px !important;
+        border-color: rgb(255, 255, 255) !important;
+      }
+    }
+    .new_transaction_label {
+      padding-left: 2px;
+      font-size: 13px;
+    }
+    .custom-control-label {
+      height: 23px;
+      padding-top: 4px;
+      font-weight: bold;
+      font-size: 12.2px;
+    }
+    .new_transaction_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .forget {
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .log_in_button {
+      width: 100%;
+      border: 3px #86c6fb solid;
+      background: rgb(255, 255, 255);
+      color: rgb(115, 162, 216);
+      font-size: 11.6px;
+      font-weight: bold;
+      padding: 8.5px 15px 8.5px 15px;
+      background: rgb(60, 127, 172);
+
+      cursor: pointer;
+      color: white;
+      &:hover {
+        box-shadow: 0 !important;
+        border: rgb(207, 231, 255) 3px solid;
+        background: rgb(0, 162, 255) !important;
+        color: rgb(255, 255, 255);
+      }
+      &:active {
+        background: rgb(16, 121, 182) !important;
+      }
+    }
+    .koch {
+      font-size: 14px;
+      b {
+        cursor: pointer;
+      }
+    }
+  }
+}
