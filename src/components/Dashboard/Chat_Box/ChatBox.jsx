@@ -67,28 +67,30 @@ class ChatBox extends Component {
                 <Invoice />
               </div>
             }
+            {!this.state.Switch ?
 
-
-            <div className="bottom  border">
-              <div className="send_reciept border ">
-                <div className=" ml">Send Receipt to mail</div>
-              </div>
-              <div className="mail_out border ml-auto rounded-pill z-depth-1">
-                <div className="send_now border rounded-pill z-depth-1">
-                  <span className="send " style={{ backgroundImage: `url(${send})` }} />
+              <div className="bottom  border">
+                <div className="send_reciept border ">
+                  <div className=" ml">Send Receipt to mail</div>
+                </div>
+                <div className="mail_out border ml-auto rounded-pill z-depth-1">
+                  <div className="send_now border rounded-pill z-depth-1">
+                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bottom  border">
-              <div className="send_reciept border ">
-                <div className=" ml">Send Receipt to mail</div>
-              </div>
-              <div className="mail_out border ml-auto rounded-pill z-depth-1">
-                <div className="send_now border rounded-pill z-depth-1">
-                  <span className="send " style={{ backgroundImage: `url(${send})` }} />
+              :
+              <div className="bottom white  text-black border-primary z-depth-1 ">
+                <textarea autoFocus={true} className=" send_reciept border border-primary  black-text py-1" />
+                {/* <div className=" ml">Send Receipt to mail</div> */}
+                {/* </div> */}
+                <div className="mail_out border ml-auto rounded-pill z-depth-1">
+                  <div className="send_now border rounded-pill z-depth-1">
+                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                  </div>
                 </div>
               </div>
-            </div>
+            }
           </div>
         </div>
       </Fragment>

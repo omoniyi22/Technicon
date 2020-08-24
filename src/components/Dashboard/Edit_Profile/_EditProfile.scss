@@ -1,4 +1,8 @@
-.ariMeji{
+input[type="file"] {
+  display: none;
+}
+
+.ariMeji {
   top: -13px;
   position: absolute !important;
   width: 100%;
@@ -7,17 +11,16 @@
   left: 0;
   background: rgba(255, 255, 255, 0.712);
   @include heart_center();
- 
-  .temiyemi{
-    .desq{
+
+  .temiyemi {
+    .desq {
       color: rgba(255, 0, 0, 0.521);
       font-size: 29px;
     }
-  background: rgba(255, 252, 252, 0.527);
-    div{
-      &::first-letter{
-  
-      font-variant: normal;
+    background: rgba(255, 252, 252, 0.527);
+    div {
+      &::first-letter {
+        font-variant: normal;
       }
       font-variant: small-caps !important;
       text-transform: none;
@@ -25,144 +28,152 @@
     }
   }
 }
-.fa-arrow-left{
-    color: #75B9E0;
+.fa-arrow-left {
+  color: #75b9e0;
 }
-.mr_a{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./profile.jpg');
-    filter: blur(7px);
-    z-index:  !important;
-    position: absolute;
-    width: 100%;
-    height: 140px;
-    border-width: 0px !important;
+.mr_a {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./profile.jpg");
+  filter: blur(7px);
+  z-index: !important;
+  position: absolute;
+  width: 100%;
+  height: 140px;
+  border-width: 0px !important;
 }
 
-.EDIT_PROFILE{
-    display: flex;
-    margin-top: -20px;
-    padding: 5px 0 10px 0;
-    .EDIT_PROFILE_A{
-        font-size: 14.2px;
-        font-weight: 600;
-        color: rgba(63, 62, 62, 0.431);
-        margin-top: 4.4px;
+.EDIT_PROFILE {
+  display: flex;
+  margin-top: -20px;
+  padding: 5px 0 10px 0;
+  .EDIT_PROFILE_A {
+    font-size: 14.2px;
+    font-weight: 600;
+    color: rgba(63, 62, 62, 0.431);
+    margin-top: 4.4px;
+  }
+  .EDIT_PROFILE_B {
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: auto;
+    color: white;
+    @include pointer();
+    padding: 5px 11px 5px 11px;
+    background: #5997bded;
+    border: 3px solid rgba(231, 231, 231, 0.726) !important ;
 
+    transition: background 2s border 2s;
+
+    &:hover {
+      background: rgba(29, 141, 206, 0.616);
+      color: white;
     }
-    .EDIT_PROFILE_B{
-        font-size: 11px;
-        font-weight: 600;
-        margin-left: auto;
-        color: white;
-        @include pointer();
-        padding: 5px 11px 5px 11px;
-        background: #68b9ebed;
-        border: 3px solid rgba(231, 231, 231, 0.459) !important ;
+    &:active {
+      border: 3px solid #68b9ebed !important;
 
-        transition: background 2s border 2s;
-
-        &:hover{
-            background:rgba(29, 141, 206, 0.616) ;
-            color: white;
-        }
-        &:active{
-            border: 3px solid #68b9ebed !important;
-
-            background: #60aedfed;
-
-        }
-
+      background: #60aedfed;
     }
+  }
 }
 
-.edit_pix{
-    border: solid 1px !important;
+.edit_pix {
+  border: solid 1px !important;
+  @include heart_center();
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./profile.jpg");
+  margin-top: 23px;
+
+  .pix_view {
+    z-index: 2;
+    background: white;
+    padding: 2.7px;
+    @include fit();
     @include heart_center();
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('./profile.jpg');
-    margin-top: 23px;
-
-    .pix_view{
-        z-index: 2;
-        background: white;
-        padding: 2.7px;
-        @include fit();
-        @include heart_center();
-        img{
-            width: 74px;
-            height: 74px;
-            background: red;
-        }
-        .opacity{
-            position: absolute;
-            background: chartreuse;
-        }
+    img {
+      width: 74px;
+      height: 74px;
+      background: red;
     }
-    .plus_pix{
-        @include pointer;
-        position: absolute;
-        margin-top: 27px;
-        @include fit();
-        padding-top: 2.29px;
-        padding-left: 2.5px;
-        padding-right: 2.7px;
-        padding-bottom: 2.4px;
-        margin-left: 25px;
-        font-size: 9.5px;
-        z-index: 2;
-        background: red;
-        .fa{
-            background: rgb(86, 193, 255);
-            color: white;
-            padding-top:2.8px;
-            padding-bottom:2.8px;
-            padding-left:3px;
-            padding-right:3px;
-        }
+    .opacity {
+      position: absolute;
+      background: chartreuse;
     }
+  }
+  .plus_pix {
+    @include pointer;
+    position: absolute;
+    margin-top: 27px;
+    @include fit();
+    height: 19px;
+    padding-top: 2.29px;
+    padding-left: 2.5px;
+    padding-right: 2.7px;
+    // padding-bottom: 2.4px;
+    margin-left: 25px;
+    font-size: 9.5px;
+    z-index: 2;
+    .fa {
+      cursor: pointer;
+      background: rgb(86, 193, 255);
+      color: white;
+      padding-top: 2.8px;
+      padding-bottom: 2.8px;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+  }
 }
-.profile_form{
-    margin-top: 45px !important;
-    .profile_input{
-        padding: 0 7px 0 7px !important;
-        margin-bottom: 18.5px; 
-        label{
-            padding: 0px 9px 0px 37px;
-            font-size: 11.93px;
-            font-weight: bold;
-            color: rgba(122, 146, 153, 0.678);
-        }
-        .edit_input{
-            .form_input{
-                padding: 0 22px 0 21px;
-                flex: 2;
-                input{
-                    font-size: 14.2px;
-                    font-weight: 600;
-                }
-            }
-            .form_input.Email, .form_input.Phone{
-                padding: 0 22px 0 19px;
-            }
-            .form_input.Location{
-                padding: 0 22px 0 23px;
-            }
-            .fa{
-                font-size: 18px;
-                margin-top: -2px;
-                color: rgb(48, 152, 184);
-                
-            }
-            .fa-pen,{
-                font-size: 16.7px;
-                margin-top: 0px;
-                color: #7a9299ad;
-            }
-        }
+.profile_form {
+  margin-top: 45px !important;
+  .profile_input {
+    padding: 0 7px 0 7px !important;
+    margin-bottom: 18.5px;
+    label {
+      padding: 0px 9px 0px 37px;
+      font-size: 11.93px;
+      font-weight: bold;
+      color: rgba(122, 146, 153, 0.678);
     }
+    .edit_input {
+      .form_input {
+        padding: 0 22px 0 21px;
+        flex: 2;
+        input {
+          font-size: 14.2px;
+          font-weight: 600;
+        }
+      }
+      .form_input.Email,
+      .form_input.Phone {
+        padding: 0 22px 0 19px;
+      }
+      .form_input.Location {
+        padding: 0 22px 0 23px;
+      }
+      .fa {
+        font-size: 18px;
+        margin-top: -2px;
+        color: rgb(48, 152, 184);
+      }
+      .fa-pen {
+        font-size: 16.7px;
+        margin-top: 0px;
+        color: #7a9299ad;
+      }
+    }
+  }
+}
+
+.dodl{
+  height: 20px;
+  width: 18px;
+  padding-right: 0px !important;
+
+  filter: contrast(23);
+  // filter: contrast(2);
+  background-image: url('./cake.png');
 }

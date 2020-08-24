@@ -63,7 +63,8 @@ class Dashboard extends Component {
       PaymentGateway,
       PaymentMethod,
       EditProfile,
-      PaymentMethod
+      PaymentMethod,
+      PaymentGateway
     )[0]
     let mobile_view = SwitchEffect(
       NewTransaction,
@@ -79,7 +80,7 @@ class Dashboard extends Component {
             {Switch[3] == null ? <UserProfile /> : Switch[3]}
           </div>
         </div>
-        <div className={`Dash_2 col-lg-4 ${!Switch[2] && "border "} ${mobile_view[1]} col-md-6 `}>
+        <div className={`Dash_2 col-lg-4 ${!Switch[2] && "border z-depth-1"} ${mobile_view[1]} col-md-6 `}>
           <div className=" w-100 mb-4 mt-2">
             {Switch[0] == null ? <ChatBox /> : Switch[0]}
   
@@ -90,7 +91,7 @@ class Dashboard extends Component {
             {Switch[1] == null ? <TransactionHistory /> : Switch[1]}
           </div>
         </div>
-        {
+        {/* {
           ((function (width, height) {
             return (
               <div className="Dash_3 col-12 mx-0 " style={{ display: width < 991 ? "block" : "none" }}>
@@ -99,7 +100,7 @@ class Dashboard extends Component {
                 </div>
               </div>)
           })())
-        }
+        } */}
 
       </div>
     )

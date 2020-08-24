@@ -6,7 +6,7 @@ import { createBrowserHistory } from 'history'
 import { countWords } from './util'
 import { white } from 'color-name'
 const pix = require('./profile.jpg')
-
+const cake = require('./cake.png')
 class EditProfile extends Component {
   constructor(props) {
     super(props)
@@ -16,16 +16,24 @@ class EditProfile extends Component {
       name: props.profile.name ? props.profile.name : "",
       username: props.profile.username ? props.profile.username : "",
       phone_number: props.profile.phone_number ? props.profile.phone_number : "",
-      location: props.profile.location ? props.profile.location : "",
+      location: props.profile.address ? props.profile.address : "",
       birthday: props.profile.birthday ? props.profile.birthday : "",
       changes: false,
-      msg: ""
+      msg: "",
+      file: "",
+      filename: ""
 
     }
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
     this.clearAll = this.clearAll.bind(this)
-
+    this.onPixed = this.onPixed.bind(this)
+  }
+  onPixed(e) {
+    this.setState({
+      file: e.target.files[0],
+      filename: e.target.files[0].name
+    })
   }
 
   clearAll() {
@@ -43,6 +51,21 @@ class EditProfile extends Component {
     })
   }
   onSubmit(e) {
+// if(file !== null){
+//   const formData = new FormData()
+// formData.append("file", file)
+
+// try {
+//   const res = awt axios.patch('/upload', formData, {
+//     headers:{
+//       "Content-Type" : "multipart/form-data"
+//     }
+//   })
+// } catch (error) {
+  
+// }
+// }
+
     e.preventDefault()
     let {
       email,
@@ -53,6 +76,7 @@ class EditProfile extends Component {
       location,
       birthday,
       changes,
+      file
 
     } = this.state
 
@@ -96,7 +120,7 @@ class EditProfile extends Component {
           email,
           name,
           phone_number,
-          location,
+          address : location,
           birthday
         })
       }
@@ -176,9 +200,9 @@ class EditProfile extends Component {
 
         <div className=" EDIT_PROFILE  ">
           <div className="EDIT_PROFILE_A"><span className="fa fa-arrow-left mr-1"
-            onClick={() => createBrowserHistory().back()}
-          />  Edit Profile </div>
-          <button className="EDIT_PROFILE_B text-right rounded-pill"
+            onClick={() => createBrowserHistory().back()}>
+          </span>  Edit Profile </div>
+          <button className="EDIT_PROFILE_B blue text-right rounded-pill"
 
           >SAVE</button>
         </div>
@@ -189,9 +213,11 @@ class EditProfile extends Component {
           <div className="pix_view  border rounded-pill z-depth-1">
             <img src={pix} className="rounded-pill" alt="" />
           </div>
-          <div className="plus_pix  white rounded-pill ">
-            <span className="fa fa-plus   rounded-pill   z-depth-3" />
+          <div className="plus_pix  white rounded-pill pb-0">
+            <label for="file" type="file" className="fa fa-plus  rounded-pill   z-depth-3" />
           </div>
+          <input type="file" id="file" accept="image/*" onCha />
+
         </div>
 
         <div className="profile_form  ">
@@ -262,7 +288,9 @@ class EditProfile extends Component {
           <div className="profile_input  px-1">
             <label className=" mb-1">Birthday</label>
             <div className="edit_input row mx-0 md-form my-0">
-              <div className="fa fa-user"></div>
+              <div className="fa dodl">
+                {/* <img src={cake}/> */}
+              </div>
               <div className=" form_input ">
                 <input className="form-control py-0 form-control-sm border-bottom my-0" placeholder="Birthday"
                   type="date"

@@ -6,7 +6,9 @@ import {
   REGISTER_SUCCESS,
   LOGOUT_SUCCESS,
   USER_LOADING,
-  GET_PROFILE
+  GET_PROFILE,
+  NAV_IN
+
 } from './../types'
 import { getProfile } from './profileAction'
 import { returnErrors } from './errorActions'
@@ -92,5 +94,7 @@ export const RegisterAction = (getState) => async (dispatch) => {
 export const logOutAction = () => {
   return {
     type: LOGOUT_SUCCESS
+    
   }
+  
 }

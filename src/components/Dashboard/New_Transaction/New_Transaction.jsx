@@ -127,8 +127,8 @@ class NewTransaction extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <div className="new_transaction_header font-weight-bold px-1 py-3 col-12  flex">New Transaction
-        {this.state.msg && <div className="Error !  ml-auto mr-2 mt-1 small border rounded-pill pl-2 py-1 red lighten-2 white-text">{this.state.msg} !!!
-        <span className="fa fa-times text-danger rounded-pill border px-2 p-1 mr-1 white"
+        {this.state.msg && <div className="Error  ml-auto mr-2 mt-1 small  rounded-pill pl-2 py-1  lighten-2 text-danger">{this.state.msg} !!!
+         <span 
               onClick={
                 this.Clear.bind(this)
               }

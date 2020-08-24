@@ -21,6 +21,8 @@ export const getProfile = async (state) => {
   }
 }
 
+
+
 //Edit Profile
 export const editProfile = (request) => async (dispatch, state) => {
   console.log(request)

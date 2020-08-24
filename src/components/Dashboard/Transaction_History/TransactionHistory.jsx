@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropType from 'prop-types'
+import { Link } from 'react-router-dom'
 let loader = require('./tenor.gif')
 const advert = require('./advert.png')
-
 
 class TransactionHistory extends Component {
   constructor(props) {
@@ -24,39 +24,43 @@ class TransactionHistory extends Component {
 
   render() {
     let transaction = this.props.all.length !== 0 && this.props.all[this.state.position].map(item => (
-      <div className="transacts_product row m-0   border-bottom border-left border-right">
-        <div className="transacts_product_pix p-1 ml-1 ">
-          <img className='border' />
-        </div>
-        <div className="transacts_product_details p-1 pl-2 ">
-          <div className="transacts_product_id  mt-1">
-            #ID {item.trackingCode}
-          </div>
-          <div className="transacts_product_name ">
-            {item.device_type}
-          </div>
-        </div>
-        <div className="transacts_product_state  ml-auto pr-2">
-          <div className="transacts_product_date   mt-1">
+      <Link to="/single_transact">
 
-            {/* <Moment calendar> */}
-            {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
-            {/* </Moment>  */}
-
-
+        <div className="transacts_product row m-0   border-bottom border-left border-right">
+          <div className="transacts_product_pix p-1 ml-1 ">
+            <img className='border' />
           </div>
-          <div className="transacts_product_status  ml-auto rounded-pill border">
-            <span className="fa fa-check" />
+          <div className="transacts_product_details p-1 pl-2 ">
+            <div className="transacts_product_id  mt-1">
+              #ID {item.trackingCode}
+            </div>
+            <div className="transacts_product_name ">
+              {item.device_type}
+            </div>
+          </div>
+          <div className="transacts_product_state  ml-auto pr-2">
+            <div className="transacts_product_date   mt-1">
+
+              {/* <Moment calendar> */}
+              {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
+              {/* </Moment>  */}
+
+
+            </div>
+            <div className="transacts_product_status  ml-auto rounded-pill border">
+              <span className="fa fa-check" />
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
+
     ))
 
     return (
       <div className="TransactionHistory">
         <div className="Advert border  text-center">
           <div className="h1"
-          style={{visibility: "hidden"}}
+            style={{ visibility: "hidden" }}
           >ADVERT HERE</div>
         </div>
         <div className="Transactions  mt-1">
@@ -121,7 +125,7 @@ class TransactionHistory extends Component {
                 })
               }}
               disabled={this.state.la_disabled || this.state.position === 0 && true}
-              >
+            >
             </button>
             <button className="transacts_nav_prev fa fa-angle-left border px-2  py-1"
               onClick={() => {
@@ -144,7 +148,7 @@ class TransactionHistory extends Component {
               <div className="staged">{this.props.all.length !== 0 ? this.state.position + 1 : 0} </div> of <div className="total_page">{this.props.all.length}</div>
             </div>
             <button className="transacts_nav_next fa fa-angle-right border px-2  py-1"
-              disabled={this.props.all.length === 0  || this.state.ra_disabled && true}
+              disabled={this.props.all.length === 0 || this.state.ra_disabled && true}
               onClick={() => {
                 if (this.state.position === (this.props.all.length - 2)) {
                   this.setState({
@@ -170,7 +174,7 @@ class TransactionHistory extends Component {
                   la_disabled: false
                 })
               }}
-              disabled={this.props.all.length === 0  || this.state.ra_disabled && true}
+              disabled={this.props.all.length === 0 || this.state.ra_disabled && true}
             ></button>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import Profile from "./EditProfile";
 import { editProfile, clearErr } from './../../../store/actions/profileAction'
+import { nav_in } from './../../../store/actions/navSwitch'
 
 const mapStateToProps = state => ({
   profile: state.profile.profile,
@@ -13,5 +14,5 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps,
-  { editProfile, clearErr }
+  { editProfile, clearErr, nav_in }
 )(Profile)

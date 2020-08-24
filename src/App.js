@@ -20,14 +20,9 @@ import Login from './components/Log_In/index'
 import SignUp from './components/Sign_Up'
 import Legal from './components/Legal'
 
-import {nav_in} from './store/actions/navSwitch'
-
+import { nav_in } from './store/actions/navSwitch'
 import './App.scss'
-
-
 // import {loadUser} from './store/actions/authAction'
-
-
 let nac = true
 class App extends React.Component {
   constructor(props) {
@@ -39,7 +34,10 @@ class App extends React.Component {
     this.yesNav = this.yesNav.bind(this)
   }
 
+  // componentDidMount() {
+  //   this.props.nav_in()
 
+  // }
   noNav() {
     nac = false
   }
@@ -70,6 +68,8 @@ class App extends React.Component {
               <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
               <Route path="/edit-profile" component={auth ? Dashboard : Login} />
               <Route path="/payment-method" component={auth ? Dashboard : Login} />
+              <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
+              <Route path="/single_transact/:id" component={auth ? Dashboard : Login} />
               <Route path="/pick-up" component={auth ? PickupLocation : Login} />
               <Route path="/your-id" component={auth ? Reach_Out_ID : Login} />
               <Route path="/office-address" component={auth ? OfficeAddress : Login} />
@@ -93,7 +93,7 @@ class App extends React.Component {
               <Route path="/" component={LandingPage} />
             </Switch>
           </Route>
-         {this.props.nav &&  <Footer />}
+          {this.props.nav && <Footer />}
         </Router>
         <div onClick={
           this.noNav
@@ -109,4 +109,4 @@ const mapStateToProps = (state) => ({
   nav: state.nav.nav
 })
 
-export default connect(mapStateToProps, {nav_in})(App);
+export default connect(mapStateToProps, { nav_in })(App);

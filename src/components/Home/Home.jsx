@@ -28,7 +28,7 @@ class Home extends Component {
             <div className="leoch">
               <div className="whity">
                 <div className="white sods p-3 rounded-lg">
-                 {this.props.auth ?  <New_Transaction /> : <Login/>}
+                 {this.props.auth ?  <New_Transaction /> : <Login  home={true}/>}
                 </div>
                 <div className=" broder  py-2">
                   <div className="  ml-3 ">

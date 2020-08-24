@@ -27,7 +27,7 @@ class LogIn extends Component {
     clearErrors: PropType.func.isRequired,
   }
   componentDidMount() {
-    this.props.nav_out()
+    !this.props.home && this.props.nav_out()
   }
   componentDidUpdate(prevProps) {
     const { error, isAuthenticated } = this.props;

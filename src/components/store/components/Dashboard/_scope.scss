@@ -1,0 +1,47 @@
+
+.user_profiles{
+    @import './User_Profile/userProfile';
+}
+
+.ChatBox{
+    @import './Chat_Box/ChatBox';
+}
+
+.TransactionHistory{
+    @import './Transaction_History/TransactionHistory';
+}
+
+.NewTransaction{
+    @import './New_Transaction/NewTransaction';
+}
+
+.PaymentGateway{
+    @import './Payment_Gateway/PaymentGateway';
+}
+
+.PaymentMethod{
+    @import './Payment_Method/PaymentMethod';
+}
+
+.EditProfile{
+    @import './Edit_Profile/EditProfile';
+};
+
+.PickupLocation{
+    @import './Pickup_Location/PickupLocation';
+};
+
+.Invoice{
+    @import './Invoice/Invoice';
+}
+
+.Thank_You{
+    @import './Thank_You/ThankYou';
+}
+
+.ReachOut{
+    @import './Reached_Out/ReachOut';
+}
+.OfficeLocation{
+    @import './Office_Address/OfficeAddress';
+}

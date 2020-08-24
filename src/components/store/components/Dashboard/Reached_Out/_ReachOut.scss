@@ -1,0 +1,28 @@
+.I_D{
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    // color: rgba(95, 19, 236, 0.548);
+    color: rgba(34, 98, 158, 0.89);
+
+}
+.thank_u{
+    margin-top: 65px !important;
+    margin-bottom: 65px !important;
+    font-size: 18px;
+    font-weight: bold;
+    // color: rgb(40, 156, 251);
+    color: rgb(18, 141, 172);
+}
+.thank_button{
+
+    div{
+        background: rgb(0, 162, 255) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    width: 100% !important;
+    font-size: 13px !important;
+    margin-top: 182px;
+    @include large_button_oda();
+}
+}

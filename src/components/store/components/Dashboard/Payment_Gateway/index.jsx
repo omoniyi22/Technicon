@@ -1,0 +1,1 @@
+export {PaymentGateway as default} from './PaymentGateway'
