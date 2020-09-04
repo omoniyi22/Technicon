@@ -69,7 +69,7 @@ class Navbar extends Component {
     function UnAuthNav() {
       return (
         <>
-          <div className="cog ">
+          {/* <div className="cog ">
             <Link to="/notification" className="limk ">
 
               <div className="nav_link pb-0  mt-2 text-center">
@@ -77,7 +77,7 @@ class Navbar extends Component {
                 <div className=" mt-1 nav_text notify">Notification</div>
               </div>
             </Link>
-          </div>
+          </div> */}
 
           <div className="cog ">
             <Link className="limk ">
@@ -159,10 +159,10 @@ class Navbar extends Component {
           <div className='lasaas'
           onClick={this.closeShare}
           ></div>
-          <div className="modals m-auto p-4 "
+          <div className="modals m-auto p-4"
           style={{ display: `${show ? 'flex': 'none'}`}}
           >
-            <div className="spread  row p-5 text-center rounded-lg white z-depth-1">
+            <div className="spread  row p-5 text-center rounded-lg   z-depth-1">
 
               <div className="col-3  p-2">
                 <FacebookMessengerShareButton
@@ -229,7 +229,7 @@ class Navbar extends Component {
               </div>
             </div>
 
-            <div className="linkss  border rounded-lg z-depth-0">
+            <div className="linkss   rounded-lg z-depth-0">
               <span className="fa fa-users" />
               <span className="dext m-auto">
                 Tell someone about technicon

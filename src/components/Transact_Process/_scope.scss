@@ -5,7 +5,9 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
-
+.pix_upload{
+  @import './Pix_Upload/pix';
+}
 .PickupLocation{
  @include mobile-contrast();
     @import './Pickup_Location/PickupLocation';

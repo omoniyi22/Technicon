@@ -27,7 +27,7 @@ class About extends Component{
                         <div className="Bold doak font-weight-bold border-bottom">
                             About Technicon
                         </div>
-                        <div className="note  Fluids">
+                        <div className="  Fluids">
                             Hey sorry about the cheezy name. When I kicked this 
                             site off on July 4th, 2007, 
                             I mostly really did write about CSS. But of course, that 
@@ -45,12 +45,12 @@ class About extends Component{
                     <div className="pix  mx-0 py-3  delay-1s wow fadeInRight  ">
                         <div className="author_card  mx-md-4">
                             <div className="pictured mb-md-1">
-                                <div className="fa fa-envelope mr-3"/>
-                                <div className="picture  rounded-pill  p-2 wow  slower fadeIn"
+                                <div className="fa fa-envelope mr-3 rounded-pill p-3 z-depth-1"/>
+                                <div className="picture  rounded-pill  p-2 wow  slower fadeIn z-depth-1"
                                 style={{backgroundImage: `url(${picture})`}}
                                 >
                                 </div>
-                                <div className="fa fa-phone-alt ml-3"/>
+                                <div className="fa fa-phone-alt ml-3 rounded-pill p-3 z-depth-1"/>
                             </div>
                             <div className="author_details  border-bottom-0 py-4 ">
                                 <div className="a_name Fluids">Chris Coyier</div>
@@ -71,7 +71,7 @@ class About extends Component{
 
 
                     <div className=" diver py-2 px-2  wow zoomIn slow ">
-                        <div className="border hoda z-depth-1  rounded-lg py-4 py-md-5">    
+                        <div className="border hoda z-depth-1 px-5  rounded-lg py-4 py-md-5">    
                             <div className="text-center">
                                 <img src={realtime} width="110px" className="wow zoomIn slow"/>
                             </div>
@@ -86,8 +86,8 @@ class About extends Component{
                     </div>
 
 
-                    <div className=" diver py-2 px-2  wow zoomIn slow">
-                        <div className="border hoda z-depth-1 rounded-lg py-4 py-md-5">    
+                    <div className=" diver  mx-4  wow zoomIn slow">
+                        <div className="border hoda z-depth-1 px-5  rounded-lg py-4 py-md-5 ">    
                             <div className="text-center">
                                 <img src={pick} width="110px" className=" wow zoomIn slow"/>
                             </div>
@@ -103,7 +103,7 @@ class About extends Component{
 
 
                     <div className=" diver py-2  px-2   wow zoomIn slow">
-                        <div className="border hoda z-depth-1  rounded-lg py-4 py-md-5">    
+                        <div className="border hoda z-depth-1 px-5  rounded-lg py-4 py-md-5">    
                             <div className="text-center">
                                 <img src={expert} width="110px" className="wow zoomIn slow"/>
                             </div>
@@ -132,7 +132,7 @@ class About extends Component{
                         <Swiper {...params} className="cient  my-5 py-5 px-md-5">
                             <div className="  testifier wow fadeInLeft slow">
                                 <div className="piz  mb-auto">
-                                    <div className="border rounded-pill"
+                                    <div className="border rounded-pill z-depth-1"
                                 style={{backgroundImage: `url(${picture})`}}
                                     
                                     ></div>
@@ -260,8 +260,8 @@ class About extends Component{
                         </div>
                     </div>
                 </div>
-                <div className="Our_Catalogue row mx-0  py-1 px-4">
-                    <div className="worker col-4 z-depth-1  border py-3 z-depth-1 wow fadeInDown faster ">
+                <div className="Our_Catalogue row mx-0  py-1 px-4  pt-3">
+                    <div className="worker col-4 z-depth-1 mx-5 my-3 border py-3 z-depth-1 wow fadeInDown faster ">
                         <div className="w-100 cleax">
                             <div className="worker_pix  rounded-pill  ">
                                 <div className="worker_pixin border rounded-pill"
@@ -272,7 +272,7 @@ class About extends Component{
                         <div className="worker_name w-100 text-center">Ben Harnny</div>
                         <div className="worker_position w-100 text-center">Top Head Enginner</div>
                     </div>
-                    <div className="worker col-4 z-depth-1  border py-3 z-depth-1 wow fadeInDown slow">
+                    <div className="worker col-4 z-depth-1 mx-5 my-3  border py-3 z-depth-1 wow fadeInDown slow">
                         <div className="w-100 cleax">
                             <div className="worker_pix  rounded-pill  ">
                                 <div className="worker_pixin border rounded-pill"
@@ -283,7 +283,7 @@ class About extends Component{
                         <div className="worker_name w-100 text-center">Ben Harnny</div>
                         <div className="worker_position w-100 text-center">Top Head Enginner</div>
                     </div>
-                    <div className="worker col-4 z-depth-1  border py-3 z-depth-1 wow fadeInDown  slower">
+                    <div className="worker col-4 z-depth-1 mx-5  my-4 border py-3 z-depth-1 wow fadeInDown  slower">
                         <div className="w-100 cleax">
                             <div className="worker_pix  rounded-pill  ">
                                 <div className="worker_pixin border rounded-pill"

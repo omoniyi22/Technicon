@@ -2,12 +2,14 @@
   // border-width: 3px !important;
   width: 40%;
   .worker_pixin {
+    min-height: 139px !important;
     padding-top: 65%;
     background-position: center;
     background-size: cover;
   }
 }
 .content {
+  min-height: 139px !important;
   padding-bottom: 13px !important;
 }
 .date {
@@ -20,28 +22,50 @@
 }
 .noted {
   font-size: small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .read_more {
-  font-size: 14px;
+  text-transform: capitalize;
+  font-size: 11.4px;
   font-weight: bold;
-  font-variant: small-caps;
   margin-top: 14px;
+
+  &:hover {
+    .sonto {
+      width: 100%;
+      border-color: rgb(43, 141, 180) !important;
+    }
+  }
   .ssowp {
     margin-top: 3.4px;
   }
-  &:hover {
-    div{
+  .sonto {
+    transition-duration: 0.3s;
+    width: 0;
+    border-color: white !important;
+  }
+  .sont {
+    color: rgb(43, 141, 180);
 
-    color: rgb(8, 154, 212);
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  &:hover {
+    div {
+      color: rgb(8, 154, 212);
     }
     cursor: pointer;
   }
 }
-.seew{
+.seew {
   padding-top: 5.3px !important;
   font-size: 19px;
   font-weight: bold !important;
-  &:hover{
+  &:hover {
     color: white !important;
     background: rgba(13, 49, 70, 0.774);
   }

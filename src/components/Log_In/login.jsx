@@ -43,7 +43,6 @@ class LogIn extends Component {
 
     if (isAuthenticated) {
       this.props.history.push('/dashboard')
-
     }
   }
 
@@ -73,7 +72,7 @@ class LogIn extends Component {
         msg: "Password must be 8 or more characters"
       })
     } else {
-      this.props.LoginAction(newUser);
+      this.props.LoginAction(newUser, this.props.history);
       this.props.clearErrors()
     }
 
@@ -103,9 +102,9 @@ class LogIn extends Component {
 
           {this.state.msg ?
             <div className="roes m-0 p-0 text-center mt-0  text-danger mt-1  mx-4 small " ><span className="fa  text-danger fa-exclamation mr-2 " /> {this.state.msg} </div>
-         :   <div className="roes m-0 p-0 text-center mt-0  text-white mt-1  mx-4 small " ><span className="fa  text-white fa-exclamation mr-2 " /> {this.state.msg} </div>}
+            : <div className="roes m-0 p-0 text-center mt-0  text-white mt-1  mx-4 small " >. {this.state.msg} </div>}
 
-          <form className="Login_form py-3 my-1  border-bottom" onSubmit={this.onSubmit}>
+          <form className="Login_form py-3 my-1 border-bottom" onSubmit={this.onSubmit}>
 
 
             <div className="new_transaction_group mb-3 ">
@@ -128,16 +127,13 @@ class LogIn extends Component {
             <div className="new_transaction_group mb-3 ">
               <div className="new_transaction_label small font-weight-bold">
                 Password
-                        </div>
+              </div>
               <div className="new_transaction_input ">
                 <div className="bolo my-1 w-100 borde-left  ">
                   <input placeholder='Password' type="password"
                     className="w-100 form-control border border-none"
                     name="password"
                     onChange={this.onChange}
-                    value={this.state.password}
-
-
                     value={this.state.password}
                     type={`${this.state.show_password ? "text" : "password"}`}
                   />
@@ -147,7 +143,6 @@ class LogIn extends Component {
                         this.show_password
                       }
                     ></span></div>
-
                 </div>
               </div>
             </div>
@@ -155,7 +150,7 @@ class LogIn extends Component {
               disabled={this.props.loading}
             >{!this.props.loading ? "Login" : "Loading..."}</button>
             <div className="mt-2 koch text-center">
-              <span className="ml-2">Do you have an account ? </span><b className="text-primary">{!this.props.loading ? <Link to="/signup">Create account</Link> : <Link>Create account</Link>}</b>
+              <span className="ml-2">Do you have an account ? </span><b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/signup">Create account</Link> : <Link>Create account</Link>}</b>
             </div>
           </form>
         </div>

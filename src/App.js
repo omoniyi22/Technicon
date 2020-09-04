@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from 'react-redux'
 import PickupLocation from './components/Transact_Process/Pickup_Location'
-
+import Pix_Upload from './components/Transact_Process/Pix_Upload'
 import Thank_You from './components/Transact_Process/Thank_You'
 import Reach_Out_ID from './components/Transact_Process/Reached_Out'
 import OfficeAddress from "./components/Transact_Process/Office_Address";
@@ -74,9 +74,8 @@ class App extends React.Component {
               <Route path="/your-id" component={auth ? Reach_Out_ID : Login} />
               <Route path="/office-address" component={auth ? OfficeAddress : Login} />
               <Route path="/thank-you" component={auth ? Thank_You : Login} />
-
               <Route path="/payment-method" component={auth ? Dashboard : Login} />
-
+              <Route path="/pix_upload" component={Pix_Upload} />
               <Route path="/login" component={Login} />
 
 

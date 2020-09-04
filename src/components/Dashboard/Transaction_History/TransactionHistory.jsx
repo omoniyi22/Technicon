@@ -24,35 +24,39 @@ class TransactionHistory extends Component {
 
   render() {
     let transaction = this.props.all.length !== 0 && this.props.all[this.state.position].map(item => (
-      <Link to="/single_transact">
+      // <Link to="/single_transact">
 
-        <div className="transacts_product row m-0   border-bottom border-left border-right">
-          <div className="transacts_product_pix p-1 ml-1 ">
-            <img className='border' />
+      <div className="transacts_product row m-0   border-bottom border-left border-right"
+        onClick={() => {
+          this.props.getReciept(item)
+        }}
+      >
+        <div className="transacts_product_pix p-1 ml-1 ">
+          <img className='border' />
+        </div>
+        <div className="transacts_product_details p-1 pl-2 ">
+          <div className="transacts_product_id  mt-1">
+            #ID {item.trackingCode}
           </div>
-          <div className="transacts_product_details p-1 pl-2 ">
-            <div className="transacts_product_id  mt-1">
-              #ID {item.trackingCode}
-            </div>
-            <div className="transacts_product_name ">
-              {item.device_type}
-            </div>
-          </div>
-          <div className="transacts_product_state  ml-auto pr-2">
-            <div className="transacts_product_date   mt-1">
-
-              {/* <Moment calendar> */}
-              {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
-              {/* </Moment>  */}
-
-
-            </div>
-            <div className="transacts_product_status  ml-auto rounded-pill border">
-              <span className="fa fa-check" />
-            </div>
+          <div className="transacts_product_name ">
+            {item.device_type}
           </div>
         </div>
-      </Link>
+        <div className="transacts_product_state  ml-auto pr-2">
+          <div className="transacts_product_date   mt-1">
+
+            {/* <Moment calendar> */}
+            {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
+            {/* </Moment>  */}
+
+
+          </div>
+          <div className="transacts_product_status  ml-auto rounded-pill border">
+            <span className="fa fa-check" />
+          </div>
+        </div>
+      </div>
+      // </Link>
 
     ))
 
@@ -115,8 +119,8 @@ class TransactionHistory extends Component {
             </div> */}
 
           </div>
-          <div className="transacts_nav  py-2 mx-0 row mt-auto">
-            <button className="transacts_nav_first fa fa-angle-double-left border px-2  py-1"
+          <div className=" z-depth-1  transacts_nav  py-2 mx-0 row mt-auto">
+            <button className="z-depth-1 rounded-lg transacts_nav_first fa fa-angle-double-left border px-2  py-1"
               onClick={() => {
                 this.setState({
                   position: 0,
@@ -127,7 +131,7 @@ class TransactionHistory extends Component {
               disabled={this.state.la_disabled || this.state.position === 0 && true}
             >
             </button>
-            <button className="transacts_nav_prev fa fa-angle-left border px-2  py-1"
+            <button className="z-depth-1 rounded-lg transacts_nav_prev fa fa-angle-left border px-2  py-1"
               onClick={() => {
                 if (this.state.position === 0) {
                   this.setState({
@@ -147,7 +151,7 @@ class TransactionHistory extends Component {
             <div className="transacts_nav_position  px-2  py-1 small row mx-0">
               <div className="staged">{this.props.all.length !== 0 ? this.state.position + 1 : 0} </div> of <div className="total_page">{this.props.all.length}</div>
             </div>
-            <button className="transacts_nav_next fa fa-angle-right border px-2  py-1"
+            <button className="z-depth-1 rounded-lg transacts_nav_next fa fa-angle-right border px-2  py-1"
               disabled={this.props.all.length === 0 || this.state.ra_disabled && true}
               onClick={() => {
                 if (this.state.position === (this.props.all.length - 2)) {
@@ -166,7 +170,7 @@ class TransactionHistory extends Component {
                 }
               }}
             ></button>
-            <button className="transacts_nav_last fa fa-angle-double-right border px-2  py-1 "
+            <button className="z-depth-1 rounded-lg transacts_nav_last fa fa-angle-double-right border px-2  py-1 "
               onClick={() => {
                 this.setState({
                   position: this.props.all.length - 1,

@@ -11,10 +11,16 @@ export const SIGNUP = `${BASE}/auth/login`;
 export const REGISTER = `${BASE}/auth/register`;
 
 //Complaint
-export const COMPLAINT = `${BASE}/complaint`;
+export const COMPLAINT = `${BASE}/transactions`;
 
 //Get all Complaint
-export const ALL_COMPLAINT = `${BASE}/complaint/fetch`;
+export const ALL_COMPLAINT = `${BASE}/transactions`;
 
 // Profile
 export const PROFILE = `${BASE}/auth`;
+
+//Edit Avatar
+export const Avata = `${BASE}/auth/avatar`
+
+//Get Reciept 
+export const GET_DEVICE_RECIEPT = `${BASE}/receipts`

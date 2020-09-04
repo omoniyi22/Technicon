@@ -11,6 +11,7 @@ class EditProfile extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      _id: props.profile.id ? props.profile.id : "",
       email: props.profile.email ? props.profile.email : "",
       address: props.profile.address ? props.profile.address : "",
       name: props.profile.name ? props.profile.name : "",
@@ -21,21 +22,33 @@ class EditProfile extends Component {
       changes: false,
       msg: "",
       file: "",
-      filename: ""
+      filename: "",
+      p_pix: null
 
     }
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
     this.clearAll = this.clearAll.bind(this)
     this.onPixed = this.onPixed.bind(this)
+    // this.onFileChange = this.onFileChange.bind(this)
+  }
+  componentDidMount(){
+    console.log("this is id", this.props.profile)
   }
   onPixed(e) {
-    this.setState({
-      file: e.target.files[0],
-      filename: e.target.files[0].name
-    })
+    if (e.target.files.length > 0)
+      this.setState({
+        changes: true,
+        p_pix: e.target.files[0],
+      })
+    console.log("done", this.state.p_pix)
   }
-
+  // onFileChange(e) {
+  //   this.setState({
+  //     p_pix: e.target.files[0]
+  //   })
+  //   console.log(e.target.files[0])
+  // }
   clearAll() {
     this.props.clearErr()
     this.setState({
@@ -51,20 +64,20 @@ class EditProfile extends Component {
     })
   }
   onSubmit(e) {
-// if(file !== null){
-//   const formData = new FormData()
-// formData.append("file", file)
+    // if(file !== null){
+    //   const formData = new FormData()
+    // formData.append("file", file)
 
-// try {
-//   const res = awt axios.patch('/upload', formData, {
-//     headers:{
-//       "Content-Type" : "multipart/form-data"
-//     }
-//   })
-// } catch (error) {
-  
-// }
-// }
+    // try {
+    //   const res = awt axios.patch('/upload', formData, {
+    //     headers:{
+    //       "Content-Type" : "multipart/form-data"
+    //     }
+    //   })
+    // } catch (error) {
+
+    // }
+    // }
 
     e.preventDefault()
     let {
@@ -79,7 +92,7 @@ class EditProfile extends Component {
       file
 
     } = this.state
-
+    let dataSUmited = []
     let num = phone_number > 0 && phone_number.match(/^[0-9]+$/)
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let emailTest = re.test(email)
@@ -116,13 +129,22 @@ class EditProfile extends Component {
           msg: "Location must contain atleat 8 characters"
         })
       } else {
-        this.props.editProfile({
-          email,
-          name,
-          phone_number,
-          address : location,
-          birthday
-        })
+        if (this.state.p_pix === null)
+          this.props.editProfile({
+            email,
+            name,
+            phone_number,
+            address: location,
+            birthday
+          })
+        else
+          this.props.editProfile({
+            email,
+            name,
+            phone_number,
+            address: location,
+            birthday
+          }, this.props.id,  this.state.p_pix)
       }
       if (this.props.success === true) {
         this.setState({
@@ -202,21 +224,29 @@ class EditProfile extends Component {
           <div className="EDIT_PROFILE_A"><span className="fa fa-arrow-left mr-1"
             onClick={() => createBrowserHistory().back()}>
           </span>  Edit Profile </div>
-          <button className="EDIT_PROFILE_B blue text-right rounded-pill"
+          <button className="EDIT_PROFILE_B  text-right rounded-pill"
 
           >SAVE</button>
         </div>
         <div className="edit_pix  ">
-          <div className="mr_a  border-top border-bottom">
+          <div className="mr_a  border-top border-bottom"
+            style={{ backgroundImage: `url(${this.props.picture})` }}
+          >
           </div>
-
           <div className="pix_view  border rounded-pill z-depth-1">
-            <img src={pix} className="rounded-pill" alt="" />
+            <img
+              src={`${
+                this.state.p_pix !== null ?
+                  URL.createObjectURL(this.state.p_pix) :  this.props.profile.avatar
+                }`}
+              className="rounded-pill" alt="" />
           </div>
           <div className="plus_pix  white rounded-pill pb-0">
             <label for="file" type="file" className="fa fa-plus  rounded-pill   z-depth-3" />
           </div>
-          <input type="file" id="file" accept="image/*" onCha />
+          <input type="file" id="file" accept="image/*"
+            onChange={this.onPixed} maxLength="1"
+          />
 
         </div>
 

@@ -1,0 +1,39 @@
+.upload_pix {
+  max-width: 880px;
+  text-align: center;
+  border-radius: 30px;
+  .fontas {
+    color: #11abff;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+      "Helvetica Neue", sans-serif;
+    font-family:  sans-serif;
+    font-size: 20.2px;
+    text-transform: uppercase;
+  }
+  .upload_container {
+    width: 300px;
+    height: 210px;
+    border: dashed 3px;
+    border-radius: 24px;
+    border-color: rgba(207, 196, 196, 0.575);
+    border-block-end-width: 3px;
+    border-block-start-width: 3px;
+    .fa-cloud-upload-alt {
+      font-size: 44px;
+      color: rgb(17, 168, 255);
+    }
+    .drag_in {
+      color: rgba(241, 82, 82, 0.602);
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+  .next_one {
+    max-width: 740px;
+    .name {
+      font-weight: bold;
+      color: rgba(54, 51, 48, 0.61);
+    }
+  }
+}

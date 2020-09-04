@@ -20,7 +20,7 @@ class PaymentMethod extends Component {
     render(){
         return(
             <div className="PaymentMethod   lighten-4">
-                <div className="Payment_Choice  white  z-depth-1 ">
+                {/* <div className="Payment_Choice  white  z-depth-1 ">
                     <div className="payment_header ">
                         Payment methods
                     </div>
@@ -57,7 +57,7 @@ class PaymentMethod extends Component {
                           </Link>
                         </div>                     
                     </div>
-                </div>
+                </div> */}
                 <div className="payment_method_promo mt-1 py-2 white z-depth-1">
                     <div className="payment_header mt-1 py-2 mb-0 white">Promo</div>
                     <div className="promo_gifting  mt-1  mb-0 white pl-2 pr-3 row mb-4">
@@ -77,7 +77,7 @@ class PaymentMethod extends Component {
                     </div>
                 <div className="mb-2 ">
                     <span className="referral_gift fa fa-gift"/>
-                    <span className="ml-2 enter_referral">Enter referral code</span>
+                    {/* <span className="ml-2 enter_referral">Enter referral code</span> */}
                 </div>
                 </div>
             </div>

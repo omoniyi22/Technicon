@@ -1,15 +1,15 @@
 import {
   BLOG, NEWSLETTER, COMPLAINT, ALL_COMPLAINT, SIGNUP, REGISTER,
-  PROFILE
+  PROFILE, Avata, GET_DEVICE_RECIEPT
 } from "./api";
 import axios from "axios";
 
 //Header config 
-export const tokenConfig = (getState) => {
+export const tokenConfig = (getState, doi) => {
   const token = getState().auth.token;
   const config = {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': !doi ? 'application/json' : "multipart/form-data"
     }
   };
 
@@ -36,28 +36,31 @@ export const tokenConfig = (getState) => {
 //POSTComplaint
 export const POSTcomplaint = async (
   {
-    description,
+    complaint,
     device_type,
     email,
-    dispatch_rider,
+    dispatchRider,
     phone_number,
     device_brand,
-    pickup,
-    delivery
+    pickup_location,
+    delivery_loaction,
+    device_name
   },
   getToken
 
 ) => {
   return axios.post(COMPLAINT,
     {
-      description,
+      complaint,
       device_type,
       email,
-      dispatch_rider,
+      dispatchRider,
       phone_number,
       device_brand,
-      pickup,
-      delivery
+      pickup_location,
+      delivery_loaction,
+      device_name
+
     },
     tokenConfig(getToken))
 }
@@ -80,3 +83,13 @@ export const UPDATE_PROFILE = async ({
     location, birthday, name, address, phone_number, username
   }, tokenConfig(getToken))
 }
+
+
+export const ChangeAvatar = async (ID, data, getState) => {
+  let de = new FormData()
+  de.append("avatar", data)
+  return axios.patch(`${Avata}/${ID}`, de, tokenConfig(getState, true))
+}
+
+
+export const getRecieptNow = async (id, getState) => axios(`${GET_DEVICE_RECIEPT}/${id}`, tokenConfig(getState))

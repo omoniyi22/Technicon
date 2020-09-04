@@ -28,7 +28,7 @@ class Home extends Component {
             <div className="leoch">
               <div className="whity">
                 <div className="white sods p-3 rounded-lg">
-                 {this.props.auth ?  <New_Transaction /> : <Login  home={true}/>}
+                  {this.props.auth ? <New_Transaction /> : <Login home={true} />}
                 </div>
                 <div className=" broder  py-2">
                   <div className="  ml-3 ">
@@ -59,6 +59,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
+
         <div className="p-4  w-100  landing_2" >
           <div className="border border-primary w-25">
           </div>
@@ -115,14 +116,14 @@ class Home extends Component {
           </div>
           <div className="docg p-2">
 
-            <div className="worker_pix ">
+            <div className="worker_pixd ">
               <div className="worker_pixin"></div>
             </div>
           </div>
         </div>
         <div className=" w-100 flex m-auto  lala_2 py-md-5">
           <ul className="About_reason  w-100 text-center pacg">
-            <div className=" diver py-2 px-2  wow zoomIn fast ">
+            <div className=" diver py-2 px-2 mt-md-5  wow zoomIn fast ">
               <div className="border hoda z-depth-1  rounded-lg py-4 py-md-4 white">
                 <div className="text-center">
                   <img src={realtime} width="110px" className="wow zoomIn fast" />
@@ -138,10 +139,10 @@ class Home extends Component {
             </div>
 
 
-            <div className=" diver py-2 px-2  wow zoomIn fast">
+            <div className=" diver py-2 px-2   wow zoomIn fast">
               <div className="border hoda z-depth-1 rounded-lg  py-4 py-md-4 px-4 white ">
                 <div className="text-center z-depth-0">
-                  <img src={pick} width="110px" className="z-depth-0 wow zoomIn fast" />
+                  <img src={pick} width="110px" className="z-depth-0mt-md-4  wow zoomIn fast" />
                 </div>
                 <div className="why_title w-100 my-2">
                   Pickup and Delivery
@@ -154,7 +155,7 @@ class Home extends Component {
             </div>
 
 
-            <div className=" diver py-2  px-2   wow zoomIn fast">
+            <div className=" diver py-2  px-2 mt-md-5  wow zoomIn fast">
               <div className="border hoda z-depth-1  rounded-lg py-4 py-md-4 px-4 white">
                 <div className="text-center">
                   <img src={expert} width="110px" className="wow zoomIn fast" />
@@ -194,9 +195,16 @@ class Home extends Component {
                    necessitatibus. Dignissimos, obcaecati recusandae!
               </div>
                 <div className="mt-3 px-3 pb-3  small">
-                  <Link to="/about" className="text-primary border-bottom border-primary py-1">
+                  {/*
                     Learn More
-                </Link>
+                */}
+                  <Link to="/about" className="text-primary border-bottom border-primary py-1">
+                    <div className="read_more flex mr-auto p-0 mx-0  festin">
+                      <div className="mx-auto mr-1 sont py-1  z-depth-0 text-primary  ">Learn More
+                    <div className="mx-0 sonto    z-depth-0  border rounded-pill"></div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -3,11 +3,19 @@
 @import "../Dashboard/class";
 @import "../About/About";
 @import "./mobile";
-.why_content{
+
+
+
+.why_content {
   font-size: 14px;
 }
-.ropz{
+.ropz {
   font-size: 14.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 .home {
   background-image: url("./LP.png");
@@ -41,6 +49,7 @@
   }
   .broder {
     margin-top: auto;
+    @include circle_1();
     .circla {
       background: rgba(243, 243, 243, 0.541);
       @include heart_center();
@@ -137,7 +146,6 @@
     @include heart_center();
     width: 51px;
     height: 51px;
-  
   }
 }
 .landing_2 {
@@ -168,7 +176,7 @@
   width: 10%;
 }
 .lala_2 {
-  background: rgba(39, 172, 224, 0.822);
+  background: #578fae;
   display: flex;
   .awho {
     font-weight: bold;
@@ -186,11 +194,23 @@
       }
     }
   }
+
   .hoda {
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px !important;
-    background: red;
+    max-width: 350px !important;
+  }
+  .worker_pixd {
+    background-size: contain;
+    background-image: url("./design-right2.svg");
+    border-width: 1px !important;
+    width: 100% !important;
+    .worker_pixin {
+      margin: 1%;
+      padding-top: 90% !important;
+      background-position: center;
+      background-size: cover;
+    }
   }
   .worker_pix {
     background-size: contain;
@@ -216,7 +236,6 @@
   }
   .abouta {
     .about_technicon {
-   
       .bsw {
         background-image: url("./Rectangle\ 53\ \(1\).png");
         background-size: contain;
@@ -232,16 +251,22 @@
       }
     }
   }
-  .blog{
-    .single{
+  .blog {
+    .single {
       @include heart_center();
-      .conner_1{
+      .conner_1 {
         min-width: 50px;
       }
-      .conner_2{
+      .conner_2 {
         flex: 2;
       }
     }
+  }
+}
+.festin {
+  width: fit-content !important;
+  .sont{
+    font-size: 15px;
   }
 }
 // .pilla1{

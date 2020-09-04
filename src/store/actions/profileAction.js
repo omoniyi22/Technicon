@@ -3,10 +3,15 @@ import {
   PROFILE_SUCCESS,
   EDIT_TIMER,
   CLEAR_ERR,
-  GET_PROFILE
+  GET_PROFILE,
+  UPDATE_PROFILE,
+  UPDATE_PIX
 } from '../types'
 
-import { UPDATE_PROFILE, GET_PROFILE as getProf } from '../service/services'
+import { GET_PROFILE as getProf, UPDATE_PROFILE as updateProfile, ChangeAvatar } from '../service/services'
+
+
+
 
 //Get Profile
 export const getProfile = async (state) => {
@@ -21,16 +26,27 @@ export const getProfile = async (state) => {
   }
 }
 
-
+// if (PIX) {
+//   let talkOne = await ChangeAvatar(ID, PIX, state)
+//   let talkTwo = await talkOne.data
+//   let talkThree = await talkTwo.avatar
+//   dispatch({ type: UPDATE_PIX, payload: talkThree })
+// }
 
 //Edit Profile
-export const editProfile = (request) => async (dispatch, state) => {
-  console.log(request)
+export const editProfile = (request,ID, PIX) => async (dispatch, state) => {
+  console.log(request,ID, PIX)
   dispatch({
     type: EDIT_TIMER
   })
   try {
-    let reses = await UPDATE_PROFILE(request, state)
+    if (PIX) {
+      let talkOne = await ChangeAvatar(ID, PIX, state)
+      let talkTwo = await talkOne.data
+      let talkThree = await talkTwo.avatar
+      dispatch({ type: UPDATE_PIX, payload: talkThree })
+    }
+    let reses = await updateProfile(request, state)
     console.log("copa", reses)
     let rese = await getProfile(state)
     console.log("copaf", rese)
@@ -42,7 +58,7 @@ export const editProfile = (request) => async (dispatch, state) => {
       type: PROFILE_SUCCESS
     })
   } catch (err) {
-    console.log(">", err)
+    console.log(">", err.response)
 
     dispatch({
       type: PROFILE_ERROR,
@@ -50,5 +66,7 @@ export const editProfile = (request) => async (dispatch, state) => {
     })
   }
 }
+
+
 
 export const clearErr = () => ({ type: CLEAR_ERR })

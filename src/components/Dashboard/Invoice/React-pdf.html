@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://react-pdf.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>React-pdf</title><link rel="stylesheet" href="./React-pdf_files/codemirror.css"><link rel="stylesheet" href="./React-pdf_files/404"><link rel="apple-touch-icon" sizes="180x180" href="https://react-pdf.org/favicons/apple-touch-icon.png?v=qABAGbMGwd"><link rel="icon" type="image/png" sizes="32x32" href="https://react-pdf.org/favicons/favicon-32x32.png?v=qABAGbMGwd"><link rel="icon" type="image/png" sizes="16x16" href="https://react-pdf.org/favicons/favicon-16x16.png?v=qABAGbMGwd"><link rel="manifest" href="https://react-pdf.org/favicons/site.webmanifest?v=qABAGbMGwd"><link rel="mask-icon" href="https://react-pdf.org/favicons/safari-pinned-tab.svg?v=qABAGbMGwd" color="#8d1602"><link rel="shortcut icon" href="https://react-pdf.org/favicons/favicon.ico?v=qABAGbMGwd"><meta name="msapplication-TileColor" content="#fafafa"><meta name="msapplication-config" content="/favicons/browserconfig.xml?v=qABAGbMGwd"><meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="og:title" content="React-pdf"><meta property="og:description" content="React renderer for creating PDF files on the browser, mobile and server"><meta property="og:image" content="/images/og-banner.png"><meta property="og:image:width" content="950"><meta property="og:image:height" content="650"><meta property="og:url" content="http://react-pdf.js.org"><meta name="viewport" content="width=device-width"><meta name="next-head-count" content="2"><link rel="preload" href="./React-pdf_files/2fc13c6f1fadaa681ac0.css" as="style"><link rel="stylesheet" href="./React-pdf_files/2fc13c6f1fadaa681ac0.css"><link rel="preload" href="./React-pdf_files/main-3cce364acca6f8cc2955.js.download" as="script"><link rel="preload" href="./React-pdf_files/webpack-1afce06492d1726dec57.js.download" as="script"><link rel="preload" href="./React-pdf_files/framework.cf32e4287f6509f34e23.js.download" as="script"><link rel="preload" href="./React-pdf_files/commons.6760439aa0c0d7152161.js.download" as="script"><link rel="preload" href="./React-pdf_files/4f7b86ae1740e987bf810ca81facb603a5716c9d.73d80ae75288e72f9b03.js.download" as="script"><link rel="preload" href="./React-pdf_files/42a8d092586dec029084cae483df856b04cb570c.bb3a03a17912b7e85136.js.download" as="script"><link rel="preload" href="./React-pdf_files/_app-baa9d0ffedaf0813e3cb.js.download" as="script"><link rel="preload" href="./React-pdf_files/093162d4bd4e35ef8b3b6dfed4163543e571d9e5.81a056a3f8d24441851b.js.download" as="script"><link rel="preload" href="./React-pdf_files/index-8f40b18b1cc616505ff7.js.download" as="script"><style data-styled="active" data-styled-version="5.1.1"></style><style type="text/css">body.swal2-shown:not(.swal2-no-backdrop) {
+  overflow-y: hidden; }
+
+body.swal2-toast-shown {
+  overflow-y: auto; }
+  body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-icon {
+      margin: 0 0 15px; }
+    body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-buttonswrapper {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-loading {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-input {
+      height: 32px;
+      font-size: 14px;
+      margin: 5px auto; }
+  body.swal2-toast-shown > .swal2-container {
+    position: fixed;
+    background-color: transparent; }
+    body.swal2-toast-shown > .swal2-container.swal2-shown {
+      background-color: transparent; }
+    body.swal2-toast-shown > .swal2-container.swal2-top {
+      top: 0;
+      left: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    body.swal2-toast-shown > .swal2-container.swal2-top-right {
+      top: 0;
+      left: auto;
+      bottom: auto;
+      right: 0; }
+    body.swal2-toast-shown > .swal2-container.swal2-top-left {
+      top: 0;
+      left: 0;
+      bottom: auto;
+      right: auto; }
+    body.swal2-toast-shown > .swal2-container.swal2-center-left {
+      top: 50%;
+      left: 0;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    body.swal2-toast-shown > .swal2-container.swal2-center {
+      top: 50%;
+      left: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    body.swal2-toast-shown > .swal2-container.swal2-center-right {
+      top: 50%;
+      left: auto;
+      bottom: auto;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    body.swal2-toast-shown > .swal2-container.swal2-bottom-left {
+      top: auto;
+      left: 0;
+      bottom: 0;
+      right: auto; }
+    body.swal2-toast-shown > .swal2-container.swal2-bottom {
+      top: auto;
+      left: 50%;
+      bottom: 0;
+      right: auto;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    body.swal2-toast-shown > .swal2-container.swal2-bottom-right {
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: 0; }
+
+body.swal2-iosfix {
+  position: fixed;
+  left: 0;
+  right: 0; }
+
+body.swal2-no-backdrop > .swal2-shown {
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  background-color: transparent; }
+  body.swal2-no-backdrop > .swal2-shown > .swal2-modal {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-top {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-top-left {
+    top: 0;
+    left: 0; }
+  body.swal2-no-backdrop > .swal2-shown.swal2-top-right {
+    top: 0;
+    right: 0; }
+  body.swal2-no-backdrop > .swal2-shown.swal2-center {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-center-left {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-center-right {
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-bottom {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  body.swal2-no-backdrop > .swal2-shown.swal2-bottom-left {
+    bottom: 0;
+    left: 0; }
+  body.swal2-no-backdrop > .swal2-shown.swal2-bottom-right {
+    bottom: 0;
+    right: 0; }
+
+.swal2-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1060; }
+  .swal2-container.swal2-top {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .swal2-container.swal2-top-left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .swal2-container.swal2-top-right {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .swal2-container.swal2-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .swal2-container.swal2-center-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .swal2-container.swal2-center-right {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .swal2-container.swal2-bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .swal2-container.swal2-bottom-left {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .swal2-container.swal2-bottom-right {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .swal2-container.swal2-grow-fullscreen > .swal2-modal {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .swal2-container.swal2-grow-row > .swal2-modal {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .swal2-container.swal2-grow-column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .swal2-container.swal2-grow-column.swal2-top, .swal2-container.swal2-grow-column.swal2-center, .swal2-container.swal2-grow-column.swal2-bottom {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .swal2-container.swal2-grow-column.swal2-top-left, .swal2-container.swal2-grow-column.swal2-center-left, .swal2-container.swal2-grow-column.swal2-bottom-left {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .swal2-container.swal2-grow-column.swal2-top-right, .swal2-container.swal2-grow-column.swal2-center-right, .swal2-container.swal2-grow-column.swal2-bottom-right {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    .swal2-container.swal2-grow-column > .swal2-modal {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .swal2-container:not(.swal2-top):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-left):not(.swal2-bottom-right) > .swal2-modal {
+    margin: auto; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .swal2-container .swal2-modal {
+      margin: 0 !important; } }
+  .swal2-container.swal2-fade {
+    -webkit-transition: background-color .1s;
+    transition: background-color .1s; }
+  .swal2-container.swal2-shown {
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.swal2-popup {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  position: relative;
+  max-width: 100%; }
+  .swal2-popup.swal2-toast {
+    width: 300px;
+    padding: 0 15px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: hidden;
+    -webkit-box-shadow: 0 0 10px #d9d9d9;
+            box-shadow: 0 0 10px #d9d9d9; }
+    .swal2-popup.swal2-toast .swal2-title {
+      max-width: 300px;
+      font-size: 16px;
+      text-align: left; }
+    .swal2-popup.swal2-toast .swal2-content {
+      font-size: 14px;
+      text-align: left; }
+    .swal2-popup.swal2-toast .swal2-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 15px 0 0; }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 32px;
+        height: 32px; }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-info, .swal2-popup.swal2-toast .swal2-icon.swal2-warning, .swal2-popup.swal2-toast .swal2-icon.swal2-question {
+        font-size: 26px;
+        line-height: 32px; }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+        top: 14px;
+        width: 22px; }
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+          left: 5px; }
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+          right: 5px; }
+    .swal2-popup.swal2-toast .swal2-buttonswrapper {
+      margin: 0 0 0 5px; }
+    .swal2-popup.swal2-toast .swal2-styled {
+      margin: 0 0 0 5px;
+      padding: 5px 10px; }
+      .swal2-popup.swal2-toast .swal2-styled:focus {
+        -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4);
+                box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4); }
+    .swal2-popup.swal2-toast .swal2-validationerror {
+      width: 100%;
+      margin: 5px -20px; }
+    .swal2-popup.swal2-toast .swal2-success {
+      border-color: #a5dc86; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'] {
+        border-radius: 50%;
+        position: absolute;
+        width: 32px;
+        height: 64px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+        .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+          border-radius: 64px 0 0 64px;
+          top: -4px;
+          left: -15px;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
+          -webkit-transform-origin: 32px 32px;
+                  transform-origin: 32px 32px; }
+        .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+          border-radius: 0 64px 64px 0;
+          top: -5px;
+          left: 14px;
+          -webkit-transform-origin: 0 32px;
+                  transform-origin: 0 32px; }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+        width: 32px;
+        height: 32px; }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+        width: 7px;
+        height: 90px;
+        left: 28px;
+        top: 8px; }
+      .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'] {
+        height: 5px; }
+        .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='tip'] {
+          width: 12px;
+          left: 3px;
+          top: 18px; }
+        .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='long'] {
+          width: 22px;
+          right: 3px;
+          top: 15px; }
+    .swal2-popup.swal2-toast .swal2-animate-success-line-tip {
+      -webkit-animation: animate-toast-success-tip .75s;
+              animation: animate-toast-success-tip .75s; }
+    .swal2-popup.swal2-toast .swal2-animate-success-line-long {
+      -webkit-animation: animate-toast-success-long .75s;
+              animation: animate-toast-success-long .75s; }
+  .swal2-popup:focus {
+    outline: none; }
+  .swal2-popup.swal2-loading {
+    overflow-y: hidden; }
+  .swal2-popup .swal2-title {
+    color: #595959;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    margin: 0 0 .4em;
+    padding: 0;
+    display: block;
+    word-wrap: break-word; }
+  .swal2-popup .swal2-buttonswrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px; }
+    .swal2-popup .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabled] {
+      opacity: .4;
+      cursor: no-drop; }
+    .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confirm {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border: 4px solid transparent;
+      border-color: transparent;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 7.5px;
+      vertical-align: top;
+      background-color: transparent !important;
+      color: transparent;
+      cursor: default;
+      border-radius: 100%;
+      -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+              animation: rotate-loading 1.5s linear 0s infinite normal;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel {
+      margin-left: 30px;
+      margin-right: 30px; }
+    .swal2-popup .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+      display: inline-block;
+      content: '';
+      margin-left: 5px;
+      vertical-align: -1px;
+      height: 15px;
+      width: 15px;
+      border: 3px solid #999999;
+      -webkit-box-shadow: 1px 1px 1px #fff;
+              box-shadow: 1px 1px 1px #fff;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+              animation: rotate-loading 1.5s linear 0s infinite normal; }
+  .swal2-popup .swal2-styled {
+    border: 0;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 15px 5px 0;
+    padding: 10px 32px; }
+    .swal2-popup .swal2-styled:focus {
+      outline: none;
+      -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4);
+              box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
+  .swal2-popup .swal2-image {
+    margin: 20px auto;
+    max-width: 100%; }
+  .swal2-popup .swal2-close {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 38px;
+    height: 40px;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: serif;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    color: #cccccc;
+    -webkit-transition: color .1s ease;
+    transition: color .1s ease; }
+    .swal2-popup .swal2-close:hover {
+      color: #d55; }
+  .swal2-popup > .swal2-input,
+  .swal2-popup > .swal2-file,
+  .swal2-popup > .swal2-textarea,
+  .swal2-popup > .swal2-select,
+  .swal2-popup > .swal2-radio,
+  .swal2-popup > .swal2-checkbox {
+    display: none; }
+  .swal2-popup .swal2-content {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+    float: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    color: #545454;
+    word-wrap: break-word; }
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea,
+  .swal2-popup .swal2-select,
+  .swal2-popup .swal2-radio,
+  .swal2-popup .swal2-checkbox {
+    margin: 20px auto; }
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+    -webkit-transition: border-color .3s, -webkit-box-shadow .3s;
+    transition: border-color .3s, -webkit-box-shadow .3s;
+    transition: border-color .3s, box-shadow .3s;
+    transition: border-color .3s, box-shadow .3s, -webkit-box-shadow .3s; }
+    .swal2-popup .swal2-input.swal2-inputerror,
+    .swal2-popup .swal2-file.swal2-inputerror,
+    .swal2-popup .swal2-textarea.swal2-inputerror {
+      border-color: #f27474 !important;
+      -webkit-box-shadow: 0 0 2px #f27474 !important;
+              box-shadow: 0 0 2px #f27474 !important; }
+    .swal2-popup .swal2-input:focus,
+    .swal2-popup .swal2-file:focus,
+    .swal2-popup .swal2-textarea:focus {
+      outline: none;
+      border: 1px solid #b4dbed;
+      -webkit-box-shadow: 0 0 3px #c4e6f5;
+              box-shadow: 0 0 3px #c4e6f5; }
+    .swal2-popup .swal2-input::-webkit-input-placeholder,
+    .swal2-popup .swal2-file::-webkit-input-placeholder,
+    .swal2-popup .swal2-textarea::-webkit-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input:-ms-input-placeholder,
+    .swal2-popup .swal2-file:-ms-input-placeholder,
+    .swal2-popup .swal2-textarea:-ms-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input::-ms-input-placeholder,
+    .swal2-popup .swal2-file::-ms-input-placeholder,
+    .swal2-popup .swal2-textarea::-ms-input-placeholder {
+      color: #cccccc; }
+    .swal2-popup .swal2-input::placeholder,
+    .swal2-popup .swal2-file::placeholder,
+    .swal2-popup .swal2-textarea::placeholder {
+      color: #cccccc; }
+  .swal2-popup .swal2-range input {
+    float: left;
+    width: 80%; }
+  .swal2-popup .swal2-range output {
+    float: right;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center; }
+  .swal2-popup .swal2-range input,
+  .swal2-popup .swal2-range output {
+    height: 43px;
+    line-height: 43px;
+    vertical-align: middle;
+    margin: 20px auto;
+    padding: 0; }
+  .swal2-popup .swal2-input {
+    height: 43px;
+    padding: 0 12px; }
+    .swal2-popup .swal2-input[type='number'] {
+      max-width: 150px; }
+  .swal2-popup .swal2-file {
+    font-size: 20px; }
+  .swal2-popup .swal2-textarea {
+    height: 108px;
+    padding: 12px; }
+  .swal2-popup .swal2-select {
+    color: #545454;
+    font-size: inherit;
+    padding: 5px 10px;
+    min-width: 40%;
+    max-width: 100%; }
+  .swal2-popup .swal2-radio {
+    border: 0; }
+    .swal2-popup .swal2-radio label:not(:first-child) {
+      margin-left: 20px; }
+    .swal2-popup .swal2-radio input,
+    .swal2-popup .swal2-radio span {
+      vertical-align: middle; }
+    .swal2-popup .swal2-radio input {
+      margin: 0 3px 0 0; }
+  .swal2-popup .swal2-checkbox {
+    color: #545454; }
+    .swal2-popup .swal2-checkbox input,
+    .swal2-popup .swal2-checkbox span {
+      vertical-align: middle; }
+  .swal2-popup .swal2-validationerror {
+    background-color: #f0f0f0;
+    margin: 0 -20px;
+    overflow: hidden;
+    padding: 10px;
+    color: gray;
+    font-size: 16px;
+    font-weight: 300;
+    display: none; }
+    .swal2-popup .swal2-validationerror::before {
+      content: '!';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #ea7d7d;
+      color: #fff;
+      line-height: 24px;
+      text-align: center;
+      margin-right: 10px; }
+
+@supports (-ms-accelerator: true) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .swal2-range input {
+    width: 100% !important; }
+  .swal2-range output {
+    display: none; } }
+
+.swal2-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  margin: 20px auto 30px;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .swal2-icon.swal2-error {
+    border-color: #f27474; }
+    .swal2-icon.swal2-error .swal2-x-mark {
+      position: relative;
+      display: block; }
+    .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+      position: absolute;
+      height: 5px;
+      width: 47px;
+      background-color: #f27474;
+      display: block;
+      top: 37px;
+      border-radius: 2px; }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        left: 17px; }
+      .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        right: 16px; }
+  .swal2-icon.swal2-warning {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #f8bb86;
+    border-color: #facea8;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-info {
+    font-family: 'Open Sans', sans-serif;
+    color: #3fc3ee;
+    border-color: #9de0f6;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-question {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #87adbd;
+    border-color: #c9dae1;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center; }
+  .swal2-icon.swal2-success {
+    border-color: #a5dc86; }
+    .swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
+      border-radius: 50%;
+      position: absolute;
+      width: 60px;
+      height: 120px;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+                transform-origin: 60px 60px; }
+      .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+                transform-origin: 0 60px; }
+    .swal2-icon.swal2-success .swal2-success-ring {
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(165, 220, 134, 0.2);
+      border-radius: 50%;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      z-index: 2; }
+    .swal2-icon.swal2-success .swal2-success-fix {
+      width: 7px;
+      height: 90px;
+      position: absolute;
+      left: 28px;
+      top: 8px;
+      z-index: 1;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .swal2-icon.swal2-success [class^='swal2-success-line'] {
+      height: 5px;
+      background-color: #a5dc86;
+      display: block;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 2; }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+
+.swal2-progresssteps {
+  font-weight: 600;
+  margin: 0 0 20px;
+  padding: 0; }
+  .swal2-progresssteps li {
+    display: inline-block;
+    position: relative; }
+  .swal2-progresssteps .swal2-progresscircle {
+    background: #3085d6;
+    border-radius: 2em;
+    color: #fff;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+    z-index: 20; }
+    .swal2-progresssteps .swal2-progresscircle:first-child {
+      margin-left: 0; }
+    .swal2-progresssteps .swal2-progresscircle:last-child {
+      margin-right: 0; }
+    .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+      background: #3085d6; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+        background: #add8e6; }
+      .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+        background: #add8e6; }
+  .swal2-progresssteps .swal2-progressline {
+    background: #3085d6;
+    height: .4em;
+    margin: 0 -1px;
+    z-index: 10; }
+
+[class^='swal2'] {
+  -webkit-tap-highlight-color: transparent; }
+
+@-webkit-keyframes showSweetToast {
+  0% {
+    -webkit-transform: translateY(-10px) rotateZ(2deg);
+            transform: translateY(-10px) rotateZ(2deg);
+    opacity: 0; }
+  33% {
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+    opacity: .5; }
+  66% {
+    -webkit-transform: translateY(5px) rotateZ(2deg);
+            transform: translateY(5px) rotateZ(2deg);
+    opacity: .7; }
+  100% {
+    -webkit-transform: translateY(0) rotateZ(0);
+            transform: translateY(0) rotateZ(0);
+    opacity: 1; } }
+
+@keyframes showSweetToast {
+  0% {
+    -webkit-transform: translateY(-10px) rotateZ(2deg);
+            transform: translateY(-10px) rotateZ(2deg);
+    opacity: 0; }
+  33% {
+    -webkit-transform: translateY(0) rotateZ(-2deg);
+            transform: translateY(0) rotateZ(-2deg);
+    opacity: .5; }
+  66% {
+    -webkit-transform: translateY(5px) rotateZ(2deg);
+            transform: translateY(5px) rotateZ(2deg);
+    opacity: .7; }
+  100% {
+    -webkit-transform: translateY(0) rotateZ(0);
+            transform: translateY(0) rotateZ(0);
+    opacity: 1; } }
+
+@-webkit-keyframes hideSweetToast {
+  0% {
+    opacity: 1; }
+  33% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+    opacity: 0; } }
+
+@keyframes hideSweetToast {
+  0% {
+    opacity: 1; }
+  33% {
+    opacity: .5; }
+  100% {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+    opacity: 0; } }
+
+@-webkit-keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes showSweetAlert {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+  45% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@-webkit-keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes hideSweetAlert {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; } }
+
+.swal2-show {
+  -webkit-animation: showSweetAlert .3s;
+          animation: showSweetAlert .3s; }
+  .swal2-show.swal2-toast {
+    -webkit-animation: showSweetToast .5s;
+            animation: showSweetToast .5s; }
+  .swal2-show.swal2-noanimation {
+    -webkit-animation: none;
+            animation: none; }
+
+.swal2-hide {
+  -webkit-animation: hideSweetAlert .15s forwards;
+          animation: hideSweetAlert .15s forwards; }
+  .swal2-hide.swal2-toast {
+    -webkit-animation: hideSweetToast .2s forwards;
+            animation: hideSweetToast .2s forwards; }
+  .swal2-hide.swal2-noanimation {
+    -webkit-animation: none;
+            animation: none; }
+
+@-webkit-keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@keyframes animate-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px; }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px; }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px; }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px; } }
+
+@-webkit-keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@keyframes animate-success-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px; }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px; }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px; } }
+
+@-webkit-keyframes animate-toast-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 9px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 9px; }
+  70% {
+    width: 24px;
+    left: -4px;
+    top: 17px; }
+  84% {
+    width: 8px;
+    left: 10px;
+    top: 20px; }
+  100% {
+    width: 12px;
+    left: 3px;
+    top: 18px; } }
+
+@keyframes animate-toast-success-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 9px; }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 9px; }
+  70% {
+    width: 24px;
+    left: -4px;
+    top: 17px; }
+  84% {
+    width: 8px;
+    left: 10px;
+    top: 20px; }
+  100% {
+    width: 12px;
+    left: 3px;
+    top: 18px; } }
+
+@-webkit-keyframes animate-toast-success-long {
+  0% {
+    width: 0;
+    right: 22px;
+    top: 26px; }
+  65% {
+    width: 0;
+    right: 22px;
+    top: 26px; }
+  84% {
+    width: 26px;
+    right: 0;
+    top: 15px; }
+  100% {
+    width: 22px;
+    right: 3px;
+    top: 15px; } }
+
+@keyframes animate-toast-success-long {
+  0% {
+    width: 0;
+    right: 22px;
+    top: 26px; }
+  65% {
+    width: 0;
+    right: 22px;
+    top: 26px; }
+  84% {
+    width: 26px;
+    right: 0;
+    top: 15px; }
+  100% {
+    width: 22px;
+    right: 3px;
+    top: 15px; } }
+
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+@keyframes rotatePlaceholder {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  5% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  12% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); }
+  100% {
+    -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg); } }
+
+.swal2-animate-success-line-tip {
+  -webkit-animation: animate-success-tip .75s;
+          animation: animate-success-tip .75s; }
+
+.swal2-animate-success-line-long {
+  -webkit-animation: animate-success-long .75s;
+          animation: animate-success-long .75s; }
+
+.swal2-success.swal2-animate-success-icon .swal2-success-circular-line-right {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+          animation: rotatePlaceholder 4.25s ease-in; }
+
+@-webkit-keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+@keyframes animate-error-icon {
+  0% {
+    -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+    opacity: 0; }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1; } }
+
+.swal2-animate-error-icon {
+  -webkit-animation: animate-error-icon .5s;
+          animation: animate-error-icon .5s; }
+
+@-webkit-keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes animate-x-mark {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    margin-top: 26px;
+    opacity: 0; }
+  80% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    margin-top: -6px; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin-top: 0;
+    opacity: 1; } }
+
+.swal2-animate-x-mark {
+  -webkit-animation: animate-x-mark .5s;
+          animation: animate-x-mark .5s; }
+
+@-webkit-keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+</style><link href="./React-pdf_files/093162d4bd4e35ef8b3b6dfed4163543e571d9e5.81a056a3f8d24441851b.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/index-8f40b18b1cc616505ff7.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/rendering-process-c6f874019e50083eff62.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/components-7ed80252b9f40f521d66.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/styling-c556fe5fc38510ba8bcb.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/fonts-279b69598d88659175f3.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/advanced-9465843a4889a14731ef.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/210e6083.4882aa726bae4c1494b0.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/f9fff01a.91bd2698063f82d83887.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/84c042bb.f70312f171d5cbf35ec0.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/f057a831.1e1fea788e7ff50480fe.js.download" rel="prefetch" as="script"><link href="./React-pdf_files/repl-3cf25c3c36e28d1593de.js.download" rel="prefetch" as="script"><script charset="utf-8" src="./React-pdf_files/9c84c086.b2cd88d8805725b4d417.js.download"></script><script charset="utf-8" src="./React-pdf_files/ff39441c.27e318d1c4ad5d8b7a35.js.download"></script><script charset="utf-8" src="./React-pdf_files/f65a48b9.5cf96da82453a8c7a2df.js.download"></script><script charset="utf-8" src="./React-pdf_files/25.4e88788ad36f26d9de2e.js.download"></script><script charset="utf-8" src="./React-pdf_files/2b7b2d2a.7f1423da10c04a684a3a.js.download"></script><script charset="utf-8" src="./React-pdf_files/26.b5555699c3ed37f30c5e.js.download"></script></head><body><div id="__next"><header class="sc-fzqBZW eNQuho"><span class="icon-menu sc-fzqNJr kXxUbs" role="button" aria-label="Menu" tabindex="0" style="font-size: 25px;"></span><span class="icon-github sc-fzqNJr kXxUbs" role="button" aria-label="GitHub Repo" tabindex="0" style="font-size: 25px;"></span></header><main class="sc-fzoXzr jYxGEJ"><nav class="sc-fzoLsD fvDiW"><div class="sc-fzpans jWAExa"></div><div class="sc-AxheI eXzlnr sc-fzokOt hLgJkJ"><img src="./React-pdf_files/logo.png" class="sc-Axmtr cUzhin"></div><ul class="sc-fznyAO CWQMf"><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/" class="sc-fzplWN fWxOhl">Quick start guide</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/rendering-process" class="sc-fzplWN bOrpux">Rendering process</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components" class="sc-fzplWN bOrpux">Components</a><ul class="sc-fznKkj bnvSqj"><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#document" class="sc-fzplWN bOrpux">Document</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#page" class="sc-fzplWN bOrpux">Page</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#view" class="sc-fzplWN bOrpux">View</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#image" class="sc-fzplWN bOrpux">Image</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#text" class="sc-fzplWN bOrpux">Text</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#link" class="sc-fzplWN bOrpux">Link</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#note" class="sc-fzplWN bOrpux">Note</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#canvas" class="sc-fzplWN bOrpux">Canvas</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#pdfviewer" class="sc-fzplWN bOrpux">PDFViewer</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#pdfdownloadlink" class="sc-fzplWN bOrpux">PDFDownloadLink</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/components#blobprovider" class="sc-fzplWN bOrpux">BlobProvider</a></li></ul></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling" class="sc-fzplWN bOrpux">Styling</a><ul class="sc-fznKkj bnvSqj"><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling#stylesheet-api" class="sc-fzplWN bOrpux">StyleSheet API</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling#media-queries" class="sc-fzplWN bOrpux">Media queries</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling#styled-components" class="sc-fzplWN bOrpux">Styled-components</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling#valid-units" class="sc-fzplWN bOrpux">Valid units</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/styling#valid-css-properties" class="sc-fzplWN bOrpux">Valid CSS properties</a></li></ul></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/fonts" class="sc-fzplWN bOrpux">Fonts</a><ul class="sc-fznKkj bnvSqj"><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/fonts#register" class="sc-fzplWN bOrpux">register</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/fonts#registerhyphenationcallback" class="sc-fzplWN bOrpux">registerHyphenationCallback</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/fonts#registeremojisource" class="sc-fzplWN bOrpux">registerEmojiSource</a></li></ul></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced" class="sc-fzplWN bOrpux">Advanced</a><ul class="sc-fznKkj bnvSqj"><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#page-wrapping" class="sc-fzplWN bOrpux">Page wrapping</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#on-the-fly-rendering" class="sc-fzplWN bOrpux">On the fly rendering</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#orphan-&amp;-widow-protection" class="sc-fzplWN bOrpux">Orphan and widow protection</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#dynamic-content" class="sc-fzplWN bOrpux">Dynamic content</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#debugging" class="sc-fzplWN bOrpux">Debugging</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#ruler" class="sc-fzplWN bOrpux">Ruler</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#hyphenation" class="sc-fzplWN bOrpux">Hyphenation</a></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/advanced#webpack-config" class="sc-fzplWN bOrpux">Webpack config</a></li></ul></li><li class="sc-fznZeY gJlwEu"><a href="https://react-pdf.org/repl" class="sc-fzplWN bOrpux">Playground / REPL</a></li><li class="sc-fznZeY gJlwEu"><a href="https://opencollective.com/react-pdf"><a href="https://opencollective.com/react-pdf" target="_blank" class="sc-fzplWN bOrpux">Donate</a></a></li></ul><a target="_blank" rel="noopener noreferrer" href="https://github.com/diegomura/react-pdf" class="sc-fzozJi dteCCc"><span class="icon-github " role="button" aria-label="GitHub Repo" tabindex="0" style="font-size: 30px;"></span></a></nav><section class="sc-fzoLag gqDFwO"><div class="sc-fzpjYC gJohPa"><div class="sc-fzomME hhnKZs"><a href="https://github.com/react-pdf/site/blob/master/docs/quick-start.md" target="_blank" class="sc-fznMnq hxvIPU"><span>Edit</span></a></div><div class="sc-AxheI eXzlnr sc-fzpkqZ fOXUpi"><img src="./React-pdf_files/logo.png" class="sc-Axmtr hnTPTK"><h1 id="react-pdf" class="sc-AxjAm lbubbC sc-AxmLO ethZyz">React-pdf</h1></div><div class="sc-fzoYkl jfRgfZ"><h1 id="react-pdf" class="sc-AxjAm lbubbC sc-fzpkJw hctKJM">React-pdf</h1><h4 id="react-renderer-for-creating-pdf-files-on-the-browser,-mobile-and-server." class="sc-AxhCb SxBSV sc-fznzOf jxQFAb">React renderer for creating PDF files on the browser, mobile and server.</h4></div><div class="sc-fzoYHE GXatJ"><img src="https://react-pdf.org/images/document-graphic.png" class="sc-fzoJMP kyojiS"><a class="sc-fznMnq hHvJRu"><span>Try it out!</span></a></div><h3 id="1.-install-react-and-react-pdf" class="sc-AxiKw juMcIl">1. Install React and react-pdf</h3><p class="sc-fzqNqU gRqcVV">Starting with react-pdf is extremely simple.</p><h4 id="using-yarn" class="sc-AxhCb SxBSV">Using Yarn</h4><div class="sc-fzoyTs iTgUaX"><div class="sc-fzoNJl loPePV"><div class="" data-tooltipped="" aria-describedby="tippy-tooltip-15" data-original-title="Copied to clipboard!" style="display: inline;"><span class="icon-files-o sc-fzoXWK hnKkAN" role="button" tabindex="0" style="font-size: 14px;"></span></div></div><pre class=" language-jsx"><code class="sc-fzpmMD enYpte  language-jsx">yarn add @react<span class="token operator">-</span>pdf<span class="token operator">/</span>renderer
+</code></pre></div><h4 id="using-npm" class="sc-AxhCb SxBSV">Using npm</h4><div class="sc-fzoyTs iTgUaX"><div class="sc-fzoNJl loPePV"><div class="" data-tooltipped="" aria-describedby="tippy-tooltip-16" data-original-title="Copied to clipboard!" style="display: inline;"><span class="icon-files-o sc-fzoXWK hnKkAN" role="button" tabindex="0" style="font-size: 14px;"></span></div></div><pre class=" language-jsx"><code class="sc-fzpmMD enYpte  language-jsx">npm install @react<span class="token operator">-</span>pdf<span class="token operator">/</span>renderer <span class="token operator">--</span>save
+</code></pre></div><p class="sc-fzqNqU gRqcVV">Since a renderer simply implements <em>how elements render into something</em>, you still need to have React to make it work (and react-dom for client-side document generation). You can find instructions on how to do that <a href="https://reactjs.org/docs/add-react-to-an-existing-app.html" class="sc-fznJRM bPhTe">here</a>.</p><h3 id="2.-create-your-pdf-document" class="sc-AxiKw juMcIl">2. Create your PDF document</h3><p class="sc-fzqNqU gRqcVV">This is where things start getting interesting. React-pdf exports a set of React primitives that enable you to render things into your document very easily. It also has an API for styling them, using CSS properties and Flexbox layout.</p><p class="sc-fzqNqU gRqcVV">Let's make the code speak for itself:</p><div class="sc-fzoyTs iTgUaX"><div class="sc-fzoNJl loPePV"><div class="" data-tooltipped="" aria-describedby="tippy-tooltip-17" data-original-title="Copied to clipboard!" style="display: inline;"><span class="icon-files-o sc-fzoXWK hnKkAN" role="button" tabindex="0" style="font-size: 14px;"></span></div></div><pre class=" language-jsx"><code class="sc-fzpmMD enYpte  language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Page<span class="token punctuation">,</span> Text<span class="token punctuation">,</span> View<span class="token punctuation">,</span> Document<span class="token punctuation">,</span> StyleSheet <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@react-pdf/renderer'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Create styles</span>
+<span class="token keyword">const</span> styles <span class="token operator">=</span> StyleSheet<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  page<span class="token operator">:</span> <span class="token punctuation">{</span>
+    flexDirection<span class="token operator">:</span> <span class="token string">'row'</span><span class="token punctuation">,</span>
+    backgroundColor<span class="token operator">:</span> <span class="token string">'#E4E4E4'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  section<span class="token operator">:</span> <span class="token punctuation">{</span>
+    margin<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    padding<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    flexGrow<span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Create Document Component</span>
+<span class="token keyword">const</span> <span class="token function-variable function">MyDocument</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Document</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Page</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A4<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>page<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>section<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Section #1</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">View</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>section<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Section #2</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Text</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">View</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Page</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Document</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p class="sc-fzqNqU gRqcVV">This will produce a PDF document with a single page. Inside, two different blocks, each of them rendering a different text. These are not the only valid primitives you can use. Please refer to the Components or Examples sections for more information.</p><h3 id="3.-choose-where-to-render-the-document" class="sc-AxiKw juMcIl">3. Choose where to render the document</h3><p class="sc-fzqNqU gRqcVV">React-pdf enables you to render the document in three different environments: <strong>web</strong>, <strong>server</strong> and <strong>mobile</strong> <em>(under development)</em>. The process is essentially the same, but catered to needs of each environment.</p><h4 id="save-in-a-file" class="sc-AxhCb SxBSV">Save in a file</h4><div class="sc-fzoyTs iTgUaX"><div class="sc-fzoNJl loPePV"><div class="" data-tooltipped="" aria-describedby="tippy-tooltip-18" data-original-title="Copied to clipboard!" style="display: inline;"><span class="icon-files-o sc-fzoXWK hnKkAN" role="button" tabindex="0" style="font-size: 14px;"></span></div></div><pre class=" language-jsx"><code class="sc-fzpmMD enYpte  language-jsx"><span class="token keyword">import</span> ReactPDF <span class="token keyword">from</span> <span class="token string">'@react-pdf/renderer'</span><span class="token punctuation">;</span>
+
+ReactPDF<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MyDocument</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>__dirname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/example.pdf</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="render-in-dom" class="sc-AxhCb SxBSV">Render in DOM</h4><div class="sc-fzoyTs iTgUaX"><div class="sc-fzoNJl loPePV"><div class="" data-tooltipped="" aria-describedby="tippy-tooltip-19" data-original-title="Copied to clipboard!" style="display: inline;"><span class="icon-files-o sc-fzoXWK hnKkAN" role="button" tabindex="0" style="font-size: 14px;"></span></div></div><pre class=" language-jsx"><code class="sc-fzpmMD enYpte  language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> PDFViewer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@react-pdf/renderer'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PDFViewer</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">MyDocument</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PDFViewer</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">App</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="render-in-mobile" class="sc-AxhCb SxBSV">Render in mobile</h4><p class="sc-fzqNqU gRqcVV"><em>In progress...</em></p><h3 id="4.-have-fun!" class="sc-AxiKw juMcIl">4. Have fun!</h3><p class="sc-fzqNqU gRqcVV">Maybe the most important step — make use of all react-pdf capabilities to create beautiful and awesome documents!</p><div class="sc-fzqMAW himZKo"><div class="sc-fzoydu jzfeVD"></div><div class="sc-fzoydu hWdlkA"><a class="sc-fznMnq hHvJRu"><span>Rendering process →</span></a></div></div></div></section><img src="https://react-pdf.org/images/corner-graphics.png" class="sc-fznxsB cUWXFh"></main></div><script async="" src="./React-pdf_files/analytics.js.download"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"HwnuS0H-KHfydkSK1YQE0","runtimeConfig":{},"nextExport":true,"autoExport":true,"isFallback":false}</script><script nomodule="" src="./React-pdf_files/polyfills-ecd3dbb5d8e886b28597.js.download"></script><script src="./React-pdf_files/main-3cce364acca6f8cc2955.js.download" async=""></script><script src="./React-pdf_files/webpack-1afce06492d1726dec57.js.download" async=""></script><script src="./React-pdf_files/framework.cf32e4287f6509f34e23.js.download" async=""></script><script src="./React-pdf_files/commons.6760439aa0c0d7152161.js.download" async=""></script><script src="./React-pdf_files/4f7b86ae1740e987bf810ca81facb603a5716c9d.73d80ae75288e72f9b03.js.download" async=""></script><script src="./React-pdf_files/42a8d092586dec029084cae483df856b04cb570c.bb3a03a17912b7e85136.js.download" async=""></script><script src="./React-pdf_files/_app-baa9d0ffedaf0813e3cb.js.download" async=""></script><script src="./React-pdf_files/093162d4bd4e35ef8b3b6dfed4163543e571d9e5.81a056a3f8d24441851b.js.download" async=""></script><script src="./React-pdf_files/index-8f40b18b1cc616505ff7.js.download" async=""></script><script src="./React-pdf_files/_buildManifest.js.download" async=""></script><script src="./React-pdf_files/_ssgManifest.js.download" async=""></script><script src="./React-pdf_files/fonts-279b69598d88659175f3.js.download"></script><script src="./React-pdf_files/rendering-process-c6f874019e50083eff62.js.download"></script><script src="./React-pdf_files/components-7ed80252b9f40f521d66.js.download"></script><script src="./React-pdf_files/styling-c556fe5fc38510ba8bcb.js.download"></script><script src="./React-pdf_files/advanced-9465843a4889a14731ef.js.download"></script><script src="./React-pdf_files/210e6083.4882aa726bae4c1494b0.js.download"></script><script src="./React-pdf_files/f9fff01a.91bd2698063f82d83887.js.download"></script><script src="./React-pdf_files/84c042bb.f70312f171d5cbf35ec0.js.download"></script><script src="./React-pdf_files/f057a831.1e1fea788e7ff50480fe.js.download"></script><script src="./React-pdf_files/repl-3cf25c3c36e28d1593de.js.download"></script></body></html>

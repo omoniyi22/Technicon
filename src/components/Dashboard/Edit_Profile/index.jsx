@@ -9,8 +9,11 @@ const mapStateToProps = state => ({
   err: state.profile.error,
   success: state.profile.success,
   timer: state.profile.timer,
-
-
+  auth: state.auth,
+  profiled: state.profile,
+  id: state.profile.id,
+  picture: state.profile.profile_pix
+  // _id: state.
 })
 
 export default connect(mapStateToProps,

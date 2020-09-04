@@ -19,7 +19,7 @@ export const LoadUserAction = () => async () => {
 
 }
 
-export const LoginAction = (getState) => async (dispatch, state) => {
+export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
   dispatch({
     type: USER_LOADING
   })
@@ -46,6 +46,7 @@ export const LoginAction = (getState) => async (dispatch, state) => {
       payload: await profile
     })
     dispatch(LoginStop())
+    reDirect.push('/dashboard')
 
   } catch (err) {
     dispatch(returnErrors(

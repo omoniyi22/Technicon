@@ -7,12 +7,13 @@ class NewTransaction extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      description: "",
+      complaint: "",
       phone_number: "",
       device_type: "",
       email: "",
       device_brand: "",
-      dispatch_rider: true,
+      dispatchRider: true,
+      device_name: "",
       msg: "",
       ButtonReady: true
     }
@@ -35,7 +36,7 @@ class NewTransaction extends Component {
 
   onCheck(e) {
     this.setState({
-      dispatch_rider: !this.state.dispatch_rider
+      dispatchRider: !this.state.dispatchRider
     })
   }
 
@@ -43,12 +44,13 @@ class NewTransaction extends Component {
     e.preventDefault()
 
     let {
-      description,
+      complaint,
       phone_number,
       device_type,
       email,
       device_brand,
-      dispatch_rider
+      dispatchRider,
+      device_name
     } = this.state
 
     let num = phone_number.match(/^[0-9]+$/)
@@ -56,11 +58,12 @@ class NewTransaction extends Component {
     let emailTest = re.test(email)
 
     if (
-      description.length < 1 ||
+      complaint.length < 1 ||
       phone_number.length < 1 ||
       device_type.length < 1 ||
       email.length < 1 ||
-      device_brand.length < 1
+      device_brand.length < 1,
+      device_name.length < 1
     ) {
       this.setState({
         msg: "Pls fill in all the fields"
@@ -79,35 +82,38 @@ class NewTransaction extends Component {
       })
     }
     else {
-      if (this.state.dispatch_rider) {
+      if (this.state.dispatchRider) {
         this.props.transactStart({
-          description,
+          complaint,
           phone_number,
           device_type,
           email,
           device_brand,
-          dispatch_rider
+          dispatchRider,
+          device_name
         })
         this.props.history.push('/pick-up')
       }
       else {
         this.props.transactStart({
-          description,
+          complaint,
           phone_number,
           device_type,
           email,
           device_brand,
-          dispatch_rider
+          dispatchRider,
+          device_name
         })
         this.props.history.push('/office-address')
       }
       this.setState({
-        description: "",
+        complaint: "",
         phone_number: "",
         device_type: "",
         email: "",
         device_brand: "",
-        dispatch_rider: true,
+        device_name: "",
+        dispatchRider: true,
         msg: null
       })
     }
@@ -117,18 +123,19 @@ class NewTransaction extends Component {
 
   render() {
     const {
-      description,
+      complaint,
       phone_number,
       device_type,
       email,
       device_brand,
-      dispatch_rider
+      dispatchRider,
+      device_name
     } = this.state
     return (
       <form onSubmit={this.onSubmit}>
         <div className="new_transaction_header font-weight-bold px-1 py-3 col-12  flex">New Transaction
         {this.state.msg && <div className="Error  ml-auto mr-2 mt-1 small  rounded-pill pl-2 py-1  lighten-2 text-danger">{this.state.msg} !!!
-         <span 
+         <span
               onClick={
                 this.Clear.bind(this)
               }
@@ -139,13 +146,13 @@ class NewTransaction extends Component {
             <div className="new_transaction_group mb-3 ">
               <div className="new_transaction_label small font-weight-bold">
                 COMPLAINT
-                        </div>
+              </div>
               <div className="new_transaction_input ">
                 <div className="bolo my-1 w-100 borde-left ">
                   <input placeholder='What is wrong with your device'
                     className="w-100 form-control border   py-0 border-none"
-                    name="description"
-                    value={this.state.description}
+                    name="complaint"
+                    value={this.state.complaint}
                     onChange={this.onChange}
                   />
                 </div>
@@ -191,21 +198,40 @@ class NewTransaction extends Component {
                 </div>
               </div>
             </div>
-            <div className="new_transaction_group mb-3 ">
-              <div className="new_transaction_label small font-weight-bold">
-                EMAIL ADDRESS
+            <div className="row mx-0 px-0">
+
+              <div className="new_transaction_group mb-3 col-6 px-0 mx-0 pr-1">
+                <div className="new_transaction_label small font-weight-bold">
+                  EMAIL ADDRESS
                         </div>
-              <div className="new_transaction_input ">
-                <div className="bolo my-1 w-100 borde-left  ">
-                  <input placeholder='Email Address'
-                    className="w-100 form-control border   py-0 border-none"
-                    onChange={this.onChange}
-                    value={this.state.email}
-                    name="email"
-                  />
+                <div className="new_transaction_input ">
+                  <div className="bolo my-1 w-100 borde-left  ">
+                    <input placeholder='Email Address'
+                      className="w-100 form-control border   py-0 border-none"
+                      onChange={this.onChange}
+                      value={this.state.email}
+                      name="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="new_transaction_group mb-3 col-6 px-0 mx-0 ">
+                <div className="new_transaction_label small font-weight-bold">
+                  DEVICE NAME
+                        </div>
+                <div className="new_transaction_input ">
+                  <div className="bolo my-1 w-100 borde-left  ">
+                    <input placeholder='Device Name'
+                      className="w-100 form-control border   py-0 border-none"
+                      onChange={this.onChange}
+                      value={this.state.device_name}
+                      name="device_name"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+
 
             <div className="new_transaction_group mb-3 ">
               <div className="new_transaction_label small font-weight-bold">
@@ -227,10 +253,10 @@ class NewTransaction extends Component {
 
             <div class="custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios"
-                checked={this.state.dispatch_rider}
+                checked={this.state.dispatchRider}
                 onChange={() => {
                   this.setState({
-                    dispatch_rider: true
+                    dispatchRider: true
                   })
                 }
                 } />
@@ -241,7 +267,7 @@ class NewTransaction extends Component {
             <div class="custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" onChange={() => {
                 this.setState({
-                  dispatch_rider: false
+                  dispatchRider: false
                 })
               }
               } />

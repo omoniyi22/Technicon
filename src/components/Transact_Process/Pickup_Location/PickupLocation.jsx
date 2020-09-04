@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
-
+import CustomPaystack from './../paystack/paystack'
 
 const map = require('./map.png')
 const vecto = require('./vecto.png')
@@ -12,21 +12,21 @@ class PickupLocation extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pickup: "",
-      delivery: "",
+      pickup_location: "",
+      delivery_location: "",
       msg: null,
-      mss : this.props.err
+      mss: this.props.err
     }
 
     this.onClick = this.onClick.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
- 
-componentDidMount(){
-  if(this.props.TS2){
-    this.props.history.push('/dashboard')
+
+  componentDidMount() {
+    if (this.props.TS1 === false) {
+      this.props.history.push('/dashboard')
+    }
   }
-}
   onClick(e) {
     this.setState({
       msg: null,
@@ -37,19 +37,19 @@ componentDidMount(){
   onSubmit(e) {
     e.preventDefault();
     let {
-      pickup,
-      delivery
+      pickup_location,
+      delivery_location
     } = this.state
     if (
-      pickup.length > 8 && delivery.length > 8
+      pickup_location.length > 8 && delivery_location.length > 8
     ) {
       this.props.Office(
         {
-          pickup,
-          delivery
-        }
+          pickup_location,
+          delivery_location
+        }, this.props.history
       )
-      
+
     } else {
       this.setState({
         msg: "Both fields must contain at least 8 characters \n for proper description"
@@ -57,7 +57,7 @@ componentDidMount(){
     }
   }
   componentDidUpdate(prevProps) {
-    let {success} = this.props
+    let { success } = this.props
     if (success !== prevProps.success) {
       this.props.history.push('/your-id')
     }
@@ -68,12 +68,12 @@ componentDidMount(){
     return (
       <form onSubmit={this.onSubmit}>
 
-        <div className="PickupLocation ">
+        <div className="PickupLocation z-depth-1 rounded-lg mt-5 pb-4 ">
           <div className="fit_in ">
             <div className="pickup_map">
             </div>
           </div>
-          <div className="pickup_content  white py-2 px-4 row m-0 p-0">
+          <div className=" pickup_content  white py-2 px-4 row m-0 p-0">
             <div className="pickup_text">
 
             </div>
@@ -84,16 +84,16 @@ componentDidMount(){
                         </span>
             </div>
             <div className="w-100 text-center text-danger mx-auto mt-3 small"
-            style={{visibility: this.state.msg ? "visible" : "hidden", marginBottom: "-10px"}}
+              style={{ visibility: this.state.msg ? "visible" : "hidden", marginBottom: "-10px" }}
             >{this.state.msg && this.state.msg + " !!!"} </div>
             <div className="w-100 text-center text-danger mx-auto mt-3 small"
-            style={{visibility: this.props.err ? "visible" : "hidden", marginBottom: "-10px"}}
+              style={{ visibility: this.props.err ? "visible" : "hidden", marginBottom: "-10px" }}
             >{this.props.err && this.props.err + " !!! Please go back and try again .."} </div>
             <div className="pickup_form flex  w-100">
               <div className="left  flex">
-                <img src={this.state.pickup.length > 8 ? vecto : vectu } width="20px" />
+                <img src={this.state.pickup_location.length > 8 ? vecto : vectu} width="20px" />
                 <img className="vecti" className="my-1" src={vecti} />
-                <img src={this.state.delivery.length > 8 ? vecto : vectu} width="20px" />
+                <img src={this.state.delivery_location.length > 8 ? vecto : vectu} width="20px" />
               </div>
               <div className="right">
 
@@ -104,9 +104,9 @@ componentDidMount(){
                   <div className="new_transaction_input ">
                     <div className="bolo my-1 w-100 borde-left  ">
                       <input placeholder='Pickup Location'
-                        name="pickup"
+                        name="pickup_location"
                         onChange={this.onClick}
-                        value={this.state.pickup}
+                        value={this.state.pickup_location}
                         className="w-100 form-control    py-0 -none" />
                     </div>
                   </div>
@@ -119,9 +119,9 @@ componentDidMount(){
                   <div className="new_transaction_input ">
                     <div className="bolo my-1 w-100 borde-left  ">
                       <input placeholder='Delivery address'
-                        name="delivery"
+                        name="delivery_location"
                         onChange={this.onClick}
-                        value={this.state.delivery}
+                        value={this.state.delivery_location}
                         className="w-100 form-control    py-0 -none" />
                     </div>
                   </div>

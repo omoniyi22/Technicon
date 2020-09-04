@@ -35,7 +35,7 @@ input[type="file"] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("./profile.jpg");
+  // background-image: url("./profile.jpg");
   filter: blur(7px);
   z-index: !important;
   position: absolute;
@@ -61,7 +61,7 @@ input[type="file"] {
     color: white;
     @include pointer();
     padding: 5px 11px 5px 11px;
-    background: #5997bded;
+    background: #2D9CDB !important;
     border: 3px solid rgba(231, 231, 231, 0.726) !important ;
 
     transition: background 2s border 2s;
@@ -79,12 +79,11 @@ input[type="file"] {
 }
 
 .edit_pix {
-  border: solid 1px !important;
   @include heart_center();
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("./profile.jpg");
+  // background-image: url("./profile.jpg");
   margin-top: 23px;
 
   .pix_view {
@@ -96,7 +95,6 @@ input[type="file"] {
     img {
       width: 74px;
       height: 74px;
-      background: red;
     }
     .opacity {
       position: absolute;
@@ -174,6 +172,5 @@ input[type="file"] {
   padding-right: 0px !important;
 
   filter: contrast(23);
-  // filter: contrast(2);
   background-image: url('./cake.png');
 }

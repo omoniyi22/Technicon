@@ -22,6 +22,7 @@ class ChatBox extends Component {
     })
   }
   render() {
+    let { selected, empty } = this.props
     return (
       <Fragment>
         <div className="ChatBox">
@@ -30,20 +31,35 @@ class ChatBox extends Component {
             <div className="chat_box_header1 py-2 px-2 font-weight-bold">
               Meet Your Engineer
                 </div>
-            <div className="chat_box_header2 row border-bottom border-top m-0 p-0 py-1">
-              <div className="chat_header_pix  p-2 mx-2 rounded-pill "></div>
-              <div className="chat_user_details  px-2 ml-2  ">
-                <div className="chat_user_id small">
-                  #ID 02002
-                        </div>
-                <div className="chat_user_product">
-                  iphone 6x
-                        </div>
-              </div>
-              <div className="chat_last   ml-auto mr-2">
-                <div className="chat_date">02/03/2020</div>
-                <div className="product_state border rounded-pill ml-auto"><div className=" my-auto fa fa-check" /></div>
-              </div>
+            <div
+              className="chat_box_header2 row py-2  text-white rounded-sm border-bottom border-top m-0 p-0 py-1"
+              style={{ height: "55px" }}
+            >
+              {
+                selected !== false &&
+                <>
+                  <div className="chat_header_pix  p-2 mx-2 rounded-pill "></div>
+                  <div className="chat_user_details  px-2 ml-2  ">
+                    <div className="chat_user_id small">
+                      #ID {selected.trans_id}
+                    </div>
+                    <div className="chat_user_product">
+                      {selected.device_brand} {selected.device_name}
+                    </div>
+                  </div>
+                  <div className="chat_last   ml-auto mr-2">
+                    <div className="chat_date">{(selected.createdAt).slice(0, selected.updatedAt.indexOf("T")).replace(/-/g, "/")}</div>
+                    {
+                      selected === "INP" ?
+                        <div className="product_state border rounded-pill ml-auto">
+                          <div className=" my-auto fa fa-check" />
+                        </div> :
+                        <div className=" my-auto fa  fa-exclamation-triangle  ml-auto" />
+
+                    }
+                  </div>
+                </>
+              }
             </div>
 
             <div className="row m-0  text-center border-bottom mb-3 py-0 my_invoice">
@@ -69,19 +85,25 @@ class ChatBox extends Component {
             }
             {!this.state.Switch ?
 
-              <div className="bottom  border">
-                <div className="send_reciept border ">
-                  <div className=" ml">Send Receipt to mail</div>
-                </div>
-                <div className="mail_out border ml-auto rounded-pill z-depth-1">
-                  <div className="send_now border rounded-pill z-depth-1">
-                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
+              <div className="bottom  border">{empty === false &&
+                <>
+                  <div className="send_reciept border ">
+                    <div className=" ml">Send Receipt to mail</div>
                   </div>
-                </div>
+                  <div className="mail_out border ml-auto rounded-pill z-depth-1">
+                    <div className="send_now border rounded-pill z-depth-1">
+                      <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                    </div>
+                  </div>
+                </>
+              }
               </div>
               :
-              <div className="bottom white  text-black border-primary z-depth-1 ">
-                <textarea autoFocus={true} className=" send_reciept border border-primary  black-text py-1" />
+              <div className="bottom white  text-black  z-depth-1 ">
+                <textarea autoFocus={true} placeholder={"You can chat with your engineer"}
+                  className=" send_reciept border border-primary  black-text py-1"
+                  style={{ resize: "none" }}
+                />
                 {/* <div className=" ml">Send Receipt to mail</div> */}
                 {/* </div> */}
                 <div className="mail_out border ml-auto rounded-pill z-depth-1">

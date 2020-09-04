@@ -5,6 +5,7 @@ import loadingReducer from './loadingReducer'
 import transact from './TransactionReducer'
 import profile  from './ProfileReducer'
 import nav from './navReducer'
+import device from './deviceReducer'
 
 
 export default combineReducers({
@@ -13,5 +14,6 @@ export default combineReducers({
   loading: loadingReducer,
   transact,
   profile,
-  nav
+  nav,
+  device
 })

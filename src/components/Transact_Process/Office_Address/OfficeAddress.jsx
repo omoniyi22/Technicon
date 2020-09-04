@@ -19,7 +19,7 @@ class OfficeAddress extends Component {
   }
 
   onClick() {
-    this.props.Office(null)
+    this.props.Office(null, this.props.history)
   }
   componentDidUpdate(prevProps) {
     let { success } = this.props

@@ -74,7 +74,7 @@ class SideBar extends Component {
                   this.props.auth.isAuthenticated ?
 
                     <div className="user_n  ">
-                      <img className="user_pix  red rounded-pill ml-auto border-0" />
+                      <img src={this.props.pix} className="user_pix rounded-pill ml-auto border" />
 
                       <div className="user_dl  mr-auto">
                         <div className="userName  mt-auto mb-1">{this.props.auth.username}</div>

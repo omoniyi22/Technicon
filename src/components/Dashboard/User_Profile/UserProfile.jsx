@@ -10,13 +10,14 @@ class UserProfile extends Component {
     return (
       <div className="user_profiles   mb-2">
         <div className="user_profile_box">
-          <div className="profile_pix text-center mx-auto rounded-pill">
-            <span className="fa fa-user mt-1 px-1 " />
+          <div style={{ backgroundImage: `url(${this.props.pix})` }}
+            className="profile_pix border text-center mx-auto rounded-pill">
+            {/* <span className="fa fa-user mt-1 px-1 " /> */}
           </div>
           <div className="user_box_details text-center">
             <div className="name ">
               {this.props.profile.name}
-                        </div>
+            </div>
             <div className="address">
               <botton className="btn btn-sm rounded-pill px-3 pt-0 z-depth-0 mb-0 mb-1">
                 <span className="fa fa-map-marker-alt mr-1" />
@@ -26,13 +27,12 @@ class UserProfile extends Component {
             <Link to="/edit-profile" className="text_inherit">
               <button className="edit_profile blue lighten-1 text-white btn btn-sm mt-0 z-depth-1 rounded-pill">
                 Edit Profile
-                        </button>
+              </button>
             </Link>
           </div>
         </div>
         <div className="switch_buttons py-0 mb-0 mt-3 border-top border-left border-right border-bottom">
           <Link to="/dashboard" className="text_inherit">
-
             <div className="dashboard mt-1 row mx-0 ">
               <div className="dashboard_icon py-1 mb-2  ">
                 <div className="fa fa-home pl-4 pr-3 " />
@@ -40,7 +40,7 @@ class UserProfile extends Component {
               <div className="dashboard_button py-2 px-1  ">
                 <div className="dashboard">
                   Dashboard
-                            </div>
+              </div>
               </div>
             </div>
           </Link>
@@ -54,7 +54,7 @@ class UserProfile extends Component {
               <div className="dashboard_button py-2 px-1  ">
                 <div className="dashboard">
                   Payment
-                            </div>
+                </div>
               </div>
             </div>
           </Link>

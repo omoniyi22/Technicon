@@ -40,6 +40,9 @@ export const EDIT_TIMER = "EDIT_TIMER"
 export const PROFILE_ERROR = "PROFILE_ERROR"
 export const PROFILE_SUCCESS = "PROFILE_SUCCESS"
 export const CLEAR_ERR = "CLEAR_ERR"
+export const UPDATE_PROFILE = "UPDATE_PROFILE"
+export const UPDATE_PIX = "UPDATE_PIX"
+export const DECICE_SELECTED = "DECICE_SELECTED"
 
 //Nav
 export const NAV_IN = "NAV_IN"
@@ -47,8 +50,14 @@ export const NAV_OUT = "NAV_OUT"
 
 
 
-//Get Trasaction
+//Device Reciept
+export const FETCHING_RECIEPT = "FETCHING_RECIEPT"
+export const STOP_RECIEPT = "STOP_RECIEPT"
+export const GET_DEVICE_RECIEPT = "GET_DEVICE_RECIEPT"
+export const RECIEPT_ERROR = "RECIEPT_ERROR"
+export const EMPTY_RECIEPT= "EMPTY_RECIEPT"
 
-//Chat
 
-//Payment Method
+//Device Chat
+export const DEVICE_CHAT = "DEVICE_CHAT"
+

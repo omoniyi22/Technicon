@@ -45,35 +45,36 @@
 
 
 
-// function de (){
+function de (){
 
-// const axios = require('axios')
-// const body = JSON.stringify({ email:"narcisse.egonu@gmail.com",
-// password: "ninja@1234"});
+const axios = require('axios')
+const body = JSON.stringify({ email:"narcisse.egonu@gmail.com",
+password: "ninja@1234"});
 
-//   axios.post('https://technicon-api.herokuapp.com/api/v1/complaint', {
-// 	"description" : "Screen damaged",
-// 	"device_type" : "IPHONE X",
-// 	"email" : "narcisse.egonu@gmail.com",
-// 	"dispatch_rider" : true,
-// 	"phone_number" : "07067656140",
-// 	"device_brand":"Apple",
-// 	"pickup" : "University of Ibadan",
-// 	"delivery":"Bodija"	
-// }	, 
-//    {
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjAxZDY0MWEwNjRkMDAyNGJmY2U4NiIsImVtYWlsIjoibmFyY2lzc2UuZWdvbnVAZ21haWwuY29tIiwiaWF0IjoxNTk2NTE3MDAxLCJleHAiOjE1OTY2MDM0MDF9.Nbd1EfbjlIHDY1ZphKyzQyr-HpeCEmNAVXKAvWzlKBU'
-//     }
-//   }
-//  )
-// .then(res => console.log("hey" , res.data.data))
-// .catch(err=>{
-//   console.log("hey", err, err)
-// })
-// }
-// de()
+  axios.post('https://cors-anywhere.herokuapp.com/https://technicon-api.herokuapp.com/api/v1/transactions', {
+	"complaint" : "Screen damaged",
+	"device_type" : "IPHONE X",
+	"device_name" : "IPHONE X",
+	"email" : "narcisse.egonu@gmail.com",
+	"dispatchRider" : true,
+	"phone_number" : "07067656140",
+	"device_brand":"Apple",
+	"pickup_location" : "University of Ibadan",
+	"delivery_location":"Bodija"	
+}	, 
+   {
+    headers: {
+      'Content-Type': 'application/json',
+      'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMjAxZDY0MWEwNjRkMDAyNGJmY2U4NiIsImVtYWlsIjoibmFyY2lzc2UuZWdvbnVAZ21haWwuY29tIiwiaWF0IjoxNTk4OTkwNTgzLCJleHAiOjE1OTkwNzY5ODN9.n5N4D6AeAeV_tKk1Akyncefnz0Galal8b8cKCucMhns'
+    }
+  }
+ )
+.then(res => console.log("hey" , res.data.data))
+.catch(err=>{
+  console.log("heyw", err.response.data)
+})
+}
+de()
 
 // function de(a, b) {
 //   let num = a.match(/^[0-9]+$/)
@@ -96,19 +97,25 @@
 // validateEmail('wwewe@dsd.com')
 
 
-// function fola(p) {
+// function fola(result) {
 //   let items
-//   let content = 3
-//   items = Math.ceil(p.length / content)
+//   let no_of_content = 3
+//   items = Math.ceil(result.length / no_of_content)
 //   let i = 0
 //   let j
 //   let len = []
 //   while (i < items) {
-//     j = p.splice(0, content)
+//     j = result.splice(0, no_of_content)
 //     len.push(j)
 //     i++
 //   }
 //   return (len)
 // }
-// let v = fola([1, 2, 3, 4, 5, 6, 7, 2, 3, 8, 3])[0]
-// v.map(i=>console.log(i))
+// let v = fola([1, 2, 3, 4, 5, 6, 7, 2, 3, 8, 3])
+// v.map(i => console.log(i))
+
+// function dele(a, b, c) {
+//   console.log(a + b + c)
+// }
+
+// dele(...[1, 2, 3])
