@@ -13,6 +13,8 @@
   <link href="/BootFont/css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="swiper/package/css/swiper.min.css">
   <link rel="stylesheet" href="BootFont/animate.css">
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
   <title>Technicon | Your device needs the perfect care</title>
 </head>
 
@@ -35,8 +37,23 @@
       }
     )
     wow.init();
+    $('.counter-count').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      });
+    });
   </script>
-  <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>
+
+  <!-- <script src="./BootFont/js/jquery-3.4.1.min.js"></script> -->
+  <!-- <script src="./numscroller-1.0.js"></script> -->
+  <!-- <script src="./prism.js"></script> -->
+  <!-- <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script> -->
 </body>
 
 </html>

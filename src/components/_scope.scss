@@ -5,9 +5,12 @@
   align-self: center;
   justify-content: center;
 }
-
+.faq{
+  @import "./Faq/faq.scss";
+}
 .Home{
     @import './Home/Home';
+
 }
 .Log_in{
     @include heart_center();

@@ -1,3 +1,10 @@
 .flex {
-    display: flex;
+  display: flex;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.bg_hasher {
+  @include hash_bg();
 }

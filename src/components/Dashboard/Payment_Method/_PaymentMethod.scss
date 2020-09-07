@@ -1,18 +1,22 @@
 .payment_header{
-    padding-bottom:18px;
+    padding-bottom:15px;
     font-size: 12px;
     font-weight: bold;
 }
+.trans_idd {
+  font-size: 13px;
+  color: #84848a93;
+}
+
 .Payment_Choice, .payment_method_promo{
     padding: 27px 23px 2.5px 23px;
     margin-bottom: 4px;
-   
+  
     .payment_method_cash{
-        
         .payment_method_cash_icon{
             margin-top: 2.7px;
             height: 18px;
-            color: #2f9af1b0;
+            color: #6c6f725d;
         }
     }
     .addman{

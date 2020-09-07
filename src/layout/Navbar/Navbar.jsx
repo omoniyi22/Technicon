@@ -69,16 +69,6 @@ class Navbar extends Component {
     function UnAuthNav() {
       return (
         <>
-          {/* <div className="cog ">
-            <Link to="/notification" className="limk ">
-
-              <div className="nav_link pb-0  mt-2 text-center">
-                <img className="nav_link_icon " width="20.5px" src={notify} />
-                <div className=" mt-1 nav_text notify">Notification</div>
-              </div>
-            </Link>
-          </div> */}
-
           <div className="cog ">
             <Link className="limk ">
               <div className="nav_link pb-0  mt-2 text-center"
@@ -129,8 +119,8 @@ class Navbar extends Component {
             </div>
 
             <div className="cog ">
-              <div  className="limk "
-              onClick={this.closeShare}
+              <div className="limk "
+                onClick={this.closeShare}
               >
                 <div className="nav_link pb-0  mt-2 text-center">
                   <span className="fa fa-share-alt nav_fa" />
@@ -148,19 +138,26 @@ class Navbar extends Component {
                 </div>
               </Link>
             </div>
-
+            <div className="cog ">
+              <Link to="/faq" className="limk ">
+                <div className="nav_link pb-0  mt-2 text-center">
+                  <img className="nav_link_icon " width="20.5px" src={notify} />
+                  <div className=" mt-1 nav_text notify">FAQs</div>
+                </div>
+              </Link>
+            </div>
             {this.props.auth.isAuthenticated ? UnAuthNav() : AuthNav()}
 
           </div>
         </nav>
         <div className="sharemodal p-5 "
-          style={{ display: `${show ? 'flex': 'none'}`, backgroundColor : `${show ? '#0000002d': '#ffffff00'}`}}
+          style={{ display: `${show ? 'flex' : 'none'}`, backgroundColor: `${show ? '#0000002d' : '#ffffff00'}` }}
         >
           <div className='lasaas'
-          onClick={this.closeShare}
+            onClick={this.closeShare}
           ></div>
           <div className="modals m-auto p-4"
-          style={{ display: `${show ? 'flex': 'none'}`}}
+            style={{ display: `${show ? 'flex' : 'none'}` }}
           >
             <div className="spread  row p-5 text-center rounded-lg   z-depth-1">
 

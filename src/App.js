@@ -10,7 +10,7 @@ import OfficeAddress from "./components/Transact_Process/Office_Address";
 import Dashboard from "./components/Dashboard/";
 import About from './components/About'
 import LandingPage from './components/Home/index'
-// import LandingPage from "./prev_pack/components/page-content/landing-page/landing-page";
+import FAQ from "./components/Faq/"
 
 import NavBar from './layout/Navbar'
 import Footer from './layout/Footer'
@@ -62,7 +62,6 @@ class App extends React.Component {
           }
           <Route>
             <Switch>
-
               <Route path="/dashboard" component={auth ? Dashboard : Login} />
               <Route path="/new-transaction" component={auth ? Dashboard : Login} />
               <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
@@ -78,13 +77,10 @@ class App extends React.Component {
               <Route path="/pix_upload" component={Pix_Upload} />
               <Route path="/login" component={Login} />
 
-
-
-
               <Route path="/about" component={About} />
               <Route path="/legal" component={Legal} />
+              <Route path="/faq" component={FAQ} />
               <Route path="/login" component={() => <Login nav={this.noNav} />
-
               } />
               <Route path="/signup" component={
                 (() => <div>{<SignUp doNav={() => this.noNav} />}</div>)

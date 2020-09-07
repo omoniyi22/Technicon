@@ -20,7 +20,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className=" row m-0 p-0 Home">
+      <div className=" row m-0 p-0 Home opacy">
         <div className="w-100  lighten-4  home">
           <div className="Laya ">
           </div>
@@ -32,7 +32,11 @@ class Home extends Component {
                 </div>
                 <div className=" broder  py-2">
                   <div className="  ml-3 ">
-                    <div className="circla border  ml-2  mr-auto rounded-pill ">
+                    <div className="circla border  ml-2  mr-auto rounded-pill animated delay-3s  wow zoomIn slow"
+                      style={{
+                        animationIterationCount: "infinite",
+                        animationDirection: "alternate"
+                      }}>
                       <div className="white rounded-pill border" />
                     </div>
                   </div>
@@ -43,7 +47,12 @@ class Home extends Component {
                 <div className="fojd ">
                   <div className=" broder jen py-2">
                     <div className="  ml-3 ">
-                      <div className="circla border  ml-2  mr-auto rounded-pill ">
+                      <div className="circla border wow zoomIn slow  ml-2  mr-auto rounded-pill "
+                        style={{
+                          animationIterationCount: "infinite",
+                          animationDirection: "alternate"
+                        }}
+                      >
                         <div className="white rounded-pill border" />
                       </div>
                     </div>
@@ -52,8 +61,23 @@ class Home extends Component {
                   <div className="text-white">to fix your gadgets...</div>
                 </div>
                 <div className="lopias ">
-                  <div className="circle1  border  circle2 rounded-pill "><div className="white rounded-pill border" /></div>
-                  <div className="circle1 border soss ml-auto  rounded-pill "><div className="white rounded-pill border" /></div>
+                  <div className="circle1  border  circle2 rounded-pill animated delay-1s  wow zoomIn slow"
+                    style={{
+                      animationIterationCount: "infinite",
+                      animationDirection: "alternate"
+                    }}
+                  ><div className="white rounded-pill border animated delay-1s  wow zoomIn slow"
+                    style={{
+                      animationIterationCount: "infinite",
+                      animationDirection: "alternate"
+                    }}
+                    /></div>
+                  <div className="circle1 border soss ml-auto  rounded-pill animated delay-2s  wow zoomIn slow"
+                    style={{
+                      animationIterationCount: "infinite",
+                      animationDirection: "alternate"
+                    }}
+                  ><div className="white rounded-pill border" /></div>
                 </div>
               </div>
             </div>
@@ -122,9 +146,9 @@ class Home extends Component {
           </div>
         </div>
         <div className=" w-100 flex m-auto  lala_2 py-md-5">
-          <ul className="About_reason  w-100 text-center pacg">
-            <div className=" diver py-2 px-2 mt-md-5  wow zoomIn fast ">
-              <div className="border hoda z-depth-1  rounded-lg py-4 py-md-4 white">
+          <ul className="About_reason  lex w-100 text-center pacg">
+            <div className="  py-2 px-2 mt-md-5  wow zoomIn fast ">
+              <div className="border hoda z-depth-1 rounded-lg py-4 py-md-4 white">
                 <div className="text-center">
                   <img src={realtime} width="110px" className="wow zoomIn fast" />
                 </div>
@@ -139,7 +163,7 @@ class Home extends Component {
             </div>
 
 
-            <div className=" diver py-2 px-2   wow zoomIn fast">
+            <div className="  py-2 px-2   wow zoomIn fast">
               <div className="border hoda z-depth-1 rounded-lg  py-4 py-md-4 px-4 white ">
                 <div className="text-center z-depth-0">
                   <img src={pick} width="110px" className="z-depth-0mt-md-4  wow zoomIn fast" />
@@ -155,7 +179,7 @@ class Home extends Component {
             </div>
 
 
-            <div className=" diver py-2  px-2 mt-md-5  wow zoomIn fast">
+            <div className="  py-2  px-2 mt-md-5  wow zoomIn fast">
               <div className="border hoda z-depth-1  rounded-lg py-4 py-md-4 px-4 white">
                 <div className="text-center">
                   <img src={expert} width="110px" className="wow zoomIn fast" />
@@ -187,12 +211,15 @@ class Home extends Component {
               </div>
               <div className="about_technicon_text mt-3 ">
                 <div className="ropz px-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dolorem aliquid vitae explicabo
-                   iure illum ratione, temporibus sequi a eos hic ex velit totam ab, tempore \
-                   necessitatibus. Dignissimos, obcaecati recusandae!
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti dolorem aliquid vitae explicabo
-                   iure illum ratione, temporibus sequi a eos hic ex velit totam ab, tempore \
-                   necessitatibus. Dignissimos, obcaecati recusandae!
+                  TechniconNG is an emerging IT firm in Nigeria. We are dedicated to helping you maintain and also repair your faulty appliances by highly reputable and skilled technicians at the comfort of your home.
+
+                  At TechniconNG, we employ the power of technology to reduce stress, save time and also cut costs by taking orders from individuals who are interested in gadget repair. Our repair centres are also easily accessible for other walk-in customers who may not be able to reach the e-platform.
+
+                  We're committed to ensuring you as a client gets the best of treatments by rendering quality, reliable and top notch services as well as leaving you with thrilling experiences during your transaction adventure with us.
+
+                  The TechniconNG squad comprises young and talented brains who have strong drives towards finessing and refining the concept of gadget maintenance in Nigeria.
+
+                  Our vision is to grow into one of the top 3 leading IT firm in Nigeria in few years time and also spread our wings to other neighbouring countries.
               </div>
                 <div className="mt-3 px-3 pb-3  small">
                   {/*

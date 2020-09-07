@@ -51,7 +51,7 @@ class Invoice extends Component {
                     />
                   </div>
                   <div className="font-weight-bold  empty_text mt-4">
-                    <span className="onr">Loading ...</span> <br />
+                    {/* <span className="onr">Loading ...</span> <br /> */}
                   </div>
                 </div>
                 :

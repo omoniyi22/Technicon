@@ -87,13 +87,15 @@ class ChatBox extends Component {
 
               <div className="bottom  border">{empty === false &&
                 <>
-                  <div className="send_reciept border ">
-                    <div className=" ml">Send Receipt to mail</div>
+                  <div className="send_reciept border pointer mx-auto text-center">
+                    <div className=" ml text-center w-100"
+                    style={{fontVariant: "small-caps", fontSize: 17}}
+                    >select payment method</div>
                   </div>
-                  <div className="mail_out border ml-auto rounded-pill z-depth-1">
-                    <div className="send_now border rounded-pill z-depth-1">
+                  <div className="mail_out  ml-auto  ">
+                    {/* <div className="send_now border rounded-pill z-depth-1">
                       <span className="send " style={{ backgroundImage: `url(${send})` }} />
-                    </div>
+                    </div> */}
                   </div>
                 </>
               }

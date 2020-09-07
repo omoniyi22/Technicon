@@ -81,7 +81,7 @@ class PickupLocation extends Component {
               <span className="fa fa-map-marked-alt mr-2" />
               <span className="enable_loaction ml-1">
                 Enable your location so our dispatch riders can come pickup your gadget.
-                        </span>
+                </span>
             </div>
             <div className="w-100 text-center text-danger mx-auto mt-3 small"
               style={{ visibility: this.state.msg ? "visible" : "hidden", marginBottom: "-10px" }}

@@ -24,8 +24,12 @@
   padding-left: 3.5%;
   padding-right: 3.5%;
   display: flex;
+  @include heart_center();
+  justify-content: space-between;
+  
   .diver {
     width: 33.33%;
+    max-width: 360px;
     .why_title {
       font-size: 20px;
       font-weight: bold;

@@ -21,24 +21,23 @@ class About extends Component{
             }
         }
         return(
-            <div className="About">
+            <div className="About ralo">
                 <div className="About_header pt-2   mx-0 ">
                     <div className="H_note  fast wow fadeInDown">
                         <div className="Bold doak font-weight-bold border-bottom">
                             About Technicon
                         </div>
-                        <div className="  Fluids">
-                            Hey sorry about the cheezy name. When I kicked this 
-                            site off on July 4th, 2007, 
-                            I mostly really did write about CSS. But of course, that 
-                            means writing about HTML too. And then JavaScript as I began 
-                            to learn that. The site is WordPress, so writing about that was
-                            sprinkled in. As my experience as a front-end developer and designer
-                            grew and my knowledge broadened, so did the sites topics.
+                        <div className="  Fluids ">
+                            TechniconNG is an emerging IT firm in Nigeria. We are dedicated to helping you maintain and also repair your faulty appliances by highly reputable and skilled technicians at the comfort of your home.
+
+At TechniconNG, we employ the power of technology to reduce stress, save time and also cut costs by taking orders from individuals who are interested in gadget repair. Our repair centres are also easily accessible for other walk-in customers who may not be able to reach the e-platform.
+
+We're committed to ensuring you as a client gets the best of treatments by rendering quality, reliable and top notch services as well as leaving you with thrilling experiences during your transaction adventure with us.
+
+
                         <div className=" mt-2 Fluids">
-                            Hey sorry about the cheezy name. When I kicked this 
-                            site off on July 4th, 2007, 
-                            I mostly really did write about CSS. But of course, that 
+The TechniconNG squad comprises young and talented brains who have strong drives towards finessing and refining the concept of gadget maintenance in Nigeria. 
+Our vision is to grow into one of the top 3 leading IT firm in Nigeria in few years time and also spread our wings to other neighbouring countries.
                         </div>
                         </div>
                     </div>
@@ -67,7 +66,7 @@ class About extends Component{
                     </div>
                 </div>
 
-                <ul className="About_reason  w-100 text-center pacg">
+                <ul className="About_reason container-fluid w-100 text-center pacg">
 
 
                     <div className=" diver py-2 px-2  wow zoomIn slow ">
