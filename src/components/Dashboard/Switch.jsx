@@ -22,7 +22,7 @@ const SwitchEffect = (
       return [[<NewTransaction />], ["mobile-v", null, "mobile-v"]]
       break;
     case 'payment-method':
-      return [[<PaymentMethod />, null, 'no-border'], ["mobile-v", "mobile-v", null]]
+      return [[<PaymentMethod />, null, 'no-border'], ["mobile-v", null, 'mobile-v']]
       break;
     case 'dashboard':
       return [[null], [null, "mobile-v", null]]
@@ -34,7 +34,7 @@ const SwitchEffect = (
       return [[<PaymentMethod/>, <PaymentGateway />, "no-border"], ["mobile-v", "mobile-v", null]]
       break;
     case 'single_transact':
-      return [[null, <PaymentGateway />, 'no-border'], ["mobile-v", null, "mobile-v"]]
+      return [[null, null, 'no-border'], ["mobile-v", "z-depth-1", "mobile-v"]]
       break;
   }
 }

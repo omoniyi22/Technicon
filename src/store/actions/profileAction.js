@@ -16,7 +16,7 @@ import { GET_PROFILE as getProf, UPDATE_PROFILE as updateProfile, ChangeAvatar }
 //Get Profile
 export const getProfile = async (state) => {
   try {
-    console.log("get_profile")
+    //console.log("get_profile")
     let res = await getProf(state)
     let data1 = await res.data
     let data2 = await data1.data
@@ -35,7 +35,7 @@ export const getProfile = async (state) => {
 
 //Edit Profile
 export const editProfile = (request,ID, PIX) => async (dispatch, state) => {
-  console.log(request,ID, PIX)
+  //console.log(request,ID, PIX)
   dispatch({
     type: EDIT_TIMER
   })
@@ -47,9 +47,9 @@ export const editProfile = (request,ID, PIX) => async (dispatch, state) => {
       dispatch({ type: UPDATE_PIX, payload: talkThree })
     }
     let reses = await updateProfile(request, state)
-    console.log("copa", reses)
+    //console.log("copa", reses)
     let rese = await getProfile(state)
-    console.log("copaf", rese)
+    //console.log("copaf", rese)
     dispatch({
       type: GET_PROFILE,
       payload: await rese
@@ -58,7 +58,7 @@ export const editProfile = (request,ID, PIX) => async (dispatch, state) => {
       type: PROFILE_SUCCESS
     })
   } catch (err) {
-    console.log(">", err.response)
+    //console.log(">", err.response)
 
     dispatch({
       type: PROFILE_ERROR,

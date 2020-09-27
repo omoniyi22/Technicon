@@ -65,7 +65,7 @@ class SideBar extends Component {
             <div className="  slide_right" style={{ "right": this.state.slideRight }}>
               <div className="contained  pt-2  ">
 
-                <div className='text-right possa' >
+                <div className='text-right possas ' >
                   <div onClick={this.slideoff}>
                     <span className="fa fa-times rounded-pill " />
                   </div>
@@ -76,20 +76,19 @@ class SideBar extends Component {
                     <div className="user_n  ">
                       <img src={this.props.pix} className="user_pix rounded-pill ml-auto border" />
 
-                      <div className="user_dl  mr-auto">
+                      <Link to="/edit-profile" onClick={this.slideoff}  className="inherit user_dl  mr-auto">
                         <div className="userName  mt-auto mb-1">{this.props.auth.username}</div>
                         <div className="userLocation  mb-auto mt-1">
                           <span className="fa fa-map-marker-alt" />
-                          89, Zik Hall, Unibadan
+                          {this.props.profile.address !== undefined ? this.props.profile.address : "Update your profile"}
                       </div>
-                      </div>
+                      </Link>
 
                     </div> :
                     <div className=" text-center w-100 ">
                       <img src={logo} width="70px" className=" pt-3" />
                     </div>
                 }
-
                 <div className="side_items ">
 
                   <div className="modals z-depth-1"
@@ -110,19 +109,19 @@ class SideBar extends Component {
                           <div className="col-4  p-2">
                             <FacebookMessengerShareButton
                               url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <FacebookMessengerIcon size={36} round={true} />
+                              <FacebookMessengerIcon size={41} round={true} />
                             </FacebookMessengerShareButton>
                           </div>
                           <div className="col-4  p-2">
                             <TwitterShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <TwitterIcon size={36} round={true} />
+                              url="https://twitter.com/TechniConNG?s=09" quote={'Technicon | Your device needs the perfect care'}>
+                              <TwitterIcon size={41} round={true} />
                             </TwitterShareButton>
                           </div>
                           <div className="col-4  p-2">
                             <WhatsappShareButton
                               url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <WhatsappIcon size={36} round={true} />
+                              <WhatsappIcon size={41} round={true} />
                             </WhatsappShareButton>
 
                           </div>
@@ -131,21 +130,21 @@ class SideBar extends Component {
 
                         <div className="row  p-2 w-100 py-2 mx-auto">
                           <div className="col-4  p-2">
-                            <EmailShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <EmailIcon size={36} round={true} />
-                            </EmailShareButton>
+                            <InstapaperShareButton
+                              url="http://www.instagram.com/techniconng" quote={'Technicon | Your device needs the perfect care'}>
+                              <InstapaperIcon size={41} round={true} />
+                            </InstapaperShareButton>
                           </div>
                           <div className="col-4  p-2">
                             <FacebookShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <FacebookIcon size={36} round={true} />
+                              url="http://facebook.com/techniconng" quote={'Technicon | Your device needs the perfect care'}>
+                              <FacebookIcon size={41} round={true} />
                             </FacebookShareButton>
                           </div>
                           <div className="col-4  p-2">
                             <TelegramShareButton
                               url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <TelegramIcon size={32} round={true} />
+                              <TelegramIcon size={41} round={true} />
                             </TelegramShareButton>
 
                           </div>
@@ -190,12 +189,18 @@ class SideBar extends Component {
                       <div className="sav">Legal</div>
                     </div>
                   </Link>
-                  <Link onClick={this.share} className="cinta">
+                  <Link onClick={this.slideoff} to="/faq" className="cinta">
+                    <div className="nav_item ">
+                      <span className="icon4 fa fa-bell " />
+                      <div className="sav">FAQs</div>
+                    </div>
+                  </Link>
+                  <div onClick={this.share} className="cinta">
                     <div className="nav_item pdf ">
                       <span className="icon5 fa fa-share-alt " />
                       <div className="sav">Share</div>
                     </div>
-                  </Link>
+                  </div>
                   {
                     !this.props.auth.isAuthenticated ?
                       <>
@@ -225,11 +230,11 @@ class SideBar extends Component {
               <div className="soss  rounded-lg" onClick={this.slideRight}>
                 <span className="fa fa-bars" />
               </div>
-              <div className="nav_logo  text-center">
+              <div className="nav_logo   text-center">
                 <Link to='/'> <img src={logo} alt="" width={'67px'} /></Link>
               </div>
               <div className="  rounded px-2 softeir">
-                <Link to={isAuthenticated ? "/dashboard" : "/login"} className="small text_inherit">
+                <Link to={isAuthenticated ? "/new-transaction" : "/login"} className="small text_inherit">
                   try for free
                 </Link>
               </div>

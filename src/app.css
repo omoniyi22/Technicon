@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url('assets/fonts/Metropolis.otf');
+}
+@font-face {
+  font-family: "rali";
+  src: url('assets/fonts/Raleway-Light.ttf');
+}
+@font-face {
+  font-family: "ralo";
+  src: url('assets/fonts/Raleway-SemiBold.ttf');
+}

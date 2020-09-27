@@ -8,10 +8,10 @@ class UserProfile extends Component {
 
   render() {
     return (
-      <div className="user_profiles   mb-2">
+      <div className="user_profiles opacy  mb-2">
         <div className="user_profile_box">
           <div style={{ backgroundImage: `url(${this.props.pix})` }}
-            className="profile_pix border text-center mx-auto rounded-pill">
+            className="profile_pix  z-depth-1 text-center mx-auto rounded-pill">
             {/* <span className="fa fa-user mt-1 px-1 " /> */}
           </div>
           <div className="user_box_details text-center">

@@ -3,6 +3,10 @@
     @import './User_Profile/userProfile';
 }
 
+
+.POF {
+  @import './../Transact_Process/Paid_OR_Failed/POF';
+}
 .ChatBox{
     @import './Chat_Box/ChatBox';
 }

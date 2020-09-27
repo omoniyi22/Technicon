@@ -1,147 +1,184 @@
-.Advert{
-    background-image: url('./advert.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 140px;
-    max-height: 36vmin;
-    height: 34vmin;
-    border-radius: 9px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+.inherit {
+  color: inherit !important;
 }
-.Transactions{
-    .senc {
-      @include heart_center();
-      justify-content: center;
-      align-items: center;
-      display: flex;
-        background: #EDEDEE;
-      div{
+.Advert {
+  background-image: url("./advert.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 140px;
+  max-height: 36vmin;
+  height: 34vmin;
+  border-radius: 9px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.Transactions {
+  .senc {
+    @include heart_center();
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #ededee;
+    div {
       width: 100%;
       height: 100%;
-        text-align: center;
-      }
-      }
-      .a{
-        width: 145px;
-        height:  100px;
-      }
-  .machine{
-  overflow-y: hidden;
-    min-height:  190px ;
+      text-align: center;
+    }
+  }
+  .a {
+    width: 145px;
+    height: 100px;
+  }
+  .machine {
+    overflow-y: hidden;
+    min-height: 190px;
     height: 190px;
     max-height: 190px;
   }
-    .transacts{
-        border-bottom: solid 1.9px rgba(234, 237, 238, 0.897);
-        .transacts_header{
-            font-weight: 600;
-        }
-        .transacts_product:nth-of-type(1){
-            border-top: 2.2px solid #1A96C7 ;
-        }
-        .transacts_product:nth-of-type(-1){
-            border-top: 1px solid !important;
-        }
-        .transacts_product{
-            padding: 7.4px 0 7.4px 0;
-            .transacts_product_details{
-                flex: 2;
-            }
-            .transacts_product_pix{
-                width: 50px;
-                height: 45px;
-              
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .transacts_product_id{
-                font-size: 11px;
-                font-weight: 900;
-            }
-            .transacts_product_name{
-                font-size: 13px;
-                max-width: 170px;
-                white-space: nowrap; 
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            .transacts_product_state{
-                .transacts_product_date{
-                    font-size: 10.8px;
-                    font-weight: bold
-                }
-                .transacts_product_status{
-                    background: rgb(80, 167, 238);
-                    justify-content: center;
-                    display: flex;
-                    width: fit-content;
-                    padding: 2.5px;
-                    margin: 1.4px;
-                    margin-top: 3.3px;
-                    margin-right: 5px;
-                    .fa-check{
-                        color: white;
-                        font-size:8px
-                    }
-                }
-            }
-        
-        }
-        .transacts_product:hover{
-            @include pointer;
-            .transacts_product_pix{
-                background: white;
-                img{
-                    background: rgba(177, 173, 173, 0.226);
-                }
-            }
-            background: rgba(177, 173, 173, 0.226);
-        }
+  .transacts {
+    border-bottom: solid 1.9px rgba(234, 237, 238, 0.897);
+    .transacts_header {
+      font-weight: 600;
     }
-    .transacts_nav{
-        border-top: 1.2px solid rgb(255, 255, 255);
-        border-top-width: 1.2px ;
-        border-bottom: 2.4px solid rgb(236, 234, 234);
-        color: #1A96C7;
-        background: #1A96C7;
-        font-size: 14px;
-        display: flex;
-        color: rgb(255, 255, 255);
-        justify-content: center;
-        align-items: center;
-        button{
-          cursor: pointer !important;
-          background: white;
-          color: #1A96C7;
-        }
-        .transacts_nav_position{
-            div{
-                font-weight: bold;
-                padding: 0 6px 0px 6px;
-            }
-        }
-        .transacts_nav_first,
-        .transacts_nav_last{
-            margin: 2px 2px 2px 2px ;
-            &:hover{
-                @include hash_bg;
-                @include pointer;
-            }
-        }
-        .transacts_nav_next,
-        .transacts_nav_prev{
-            margin: 2px 4px 2px 4px ;
-            &:hover{
-                @include hash_bg;
-                @include pointer;
-            }
-
-        }
+    .transacts_product:nth-of-type(1) {
+      border-top: 2.2px solid #1a96c7;
     }
+    .transacts_product:nth-of-type(-1) {
+      border-top: 1px solid !important;
+    }
+    .transacts_product {
+      padding: 7.4px 0 7.4px 0;
+      .transacts_product_details {
+        flex: 2;
+      }
+      .transacts_product_pix {
+        width: 50px;
+        height: 45px;
+        .Android,
+        .Phone {
+          background-image: url("./icons/phone.png");
+          background-size: 31px 29px;
+          background-position: center;
+          filter: saturate(20%);
+        }
+        .Laptop {
+          background-image: url("./icons/laptop.png");
+          background-size: 33px 28px;
+          background-position: center;
+        }
+        .Desktop {
+          background-image: url("./icons/desktop.png");
+          background-size: 35px 32px;
+          background-position: center;
+          filter: saturate(20%);
+        }
+        .Tablet {
+          background-image: url("./icons/phone.png");
+          background-size: 62px 25px;
+          background-position: center;
+          filter: saturate(20%);
+        }
+        .Accessories {
+          background-image: url("./icons/acce.png");
+          background-size: 33px 29px;
+          background-position: center;
+          filter: saturate(20%);
+        }
+        .Accesories {
+          background-image: url("./icons/acce.png");
+          background-size: 33px 29px;
+          background-position: center;
+          filter: saturate(20%);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+        }
+      }
+      .transacts_product_id {
+        font-size: 11px;
+        font-weight: 900;
+      }
+      .transacts_product_name {
+        font-size: 13px;
+        max-width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .transacts_product_state {
+        .transacts_product_date {
+          font-size: 10.8px;
+          font-weight: bold;
+        }
+        .transacts_product_status {
+          background: rgb(80, 167, 238);
+          justify-content: center;
+          display: flex;
+          width: fit-content;
+          padding: 2.5px;
+          margin: 1.4px;
+          margin-top: 3.3px;
+          margin-right: 5px;
+          .fa-check {
+            color: white;
+            font-size: 8px;
+          }
+        }
+      }
+    }
+    .transacts_product:hover {
+      @include pointer;
+      .transacts_product_pix {
+        background: white;
+        img {
+          // background: rgba(177, 173, 173, 0.226);
+        }
+      }
+      background: rgba(177, 173, 173, 0.226);
+    }
+  }
+  .transacts_nav {
+    border-top: 1.2px solid rgb(255, 255, 255);
+    border-top-width: 1.2px;
+    border-bottom: 2.4px solid rgb(236, 234, 234);
+    color: #1a96c7;
+    background: #1a96c7;
+    font-size: 14px;
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    button {
+      cursor: pointer !important;
+      background: white;
+      color: #1a96c7;
+    }
+    .transacts_nav_position {
+      div {
+        font-weight: bold;
+        padding: 0 6px 0px 6px;
+      }
+    }
+    .transacts_nav_first,
+    .transacts_nav_last {
+      margin: 2px 2px 2px 2px;
+      &:hover {
+        @include hash_bg;
+        @include pointer;
+      }
+    }
+    .transacts_nav_next,
+    .transacts_nav_prev {
+      margin: 2px 4px 2px 4px;
+      &:hover {
+        @include hash_bg;
+        @include pointer;
+      }
+    }
+  }
 }

@@ -38,7 +38,7 @@ class SignUp extends Component {
       //Check for registered error
       if (error.id === "REGISTER_FAIL") {
         this.setState({ msg: error.msg })
-        console.log(error)
+        //console.log(error)
       } else {
         this.setState({ msg: null })
       }
@@ -50,7 +50,7 @@ class SignUp extends Component {
       [e.target.name]: e.target.value
     })
     const { username, password, email } = this.state
-    console.log({ username, password, email })
+    //console.log({ username, password, email })
   }
 
   onSubmit(e) {
@@ -172,7 +172,7 @@ class SignUp extends Component {
                         </div>
               <div className="new_transaction_input ">
                 <div className="bolo my-1 w-100 borde-left  ">
-                  <input placeholder='Comfirm Password'
+                  <input placeholder='Confirm Password'
                     className="w-100 form-control border    border-none"
                     onChange={this.onChange}
                     name="confirm_password"

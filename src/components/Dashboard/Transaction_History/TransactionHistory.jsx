@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import PropType from 'prop-types'
 import { Link } from 'react-router-dom'
+import { N } from '../../../store/actions/Util'
 let loader = require('./tenor.gif')
 const advert = require('./advert.png')
+
+let phone = require('./icons/phone.png')
 
 class TransactionHistory extends Component {
   constructor(props) {
@@ -24,38 +27,40 @@ class TransactionHistory extends Component {
 
   render() {
     let transaction = this.props.all.length !== 0 && this.props.all[this.state.position].map(item => (
-      // <Link to="/single_transact">
+      <Link to="/single_transact" className="inherit">
 
-      <div className="transacts_product row m-0   border-bottom border-left border-right"
-        onClick={() => {
-          this.props.getReciept(item)
-        }}
-      >
-        <div className="transacts_product_pix p-1 ml-1 ">
-          <img className='border' />
+
+        <div className="transacts_product row m-0  opacy border-bottom border-left border-right"
+          onClick={() => {
+            this.props.getReciept(item)
+          }}
+        >
+          <div className="transacts_product_pix p-1 ml-1 ">
+            <img className={`border ${item.device_type} `} />
+          </div>
+          <div className="transacts_product_details p-1 pl-2 ">
+            <div className="transacts_product_id  mt-1">
+              #ID {item.trans_id}
+            </div>
+            <div className="transacts_product_name ">
+              {item.device_type}
+            </div>
+          </div>
+          <div className="transacts_product_state  ml-auto pr-2">
+            <div className="transacts_product_date   mt-1">
+
+              {/* <Moment calendar> */}
+              {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
+              {/* </Moment>  */}
+
+
+            </div>
+            <div className="transacts_product_status  ml-auto rounded-pill border">
+              <span className="fa fa-check" />
+            </div>
+          </div>
         </div>
-        <div className="transacts_product_details p-1 pl-2 ">
-          <div className="transacts_product_id  mt-1">
-            #ID {item.trackingCode}
-          </div>
-          <div className="transacts_product_name ">
-            {item.device_type}
-          </div>
-        </div>
-        <div className="transacts_product_state  ml-auto pr-2">
-          <div className="transacts_product_date   mt-1">
-
-            {/* <Moment calendar> */}
-            {(item.updatedAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}
-            {/* </Moment>  */}
-
-
-          </div>
-          <div className="transacts_product_status  ml-auto rounded-pill border">
-            <span className="fa fa-check" />
-          </div>
-        </div>
-      </div>
+      </Link>
       // </Link>
 
     ))
@@ -154,7 +159,15 @@ class TransactionHistory extends Component {
             <button className="z-depth-1 rounded-lg transacts_nav_next fa fa-angle-right border px-2  py-1"
               disabled={this.props.all.length === 0 || this.state.ra_disabled && true}
               onClick={() => {
-                if (this.state.position === (this.props.all.length - 2)) {
+                if (this.state.position === (this.props.all.length - 1)) {
+                  this.setState({
+                    position: this.state.position,
+                    ra_disabled: true,
+                    la_disabled: false
+
+                  })
+                }
+                else if (this.state.position === (this.props.all.length - 2)) {
                   this.setState({
                     position: this.state.position + 1,
                     ra_disabled: true,

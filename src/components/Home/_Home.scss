@@ -4,8 +4,6 @@
 @import "../About/About";
 @import "./mobile";
 
-
-
 .why_content {
   font-size: 14px;
 }
@@ -194,9 +192,9 @@
       }
     }
   }
-.diver{
-  @include heart_center();
-}
+  .diver {
+    @include heart_center();
+  }
   .hoda {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -212,6 +210,7 @@
       padding-top: 90% !important;
       background-position: center;
       background-size: cover;
+      background-repeat: no-repeat;
     }
   }
   .worker_pix {
@@ -219,6 +218,7 @@
     background-image: url("./design-left2.svg");
     border-width: 1px !important;
     width: 100% !important;
+    background-repeat: no-repeat;
 
     .worker_pixin {
       margin: 1%;
@@ -267,7 +267,7 @@
 }
 .festin {
   width: fit-content !important;
-  .sont{
+  .sont {
     font-size: 15px;
   }
 }

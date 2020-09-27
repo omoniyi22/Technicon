@@ -12,14 +12,15 @@ class CustomPaystack {
     } if (!data.reference) {
       data.reference = "" + Math.floor(Math.random() * 1000000000 + 1);
     }
-     if (myWindow.PaystackPop) {
-      console.log("paystack", data)
+    console.log("my reference ", data.reference)
+    if (myWindow.PaystackPop) {
+      //console.log("paystack", data)
       let handler = myWindow.PaystackPop.setup({
         key: this.public_key,
         // Replace with your public key
         email: data.email,
-        amount:500,
-        reference: data.reference,
+        amount: data.amount,
+        ref: data.reference,
         callback: onSuccess,
         onClose: onClose,
         channels: ["card"],

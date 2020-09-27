@@ -6,11 +6,12 @@ import Pix_Upload from './components/Transact_Process/Pix_Upload'
 import Thank_You from './components/Transact_Process/Thank_You'
 import Reach_Out_ID from './components/Transact_Process/Reached_Out'
 import OfficeAddress from "./components/Transact_Process/Office_Address";
-
 import Dashboard from "./components/Dashboard/";
 import About from './components/About'
 import LandingPage from './components/Home/index'
 import FAQ from "./components/Faq/"
+import ForgotPassword from './components/Forgot_Password'
+import ResetPassword from './components/Reset_Password'
 
 import NavBar from './layout/Navbar'
 import Footer from './layout/Footer'
@@ -22,6 +23,8 @@ import Legal from './components/Legal'
 
 import { nav_in } from './store/actions/navSwitch'
 import './App.scss'
+import './app.css'
+import Result from "./components/Transact_Process/Paid_OR_Failed/";
 // import {loadUser} from './store/actions/authAction'
 let nac = true
 class App extends React.Component {
@@ -30,70 +33,57 @@ class App extends React.Component {
     this.state = {
       navba: true
     }
-    this.noNav = this.noNav.bind(this)
-    this.yesNav = this.yesNav.bind(this)
   }
 
-  // componentDidMount() {
-  //   this.props.nav_in()
-
-  // }
   noNav() {
     nac = false
-  }
-  yesNav() {
-    this.setState({
-      navba: true
-    })
   }
   render() {
     let { auth } = this.props
     return (
       <>
-
         <Router>
           {this.props.nav &&
-            <div style={{
-            }}> <NavBar />
-              <SideNav /> </div>
+            <div>
+              <NavBar />
+              <SideNav />
+            </div>
           }
           {
             !this.props.nav && <div className="mt-5" />
           }
-          <Route>
-            <Switch>
-              <Route path="/dashboard" component={auth ? Dashboard : Login} />
-              <Route path="/new-transaction" component={auth ? Dashboard : Login} />
-              <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
-              <Route path="/edit-profile" component={auth ? Dashboard : Login} />
-              <Route path="/payment-method" component={auth ? Dashboard : Login} />
-              <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
-              <Route path="/single_transact/:id" component={auth ? Dashboard : Login} />
-              <Route path="/pick-up" component={auth ? PickupLocation : Login} />
-              <Route path="/your-id" component={auth ? Reach_Out_ID : Login} />
-              <Route path="/office-address" component={auth ? OfficeAddress : Login} />
-              <Route path="/thank-you" component={auth ? Thank_You : Login} />
-              <Route path="/payment-method" component={auth ? Dashboard : Login} />
-              <Route path="/pix_upload" component={Pix_Upload} />
-              <Route path="/login" component={Login} />
 
-              <Route path="/about" component={About} />
-              <Route path="/legal" component={Legal} />
-              <Route path="/faq" component={FAQ} />
-              <Route path="/login" component={() => <Login nav={this.noNav} />
-              } />
-              <Route path="/signup" component={
-                (() => <div>{<SignUp doNav={() => this.noNav} />}</div>)
-              } />
-              <Route path="/" component={LandingPage} />
-            </Switch>
-          </Route>
-          {this.props.nav && <Footer />}
+          <Switch>
+            <Route path="/dashboard" component={auth ? Dashboard : Login} />
+            <Route path="/new-transaction" component={auth ? Dashboard : Login} />
+            <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
+            <Route path="/edit-profile" component={auth ? Dashboard : Login} />
+            <Route path="/payment-method" component={auth ? Dashboard : Login} />
+            <Route path="/payment-gateway" component={auth ? Dashboard : Login} />
+            <Route path="/single_transact" component={auth ? Dashboard : Login} />
+            <Route path="/pick-up" component={auth ? PickupLocation : Login} />
+            <Route path="/your-id" component={auth ? Reach_Out_ID : Login} />
+            <Route path="/office-address" component={auth ? OfficeAddress : Login} />
+            <Route path="/thank-you" component={auth ? Thank_You : Login} />
+            <Route path="/thank-you" component={auth ? Thank_You : Login} />
+            <Route path="/payment-method" component={auth ? Dashboard : Login} />
+            <Route path="/result" component={auth ? Result : Login} />
+            <Route path="/pix_upload" component={Pix_Upload} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgot_password" component={ForgotPassword} />
+            <Route path="/password/reset/:id/:token" component={ResetPassword} />
+            <Route path="/about" component={About} />
+            <Route path="/legal" component={Legal} />
+            <Route path="/faq" component={FAQ} />
+            <Route path="/login" component={() => <Login />
+            } />
+            <Route path="/signup" component={
+              (() => <div>{<SignUp />}</div>)
+            } />
+            <Route path="/" component={LandingPage} />
+          </Switch>
         </Router>
-        <div onClick={
-          this.noNav
-        }>
-        </div>
+        {this.props.nav && <Footer />}
       </>
     );
   }

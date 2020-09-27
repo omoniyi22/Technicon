@@ -17,6 +17,9 @@ class Faq extends Component {
     this.faq3 = this.faq3.bind(this)
     this.faq5 = this.faq5.bind(this)
   }
+    componentDidMount(){
+    this.props.nav_in()
+  }
   faq1() {
     this.setState({
       faq1: !this.state.faq1
@@ -112,12 +115,12 @@ class Faq extends Component {
               <div className="flex pointer"
                 onClick={this.faq4}
               >
-                <div className="border text-white question_mark  rounded-pill mr-2 mb-1 font-weight-bold">?</div><div className="faqui">The gadgets I want to repair is not  movable, can I get it fixed in my home ?</div>
+                <div className="border text-white question_mark  rounded-pill mr-2 mb-1 px-1 font-weight-bold">?</div><div className="faqui">The gadgets I want to repair is not  movable, can I get it fixed in my home ?</div>
               </div>
               <div className={`faq_trnas my-2 ${faq4} flex`}>
                 <div className=" text-white question_mark mx-1 white rounded-pill mr-2 mb-1 font-weight-bold">?</div>
 
-                Our technicians will also be attending to our lovely clients whose gadgets cannot leave their abode due to the nature of installation or its mobility. The repair task will be done at your residence or office.
+              Our technicians will also be attending to our lovely clients whose gadgets cannot leave their abode due to the nature of installation or its mobility. The repair task will be done at your residence or office.
             </div>
             </div>
             <div className="faq_left col-md-8 py-2 border-bottom  specfaq mt-3">

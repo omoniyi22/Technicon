@@ -99,29 +99,31 @@ class Home extends Component {
           </div>
         </div>
         <div className="row  w-100 p-0 m-0 mx-md-5  mt-3 mt-md-5 ">
-          <div className="col-lg-4 posho  px-3 mt-lg-3 mb-4">
-            <div className="p-3 z-depth-1 rounded-lg lioe flex ">
+          <div className="col-lg-4 posho wow fadeInLeft    px-3 mt-lg-3 mb-4">
+            <div className="p-3 z-depth-1 blue-grey lighten-5 rounded-lg lioe flex ">
               <div className="p-2 border psoa my-auto rounded-pill bg-primary ">
                 <img src={phone} width="42px" />
               </div>
-              <div className="mr-auto pr-3 ml-3 my-auto">Our repair alive services specialize in...</div>
+              <div className="mr-auto pr-3 ml-3 my-auto">Android and IOS<span className="text-primary"> mobile phones and accessories</span></div>
             </div>
           </div>
-          <div className="col-lg-4 posho  px-3 mb-lg-5 mb-4">
-            <div className="p-3 z-depth-1 rounded-lg lioe flex ">
+          <div className="col-lg-4 posho wow fadeInLeft delay-1s    px-3 mb-lg-5 mb-4">
+            <div className="p-3 z-depth-1 blue-grey lighten-5 rounded-lg lioe flex ">
               <div className="p-2 border psoa my-auto rounded-pill  pilla1 bg-primary">
                 <img src={tab} width="34px" />
               </div>
-              <div className="mr-auto pr-3 ml-3 my-auto">Our repair alive services specialize in...</div>
+              <div className="mr-auto pr-3 ml-3 my-auto">Hardware and Software of<span className="text-primary"> tablets and accessories</span></div>
             </div>
           </div>
-          <div className="col-lg-4 posho  px-3 mt-lg-3 mb-3">
-            <div className="p-3 z-depth-1 rounded-lg lioe flex ">
+          <div className="col-lg-4 posho  wow fadeInLeft  delay-2s px-3 mt-lg-3 mb-3">
+            <div className="p-3 z-depth-1 blue-grey lighten-5 rounded-lg lioe flex ">
               <div className="p-2 border psoa my-auto rounded-pill pilla2 bg-primary">
                 <img src={laptop} width="34px" />
 
               </div>
-              <div className="mr-auto pr-3 ml-3 my-auto">Our repair alive services specialize in...</div>
+              <div className="mr-auto pr-3 ml-3 my-auto">
+            All brands of laptops, and     <span className="text-primary"> operating systems.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -150,14 +152,13 @@ class Home extends Component {
             <div className="  py-2 px-2 mt-md-5  wow zoomIn fast ">
               <div className="border hoda z-depth-1 rounded-lg py-4 py-md-4 white">
                 <div className="text-center">
-                  <img src={realtime} width="110px" className="wow zoomIn fast" />
+                  <img src={realtime} width="110px" className="rounded-pill" />
                 </div>
                 <div className="why_title w-100 my-2">
                   Pickup and Delivery
                             </div>
                 <div className="why_content w-100 px-5">
-                  Hey sorry about the cheezy name. When I kicked this
-                  site about CSS. But of course, that
+                  We pick up your device and deliver before/after or you may visit a technicon office near you.
                             </div>
               </div>
             </div>
@@ -166,14 +167,14 @@ class Home extends Component {
             <div className="  py-2 px-2   wow zoomIn fast">
               <div className="border hoda z-depth-1 rounded-lg  py-4 py-md-4 px-4 white ">
                 <div className="text-center z-depth-0">
-                  <img src={pick} width="110px" className="z-depth-0mt-md-4  wow zoomIn fast" />
+                  <img src={pick} width="110px" className="z-depth-0 mt-md-4 rounded-pill  wow zoomIn fast" />
                 </div>
                 <div className="why_title w-100 my-2">
-                  Pickup and Delivery
+                  Realtime updates
                             </div>
                 <div className="why_content w-100 px-5">
-                  Hey sorry about the cheezy name. When I kicked this
-                  site about CSS. But of course, that
+                  Get realtime updates on the status of your device as it is being repaired.
+
                             </div>
               </div>
             </div>
@@ -182,14 +183,13 @@ class Home extends Component {
             <div className="  py-2  px-2 mt-md-5  wow zoomIn fast">
               <div className="border hoda z-depth-1  rounded-lg py-4 py-md-4 px-4 white">
                 <div className="text-center">
-                  <img src={expert} width="110px" className="wow zoomIn fast" />
+                  <img src={expert} width="110px" className="rounded-pill" />
                 </div>
                 <div className="why_title w-100 my-2">
-                  Pickup and Delivery
+                  Expert engineers
                 </div>
                 <div className="why_content w-100 px-5">
-                  Hey sorry about the cheezy name. When I kicked this
-                  site about CSS. But of course, that
+                  hire the most trusted technician to fix your mobile phone and desktop
                 </div>
               </div>
             </div>

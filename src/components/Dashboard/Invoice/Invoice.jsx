@@ -4,6 +4,10 @@ const emptyCart = require('./EC.png')
 const error = require('./erroed.png')
 const eE = require('./CTE.png')
 const logo = require('./logo.png')
+var NumberFormat = require('react-number-format/dist/react-number-format');
+
+
+
 function getFDate(date = new Date()) {
   var year = date.getFullYear();
 
@@ -31,7 +35,7 @@ class Invoice extends Component {
               <div className="empty_one rounded-pill  mx-auto p-4 mt-5">
                 {/* <div className="errored" /> */}
                 <div className="fa fa-briefcase sofo"
-                style={{fontSize: 50}}/>
+                  style={{ fontSize: 50 }} />
               </div>
               <div className="font-weight-bold  empty_text mt-4">
                 <span className="onr">Select a device from transaction history</span> <br />
@@ -69,20 +73,27 @@ class Invoice extends Component {
                         </div>
                         <div className="invoice_cash ">
                           <span className="cash">Cash</span>
-                          <span className="amount  text-right">{device && device.price}</span>
+                          <span className="amount  text-right">{
+                            device &&
+                            <NumberFormat value={device.price} displayType={'text'} thousandSeparator={true} prefix={'₦'} />
+                          }</span>
                         </div>
                         <div className="transacts_list border-top">
                           {device.diagnosis &&
                             device.diagnosis.map(item =>
                               <div className="transact_items ">
                                 <span className="transact_item ">{item.item}</span>
-                                <span className="transact_amount ">{item.amount}</span>
+                                <span className="transact_amount ">{
+                                  <NumberFormat value={item.amount} displayType={'text'} thousandSeparator={true} prefix={'₦'} />
+                                }</span>
                               </div>
                             )
                           }
                           <div className="transact_items   total ">
                             <span className="transact_total ">Total</span>
-                            <span className="transact_total_amount border-top ">{device.price}</span>
+                            <span className="transact_total_amount border-top ">{
+                              <NumberFormat value={device.price} displayType={'text'} thousandSeparator={true} prefix={'₦'} />
+                            }</span>
                           </div>
                         </div>
                       </>
@@ -92,8 +103,8 @@ class Invoice extends Component {
                           <div className="empty_oned" />
                         </div>
                         <div className="font-weight-bold empty_text mt-4">
-                          <span className="onr">Invoice not available..</span> <br />
-                          <small><i>Device has not been diagonised</i></small>
+                          <span className="onr">Invoice wiil be ready</span> <br />
+                          <small>After device has been diagonised</small>
                         </div>
                       </div>
                     }

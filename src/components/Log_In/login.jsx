@@ -35,7 +35,7 @@ class LogIn extends Component {
       //Check for registered error
       if (error.id === "LOGIN_FAIL") {
         this.setState({ msg: error.msg })
-        console.log(error)
+        //console.log(error)
       } else {
         this.setState({ msg: null })
       }
@@ -69,7 +69,7 @@ class LogIn extends Component {
       })
     } else if (password.length < 8) {
       this.setState({
-        msg: "Password must be 8 or more characters"
+        msg: "Password must be 8 characters or more"
       })
     } else {
       this.props.LoginAction(newUser, this.props.history);
@@ -92,7 +92,7 @@ class LogIn extends Component {
 
     return (
       <div className="Log_in  rounded-lg">
-        <div className="Login z-depth-1   rounded-lg mt-3 pt-3 pb-5">
+        <div className="Login z-depth-1   rounded-lg mt-3 pt-3 pb-3">
           <div className=" text-center mt-2">
             <img src={logo} width="70px" />
           </div>
@@ -118,7 +118,6 @@ class LogIn extends Component {
                     name="email"
                     onChange={this.onChange}
                     value={this.state.email}
-
                   />
                 </div>
               </div>
@@ -153,6 +152,9 @@ class LogIn extends Component {
               <span className="ml-2">Do you have an account ? </span><b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/signup">Create account</Link> : <Link>Create account</Link>}</b>
             </div>
           </form>
+          <div className=" mx-auto" style={{width: "fit-content", fontSize: "14px"}}>
+              <b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/forgot_password">Forgot password ?</Link> : <Link>Forgot password ?</Link>}</b>
+          </div>
         </div>
       </div>
     )

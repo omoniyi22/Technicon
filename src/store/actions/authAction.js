@@ -14,12 +14,14 @@ import { getProfile } from './profileAction'
 import { returnErrors } from './errorActions'
 import { LoginStart, LoginStop, RegisterStart, RegisterStop } from './loadingAction'
 import { LoginApi, RegisterApi } from './../service/services'
+import { BASE } from '../service/api'
 
 export const LoadUserAction = () => async () => {
 
 }
 
 export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
+  // let data =  { email: "omoniyioluwaseun22@gmail.com", password: "seun2322" }
   dispatch({
     type: USER_LOADING
   })
@@ -28,10 +30,8 @@ export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
     email: "narcisse.egonu@gmail.com",
     password: "ninja@1234"
   };
-  console.log(getState)
   try {
-
-    let data = await axios.post('https://cors-anywhere.herokuapp.com/https://technicon-api.herokuapp.com/api/v1/auth/login', getState)
+    let data = await axios.post(`${BASE}/auth/login`, getState)
     let rose = await data.data
     let sop = await rose.data
 
@@ -40,7 +40,7 @@ export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
       payload: await sop
     })
     let profile = await getProfile(state)
-    console.log(profile)
+    //console.log(profile)
     dispatch({
       type: GET_PROFILE,
       payload: await profile
@@ -50,7 +50,7 @@ export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
 
   } catch (err) {
     dispatch(returnErrors(
-      err.response !== undefined ? err.response.data.error : 'Login failed',
+      err.response !== undefined ? err.response.data.error : "Login Failed",
       err.response !== undefined ? err.response.status : 500,
       LOGIN_FAIL
     ))
@@ -66,7 +66,7 @@ export const LoginAction = (getState, reDirect) => async (dispatch, state) => {
 export const RegisterAction = (getState) => async (dispatch) => {
   dispatch(RegisterStart())
   try {
-    let response = await axios.post('https://cors-anywhere.herokuapp.com/https://technicon-api.herokuapp.com/api/v1/auth/register', getState,
+    let response = await axios.post(`${BASE}/auth/register`, getState,
       {
         headers: {
           'Content-Type': 'application/json'
@@ -95,7 +95,5 @@ export const RegisterAction = (getState) => async (dispatch) => {
 export const logOutAction = () => {
   return {
     type: LOGOUT_SUCCESS
-    
   }
-  
 }

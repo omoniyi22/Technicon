@@ -133,7 +133,7 @@ class NewTransaction extends Component {
     } = this.state
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="new_transaction_header font-weight-bold px-1 py-3 col-12  flex">New Transaction
+        <div className="new_transaction_header opacy font-weight-bold px-1 py-3 col-12  flex">New Transaction
         {this.state.msg && <div className="Error  ml-auto mr-2 mt-1 small  rounded-pill pl-2 py-1  lighten-2 text-danger">{this.state.msg} !!!
          <span
               onClick={
@@ -189,10 +189,11 @@ class NewTransaction extends Component {
                       name="device_type"
                     >
                       <option >Select Device Type</option>
+                      <option >Phone</option>
                       <option >Laptop</option>
-                      <option >Desktop</option>
                       <option >Tablet</option>
-                      <option >Accesories</option>
+                      <option >Desktop</option>
+                      <option >Accessories</option>
                     </select>
                   </div>
                 </div>
@@ -217,11 +218,11 @@ class NewTransaction extends Component {
               </div>
               <div className="new_transaction_group mb-3 col-6 px-0 mx-0 ">
                 <div className="new_transaction_label small font-weight-bold">
-                  DEVICE NAME
+                  DEVICE MODEL
                         </div>
                 <div className="new_transaction_input ">
                   <div className="bolo my-1 w-100 borde-left  ">
-                    <input placeholder='Device Name'
+                    <input placeholder='Device Model'
                       className="w-100 form-control border   py-0 border-none"
                       onChange={this.onChange}
                       value={this.state.device_name}

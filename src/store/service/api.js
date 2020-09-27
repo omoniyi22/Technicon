@@ -1,4 +1,6 @@
-const BASE = `https://cors-anywhere.herokuapp.com/https://technicon-api.herokuapp.com/api/v1`;
+// export const BASE = `http://localhost:8001/api/v1`
+export const BASE = `https://cors-anywhere.herokuapp.com/https://technicon-api.herokuapp.com/api/v1`;
+// export const BASE = `https://cors-anywhere.herokuapp.com/https://1f055bcdd77c.ngrok.io/api/v1`
 
 //Blog
 export const BLOG = `http://blog.learnam.com.ng/wp-json/wp/v2/content`;
@@ -24,3 +26,10 @@ export const Avata = `${BASE}/auth/avatar`
 
 //Get Reciept 
 export const GET_DEVICE_RECIEPT = `${BASE}/receipts`
+
+//Pay
+export const PAY_NOW = `${BASE}/receipts/pay`
+
+//forgot password
+export const FORGOT_PASSWORD = `${BASE}/auth/forgot-password`
+export const RESET_PASSWORD = `${BASE}/auth/reset-password`

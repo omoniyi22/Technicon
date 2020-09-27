@@ -50,9 +50,9 @@ class OfficeAddress extends Component {
 
           </div>
 
-          <div className="pickup_button_3 rounded-pill text-center mt-3">
+          {/* <div className="pickup_button_3 rounded-pill text-center mt-3">
             SEND LOCATION TO MAIL
-                    </div>
+                    </div> */}
 
           <button className="down_button rounded-pill text-center"
             disabled={this.props.Load}

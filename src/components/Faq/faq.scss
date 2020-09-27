@@ -1,7 +1,7 @@
 .light {
   font-family: light;
 }
-.piew{
+.piew {
   border-bottom: solid 2.3px rgb(66, 170, 231);
 }
 .faq_header {
@@ -32,7 +32,8 @@
   .question_mark {
     font-size: 9px;
     // padding: 0px 3px 0px px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+      sans-serif;
     height: 14px;
     font-weight: 700;
     width: 14px;
@@ -40,29 +41,31 @@
     background: rgb(56, 56, 58);
   }
 }
-.faqui{
+.faqui,
+.cwe {
   font-size: 15px;
   font-weight: 800;
+  font-family: rali;
 }
 
 .faq_trnas {
   overflow: hidden !important;
   font-family: rali;
-  font-size: 15px;
   font-weight: 600;
   color: rgb(153, 152, 149);
   transition: 0.2s ease-in-out !important;
-  max-height:70px;
+  max-height: 70px;
 }
-.false{
- overflow:hidden;
-  max-height:0px;
+.false {
+  overflow: hidden;
+  max-height: 0px;
 }
-
-
-
 
 @media (max-width: 767px) {
+  .cwe,
+  .faq_trnas {
+    font-size: 12px !important;
+  }
   .faq_header {
     padding-top: 19px !important;
     padding-bottom: 19px !important;
@@ -79,7 +82,7 @@
       }
     }
     text-align: center;
-    .specfaq{
+    .specfaq {
       text-align: left;
       padding: 5px 0px 5px 0 !important;
     }

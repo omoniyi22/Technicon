@@ -1,4 +1,4 @@
-import { LOAD, T_GET_ALL } from './../types'
+import { LOAD, T_GET_ALL, PAYMENT_ERROR } from './../types'
 import { T_ERROR, T_SUCCESS, TS1, TS2, TS_END, ALL_LOADING, T_ALL_ERROR } from './../types'
 import { POSTcomplaint, GET_ALL_complaint } from './../service/services'
 import { T_loader } from './Util'
@@ -16,7 +16,7 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
 
   dispatch({
     type: LOAD,
-    payload: await !Taoma().transact.Load
+    payload: !Taoma().transact.Load
   })
 
   if (getState === null) {
@@ -26,7 +26,7 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
         type: LOAD,
         payload: await !Taoma().transact.Load
       })
-      console.log("my-self", data)
+      //console.log("my-self", data)
       if (data.data.data.trans_id) {
         dispatch({
           type: T_SUCCESS,
@@ -34,7 +34,7 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
         })
       }
     } catch (err) {
-      console.log('office', err)
+      //console.log('office', err)
       dispatch({
         type: T_ERROR,
         payload: err
@@ -45,19 +45,16 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
       })
     }
   } else {
-    console.log("all of these", { ...prevData, ...getState })
+    //console.log("all of these", { ...prevData, ...getState })
     let prevDatas = { ...prevData, ...getState }
 
 
     try {
-      console.log(prevDatas, prevData)
       let data = await POSTcomplaint(prevDatas, Taoma)
-      console.log(await data.data)
       dispatch({
         type: LOAD,
         payload: !Taoma().transact.Load
       })
-      console.log(data)
 
 
       const payload = {
@@ -65,6 +62,10 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
         amount: await data.data.data.amount,
         reference: await data.data.data.reference
       }
+
+      console.log("payload B4 paystack", payload)
+      console.log("data", await data.data)
+
       const onSuccess = () => {
         if (data.data.data.trackingCode) {
           dispatch({
@@ -76,21 +77,24 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
       }
 
       const onError = (error) => {
-        console.log("payment failed")
+        console.log("payment failed", payload)
+        dispatch({ type: PAYMENT_ERROR, payload: "an error occured" })
+        redirect.push('/result')
       }
       CustomPaystack.pay(payload, onSuccess, onError)
 
-
-
     } catch (err) {
-      console.log('office', err)
+      redirect.push('/result')
+      dispatch({ type: PAYMENT_ERROR, payload: err.message })
+
+      console.log('error nla', err)
       dispatch({
         type: T_ERROR,
         payload: err.message
       })
       dispatch({
         type: LOAD,
-        payload: await !Taoma().transact.Load
+        payload: !Taoma().transact.Load
       })
     }
   }
@@ -115,7 +119,7 @@ export const AllComplaint = () => async (dispatch, Taoma) => {
     })
   } catch (err) {
 
-    console.log(err)
+    //console.log(err)
     dispatch({
       type: T_ALL_ERROR,
       payload: true

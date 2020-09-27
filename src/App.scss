@@ -2,20 +2,12 @@
 @import "./layout/scope";
 @import "./layout/extendible";
 @import "./components/Transact_Process/index.scss";
-@font-face {
-  font-family: "MyWebFont";
-  src: url(./assets/fonts/Metropolis.otf); /* IE9 Compat Modes */
-}
 
-@font-face {
-  font-family: "rali";
-  src: url(./assets/fonts/Raleway-Light.ttf); /* IE9 Compat Modes */
-}
 
-@font-face {
-  font-family: "ralo";
-  src: url(./assets/fonts/Raleway-SemiBold.ttf); /* IE9 Compat Modes */
-}
+
+
+
+
 
 * {
   font-family: "MyWebFont";
@@ -39,3 +31,4 @@ body {
 .text_inherit {
   color: inherit !important;
 }
+

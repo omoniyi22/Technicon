@@ -55,9 +55,42 @@ export const FETCHING_RECIEPT = "FETCHING_RECIEPT"
 export const STOP_RECIEPT = "STOP_RECIEPT"
 export const GET_DEVICE_RECIEPT = "GET_DEVICE_RECIEPT"
 export const RECIEPT_ERROR = "RECIEPT_ERROR"
-export const EMPTY_RECIEPT= "EMPTY_RECIEPT"
+export const EMPTY_RECIEPT = "EMPTY_RECIEPT"
 
+//Payment Mehthod
+export const PAYMENT_START = "PAYMENT_START"
+export const PAID = "PAID"
+export const SENT = "SENT"
+export const PAYMENT_ERROR = "PAYMENT_ERROR"
+export const OKAY = "OKAY"
 
 //Device Chat
-export const DEVICE_CHAT = "DEVICE_CHAT"
+export const CLEAR_CHAT = "CLEAR_CHAT"
+export const RECIEVE_ALL_CHAT = "RECIEVE_ALL_CHAT"
+export const CLIENT_CHAT = "CLIENT_CHAT"
+export const ADMIN_CHAT = "ADMIN_CHAT"
+// // export const ADMIN_CHAT = "ADMIN_CHAT"
+
+/**
+ * ======================
+ * Reset Password
+ * ======================
+ * */
+
+export const TOKEN_SENDING_TO_MAIL = "TOKEN_SENDING_TO_MAIL"
+export const TOKEN_FAIL_TO_MAIL = "TOKEN_FAIL_TO_MAIL"
+export const TOKEN_PASSED_TO_MAIL = "TOKEN_PASSED_TO_MAIL"
+export const CLEAR_ERROR = "CLEAR_ERROR"
+
+/**
+ * ======================
+ * Change Password
+ * ======================
+ * */
+
+export const SET_RESET_TOKEN = "SET_RESET_TOKEN"
+export const TOKEN_SENDING_TO_RESET = "TOKEN_SENDING_TO_RESET"
+export const TOKEN_FAIL_TO_RESET = "TOKEN_FAIL_TO_RESET"
+export const TOKEN_PASSED_TO_RESET = "TOKEN_PASSED_TO_RESET"
+// export const CLEAR_ERROR = "CLEAR_ERROR"
 

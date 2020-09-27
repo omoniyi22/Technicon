@@ -156,7 +156,7 @@ class Navbar extends Component {
           <div className='lasaas'
             onClick={this.closeShare}
           ></div>
-          <div className="modals m-auto p-4"
+          <div className="modals m-auto p-4 opacy"
             style={{ display: `${show ? 'flex' : 'none'}` }}
           >
             <div className="spread  row p-5 text-center rounded-lg   z-depth-1">
@@ -174,7 +174,7 @@ class Navbar extends Component {
               <div className="col-3  p-2">
                 <TwitterShareButton
                   className="z-depth-1 rounded-pill"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                  url="https://twitter.com/TechniConNG?s=09" quote={'Technicon | Your device needs the perfect care'}>
                   <TwitterIcon size={57} className="" round={true} />
                 </TwitterShareButton>
               </div>
@@ -187,16 +187,16 @@ class Navbar extends Component {
 
               </div>
               <div className="col-3  p-2">
-                <EmailShareButton
+                <InstapaperShareButton
                   className="z-depth-1 rounded-pill"
                   url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                  <EmailIcon size={57} round={true} className='' />
-                </EmailShareButton>
+                  <InstapaperIcon size={57} round={true} lightingColor={"white"} className='' />
+                </InstapaperShareButton>
               </div>
               <div className="col-3  p-2">
                 <FacebookShareButton
                   className="z-depth-1 rounded-pill mt-3"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                  url="http://facebook.com/techniconng" quote={'Technicon | Your device needs the perfect care'}>
                   <FacebookIcon size={57} className='' round={true} />
                 </FacebookShareButton>
               </div>
@@ -219,7 +219,7 @@ class Navbar extends Component {
               <div className="col-3  p-2">
                 <LinkedinShareButton
                   className="z-depth-1 rounded-pill mt-3"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                  url="http://linkedin.com/company/techniconng" quote={'Technicon | Your device needs the perfect care'}>
                   <LinkedinIcon size={57} className={''} round={true} />
                 </LinkedinShareButton>
 

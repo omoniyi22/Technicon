@@ -23,6 +23,11 @@ class PickupLocation extends Component {
   }
 
   componentDidMount() {
+    this.setState({
+      pickup_location: "",
+      delivery_location: "",
+      msg: null,
+    })
     if (this.props.TS1 === false) {
       this.props.history.push('/dashboard')
     }

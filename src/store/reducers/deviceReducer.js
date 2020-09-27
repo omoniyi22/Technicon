@@ -5,7 +5,8 @@ const initialState = {
   stop_: false,
   error: "",
   empty: true,
-  selected: false
+  selected: false,
+  payment_status: false
 }
 
 export default function deviceReducer(state = initialState, action) {

@@ -70,3 +70,48 @@
     background: rgba(13, 49, 70, 0.774);
   }
 }
+
+@media (max-width: 779px) {
+  .swd{
+    margin-top: 30px !important;
+  }
+  .pack {
+    margin: 0 !important;
+    max-height: 100px !important;
+    // border: s;
+  }
+  .content {
+    padding: 1px !important;
+    padding: 1px !important;
+    padding-left: 10px !important;
+  }
+  .title {
+    padding: 1px !important;
+    // padding: 1px  !important;
+    margin-top: 0 !important;
+    font-size: 13px !important;
+  }
+  .noted {
+    font-size: 11px !important;
+  }
+  .possa {
+    display: none !important;
+  }
+  .read_more {
+    margin-top: 9px !important;
+    padding: 1px !important;
+    font-size: 10px;
+    font-weight: lighter;
+    .date {
+      font-size: 10px;
+    }
+  }
+  .sent {
+    margin-top: 1px !important;
+  }
+  .ssowp {
+    padding-bottom: 2px;
+    margin-bottom: 13px !important;
+    margin-right: 8px !important;
+  }
+}

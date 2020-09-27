@@ -1,6 +1,6 @@
 import {
   BLOG, NEWSLETTER, COMPLAINT, ALL_COMPLAINT, SIGNUP, REGISTER,
-  PROFILE, Avata, GET_DEVICE_RECIEPT
+  PROFILE, Avata, GET_DEVICE_RECIEPT, PAY_NOW, FORGOT_PASSWORD, RESET_PASSWORD
 } from "./api";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ export const tokenConfig = (getState, doi) => {
   if (token) {
     config.headers['x-access-token'] = token;
   }
-  console.log(config)
+  //console.log(config)
   return config;
 };
 
@@ -90,6 +90,8 @@ export const ChangeAvatar = async (ID, data, getState) => {
   de.append("avatar", data)
   return axios.patch(`${Avata}/${ID}`, de, tokenConfig(getState, true))
 }
-
-
 export const getRecieptNow = async (id, getState) => axios(`${GET_DEVICE_RECIEPT}/${id}`, tokenConfig(getState))
+export const PayApi = async ({ trans_id, payment_method }, getToken) => axios.post(`${GET_DEVICE_RECIEPT}/${"pay"}`, { trans_id, payment_method }, tokenConfig(getToken))
+
+export const getForgotToken = async (email) => axios.post(`${FORGOT_PASSWORD}`, { email })
+export const resetForgotToken = async (token, password) => axios.post(`${RESET_PASSWORD}/${token}`, { password })

@@ -10,7 +10,12 @@
 }
 .Home{
     @import './Home/Home';
-
+}
+.ResetPassword{
+    @import './Reset_Password/RP';
+}
+.Forgot_Password{
+    @import './Forgot_Password/FP';
 }
 .Log_in{
     @include heart_center();

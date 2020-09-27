@@ -6,6 +6,10 @@ import transact from './TransactionReducer'
 import profile  from './ProfileReducer'
 import nav from './navReducer'
 import device from './deviceReducer'
+import payment from './paymentReducer'
+import chat from './chatReducer'
+import forgotPassword from './forgot_password'
+import reset_password from './reset_password_reducer'
 
 
 export default combineReducers({
@@ -15,5 +19,9 @@ export default combineReducers({
   transact,
   profile,
   nav,
-  device
+  device,
+  payment,
+  chat,
+  reset_password,
+  forgotPassword
 })

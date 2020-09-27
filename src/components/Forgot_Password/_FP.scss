@@ -1,0 +1,121 @@
+.FP {
+  min-height: 90vh !important;
+  min-width: 100%;
+  @include heart_center();
+  flex-direction: column;
+  .FP_form {
+    margin-bottom: 60px;
+    border-radius: 6px;
+
+    @include heart_center();
+    width: 500px;
+    max-width: 100%;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .head {
+    .heads_text {
+      margin-left: 4%;
+      font-size: 17px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.774);
+      @include heart_center();
+    }
+    .fa-lock {
+      border-radius: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background: #dee2e68c;
+      margin-left: 4%;
+      @include heart_center();
+      text-align: center;
+      font-size: 55px;
+      width: 30%;
+      color: rgb(55, 190, 231);
+    }
+    .head_text {
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.774);
+    }
+    .note_text {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.774);
+      margin-top: 15px;
+    }
+    .small_text {
+      color: rgba(0, 0, 0, 0.774);
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  .form {
+    margin-top: 9px;
+    .controlled {
+      border-radius: 19px;
+      border-width: 2px;
+      height: 44px;
+      padding-right: 39px !important;
+    }
+    .cosw {
+      width: fit-content;
+      right: 0%;
+      margin-bottom: -35px;
+      margin-left: auto;
+      margin-right: 14px;
+      font-weight: lighter;
+      @include heart_center();
+      span {
+        text-align: center;
+        width: fit-content;
+        border-radius: 50%;
+        padding-top: 5.4px;
+        padding-left: 1.2px;
+        width: 25px;
+        font-size: 14px;
+        height: 25px;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(240, 240, 240);
+        }
+      }
+    }
+    .text-pick {
+      opacity: 0.7;
+      transition-duration: 0.4s;
+      .props {
+        .fa {
+          font-size: 17px;
+        }
+        margin-left: 3px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #c7331c;
+      }
+      .mysta {
+        opacity: 0.7;
+        .fa {
+          font-size: 17px;
+        }
+        margin-left: 3px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #1c83c7;
+      }
+    }
+  }
+  .submitin {
+    background: #dee2e68c;
+    .bordered {
+      height: 44px;
+      background: rgb(3, 96, 139);
+      color: white;
+      &:active {
+        background: rgb(3, 86, 124);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+      }
+    }
+    margin-top: 30px;
+  }
+}

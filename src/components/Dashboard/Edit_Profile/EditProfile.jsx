@@ -33,7 +33,7 @@ class EditProfile extends Component {
     // this.onFileChange = this.onFileChange.bind(this)
   }
   componentDidMount(){
-    console.log("this is id", this.props.profile)
+    //console.log("this is id", this.props.profile)
   }
   onPixed(e) {
     if (e.target.files.length > 0)
@@ -41,13 +41,13 @@ class EditProfile extends Component {
         changes: true,
         p_pix: e.target.files[0],
       })
-    console.log("done", this.state.p_pix)
+    //console.log("done", this.state.p_pix)
   }
   // onFileChange(e) {
   //   this.setState({
   //     p_pix: e.target.files[0]
   //   })
-  //   console.log(e.target.files[0])
+  //   //console.log(e.target.files[0])
   // }
   clearAll() {
     this.props.clearErr()
@@ -165,7 +165,7 @@ class EditProfile extends Component {
     let { timer, success, err, message } = this.props
 
     return (
-      <form className="EditProfile  mt-2 mt-md-3" onSubmit={this.onSubmit}>
+      <form className="EditProfile  mt-2 mt-md-3 opacy" onSubmit={this.onSubmit}>
         {timer && <div className="ariMeji  p-4 text-center mb-4npm i react-bootstrap-sweetalert">
           {<div className="temiyemi  p-5 m-auto">
             <Loader
