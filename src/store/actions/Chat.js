@@ -4,7 +4,7 @@ export const getAllChat = (socket) => async (dispatch, state) => {
   let token = await state().auth.token
   let trans_id = await state().device.device_receipt.trans_id
   let emit_message = {
-    user_id: "admin",
+    trans_id : "ONtOvx7fY",
     token
   }
   socket.emit('get_transaction_chats', emit_message)
@@ -18,15 +18,11 @@ export const recieveAllChat = (socket, goDown) => async (dispatch) => {
 }
 
 export const getAdminChat = (socket, message) => async (dispatch, state) => {
+  let token = await state().auth.token
   let trans_id = await state().device.device_receipt.trans_id
   let emit_message = {
-
-    // Admin does not need a token here
-    // Except in admin App
-    // user_id represents (demo admin token)
-
-    user_id: "admin",
-    trans_id,
+     token,
+    trans_id : "ONtOvx7fY",
     message
   }
   await socket.emit('admin_chat', emit_message)
@@ -44,7 +40,7 @@ export const getClientChat = (socket, message) => async (dispatch, state) => {
   let trans_id = await state().device.device_receipt.trans_id
   let emit_message = {
     token,
-    trans_id,
+    trans_id : "ONtOvx7fY",
     message
   }
   await socket.emit('client_chat', emit_message)

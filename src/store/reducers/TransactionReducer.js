@@ -57,6 +57,7 @@ export default (state = initialState, action) => {
         all_loading: action.payload
       }
     case T_GET_ALL:
+      console.log(action.payload)
       return {
         ...state,
         all_loading: false,

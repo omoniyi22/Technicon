@@ -57,6 +57,7 @@ export const Office = (getState, redirect) => async (dispatch, Taoma) => {
       })
 
 
+
       const payload = {
         email: await data.data.data.email,
         amount: await data.data.data.amount,

@@ -161,16 +161,7 @@ class Navbar extends Component {
           >
             <div className="spread  row p-5 text-center rounded-lg   z-depth-1">
 
-              <div className="col-3  p-2">
-                <FacebookMessengerShareButton
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}
-                  className="z-depth-1 rounded-pill"
-                >
-                  <FacebookMessengerIcon size={57} className=" dso "
-
-                    round={true} />
-                </FacebookMessengerShareButton>
-              </div>
+              
               <div className="col-3  p-2">
                 <TwitterShareButton
                   className="z-depth-1 rounded-pill"
@@ -181,18 +172,34 @@ class Navbar extends Component {
               <div className="col-3  p-2">
                 <WhatsappShareButton
                   className="z-depth-1 rounded-pill"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                  url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
                   <WhatsappIcon size={57} className="" round={true} />
                 </WhatsappShareButton>
 
               </div>
-              <div className="col-3  p-2">
+              {/* <div className="col-3  p-2">
                 <InstapaperShareButton
                   className="z-depth-1 rounded-pill"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                  url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
                   <InstapaperIcon size={57} round={true} lightingColor={"white"} className='' />
                 </InstapaperShareButton>
+              </div> */}
+              <div className="col-3  p-2">
+                <TelegramShareButton
+                  className="z-depth-1 rounded-pill mt-3"
+                  url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
+                  <TelegramIcon size={57} className={''} round={true} />
+                </TelegramShareButton>
+
               </div>
+              {/* <div className="col-3  p-2">
+                <PinterestShareButton
+                  className="z-depth-1 rounded-pill mt-3"
+                  url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
+                  <PinterestIcon size={57} className={''} round={true} />
+                </PinterestShareButton>
+
+              </div> */}
               <div className="col-3  p-2">
                 <FacebookShareButton
                   className="z-depth-1 rounded-pill mt-3"
@@ -200,23 +207,7 @@ class Navbar extends Component {
                   <FacebookIcon size={57} className='' round={true} />
                 </FacebookShareButton>
               </div>
-              <div className="col-3  p-2">
-                <TelegramShareButton
-                  className="z-depth-1 rounded-pill mt-3"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                  <TelegramIcon size={57} className={''} round={true} />
-                </TelegramShareButton>
-
-              </div>
-              <div className="col-3  p-2">
-                <PinterestShareButton
-                  className="z-depth-1 rounded-pill mt-3"
-                  url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                  <PinterestIcon size={57} className={''} round={true} />
-                </PinterestShareButton>
-
-              </div>
-              <div className="col-3  p-2">
+              <div className="flex-2  p-2">
                 <LinkedinShareButton
                   className="z-depth-1 rounded-pill mt-3"
                   url="http://linkedin.com/company/techniconng" quote={'Technicon | Your device needs the perfect care'}>

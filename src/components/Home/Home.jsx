@@ -136,7 +136,7 @@ class Home extends Component {
           <div className="awho  text-center text-white p-4">
             Use Technicon in three steps
             <div className="tectak text-white px-2 px-md-4">
-              Our unbeliveabe services a place us as leader in the
+              Our unbeatable services a place us as leader in the
               mobile engineeering space
             </div>
           </div>

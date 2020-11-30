@@ -10,6 +10,7 @@ export const NEWSLETTER = `${BASE}/auth/news-letter`;
 
 //Auth
 export const SIGNUP = `${BASE}/auth/login`;
+
 export const REGISTER = `${BASE}/auth/register`;
 
 //Complaint

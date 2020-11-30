@@ -32,15 +32,10 @@ class ChatBox extends Component {
       this.props.recieveClientChat(socket, this.goDown)
     })
   }
-  // componentWillUnmount() {
-  // socket.io.reconnection()
-  // this.props.clearChat()
-  // }
 
   adminMessage(e) {
     console.log("admin")
     if (this.state.chat.length > 0) this.props.getAdminChat(socket, this.state.chat)
-
   }
 
   clientMessage(e) {
@@ -173,22 +168,22 @@ class ChatBox extends Component {
                 />
                 {/* <div className=" ml">Send Receipt to mail</div> */}
                 {/* </div> */}
-                <div onClick={this.clientMessage}
-                  className="mail_out border ml-auto rounded-pill z-depth-1">
-                  <div className="send_now border rounded-pill z-depth-1">
-                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
-                  </div>
-                </div>
-
-
-                {/* This is the admin chat button */}
-
-                {/* <div onClick={this.adminMessage}
+                {/* <div onClick={this.clientMessage}
                   className="mail_out border ml-auto rounded-pill z-depth-1">
                   <div className="send_now border rounded-pill z-depth-1">
                     <span className="send " style={{ backgroundImage: `url(${send})` }} />
                   </div>
                 </div> */}
+
+
+                {/* This is the admin chat button */}
+
+                <div onClick={this.adminMessage}
+                  className="mail_out border ml-auto rounded-pill z-depth-1">
+                  <div className="send_now border rounded-pill z-depth-1">
+                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                  </div>
+                </div>
               </div>
             }
           </div>

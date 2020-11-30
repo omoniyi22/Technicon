@@ -43,7 +43,7 @@ class TransactionHistory extends Component {
               #ID {item.trans_id}
             </div>
             <div className="transacts_product_name ">
-              {item.device_type}
+              <span className="font-weight-bold"> {item.device_type} :</span><span className="text-primary"> {item.device_brand} {item.device_name}</span>
             </div>
           </div>
           <div className="transacts_product_state  ml-auto pr-2">

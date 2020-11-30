@@ -179,7 +179,9 @@ class PaymentMethod extends Component {
                                   </div>
                                 </div>
                                 <div className="font-weight-bold empty_text mt-4">
-                                  <span className="onr mt-4">Payment has been made..</span> <br />
+                                  <small>Transaction id : <span className="text-primary">{selected.trans_id}</span></small><br/>
+                                  <small>For this transaction (<span className="text-primary"> {selected.device_brand} {selected.device_name} </span>)</small>
+                                  <br/><span className="onr mt-4">Payment has been made.</span> <br />
                                 </div>
                               </div>
                             </>
@@ -191,9 +193,8 @@ class PaymentMethod extends Component {
                           <div className="empty_oned" />
                         </div>
                         <div className="font-weight-bold empty_text mt-4">
-                          <span className="onr">Invoice not available..</span> <br />
-                          <small><i>Device has not been diagonised</i></small>
-                        </div>
+                          <span className="onr">Invoice wiil be ready</span> <br />
+                          <small>After your <span className="text-primary"> {selected.device_brand} {selected.device_name}</span> has been diagonised</small>                        </div>
                       </div>
                     }
                     </>

@@ -89,74 +89,99 @@ class LogIn extends Component {
   //   })
   // }
   render() {
-
+    let { home } = this.props
     return (
       <div className="Log_in  rounded-lg">
         <div className="Login z-depth-1   rounded-lg mt-3 pt-3 pb-3">
           <div className=" text-center mt-2">
             <img src={logo} width="70px" />
           </div>
-          <div className=" text-center mt-3 Login_title">
-            SIGN IN
+          {!home ?
+            <div className=" text-center mt-3 Login_title">
+              SIGN IN
+          </div> :
+            <>
+              <div className=" text-center mt-5 Login_title font-weight-bold">
+                WELCOME
           </div>
+              <div className=" text-center mt-5 Login_title">
+                TECHNICON OPENS FROM 9:00AM TO 8:00PM <br />
+                <div className="below pt-4">
+                  CLICK THE BUTTON BELOW
+              </div>
+              </div>
+
+              <div className="mx-auto  text-center mt-2">
+                <Link to={this.props.isAuthenticated ? "/new-transaction" : "/signup"}>
+                  <button className="log_in_button rounded-pill btn slso mt-4 "
+                    disabled={this.props.loading}
+                  >{!this.props.loading ? "Try for free" : "Loading..."}</button>
+                </Link>
+              </div>
+            </>
+          }
 
           {this.state.msg ?
             <div className="roes m-0 p-0 text-center mt-0  text-danger mt-1  mx-4 small " ><span className="fa  text-danger fa-exclamation mr-2 " /> {this.state.msg} </div>
             : <div className="roes m-0 p-0 text-center mt-0  text-white mt-1  mx-4 small " >. {this.state.msg} </div>}
 
-          <form className="Login_form py-3 my-1 border-bottom" onSubmit={this.onSubmit}>
+          {!home &&
+            <>
+              <form className="Login_form py-3 my-1 border-bottom" onSubmit={this.onSubmit}>
 
 
-            <div className="new_transaction_group mb-3 ">
-              <div className="new_transaction_label small font-weight-bold">
-                Email Address
+                <div className="new_transaction_group mb-3 ">
+                  <div className="new_transaction_label small font-weight-bold">
+                    Email Address
                         </div>
-              <div className="new_transaction_input ">
-                <div className="bolo my-1 w-100 borde-left  ">
-                  <input placeholder='Email Address' type="email"
-                    className="w-100 form-control border py-0 border-none"
-                    name="email"
-                    onChange={this.onChange}
-                    value={this.state.email}
-                  />
+                  <div className="new_transaction_input ">
+                    <div className="bolo my-1 w-100 borde-left  ">
+                      <input placeholder='Email Address' type="email"
+                        className="w-100 form-control border py-0 border-none"
+                        name="email"
+                        onChange={this.onChange}
+                        value={this.state.email}
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div className="new_transaction_group mb-3 ">
-              <div className="new_transaction_label small font-weight-bold">
-                Password
+                <div className="new_transaction_group mb-3 ">
+                  <div className="new_transaction_label small font-weight-bold">
+                    Password
               </div>
-              <div className="new_transaction_input ">
-                <div className="bolo my-1 w-100 borde-left  ">
-                  <input placeholder='Password' type="password"
-                    className="w-100 form-control border border-none"
-                    name="password"
-                    onChange={this.onChange}
-                    value={this.state.password}
-                    type={`${this.state.show_password ? "text" : "password"}`}
-                  />
-                  <div className="tine ml-auto  w-auto text-right">
-                    <span className={`fa texs ${!this.state.show_password ? "fa-eye" : "fa-eye-slash Sy_font"}`}
-                      onClick={
-                        this.show_password
-                      }
-                    ></span></div>
+                  <div className="new_transaction_input ">
+                    <div className="bolo my-1 w-100 borde-left  ">
+                      <input placeholder='Password' type="password"
+                        className="w-100 form-control border border-none"
+                        name="password"
+                        onChange={this.onChange}
+                        value={this.state.password}
+                        type={`${this.state.show_password ? "text" : "password"}`}
+                      />
+                      <div className="tine ml-auto  w-auto text-right">
+                        <span className={`fa texs ${!this.state.show_password ? "fa-eye" : "fa-eye-slash Sy_font"}`}
+                          onClick={
+                            this.show_password
+                          }
+                        ></span></div>
+                    </div>
+                  </div>
                 </div>
+                <button className="log_in_button rounded-pill mt-4 btn"
+                  disabled={this.props.loading}
+                >{!this.props.loading ? "Login" : "Loading..."}</button>
+                <div className="mt-2 koch text-center">
+                  <span className="ml-2">Do you have an account ? </span><b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/signup">Create account</Link> : <Link>Create account</Link>}</b>
+                </div>
+              </form>
+              <div className=" mx-auto" style={{ width: "fit-content", fontSize: "14px" }}>
+                <b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/forgot_password">Forgot password ?</Link> : <Link>Forgot password ?</Link>}</b>
               </div>
-            </div>
-            <button className="log_in_button rounded-pill mt-4 btn"
-              disabled={this.props.loading}
-            >{!this.props.loading ? "Login" : "Loading..."}</button>
-            <div className="mt-2 koch text-center">
-              <span className="ml-2">Do you have an account ? </span><b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/signup">Create account</Link> : <Link>Create account</Link>}</b>
-            </div>
-          </form>
-          <div className=" mx-auto" style={{width: "fit-content", fontSize: "14px"}}>
-              <b className="text-primary ">{!this.props.loading ? <Link className="text-primary" to="/forgot_password">Forgot password ?</Link> : <Link>Forgot password ?</Link>}</b>
-          </div>
+            </>
+          }
         </div>
-      </div>
+      </div >
     )
   }
 }

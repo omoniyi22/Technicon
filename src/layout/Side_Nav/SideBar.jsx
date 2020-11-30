@@ -106,12 +106,7 @@ class SideBar extends Component {
                       </div>
                       <div className=" icond p-3 z-depth-1">
                         <div className="row  p-2 w-100 py-2 mx-auto">
-                          <div className="col-4  p-2">
-                            <FacebookMessengerShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <FacebookMessengerIcon size={41} round={true} />
-                            </FacebookMessengerShareButton>
-                          </div>
+                          
                           <div className="col-4  p-2">
                             <TwitterShareButton
                               url="https://twitter.com/TechniConNG?s=09" quote={'Technicon | Your device needs the perfect care'}>
@@ -120,9 +115,16 @@ class SideBar extends Component {
                           </div>
                           <div className="col-4  p-2">
                             <WhatsappShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
+                              url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
                               <WhatsappIcon size={41} round={true} />
                             </WhatsappShareButton>
+
+                          </div>
+                             <div className="flex-2 ml-4  p-2">
+                            <TelegramShareButton
+                              url="www.technicon.ng" quote={'Technicon | Your device needs the perfect care'}>
+                              <TelegramIcon size={41} round={true} />
+                            </TelegramShareButton>
 
                           </div>
                         </div>
@@ -130,10 +132,10 @@ class SideBar extends Component {
 
                         <div className="row  p-2 w-100 py-2 mx-auto">
                           <div className="col-4  p-2">
-                            <InstapaperShareButton
+                            {/* <InstapaperShareButton
                               url="http://www.instagram.com/techniconng" quote={'Technicon | Your device needs the perfect care'}>
                               <InstapaperIcon size={41} round={true} />
-                            </InstapaperShareButton>
+                            </InstapaperShareButton> */}
                           </div>
                           <div className="col-4  p-2">
                             <FacebookShareButton
@@ -141,13 +143,7 @@ class SideBar extends Component {
                               <FacebookIcon size={41} round={true} />
                             </FacebookShareButton>
                           </div>
-                          <div className="col-4  p-2">
-                            <TelegramShareButton
-                              url="www.klwenkwlnln.com" quote={'Technicon | Your device needs the perfect care'}>
-                              <TelegramIcon size={41} round={true} />
-                            </TelegramShareButton>
-
-                          </div>
+                       
                         </div>
 
 

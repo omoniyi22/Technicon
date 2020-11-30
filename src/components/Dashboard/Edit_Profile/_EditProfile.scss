@@ -104,14 +104,14 @@ input[type="file"] {
   .plus_pix {
     @include pointer;
     position: absolute;
-    margin-top: 27px;
+    margin-top: 49px;
     @include fit();
     height: 19px;
     padding-top: 2.29px;
     padding-left: 2.5px;
     padding-right: 2.7px;
     // padding-bottom: 2.4px;
-    margin-left: 25px;
+    margin-left: 55px;
     font-size: 9.5px;
     z-index: 2;
     .fa {

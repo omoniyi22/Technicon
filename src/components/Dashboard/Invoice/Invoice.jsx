@@ -104,7 +104,7 @@ class Invoice extends Component {
                         </div>
                         <div className="font-weight-bold empty_text mt-4">
                           <span className="onr">Invoice wiil be ready</span> <br />
-                          <small>After device has been diagonised</small>
+                          <small>After your <span className="text-primary"> {selected.device_brand} {selected.device_name}</span> has been diagonised</small>
                         </div>
                       </div>
                     }

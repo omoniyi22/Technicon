@@ -13,7 +13,7 @@ class Chat extends Component {
     this.props.all_chat.length > 0 && this.props.refe.current.scrollIntoView({ behaviour: "smooth" })
   }
   componentDidUpdate(pros) {
-    if (this.props.down !== pros.down) {
+    if ((this.props.down !== pros.down) || (this.props.all_chat.length !== pros.all_chat.length)) {
       this.props.all_chat.length > 0 && this.props.refe.current.scrollIntoView({ behaviour: "smooth" })
     }
   }

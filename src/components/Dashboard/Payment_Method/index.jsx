@@ -14,4 +14,5 @@ const mapStateToProps = state => ({
   selected: state.device.selected,
   payment_status: state.device.device_receipt.payment_status
 })
+
 export default withRouter(connect(mapStateToProps, { pay: payAction })(PaymentMethod))

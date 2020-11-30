@@ -34,7 +34,8 @@ class Blog extends Component {
                             <span className="possa">  <span className="fa fa-clock mr-1 text-primary" />
                               Posted On </span>14.09.2018
                 </div>
-                          <div className="ml-auto mr-1 text-primary sent">read more</div>  <div className="ssowp fa fa-angle-right text-primary " />
+                          <div className="ml-auto mr-1 text-primary sent">                          <a href="https://blog.technicon.ng" target="blank">read more</a> 
+</div>  <div className="ssowp fa fa-angle-right text-primary " />
                         </div>
                       </div>
                     </div>
@@ -66,14 +67,17 @@ class Blog extends Component {
                             <span className="possa">  <span className="fa fa-clock text-primary font-weight-bold mr-1" />
                               Posted On</span> 14/09/2018
                 </div>
-                          <div className="ml-auto mr-1 text-primary sent">read more</div>  <div className="ssowp text-primary fa fa-angle-right" />
+                          <div className="ml-auto mr-1 text-primary sent">
+                          <a href="https://blog.technicon.ng" target="blank">read more</a> 
+                            </div>  <div className="ssowp text-primary fa fa-angle-right" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="read_more flex  px-2">
-                  <div className="mx-auto mr-1 sont py-1 px-2 z-depth-0 text-primary small ">see More
+                  <div className="mx-auto mr-1 sont py-1 px-2 z-depth-0 text-primary small ">
+                    <a href="https://blog.technicon.ng" target="blank">see More</a> 
                   <div className="mx-0 sonto z-depth-0  border rounded-pill"></div>
                   </div>
                 </div>
