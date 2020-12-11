@@ -1,5 +1,5 @@
 import {
-  BLOG, NEWSLETTER, COMPLAINT, ALL_COMPLAINT, SIGNUP, REGISTER,
+  BLOG, NEWSLETTER, COMPLAINT, ALL_COMPLAINT, SIGNUP, REGISTER, CHAT,
   PROFILE, Avata, GET_DEVICE_RECIEPT, PAY_NOW, FORGOT_PASSWORD, RESET_PASSWORD
 } from "./api";
 import axios from "axios";
@@ -95,3 +95,6 @@ export const PayApi = async ({ trans_id, payment_method }, getToken) => axios.po
 
 export const getForgotToken = async (email) => axios.post(`${FORGOT_PASSWORD}`, { email })
 export const resetForgotToken = async (token, password) => axios.post(`${RESET_PASSWORD}/${token}`, { password })
+
+export const getTransChat = async (trans_id, getToken) => axios.get(`${CHAT}/${trans_id}/complaints`, tokenConfig(getToken))
+export const postTransChat = async (data, getToken) => axios.post(`${CHAT}/send`, data, tokenConfig(getToken))

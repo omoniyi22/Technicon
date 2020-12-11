@@ -27,10 +27,10 @@ class Home extends Component {
           <div className="lading_pack">
             <div className="leoch">
               <div className="whity">
-                <div className="white sods p-3 rounded-lg">
+                {/* <div className="white sods p-3 rounded-lg">
                   {this.props.auth ? <New_Transaction /> : <Login home={true} />}
-                </div>
-                <div className=" broder  py-2">
+                </div> */}
+                {/* <div className=" broder  py-2">
                   <div className="  ml-3 ">
                     <div className="circla border  ml-2  mr-auto rounded-pill animated delay-3s  wow zoomIn slow"
                       style={{
@@ -40,12 +40,12 @@ class Home extends Component {
                       <div className="white rounded-pill border" />
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div className="re_text  white-text ">
+              <div className="re_text  white-text mt-5">
 
                 <div className="fojd ">
-                  <div className=" broder jen py-2">
+                  <div className=" broder jen py-2 ">
                     <div className="  ml-3 ">
                       <div className="circla border wow zoomIn slow  ml-2  mr-auto rounded-pill "
                         style={{
@@ -57,8 +57,22 @@ class Home extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="text-white">Hire experts engineers</div>
-                  <div className="text-white">to fix your gadgets...</div>
+                  <div className="text-white fmma">Hire experts engineers</div>
+                  <div className="text-white fmma">to fix your gadgets...</div>
+                  <div className="small text-white bisy font-weight-light">
+                    Technicon brings quality repair
+                   <br />
+                    to your finger tips
+                    </div>
+
+                  <div className="ml-0 mr-auto  text-left mt-2  w-fit ">
+                    <Link to={this.props.isAuthenticated ? "/new-transaction" : "/signup"} className=" mr-auto ml-0">
+                      <button className="log_in_button ml-0 rounded-pill btn slso mt-4 btn-white z-depth-1">
+                        Try for free
+                      </button>
+                    </Link>
+                  </div>
+
                 </div>
                 <div className="lopias ">
                   <div className="circle1  border  circle2 rounded-pill animated delay-1s  wow zoomIn slow"
@@ -122,7 +136,7 @@ class Home extends Component {
 
               </div>
               <div className="mr-auto pr-3 ml-3 my-auto">
-            All brands of laptops, and     <span className="text-primary"> operating systems.</span>
+                All brands of laptops, and     <span className="text-primary"> operating systems.</span>
               </div>
             </div>
           </div>

@@ -4,6 +4,12 @@
 @import "../About/About";
 @import "./mobile";
 
+.bisy {
+  font-size: 19px;
+  font-weight: 600 !important;
+  font-family: rali;
+  opacity: 0.78;
+}
 .why_content {
   font-size: 14px;
 }
@@ -117,6 +123,7 @@
     }
 
     .whity {
+      display: none;
       width: 100%;
       min-width: 25%;
       max-width: 420px;
@@ -283,3 +290,14 @@
 //   background-image: url('./phone-img.svg') !important;
 //   background-size: contain;
 // }
+@media (max-width: "779px"){
+  .re_text{
+    margin-top: 5px !important;
+  }
+  .fmma{
+    font-size: 20px !important;
+  }
+  .bisy{
+    font-size: 15px !important;
+  }
+}

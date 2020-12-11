@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux'
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import errorReducer from './errorReducer'
 import authReducer from './authReducer'
 import loadingReducer from './loadingReducer'
@@ -12,7 +14,13 @@ import forgotPassword from './forgot_password'
 import reset_password from './reset_password_reducer'
 
 
-export default combineReducers({
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['auth', "profile", "chat", "device", "transact"]
+}
+
+const combine = combineReducers({
   error: errorReducer,
   auth: authReducer,
   loading: loadingReducer,
@@ -25,3 +33,5 @@ export default combineReducers({
   reset_password,
   forgotPassword
 })
+
+export default persistReducer(persistConfig, combine)

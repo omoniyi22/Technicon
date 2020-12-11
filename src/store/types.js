@@ -94,3 +94,6 @@ export const TOKEN_FAIL_TO_RESET = "TOKEN_FAIL_TO_RESET"
 export const TOKEN_PASSED_TO_RESET = "TOKEN_PASSED_TO_RESET"
 // export const CLEAR_ERROR = "CLEAR_ERROR"
 
+export const CHAT_LOAD = "CHAT_LOAD"
+export const CHAT_ERROR = "CHAT_ERROR"
+export const GOT_ALL_CHAT = "GOT_ALL_CHAT"

@@ -10,11 +10,12 @@ class Chat extends Component {
     this.myDate = this.myDate.bind(this)
   }
   componentDidMount() {
-    this.props.all_chat.length > 0 && this.props.refe.current.scrollIntoView({ behaviour: "smooth" })
+    this.props.all_chat.length > 0 && this.scrollToBottom.current.scrollIntoView({ behaviour: "smooth" })
   }
   componentDidUpdate(pros) {
     if ((this.props.down !== pros.down) || (this.props.all_chat.length !== pros.all_chat.length)) {
-      this.props.all_chat.length > 0 && this.props.refe.current.scrollIntoView({ behaviour: "smooth" })
+      if (this.props.all_chat.length > 0 && this.scrollToBottom.current)
+        this.scrollToBottom.current.scrollIntoView({ behaviour: "smooth" })
     }
   }
   myDate(e) {
@@ -37,20 +38,20 @@ class Chat extends Component {
     return (
       <div className="chat_box smoothed" id="chat_box">
         {this.props.all_chat.map((arr, key) => {
-          if (arr.type === "admin") {
-            return <div ref={this.props.refe} className="right_chat_box px-2 py-0 ml-auto">
+          if (arr.user_type === "SUPER_ADMIN" || arr.user_type === "FRONT_DESK") {
+            return <div ref={this.scrollToBottom} className="right_chat_box px-2 py-0 ml-auto">
               <div className="right_chat_box_message  border">
                 {arr.message}
 
               </div>
-              <div className='right_chat_box_date mb-3 mt-1  ml-auto'> {myDate(arr.time)}</div>
+              <div className='right_chat_box_date mb-3 mt-1  ml-auto'> {(arr.createdAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}</div>
             </div>
-          } else if (arr.type === "client") {
-            return <div ref={this.props.refe} className="left_chat_box px-2 py-0 ">
+          } else if (arr.user_type === "USER") {
+            return <div ref={this.scrollToBottom} className="left_chat_box px-2 py-0 ">
               <div className="left_chat_box_message  border">
                 {arr.message}
               </div>
-              <div className='left_chat_box_date mb-3 mt-1 '> {myDate(arr.time)}</div>
+              <div className='left_chat_box_date mb-3 mt-1 '> {(arr.createdAt).slice(0, -8).replace("T", "  ").replace(/-/g, "/")}</div>
             </div>
           }
         })}

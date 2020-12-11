@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom'
 import io from 'socket.io-client'
 import Invoice from "../Invoice";
 import Chat from './chat'
+import Loader from 'react-loader-spinner'
+
 
 const socketUrl = "localhost:8001"
 const socket = io(socketUrl)
 const send = require('./Vector.png')
+
 class ChatBox extends Component {
   scrollToBottom = React.createRef()
   constructor(props) {
@@ -19,29 +22,24 @@ class ChatBox extends Component {
     this.Switch = this.Switch.bind(this)
     this.unSwitch = this.unSwitch.bind(this)
     this.Chatting = this.Chatting.bind(this)
-    this.clientMessage = this.clientMessage.bind(this)
-    this.adminMessage = this.adminMessage.bind(this)
     this.goDown = this.goDown.bind(this)
+    this.sendChat = this.sendChat.bind(this)
   }
   componentDidMount() {
-    socket.on("connect", () => {
-      this.props.getAllChat(socket)
-      this.props.recieveAllChat(socket, this.goDown)
-      this.props.recieveErrorMessage(socket, this.goDown)
-      this.props.recieveAdminChat(socket, this.goDown)
-      this.props.recieveClientChat(socket, this.goDown)
-    })
+    this.props.getAllChat(this.goDown)
   }
 
-  adminMessage(e) {
-    console.log("admin")
-    if (this.state.chat.length > 0) this.props.getAdminChat(socket, this.state.chat)
+  sendChat() {
+    let { chat } = this.state
+    console.log(chat)
+    if (chat !== "") {
+      this.props.sendChat(chat, this.goDown)
+      this.setState({
+        chat: ""
+      })
+    }
   }
 
-  clientMessage(e) {
-    console.log("client")
-    if (this.state.chat.length > 0) this.props.getClientChat(socket, this.state.chat)
-  }
   goDown() {
     this.setState({ down: true })
     setTimeout(() => {
@@ -50,7 +48,11 @@ class ChatBox extends Component {
   }
 
   Chatting(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+
+
   }
 
   Switch() {
@@ -64,7 +66,8 @@ class ChatBox extends Component {
     })
   }
   render() {
-    let { selected, empty, payment_status } = this.props
+    let { chat } = this.state
+    let { selected, empty, payment_status, loading } = this.props
     return (
       <Fragment>
         <div className="ChatBox opacy">
@@ -162,9 +165,18 @@ class ChatBox extends Component {
               </div>
               :
               <div className="bottom white  text-black  z-depth-1 ">
-                <textarea autoFocus={true} value={this.state.chat} name={"chat"} onChangeCapture={this.Chatting} placeholder={"You can chat with your engineer"}
+                <textarea
+
+                  textarea style={{ resize: "none", fontSize: "14px" }}
+                  placeholder="You can chat with your engineer"
                   className=" send_reciept border border-primary  black-text py-1"
-                  style={{ resize: "none" }}
+                  name="chat"
+                  disabled={loading}
+                  value={chat}
+                  onChange={this.Chatting}
+                  autoFocus={true}
+
+
                 />
                 {/* <div className=" ml">Send Receipt to mail</div> */}
                 {/* </div> */}
@@ -178,10 +190,21 @@ class ChatBox extends Component {
 
                 {/* This is the admin chat button */}
 
-                <div onClick={this.adminMessage}
+                <div
                   className="mail_out border ml-auto rounded-pill z-depth-1">
                   <div className="send_now border rounded-pill z-depth-1">
-                    <span className="send " style={{ backgroundImage: `url(${send})` }} />
+                    {
+                      loading === false && <span className="send " style={{ backgroundImage: `url(${send})` }}
+                        onClick={this.sendChat}
+                      />}
+                    {loading === true &&
+                      <Loader
+                        type="Oval"
+                        color="white"
+                        height={30}
+                        width={30}
+                      />
+                    }
                   </div>
                 </div>
               </div>

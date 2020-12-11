@@ -1,10 +1,11 @@
 import { ChatBox } from './ChatBox'
-import { recieveAllChat, recieveErrorMessage, clearChat, recieveAdminChat, recieveClientChat, getAdminChat, getAllChat, getClientChat } from './../../../store/actions/Chat'
+import { recieveAllChat, sendChat, recieveErrorMessage, clearChat, recieveAdminChat, recieveClientChat, getAdminChat, getAllChat, getClientChat } from './../../../store/actions/Chat'
 import { connect } from 'react-redux'
 
 const mapStateToProps = state => ({
   client_chat: state.chat.client_chat,
   admin_chats: state.chat.admin_chat,
+  loading: state.chat.loading,
   all_chats: state.chat.all_chat,
   selected: state.device.selected,
   empty: state.device.empty,
@@ -18,6 +19,7 @@ export default connect(
   recieveClientChat,
   getAdminChat,
   getAllChat,
+  sendChat,
   getClientChat,
   clearChat,
   recieveErrorMessage

@@ -34,3 +34,6 @@ export const PAY_NOW = `${BASE}/receipts/pay`
 //forgot password
 export const FORGOT_PASSWORD = `${BASE}/auth/forgot-password`
 export const RESET_PASSWORD = `${BASE}/auth/reset-password`
+
+// Chat
+export const CHAT =  `${BASE}/chats`

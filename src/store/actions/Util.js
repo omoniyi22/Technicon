@@ -15,9 +15,9 @@ export const T_loader = (p) => {
 
 export const DateSorter = (arr) => {
   console.log(arr)
-  return arr.filter(res => res.type === "client" || res.type === "admin")
+  return arr.filter(res => res.user_type === "FRONT_DESK" || res.user_type === "SUPER_ADMIN" || res.user_type === "USER")
     .sort((a, b) => {
-      let dateA = new Date(a.time), dateB = new Date(b.time)
+      let dateA = new Date(a.createdAt), dateB = new Date(b.createdAt)
       return dateA - dateB
     })
 }
@@ -85,3 +85,10 @@ export function N(a, d) {
     return z
   }
 }
+
+
+export const AdminChatFilter = (array) =>
+  array.filter(chat => chat.user_type === "SUPER_ADMIN" || chat.user_type === "FRONT_DESK")
+
+export const UserChatFilter = (array) =>
+  array.filter(chat => chat.user_type === "USER")
