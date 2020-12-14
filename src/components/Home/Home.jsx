@@ -65,7 +65,7 @@ class Home extends Component {
                     to your finger tips
                     </div>
 
-                  <div className="ml-0 mr-auto  text-left mt-2  w-fit ">
+                  <div className="ml-0 mr-auto  text-left mt-2  w-fit ppoaa">
                     <Link to={this.props.isAuthenticated ? "/new-transaction" : "/signup"} className=" mr-auto ml-0">
                       <button className="log_in_button ml-0 rounded-pill btn slso mt-4 btn-white z-depth-1">
                         Try for free

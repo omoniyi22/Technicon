@@ -290,14 +290,32 @@
 //   background-image: url('./phone-img.svg') !important;
 //   background-size: contain;
 // }
-@media (max-width: "779px"){
-  .re_text{
+@media (max-width: "779px") {
+  .re_text {
     margin-top: 5px !important;
   }
-  .fmma{
+  .fmma {
     font-size: 20px !important;
   }
-  .bisy{
+  .bisy {
     font-size: 15px !important;
+  }
+}
+.ppoaa {
+  button {
+    background: rgba(10, 91, 129, 0.89) !important;
+    color: white !important;
+  }
+}
+@media (max-width: 500px) {
+  .ppoaa {
+    margin-top: -14px !important;
+
+    button {
+      font-size: 10px !important;
+      padding: 4px 10px !important;
+      background: rgba(10, 91, 129, 0.89) !important;
+      color: white !important;
+    }
   }
 }

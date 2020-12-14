@@ -59,8 +59,8 @@
   padding-right: 46px !important;
   padding-bottom: 8px;
   padding-top: 8px;
-  background: rgb(2, 54, 77);
-  color: rgba(219, 219, 219, 0.856);
+  background: #ddebee;
+  color: #01364d;
   .flex-2{
     flex: 2;
     display: flex;
@@ -70,7 +70,7 @@
     justify-content: center;
   }
   .nav_logo {
-    filter: brightness(190%);
+    // filter: brightness(190%);
   }
   .nav_items {
     .cog {
@@ -104,6 +104,7 @@
       width: 78px;
     }
     .nav_text {
+      color: #01364d;
       font-size: 13.6px;
     }
     .notify {
@@ -111,10 +112,17 @@
     }
     .nav_fa {
       font-size: 20px;
-      color: rgb(189, 189, 189) !important;
+      color: #01364d !important;
       div {
         margin-top: 40px !important;
       }
     }
+    .ssga{
+      font-size: 23px;
+
+    }
   }
 }
+
+
+.nav_link_icon{}

@@ -103,7 +103,7 @@ class Navbar extends Component {
         <nav className="Nav_Bar w-100  pl-3 pr-2  flex">
 
           <div className="nav_logo ">
-            <Link to="/" className="limk ">
+            <Link to="/" className="limk pl-3 pb-1">
               <img src={logo} width="77px" height="43px" className="mt-3 pb-1" />
             </Link>
           </div>
@@ -112,7 +112,8 @@ class Navbar extends Component {
             <div className="cog ">
               <Link to="/about" className="limk ">
                 <div className="nav_link pb-0  mt-2 text-center">
-                  <img className="nav_link_icon " width="22.8px" src={about} />
+                  {/* <img className="nav_link_icon " width="22.8px" src={about} /> */}
+                  <span className="fa fa-exclamation-circle  nav_fa" />
                   <div className=" mt-1 nav_text">About</div>
                 </div>
               </Link>
@@ -133,7 +134,8 @@ class Navbar extends Component {
             <div className="cog ">
               <Link to="/legal" className="limk ">
                 <div className="nav_link pb-0  mt-2 text-center">
-                  <img className="nav_link_icon " width="17px" src={legal} />
+                  {/* <img className="nav_link_icon " width="17px" src={legal} /> */}
+                  <span className="fa fa-bookmark nav_fa" />
                   <div className=" mt-1 nav_text notified">Legal</div>
                 </div>
               </Link>
@@ -141,7 +143,8 @@ class Navbar extends Component {
             <div className="cog ">
               <Link to="/faq" className="limk ">
                 <div className="nav_link pb-0  mt-2 text-center">
-                  <img className="nav_link_icon " width="20.5px" src={notify} />
+                  {/* <img className="nav_link_icon " width="20.5px" src={notify} /> */}
+                  <span className="fa fa-bell nav_fa ssga" />
                   <div className=" mt-1 nav_text notify">FAQs</div>
                 </div>
               </Link>
@@ -161,7 +164,7 @@ class Navbar extends Component {
           >
             <div className="spread  row p-5 text-center rounded-lg   z-depth-1">
 
-              
+
               <div className="col-3  p-2">
                 <TwitterShareButton
                   className="z-depth-1 rounded-pill"
