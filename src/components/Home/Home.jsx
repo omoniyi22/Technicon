@@ -212,18 +212,18 @@ class Home extends Component {
         </div>
 
         <div className="row w-100 ahs mx-0 mt-3">
-          <div className="col-md-5 abouta p-4   lighten-1">
+          <div className="col-md-12 abouta p-4   lighten-1">
             <div className="header mb-2">
               About Technicon Service Center
               </div>
-            <div className="z-depth-1 rounded-sm">
+            <div className="z-depth-1 rounded-sm flex">
 
-              <div className="about_technicon">
+              <div className="about_technicon w-50 ">
                 <div className="bsw red ">
                   <div className="bsw_img"></div>
                 </div>
               </div>
-              <div className="about_technicon_text mt-3 ">
+              <div className="about_technicon_text mt-3 w-50 ">
                 <div className="ropz px-3">
                   TechniconNG is an emerging IT firm in Nigeria. We are dedicated to helping you maintain and also repair your faulty appliances by highly reputable and skilled technicians at the comfort of your home.
 
@@ -251,7 +251,7 @@ class Home extends Component {
             </div>
 
           </div>
-          <div className="col-md-7 blog p-3 p-md-4  border-left lighten-0">
+          {/* <div className="col-md-7 blog p-3 p-md-4  border-left lighten-0">
             <div className="header mb-2 text-left ">
               Blog
               </div>
@@ -262,7 +262,7 @@ class Home extends Component {
 
 
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )
