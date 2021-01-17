@@ -19,7 +19,7 @@ class Footer extends Component {
                   <a href="https://twitter.com/TechniConNG?s=09" target="blank">
                     <div className="fab fa-twitter p-2 mx-1 rounded-pill border text-white" />
                   </a>
-                  <a href="www.instagram.com/techniconng" target="blank">
+                  <a href="https://www.instagram.com/techniconng" target="blank">
                     <div className="fab fa-instagram p-2 mx-1 rounded-pill border text-white" />
                   </a>
                 </div>
